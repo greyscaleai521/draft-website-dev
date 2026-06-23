@@ -144,7 +144,7 @@ a {
   top: calc(100% + 12px);
   left: 0;
   min-width: 230px;
-  display: grid;
+  display: none;
   gap: 2px;
   padding: 10px;
   margin: 0;
@@ -153,10 +153,7 @@ a {
   border-radius: var(--radius);
   background: #101820;
   box-shadow: var(--shadow);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-6px);
-  transition: opacity 160ms ease, transform 160ms ease;
+  z-index: 20;
 }
 
 .nav-menu::before {
@@ -168,9 +165,7 @@ a {
 
 .has-menu:hover .nav-menu,
 .has-menu:focus-within .nav-menu {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
+  display: grid;
 }
 
 .nav-menu a {
@@ -1370,13 +1365,15 @@ textarea {
   .nav-menu {
     position: static;
     min-width: 0;
+    display: none;
     padding: 0 0 8px 14px;
     border: 0;
     background: transparent;
     box-shadow: none;
-    opacity: 1;
-    pointer-events: auto;
-    transform: none;
+  }
+
+  .nav-links.is-open .nav-menu {
+    display: grid;
   }
 
   .nav-menu::before {
