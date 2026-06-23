@@ -13,7 +13,7 @@ const heroImages = [
   "assets/img/hero/chicken-production.png",
   "assets/img/hero/frozen-foods.png",
   "assets/img/hero/cheese-production.png",
-  "assets/img/hero/pill-production.png"
+  "assets/img/markets/protein.png"
 ];
 
 if (hero && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {

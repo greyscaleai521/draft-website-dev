@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://greyscaleai521.github.io/draft-website-dev/</loc>
-  </url>
-  <url>
-    <loc>https://greyscaleai521.github.io/draft-website-dev/solutions/</loc>
-  </url>
-  <url>
-    <loc>https://greyscaleai521.github.io/draft-website-dev/markets_and_applications/</loc>
-  </url>
-  <url>
-    <loc>https://greyscaleai521.github.io/draft-website-dev/careers/</loc>
-  </url>
-  <url>
-    <loc>https://greyscaleai521.github.io/draft-website-dev/contact/</loc>
-  </url>
-  <url>
-    <loc>https://greyscaleai521.github.io/draft-website-dev/news/</loc>
-  </url>
+  <url><loc>https://greyscaleai521.github.io/draft-website-dev/</loc></url>
+  <url><loc>https://greyscaleai521.github.io/draft-website-dev/solutions/</loc></url>
+  <url><loc>https://greyscaleai521.github.io/draft-website-dev/insights/</loc></url>
+  <url><loc>https://greyscaleai521.github.io/draft-website-dev/inspection-as-a-service/</loc></url>
+  <url><loc>https://greyscaleai521.github.io/draft-website-dev/machines/</loc></url>
+  <url><loc>https://greyscaleai521.github.io/draft-website-dev/markets_and_applications/</loc></url>
+  <url><loc>https://greyscaleai521.github.io/draft-website-dev/industries/protein/</loc></url>
+  <url><loc>https://greyscaleai521.github.io/draft-website-dev/industries/dairy-cheese/</loc></url>
+  <url><loc>https://greyscaleai521.github.io/draft-website-dev/industries/frozen-prepared-foods/</loc></url>
+  <url><loc>https://greyscaleai521.github.io/draft-website-dev/industries/pet-food/</loc></url>
+  <url><loc>https://greyscaleai521.github.io/draft-website-dev/industries/produce/</loc></url>
+  <url><loc>https://greyscaleai521.github.io/draft-website-dev/industries/seafood/</loc></url>
+  <url><loc>https://greyscaleai521.github.io/draft-website-dev/industries/beverage-packaged-goods/</loc></url>
+  <url><loc>https://greyscaleai521.github.io/draft-website-dev/resources/case-studies/</loc></url>
+  <url><loc>https://greyscaleai521.github.io/draft-website-dev/resources/spec-sheets/</loc></url>
+  <url><loc>https://greyscaleai521.github.io/draft-website-dev/careers/</loc></url>
+  <url><loc>https://greyscaleai521.github.io/draft-website-dev/contact/</loc></url>
 </urlset>
-
