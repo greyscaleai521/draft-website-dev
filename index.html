@@ -20,13 +20,12 @@
           <span></span>
         </button>
         <ul class="nav-links" data-nav-links>
-          <li><a href="solutions/">Platform</a></li>
-          <li><a href="insights/">Insights</a></li>
-          <li><a href="machines/">Machines</a></li>
-          <li><a href="markets_and_applications/">Industries</a></li>
-          <li><a href="resources/case-studies/">Case Studies</a></li>
-          <li><a href="resources/spec-sheets/">Spec Sheets</a></li>
-          
+          <li class="nav-item has-menu"><a href="solutions/">Platform</a><ul class="nav-menu"><li><a href="solutions/">Overview</a></li><li><a href="capabilities/foreign-material-detection/">Foreign Material</a></li><li><a href="capabilities/product-quality-inspection/">Product Quality</a></li><li><a href="insights/#beyond-rejects">Beyond Rejects</a></li><li><a href="inspection-as-a-service/">Inspection as a Service</a></li><li><a href="solutions/#security-access">Security &amp; Access</a></li></ul></li>
+          <li class="nav-item has-menu"><a href="insights/">Insights</a><ul class="nav-menu"><li><a href="insights/">Overview</a></li><li><a href="insights/#beyond-rejects">Beyond Rejects</a></li><li><a href="insights/#machine-visibility">Machine Visibility</a></li><li><a href="insights/#enterprise-access">Enterprise Access</a></li></ul></li>
+          <li class="nav-item has-menu"><a href="machines/">Inspection Systems</a><ul class="nav-menu"><li><a href="machines/">HRX Systems</a></li><li><a href="resources/spec-sheets/">Spec Sheets</a></li><li><a href="contact/">Talk Through Fit</a></li></ul></li>
+          <li class="nav-item has-menu"><a href="markets_and_applications/">Industries</a><ul class="nav-menu"><li><a href="industries/protein/">Protein</a></li><li><a href="industries/dairy-cheese/">Dairy &amp; Cheese</a></li><li><a href="industries/frozen-prepared-foods/">Frozen Foods</a></li><li><a href="industries/pet-food/">Pet Food</a></li><li><a href="industries/produce/">Produce</a></li><li><a href="industries/seafood/">Seafood</a></li><li><a href="industries/beverage-packaged-goods/">Beverage &amp; Packaged Goods</a></li></ul></li>
+          <li class="nav-item has-menu"><a href="resources/case-studies/">Case Studies</a><ul class="nav-menu"><li><a href="resources/case-studies/">All Case Studies</a></li><li><a href="resources/case-studies/bone-detection/">Bone Detection</a></li><li><a href="contact/">Discuss Your Line</a></li></ul></li>
+          <li class="nav-item has-menu"><a href="resources/spec-sheets/">Spec Sheets</a><ul class="nav-menu"><li><a href="resources/spec-sheets/">All Spec Sheets</a></li><li><a href="machines/">HRX Systems</a></li><li><a href="contact/">Request a Spec Sheet</a></li></ul></li>
           <li><a class="nav-cta" href="contact/">Request a Demo</a></li>
         </ul>
       </nav>
@@ -39,6 +38,7 @@
             <p class="eyebrow">Inspection intelligence for food production</p>
             <h1>Inspection intelligence for every product on your line.</h1>
             <p class="lead">GreyscaleAI combines high-resolution x-ray inspection, AI image analysis, machine monitoring, and Insights to help food producers detect foreign material, understand product quality, and see what is happening across machines, lines, and plants.</p>
+            <p class="hero-support">Turn every inspected product into actionable data: detect foreign material, monitor product quality, and gain visibility across machines, lines, and plants.</p>
             <div class="hero-actions">
               <a class="button" href="contact/">Request a Demo</a>
               <a class="button secondary" href="solutions/">See How It Works</a>
@@ -59,16 +59,16 @@
           <p class="lead">Traditional inspection systems are often treated as pass/fail equipment. They reject products, but they do not always help teams understand what is changing, where issues are developing, or what patterns are appearing across lines and plants.</p>
           <div class="card-grid three">
             <article class="capability">
-              <h3>Foreign material risk</h3>
-              <p>QA and food safety teams need inspection evidence, event review, and context when contaminants or suspicious signals appear.</p>
+              <h3>Contaminant uncertainty</h3>
+              <p>Food safety teams need more than a binary reject. They need image evidence, event history, and context to quickly confirm or rule out foreign material.</p>
             </article>
             <article class="capability">
-              <h3>Quality variation</h3>
-              <p>Product quality can drift through density, shape, missing product, breakage, fill, or package changes before the trend is obvious.</p>
+              <h3>Hidden quality drift</h3>
+              <p>Quality managers often miss density, shape, or fill problems until they become complaints. Seeing these patterns early helps prevent waste and rework.</p>
             </article>
             <article class="capability">
-              <h3>Operational blind spots</h3>
-              <p>Plant managers, maintenance teams, and corporate leaders need visibility without standing at every machine.</p>
+              <h3>No line visibility</h3>
+              <p>Plant managers and maintenance teams cannot physically monitor every line. Remote insight into reject trends, alerts, and machine health saves time and cost.</p>
             </article>
           </div>
         </div>
@@ -79,11 +79,11 @@
           <p class="eyebrow">Platform</p>
           <h2>Inspect. Analyze. Improve.</h2>
           <div class="architecture" aria-label="GreyscaleAI inspection intelligence platform">
-            <div><strong>Inspect</strong>High-resolution x-ray inspection systems capture production images at machine speed.</div>
-            <div><strong>Analyze</strong>AI image analysis supports foreign material, quality, grading, checkweighing, and product-specific attributes.</div>
-            <div><strong>Connect</strong>Machine monitoring and image history make inspection activity visible beyond the line.</div>
-            <div><strong>Alert</strong>Insights surfaces meaningful alerts, trends, recurring issues, and production patterns.</div>
-            <div><strong>Support</strong>Monitoring, software updates, analytics, and application support help systems keep improving.</div>
+            <div><strong>Inspect</strong>High-resolution x-ray images capture 100% of product flow at line speed.</div>
+            <div><strong>Analyze</strong>AI models evaluate each image for contaminants, shape, density, counts, or other attributes specific to your product.</div>
+            <div><strong>Connect</strong>Images and events are stored in Insights so you can search, review, and trace inspected units.</div>
+            <div><strong>Alert</strong>Meaningful alerts highlight changes in quality, rejects, or machine performance before they become problems.</div>
+            <div><strong>Support</strong>Continuous monitoring, updates, and application support keep your system improving without adding work for your team.</div>
           </div>
         </div>
       </section>
@@ -93,12 +93,12 @@
           <div>
             <p class="eyebrow">Beyond Rejects</p>
             <h2>Go beyond rejects.</h2>
-            <p class="lead">A reject tells you what happened once. GreyscaleAI Insights helps teams understand what is changing across machines, lines, and plants. Beyond Rejects turns inspection activity into meaningful alerts, trends, and operational visibility.</p>
+            <p class="lead">Inspection data should not just go to a reject bin. Insights surfaces patterns and alerts so teams understand when and why rejects happen, across machines and plants.</p>
             <ul class="feature-list">
-              <li><strong>Visibility from anywhere</strong><br>See machine activity and inspection events without standing at the system.</li>
-              <li><strong>Multi-plant awareness</strong><br>Understand patterns across facilities.</li>
-              <li><strong>Alerts with context</strong><br>Surface meaningful changes, recurring issues, and conditions that deserve attention.</li>
-              <li><strong>Enterprise access</strong><br>Single sign-on with customer authentication for authorized users.</li>
+              <li><strong>Visibility from anywhere</strong><br>See live inspection status and images from any device.</li>
+              <li><strong>Multi-plant awareness</strong><br>Compare performance and trends across lines, shifts, or facilities.</li>
+              <li><strong>Alerts with context</strong><br>Get actionable alerts with image evidence, not just alarm codes.</li>
+              <li><strong>Enterprise access</strong><br>Single sign-on gives authorized users access without extra logins or IT burden.</li>
             </ul>
           </div>
           <div class="media-frame">
@@ -134,12 +134,12 @@
           <p class="eyebrow">Capabilities</p>
           <h2>Inspection capabilities for production teams.</h2>
           <div class="card-grid three">
-            <article class="capability"><h3>Foreign Material Detection</h3><p>High-resolution x-ray inspection helps detect material risks. Detection performance depends on product, packaging, contaminant type, size, density, and application conditions.</p></article>
-            <article class="capability"><h3>Product Quality Inspection</h3><p>Use image analysis to support checks for product-specific attributes such as density, shape, missing product, breakage, or variation where appropriate.</p></article>
-            <article class="capability"><h3>Checkweighing &amp; Grading</h3><p>Combine inspection signals to support repeatable quality decisions and line-side automation.</p></article>
-            <article class="capability"><h3>Image History &amp; Traceability</h3><p>Keep inspection images and event context available for review, investigation, and documentation workflows.</p></article>
-            <article class="capability"><h3>Production Analytics</h3><p>Turn machine-speed activity into trends that QA, plant management, and corporate operations teams can use.</p></article>
-            <article class="capability"><h3>Machine Monitoring &amp; Support</h3><p>Track system health and bring context into support conversations from the start.</p></article>
+            <a class="capability-link" href="capabilities/foreign-material-detection/"><article class="capability"><h3>Foreign Material Detection</h3><p>High-resolution x-ray inspection helps detect material risks. Detection performance depends on product, packaging, contaminant type, size, density, and application conditions.</p><span class="button">View details</span></article></a>
+            <a class="capability-link" href="capabilities/product-quality-inspection/"><article class="capability"><h3>Product Quality Inspection</h3><p>Use image analysis to support checks for product-specific attributes such as density, shape, missing product, breakage, or variation where appropriate.</p><span class="button">View details</span></article></a>
+            <a class="capability-link" href="capabilities/checkweighing-grading/"><article class="capability"><h3>Checkweighing &amp; Grading</h3><p>Combine inspection signals to support repeatable quality decisions and line-side automation.</p><span class="button">View details</span></article></a>
+            <a class="capability-link" href="capabilities/image-history-traceability/"><article class="capability"><h3>Image History &amp; Traceability</h3><p>Keep inspection images and event context available for review, investigation, and documentation workflows.</p><span class="button">View details</span></article></a>
+            <a class="capability-link" href="capabilities/production-analytics/"><article class="capability"><h3>Production Analytics</h3><p>Turn machine-speed activity into trends that QA, plant management, and corporate operations teams can use.</p><span class="button">View details</span></article></a>
+            <a class="capability-link" href="capabilities/machine-monitoring-support/"><article class="capability"><h3>Machine Monitoring &amp; Support</h3><p>Track system health and bring context into support conversations from the start.</p><span class="button">View details</span></article></a>
           </div>
         </div>
       </section>
@@ -164,14 +164,22 @@
         <div class="section-inner">
           <p class="eyebrow">Proof for production teams</p>
           <h2>Make inspection decisions with context.</h2>
+          <div class="proof-band">
+            <div>
+              <p class="meta">Featured case study</p>
+              <h3>AI bone detection in poultry production</h3>
+              <p>An anonymized protein application used GreyscaleAI AI models to distinguish true bone from cartilage, ligament, tendon, and normal product variation.</p>
+            </div>
+            <a class="button" href="resources/case-studies/bone-detection/">Read the case study</a>
+          </div>
           <div class="card-grid three">
-            <a class="resource-card" href="resources/case-studies/">
-              <div><h3>Case Studies</h3><p>See how food producers use GreyscaleAI in real production environments.</p></div>
+            <a class="resource-card" href="resources/case-studies/product-in-seal/">
+              <div><h3>Product-in-Seal Case Study</h3><p>See how AI image analysis supports subtle seal-region inspection at production speed.</p></div>
               <span class="button">View case studies</span>
             </a>
             <a class="resource-card" href="resources/spec-sheets/">
               <div><h3>Spec Sheets</h3><p>Review standard GreyscaleAI inspection systems and machine configurations.</p></div>
-              <span class="button">Review machines</span>
+              <span class="button">Review systems</span>
             </a>
             <a class="resource-card" href="contact/">
               <div><h3>Talk Through Your Application</h3><p>Share your product, package, line speed, and inspection goals.</p></div>

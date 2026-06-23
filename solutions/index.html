@@ -20,13 +20,12 @@
           <span></span>
         </button>
         <ul class="nav-links" data-nav-links>
-          <li><a href="../solutions/" aria-current="page">Platform</a></li>
-          <li><a href="../insights/">Insights</a></li>
-          <li><a href="../machines/">Machines</a></li>
-          <li><a href="../markets_and_applications/">Industries</a></li>
-          <li><a href="../resources/case-studies/">Case Studies</a></li>
-          <li><a href="../resources/spec-sheets/">Spec Sheets</a></li>
-          
+          <li class="nav-item has-menu"><a href="../solutions/">Platform</a><ul class="nav-menu"><li><a href="../solutions/">Overview</a></li><li><a href="../capabilities/foreign-material-detection/">Foreign Material</a></li><li><a href="../capabilities/product-quality-inspection/">Product Quality</a></li><li><a href="../insights/#beyond-rejects">Beyond Rejects</a></li><li><a href="../inspection-as-a-service/">Inspection as a Service</a></li><li><a href="../solutions/#security-access">Security &amp; Access</a></li></ul></li>
+          <li class="nav-item has-menu"><a href="../insights/">Insights</a><ul class="nav-menu"><li><a href="../insights/">Overview</a></li><li><a href="../insights/#beyond-rejects">Beyond Rejects</a></li><li><a href="../insights/#machine-visibility">Machine Visibility</a></li><li><a href="../insights/#enterprise-access">Enterprise Access</a></li></ul></li>
+          <li class="nav-item has-menu"><a href="../machines/">Inspection Systems</a><ul class="nav-menu"><li><a href="../machines/">HRX Systems</a></li><li><a href="../resources/spec-sheets/">Spec Sheets</a></li><li><a href="../contact/">Talk Through Fit</a></li></ul></li>
+          <li class="nav-item has-menu"><a href="../markets_and_applications/">Industries</a><ul class="nav-menu"><li><a href="../industries/protein/">Protein</a></li><li><a href="../industries/dairy-cheese/">Dairy &amp; Cheese</a></li><li><a href="../industries/frozen-prepared-foods/">Frozen Foods</a></li><li><a href="../industries/pet-food/">Pet Food</a></li><li><a href="../industries/produce/">Produce</a></li><li><a href="../industries/seafood/">Seafood</a></li><li><a href="../industries/beverage-packaged-goods/">Beverage &amp; Packaged Goods</a></li></ul></li>
+          <li class="nav-item has-menu"><a href="../resources/case-studies/">Case Studies</a><ul class="nav-menu"><li><a href="../resources/case-studies/">All Case Studies</a></li><li><a href="../resources/case-studies/bone-detection/">Bone Detection</a></li><li><a href="../contact/">Discuss Your Line</a></li></ul></li>
+          <li class="nav-item has-menu"><a href="../resources/spec-sheets/">Spec Sheets</a><ul class="nav-menu"><li><a href="../resources/spec-sheets/">All Spec Sheets</a></li><li><a href="../machines/">HRX Systems</a></li><li><a href="../contact/">Request a Spec Sheet</a></li></ul></li>
           <li><a class="nav-cta" href="../contact/">Request a Demo</a></li>
         </ul>
       </nav>
@@ -44,13 +43,29 @@
       <section class="section">
         <div class="section-inner">
           <p class="eyebrow">Architecture</p>
-          <h2>Machines plus AI plus Insights plus support.</h2>
-          <div class="architecture">
-            <div><strong>Machines</strong>Standard HRX inspection systems and configurations for line-side inspection.</div>
-            <div><strong>X-ray image</strong>High-resolution inspection images create a reusable production data source.</div>
-            <div><strong>AI analysis</strong>Models help identify foreign material, quality variation, grading, checkweighing, and product attributes.</div>
-            <div><strong>Insights</strong>Authorized users see machine visibility, alerts, trends, image history, and multi-plant inspection intelligence.</div>
-            <div><strong>Monitoring &amp; support</strong>Inspection as a Service keeps systems monitored, supported, updated, and improving.</div>
+          <h2>Inspection systems plus AI plus Insights plus support.</h2>
+          <p class="lead">GreyscaleAI connects standard HRX systems with AI image analysis, Insights software, and a managed support model.</p>
+          <div class="architecture-diagram" aria-label="GreyscaleAI platform diagram">
+            <div class="diagram-step">
+              <span class="diagram-icon">1</span>
+              <strong>Inspection machine</strong>
+              <p>Standard HRX systems capture every product at line speed.</p>
+            </div>
+            <div class="diagram-step">
+              <span class="diagram-icon">2</span>
+              <strong>AI layer</strong>
+              <p>X-ray images feed AI models that assess product-specific inspection signals.</p>
+            </div>
+            <div class="diagram-step">
+              <span class="diagram-icon">3</span>
+              <strong>Insights software</strong>
+              <p>Images, events, trends, and alerts stay available to authorized users.</p>
+            </div>
+            <div class="diagram-step muted">
+              <span class="diagram-icon">4</span>
+              <strong>Support layer</strong>
+              <p>Monitoring, updates, and application support keep the platform improving over time.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -58,16 +73,16 @@
       <section class="section tint">
         <div class="section-inner split">
           <div>
-            <p class="eyebrow">Inspect layer</p>
-            <h2>High-resolution x-ray inspection at machine speed.</h2>
-            <p class="lead">GreyscaleAI inspection systems are built for food production environments where product format, packaging, line speed, and contaminant risk all matter.</p>
-            <ul class="feature-list">
-              <li><strong>Foreign material detection</strong><br>Support contaminant detection workflows with careful application review.</li>
-              <li><strong>Product quality inspection</strong><br>Use image data to support product-specific quality checks where appropriate.</li>
-              <li><strong>Checkweighing and grading</strong><br>Combine inspection functions into a practical line-side workflow.</li>
-              <li><strong>Image history</strong><br>Preserve inspection context for event review and traceability workflows.</li>
-            </ul>
-          </div>
+          <p class="eyebrow">Inspect layer</p>
+          <h2>High-resolution x-ray inspection at machine speed.</h2>
+          <p class="lead">GreyscaleAI inspection systems are built for food production environments where product format, packaging, line speed, and contaminant risk all matter.</p>
+          <ul class="feature-list">
+              <li id="foreign-material-detection"><strong><a href="../capabilities/foreign-material-detection/">Foreign material detection</a></strong><br>High-resolution X-ray and AI models help detect metal, bone, glass, or other dense contaminants. Detection performance depends on your product, packaging, and contaminant type.</li>
+              <li id="product-quality-inspection"><strong><a href="../capabilities/product-quality-inspection/">Product quality inspection</a></strong><br>Assess density, shape, fill, count, or other product-specific attributes. Accuracy depends on your product format, packaging, and inspection conditions.</li>
+              <li><strong><a href="../capabilities/checkweighing-grading/">Checkweighing and grading</a></strong><br>Combine inspection functions into a practical line-side workflow. Performance depends on your product, packaging, and application goals.</li>
+              <li><strong><a href="../capabilities/image-history-traceability/">Image history</a></strong><br>Preserve inspection context for event review and traceability workflows. Usability depends on your image quality, line setup, and retention policy.</li>
+          </ul>
+        </div>
           <div class="media-frame">
             <img src="../assets/img/products/hrx660.jpg" alt="GreyscaleAI HRX660 inspection system">
           </div>
@@ -82,8 +97,7 @@
           <div>
             <p class="eyebrow">Analyze layer</p>
             <h2>AI image analysis turns inspection images into useful signals.</h2>
-            <p class="lead">The platform analyzes x-ray images to help teams understand product, package, quality, and inspection events beyond a simple reject count.</p>
-            <p class="muted">Detection performance depends on product, packaging, contaminant type, size, density, and application conditions.</p>
+            <p class="lead">AI models classify defects, measure density and shape, count missing components, and identify quality bands. These signals feed into grading, checkweighing, and analytics.</p>
           </div>
         </div>
       </section>
@@ -92,10 +106,57 @@
         <div class="section-inner">
           <p class="eyebrow">Insights application layer</p>
           <h2>See what your inspection systems are telling you.</h2>
-          <div class="card-grid three">
-            <article class="capability"><h3>Machine visibility</h3><p>See inspection status and machine activity without standing at the system.</p></article>
-            <article class="capability"><h3>Beyond Rejects</h3><p>Turn inspection activity into alerts, trends, and operational awareness.</p></article>
-            <article class="capability"><h3>Enterprise access</h3><p>Single sign-on with customer authentication gives authorized users access without another standalone login.</p></article>
+          <div class="insights-grid">
+            <figure class="screenshot-card">
+              <div class="mock-screen">
+                <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+                <div class="mock-body">
+                  <p class="caption">Reject trends</p>
+                  <p class="muted">View rejects by shift, SKU, or line.</p>
+                  <div class="mock-chart" aria-hidden="true">
+                    <span style="height:36%"></span><span style="height:58%"></span><span style="height:44%"></span><span style="height:72%"></span><span style="height:48%"></span><span style="height:82%"></span>
+                  </div>
+                </div>
+              </div>
+              <figcaption>Reject trends: View rejects by shift, SKU or line.</figcaption>
+            </figure>
+            <figure class="screenshot-card">
+              <div class="mock-screen">
+                <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+                <div class="mock-body">
+                  <p class="caption">Image history</p>
+                  <div class="mock-grid">
+                    <div class="mock-panel">
+                      <p class="muted">Event images</p>
+                      <div class="meter"><span style="width:78%"></span></div>
+                      <div class="meter"><span style="width:42%"></span></div>
+                      <div class="meter"><span style="width:88%"></span></div>
+                    </div>
+                    <div class="mock-panel small">
+                      <p class="muted">Filter</p>
+                      <div class="meter"><span style="width:64%"></span></div>
+                      <div class="meter"><span style="width:52%"></span></div>
+                      <div class="meter"><span style="width:74%"></span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <figcaption>Image history: Drill down to individual images for event review and traceability.</figcaption>
+            </figure>
+            <figure class="screenshot-card">
+              <div class="mock-screen">
+                <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+                <div class="mock-body">
+                  <p class="caption">Alert feed</p>
+                  <div class="mock-list">
+                    <div><span>Line 4 reject spike</span><span>Now</span></div>
+                    <div><span>Dense object detected</span><span>12 min</span></div>
+                    <div><span>System health warning</span><span>27 min</span></div>
+                  </div>
+                </div>
+              </div>
+              <figcaption>Alert feed: See and acknowledge alerts with context.</figcaption>
+            </figure>
           </div>
           <div class="section-actions">
             <a class="button" href="../insights/">Explore Insights</a>
@@ -103,7 +164,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="security-access">
         <div class="section-inner">
           <p class="eyebrow">Security &amp; access</p>
           <h2>Built for customer IT stakeholders.</h2>
@@ -111,6 +172,7 @@
             <article class="capability"><h3>Authorized users</h3><p>Access is framed around approved users across the customer organization, not uncontrolled broad access.</p></article>
             <article class="capability"><h3>Single sign-on</h3><p>Insights integrates with customer authentication so teams do not need another separate login.</p></article>
             <article class="capability"><h3>No added local maintenance burden</h3><p>GreyscaleAI manages the application layer so IT teams do not maintain another local application.</p></article>
+            <article class="capability"><h3>Retention and privacy</h3><p>Images and data are stored securely for agreed retention periods, with customer control over export and deletion.</p></article>
           </div>
         </div>
       </section>
@@ -120,8 +182,15 @@
           <p class="eyebrow">Related resources</p>
           <h2>Continue through the platform.</h2>
           <div class="card-grid three">
+            <a class="resource-card" href="../capabilities/foreign-material-detection/"><div><h3>Foreign Material Detection</h3><p>See contaminants, caveats, and example X-ray evidence for food safety review.</p></div><span class="button">View capability</span></a>
+            <a class="resource-card" href="../capabilities/product-quality-inspection/"><div><h3>Product Quality Inspection</h3><p>Review quality signals such as voids, clumps, missing components, and density drift.</p></div><span class="button">View capability</span></a>
+            <a class="resource-card" href="../capabilities/checkweighing-grading/"><div><h3>Checkweighing &amp; Grading</h3><p>Understand how image-derived weight and grading logic support line decisions.</p></div><span class="button">View capability</span></a>
+            <a class="resource-card" href="../capabilities/image-history-traceability/"><div><h3>Image History &amp; Traceability</h3><p>See how images and metadata are stored, searched, and reviewed.</p></div><span class="button">View capability</span></a>
             <a class="resource-card" href="../inspection-as-a-service/"><div><h3>Inspection as a Service</h3><p>The managed support layer behind GreyscaleAI inspection systems.</p></div><span class="button">View support model</span></a>
-            <a class="resource-card" href="../machines/"><div><h3>Machines</h3><p>Review standard HRX inspection systems and configurations.</p></div><span class="button">View machines</span></a>
+            <a class="resource-card" href="../insights/"><div><h3>Insights Overview</h3><p>See what the application layer looks like and how Beyond Rejects works.</p></div><span class="button">Explore Insights</span></a>
+            <a class="resource-card" href="../capabilities/production-analytics/"><div><h3>Production Analytics</h3><p>See dashboard examples for reject trends, reasons, and shift correlation.</p></div><span class="button">View capability</span></a>
+            <a class="resource-card" href="../capabilities/machine-monitoring-support/"><div><h3>Machine Monitoring &amp; Support</h3><p>Review health dashboards, remote diagnostics, and managed support context.</p></div><span class="button">View capability</span></a>
+            <a class="resource-card" href="../machines/"><div><h3>Inspection Systems</h3><p>Review standard HRX inspection systems and configurations.</p></div><span class="button">View systems</span></a>
             <a class="resource-card" href="../contact/"><div><h3>Talk Through Your Application</h3><p>Share product, packaging, line speed, and inspection goals.</p></div><span class="button">Request a Demo</span></a>
           </div>
         </div>

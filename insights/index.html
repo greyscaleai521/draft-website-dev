@@ -16,13 +16,12 @@
         <a class="brand" href="../index.html" aria-label="GreyscaleAI home"><img src="../assets/img/logos/greyscale-ai-logo-white.png" alt="GreyscaleAI"></a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle><span></span></button>
         <ul class="nav-links" data-nav-links>
-          <li><a href="../solutions/">Platform</a></li>
-          <li><a href="../insights/" aria-current="page">Insights</a></li>
-          <li><a href="../machines/">Machines</a></li>
-          <li><a href="../markets_and_applications/">Industries</a></li>
-          <li><a href="../resources/case-studies/">Case Studies</a></li>
-          <li><a href="../resources/spec-sheets/">Spec Sheets</a></li>
-          
+          <li class="nav-item has-menu"><a href="../solutions/">Platform</a><ul class="nav-menu"><li><a href="../solutions/">Overview</a></li><li><a href="../capabilities/foreign-material-detection/">Foreign Material</a></li><li><a href="../capabilities/product-quality-inspection/">Product Quality</a></li><li><a href="../insights/#beyond-rejects">Beyond Rejects</a></li><li><a href="../inspection-as-a-service/">Inspection as a Service</a></li><li><a href="../solutions/#security-access">Security &amp; Access</a></li></ul></li>
+          <li class="nav-item has-menu"><a href="../insights/">Insights</a><ul class="nav-menu"><li><a href="../insights/">Overview</a></li><li><a href="../insights/#beyond-rejects">Beyond Rejects</a></li><li><a href="../insights/#machine-visibility">Machine Visibility</a></li><li><a href="../insights/#enterprise-access">Enterprise Access</a></li></ul></li>
+          <li class="nav-item has-menu"><a href="../machines/">Inspection Systems</a><ul class="nav-menu"><li><a href="../machines/">HRX Systems</a></li><li><a href="../resources/spec-sheets/">Spec Sheets</a></li><li><a href="../contact/">Talk Through Fit</a></li></ul></li>
+          <li class="nav-item has-menu"><a href="../markets_and_applications/">Industries</a><ul class="nav-menu"><li><a href="../industries/protein/">Protein</a></li><li><a href="../industries/dairy-cheese/">Dairy &amp; Cheese</a></li><li><a href="../industries/frozen-prepared-foods/">Frozen Foods</a></li><li><a href="../industries/pet-food/">Pet Food</a></li><li><a href="../industries/produce/">Produce</a></li><li><a href="../industries/seafood/">Seafood</a></li><li><a href="../industries/beverage-packaged-goods/">Beverage &amp; Packaged Goods</a></li></ul></li>
+          <li class="nav-item has-menu"><a href="../resources/case-studies/">Case Studies</a><ul class="nav-menu"><li><a href="../resources/case-studies/">All Case Studies</a></li><li><a href="../resources/case-studies/bone-detection/">Bone Detection</a></li><li><a href="../contact/">Discuss Your Line</a></li></ul></li>
+          <li class="nav-item has-menu"><a href="../resources/spec-sheets/">Spec Sheets</a><ul class="nav-menu"><li><a href="../resources/spec-sheets/">All Spec Sheets</a></li><li><a href="../machines/">HRX Systems</a></li><li><a href="../contact/">Request a Spec Sheet</a></li></ul></li>
           <li><a class="nav-cta" href="../contact/">Request a Demo</a></li>
         </ul>
       </nav>
@@ -35,30 +34,120 @@
           <p class="lead">The application for seeing what your inspection systems are telling you across machines, lines, and plants.</p>
         </div>
       </section>
-      <section class="section">
+      <section class="section" id="beyond-rejects">
         <div class="section-inner split">
           <div>
             <p class="eyebrow">Beyond Rejects</p>
             <h2>Inspection data should do more than trigger a reject.</h2>
-            <p class="lead">Insights gives authorized users visibility into inspection systems across machines, lines, and plants without requiring them to be in front of the equipment. Through Beyond Rejects, Insights turns inspection activity into meaningful alerts, trends, and operational visibility.</p>
-            <p>Instead of only knowing that a product was rejected, teams can understand what is changing, where issues are appearing, and when action may be needed.</p>
+            <p class="lead">Inspection data should not just go to a reject bin. Insights surfaces patterns and alerts so teams understand when and why rejects happen, across machines and plants.</p>
+            <p>Instead of only knowing that a product was rejected, teams can see the live state of a line, search the event history, and connect what changed to the product or machine that needs attention.</p>
           </div>
           <div class="media-frame"><img src="../assets/img/hero/chicken-production.png" alt="Protein production inspection line"></div>
         </div>
       </section>
-      <section class="section tint">
+      <section class="section tint" id="machine-visibility">
         <div class="section-inner">
-          <p class="eyebrow">What teams see</p>
+          <p class="eyebrow">Features</p>
           <h2>Visibility across inspection activity.</h2>
           <div class="card-grid three">
-            <article class="capability"><h3>Live machine visibility</h3><p>See machine activity and inspection status without standing at the system.</p></article>
-            <article class="capability"><h3>Meaningful alerts</h3><p>Surface issues that deserve attention across quality, production, and machine performance.</p></article>
-            <article class="capability"><h3>Multi-plant view</h3><p>Give corporate QA and operations teams visibility across locations.</p></article>
-            <article class="capability"><h3>Image history</h3><p>Review inspection events with the context QA and food safety teams need.</p></article>
-            <article class="capability"><h3>Trend view</h3><p>See recurring issues, quality shifts, and production patterns before they become harder to manage.</p></article>
-            <article class="capability"><h3>Application support</h3><p>Connect what Insights shows with the support layer behind the system.</p></article>
+            <article class="capability"><h3>Live machine visibility</h3><p>See current inspection status, line speed, and reject counts in real time.</p></article>
+            <article class="capability"><h3>Event review</h3><p>Search by time, SKU, line, or event type, then view the X-ray image, AI decision, and machine metadata to support root-cause investigations.</p></article>
+            <article class="capability"><h3>Reject pattern analysis</h3><p>Identify recurring issues by product, shift, or supplier so corrective actions are based on evidence instead of guesswork.</p></article>
+            <article class="capability"><h3>Multi-plant dashboard</h3><p>Compare inspection performance across facilities and lines using standard metrics.</p></article>
+            <article class="capability"><h3>Meaningful alerts</h3><p>Define thresholds for reject rates or quality deviations. Insights notifies the right people with supporting data.</p></article>
+            <article class="capability"><h3>Image history</h3><p>Keep traceable records of inspected units and related inspection events for QA and food safety workflows.</p></article>
           </div>
-          <div class="callout"><strong>Built for enterprise access.</strong> Insights integrates with customer authentication through single sign-on, so authorized users do not need another standalone login.</div>
+          <div class="insights-grid">
+            <figure class="screenshot-card">
+              <div class="mock-screen">
+                <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+                <div class="mock-body">
+                  <p class="caption">Live status</p>
+                  <div class="mock-grid">
+                    <div class="mock-panel">
+                      <p class="muted">Line speed</p>
+                      <p style="font-size:2rem;font-weight:900;margin:8px 0 0;">214 ppm</p>
+                      <p class="muted">Reject count: 3</p>
+                    </div>
+                    <div class="mock-panel small">
+                      <p class="muted">Machine health</p>
+                      <div class="meter"><span style="width:84%"></span></div>
+                      <div class="meter"><span style="width:68%"></span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <figcaption>Live machine visibility: See current inspection status, line speed and reject counts in real time.</figcaption>
+            </figure>
+            <figure class="screenshot-card">
+              <div class="mock-screen">
+                <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+                <div class="mock-body">
+                  <p class="caption">Review screen</p>
+                  <div class="mock-list">
+                    <div><span>SKU 2418-3</span><span>AI match</span></div>
+                    <div><span>X-ray image</span><span>Opened</span></div>
+                    <div><span>Machine metadata</span><span>Line 2</span></div>
+                  </div>
+                </div>
+              </div>
+              <figcaption>Event review: Search by time, SKU, line or event type. View the X-ray image, AI decision and machine metadata to support root-cause investigations.</figcaption>
+            </figure>
+            <figure class="screenshot-card">
+              <div class="mock-screen">
+                <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+                <div class="mock-body">
+                  <p class="caption">Pattern analysis</p>
+                  <div class="mock-chart" aria-hidden="true">
+                    <span style="height:18%"></span><span style="height:34%"></span><span style="height:64%"></span><span style="height:42%"></span><span style="height:74%"></span><span style="height:58%"></span>
+                  </div>
+                  <div class="mock-list">
+                    <div><span>Product</span><span>Jerky</span></div>
+                    <div><span>Shift</span><span>Night</span></div>
+                    <div><span>Supplier</span><span>Batch 42</span></div>
+                  </div>
+                </div>
+              </div>
+              <figcaption>Reject pattern analysis: Identify recurring issues by product, shift or supplier so corrective actions are based on evidence instead of guesswork.</figcaption>
+            </figure>
+            <figure class="screenshot-card">
+              <div class="mock-screen">
+                <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+                <div class="mock-body">
+                  <p class="caption">Plant compare</p>
+                  <div class="mock-grid">
+                    <div class="mock-panel small">
+                      <p class="muted">Plant A</p>
+                      <div class="meter"><span style="width:82%"></span></div>
+                      <div class="meter"><span style="width:51%"></span></div>
+                      <div class="meter"><span style="width:69%"></span></div>
+                    </div>
+                    <div class="mock-panel small">
+                      <p class="muted">Plant B</p>
+                      <div class="meter"><span style="width:63%"></span></div>
+                      <div class="meter"><span style="width:74%"></span></div>
+                      <div class="meter"><span style="width:46%"></span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <figcaption>Multi-plant dashboard: Compare inspection performance across facilities and lines using standard metrics.</figcaption>
+            </figure>
+            <figure class="screenshot-card">
+              <div class="mock-screen">
+                <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+                <div class="mock-body">
+                  <p class="caption">Alert feed</p>
+                  <div class="mock-list">
+                    <div><span>Reject rate above threshold</span><span>Now</span></div>
+                    <div><span>Quality deviation trend</span><span>12 min</span></div>
+                    <div><span>Machine health warning</span><span>27 min</span></div>
+                  </div>
+                </div>
+              </div>
+              <figcaption>Meaningful alerts: Define thresholds for reject rates or quality deviations and see supporting data before issues grow.</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
       <section class="section">
@@ -67,7 +156,8 @@
           <div>
             <p class="eyebrow">No added IT maintenance burden</p>
             <h2>Secure application layer, managed by GreyscaleAI.</h2>
-            <p class="lead">Insights is not positioned as a generic dashboard. It is the secure application layer of the platform, providing authorized users with machine visibility, meaningful alerts, and multi-plant inspection intelligence through single sign-on and without customer IT maintenance burden.</p>
+            <p class="lead">Insights is delivered as a secure, cloud-hosted web application under the standard service agreement. GreyscaleAI handles maintenance, updates, backups, and application support. Customers access it through single sign-on with their existing authentication.</p>
+            <div class="callout" id="enterprise-access"><strong>Built for enterprise access.</strong> Authorized users can access Insights through their existing authentication, without extra logins or a local application to maintain.</div>
           </div>
         </div>
       </section>
@@ -75,6 +165,11 @@
         <div class="section-inner">
           <p class="eyebrow">Connected offering</p>
           <h2>Insights shows what is happening. Inspection as a Service helps support and improve the system.</h2>
+          <div class="card-grid three">
+            <a class="resource-card" href="../capabilities/production-analytics/"><div><h3>Production Analytics</h3><p>See dashboard examples for reject trends, recurring reasons, and shift correlation.</p></div><span class="button">View capability</span></a>
+            <a class="resource-card" href="../capabilities/image-history-traceability/"><div><h3>Image History &amp; Traceability</h3><p>See how searchable image records support investigations and documentation.</p></div><span class="button">View capability</span></a>
+            <a class="resource-card" href="../capabilities/machine-monitoring-support/"><div><h3>Machine Monitoring &amp; Support</h3><p>Review health dashboards and remote diagnostics tied to the service model.</p></div><span class="button">View capability</span></a>
+          </div>
           <div class="section-actions">
             <a class="button" href="../inspection-as-a-service/">See Inspection as a Service</a>
             <a class="button secondary" href="../contact/">Request a Demo</a>
