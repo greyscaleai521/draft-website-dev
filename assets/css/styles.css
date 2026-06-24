@@ -1003,13 +1003,19 @@ h3 {
 }
 
 .spec-process {
-  align-items: center;
-  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 30px 0 18px;
 }
 
-.spec-process .button {
-  width: 100%;
-  justify-content: center;
+.spec-process .capability {
+  min-height: 100%;
+}
+
+.spec-process-actions {
+  margin-top: 0;
+  margin-bottom: 38px;
 }
 
 .spec-item {
@@ -1271,6 +1277,11 @@ h3 {
 
 .page-hero .lead {
   color: rgba(255, 255, 255, 0.82);
+}
+
+.page-hero .matrix-note {
+  width: min(760px, 100%);
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .contact-grid {
