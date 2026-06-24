@@ -780,36 +780,6 @@ h3 {
   background: linear-gradient(180deg, #fbfdfe, #eef6f8);
 }
 
-.inspection-system-visual {
-  margin: 34px auto 0;
-}
-
-.legacy-xray-visual {
-  width: min(1040px, 100%);
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--paper);
-  box-shadow: 0 18px 44px rgba(16, 24, 32, 0.08);
-}
-
-.legacy-xray-visual iframe {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1200 / 590;
-  border: 0;
-  background: #ffffff;
-}
-
-.inspection-system-visual figcaption {
-  width: min(760px, 100%);
-  margin: 0 auto;
-  padding: 16px 18px 18px;
-  color: var(--muted);
-  text-align: center;
-}
-
 .platform-steps {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -1389,6 +1359,76 @@ h3 {
   color: rgba(255, 255, 255, 0.78);
 }
 
+.platform-page-hero {
+  overflow: hidden;
+  padding: 88px 0 64px;
+  background:
+    radial-gradient(circle at 78% 24%, rgba(89, 207, 232, 0.20), transparent 34%),
+    linear-gradient(135deg, #002060 0%, #0a2f4a 46%, #101820 100%);
+}
+
+.platform-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.86fr) minmax(540px, 1.14fr);
+  gap: 44px;
+  align-items: center;
+}
+
+.platform-hero-copy {
+  max-width: 560px;
+}
+
+.platform-page-hero h1 {
+  font-size: clamp(2.7rem, 5vw, 4.35rem);
+}
+
+.platform-page-hero .lead {
+  max-width: 620px;
+  font-size: 1.12rem;
+}
+
+.platform-hero-graphic {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  border-radius: 30px;
+  filter: drop-shadow(0 28px 58px rgba(0, 0, 0, 0.30));
+}
+
+.platform-hero-object,
+.platform-hero-poster {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1200 / 590;
+  border: 0;
+  border-radius: 30px;
+  background: #061627;
+}
+
+.platform-hero-poster {
+  display: none;
+}
+
+.platform-hero-caption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .platform-hero-object {
+    display: none;
+  }
+
+  .platform-hero-poster {
+    display: block;
+  }
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
@@ -1550,6 +1590,19 @@ textarea {
     min-height: 620px;
   }
 
+  .platform-page-hero {
+    padding: 76px 0 52px;
+  }
+
+  .platform-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .platform-hero-copy {
+    max-width: 760px;
+  }
+
   .split,
   .split.reverse,
   .contact-grid,
@@ -1587,6 +1640,24 @@ textarea {
 
   .hero-inner {
     padding: 88px 0 118px;
+  }
+
+  .platform-page-hero {
+    padding: 64px 0 42px;
+  }
+
+  .platform-page-hero h1 {
+    font-size: clamp(2.35rem, 13vw, 3.55rem);
+  }
+
+  .platform-page-hero .lead {
+    font-size: 1.04rem;
+  }
+
+  .platform-hero-graphic,
+  .platform-hero-object,
+  .platform-hero-poster {
+    border-radius: 18px;
   }
 
   .section {

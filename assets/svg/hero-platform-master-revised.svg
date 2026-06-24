@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="590" viewBox="0 0 1200 590" role="img" aria-labelledby="title desc">
+<title id="title">GreyscaleAI platform hero graphic revision</title>
+<desc id="desc">HRX380AQ machine rendering, realistic fish fillet X-ray image evidence, AI detection overlays, and Insights dashboard with alert, trend, image history, system health, and support.</desc>
+
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="590" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#061627"/><stop offset="0.45" stop-color="#002060"/><stop offset="1" stop-color="#101820"/></linearGradient>
+  <radialGradient id="halo" cx=".44" cy=".48" r=".75"><stop offset="0" stop-color="#59CFE8" stop-opacity=".30"/><stop offset=".55" stop-color="#00A09D" stop-opacity=".11"/><stop offset="1" stop-color="#00A09D" stop-opacity="0"/></radialGradient>
+  <linearGradient id="strokeGlass" x1="30" y1="22" x2="1170" y2="568" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#59CFE8" stop-opacity=".55"/><stop offset=".48" stop-color="#fff" stop-opacity=".12"/><stop offset="1" stop-color="#00A09D" stop-opacity=".32"/></linearGradient>
+  <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#59CFE8" stop-opacity="0"/><stop offset=".5" stop-color="#59CFE8" stop-opacity=".86"/><stop offset="1" stop-color="#59CFE8" stop-opacity="0"/></linearGradient>
+  <linearGradient id="route" x1="300" y1="250" x2="1100" y2="260" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#59CFE8" stop-opacity=".12"/><stop offset=".44" stop-color="#59CFE8" stop-opacity=".94"/><stop offset="1" stop-color="#00A09D" stop-opacity=".86"/></linearGradient>
+  <linearGradient id="xrayCard" x1="405" y1="72" x2="742" y2="525" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity=".17"/><stop offset=".55" stop-color="#EEF6F8" stop-opacity=".07"/><stop offset="1" stop-color="#59CFE8" stop-opacity=".13"/></linearGradient>
+  <linearGradient id="dashFill" x1="760" y1="80" x2="1130" y2="505" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#EEF6F8"/></linearGradient>
+  <linearGradient id="miniCard" x1="790" y1="135" x2="1100" y2="455" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#F7FBFC"/></linearGradient>
+  <filter id="softShadow" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="24" stdDeviation="20" flood-color="#101820" flood-opacity=".28"/></filter>
+  <filter id="tightShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="13" stdDeviation="10" flood-color="#101820" flood-opacity=".22"/></filter>
+  <filter id="aquaGlow" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#59CFE8" flood-opacity=".58"/></filter>
+  <filter id="amberGlow" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#F4B942" flood-opacity=".6"/></filter>
+  <clipPath id="xrayClip"><rect x="438" y="132" width="270" height="270" rx="24"/></clipPath>
+  <clipPath id="alertClip"><rect x="1032" y="157" width="55" height="48" rx="10"/></clipPath>
+  <clipPath id="hist1"><rect x="975" y="299" width="26" height="26" rx="7"/></clipPath>
+  <clipPath id="hist2"><rect x="1006" y="299" width="26" height="26" rx="7"/></clipPath>
+  <clipPath id="hist3"><rect x="1037" y="299" width="26" height="26" rx="7"/></clipPath>
+  <clipPath id="hist4"><rect x="1068" y="299" width="26" height="26" rx="7"/></clipPath>
+</defs>
+
+
+<style>
+  .font{font-family:Inter,Arial,Helvetica,sans-serif}.eyebrow{font:800 11px Inter,Arial,sans-serif;letter-spacing:1.2px}.label{font:700 12px Inter,Arial,sans-serif}.labelSm{font:700 10px Inter,Arial,sans-serif}.bodySm{font:500 10px Inter,Arial,sans-serif}.title{font:800 14px Inter,Arial,sans-serif}.metric{font:800 28px Inter,Arial,sans-serif}.navy{fill:#002060}.muted{fill:#667783}.teal{fill:#00A09D}.aqua{fill:#59CFE8}.red{fill:#EF4444}.amber{fill:#F4B942}.white{fill:#fff}
+  :root{--loop:12.8s;--ease:cubic-bezier(.22,1,.36,1);--ui:cubic-bezier(.16,1,.3,1)}
+  #background-grid{animation:grid var(--loop) linear infinite}
+  #product-packet{animation:product var(--loop) linear infinite;transform-box:fill-box;transform-origin:center}
+  #scan-beam{animation:scan var(--loop) var(--ease) infinite;transform-box:fill-box;transform-origin:center}
+  #xray-scan-sheen{animation:sheen var(--loop) linear infinite}
+  #dense-signal-box{stroke-dasharray:300;stroke-dashoffset:300;animation:bbox var(--loop) var(--ui) infinite}
+  .ai-node{animation:nodes var(--loop) ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+  .data-particle{animation:particle var(--loop) ease-in-out infinite}
+  #alert-card{animation:alert var(--loop) var(--ui) infinite;transform-box:fill-box;transform-origin:center}
+  #trend-line{stroke-dasharray:160;stroke-dashoffset:160;animation:trend var(--loop) var(--ui) infinite}
+  #health-ring{stroke-dasharray:96;stroke-dashoffset:96;animation:health var(--loop) var(--ui) infinite}
+  #progress-fill{stroke-dasharray:800;stroke-dashoffset:800;animation:progress var(--loop) var(--ui) infinite}
+  #live-pill circle{animation:live 1.7s ease-in-out infinite}
+  @keyframes grid{to{transform:translate(8px,4px)}}
+  @keyframes product{0%,8%{opacity:0;transform:translateX(-20px)}10%,21%{opacity:1}25%,100%{opacity:0;transform:translateX(170px)}}
+  @keyframes scan{0%,8%,28%,100%{opacity:.25;transform:scaleX(.75)}12%,22%{opacity:1;transform:scaleX(1.25)}}
+  @keyframes sheen{0%,28%{transform:translateX(-30px);opacity:0}34%,43%{opacity:.38}50%,100%{transform:translateX(294px);opacity:0}}
+  @keyframes bbox{0%,31%{stroke-dashoffset:300;opacity:0}38%,100%{stroke-dashoffset:0;opacity:1}}
+  @keyframes nodes{0%,30%{opacity:.16;transform:scale(.7)}40%,84%{opacity:1;transform:scale(1)}100%{opacity:.5;transform:scale(.86)}}
+  @keyframes particle{0%,42%{opacity:.15}52%,80%{opacity:1}100%{opacity:.35}}
+  @keyframes alert{0%,55%{transform:translateY(0)}60%,72%{transform:translateY(-7px)}84%,100%{transform:translateY(0)}}
+  @keyframes trend{0%,56%{stroke-dashoffset:160}72%,100%{stroke-dashoffset:0}}
+  @keyframes health{0%,70%{stroke-dashoffset:96}85%,100%{stroke-dashoffset:0}}
+  @keyframes progress{0%{stroke-dashoffset:800}20%{stroke-dashoffset:650}43%{stroke-dashoffset:430}58%{stroke-dashoffset:260}77%{stroke-dashoffset:90}92%,100%{stroke-dashoffset:0}}
+  @keyframes live{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.55);opacity:.38}}
+  @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}#progress-fill,#dense-signal-box,#trend-line,#health-ring{stroke-dashoffset:0!important}}
+</style>
+
+
+<g id="background" data-layer="01-background">
+  <rect x="28" y="22" width="1144" height="546" rx="30" fill="url(#bg)"/>
+  <rect x="28.5" y="22.5" width="1143" height="545" rx="29.5" fill="none" stroke="url(#strokeGlass)" stroke-width="1.2"/>
+  <ellipse cx="595" cy="290" rx="470" ry="255" fill="url(#halo)" opacity=".55"/>
+  <g id="background-grid"><path d="M56 46 V546" stroke="#FFFFFF" stroke-opacity=".045"/><path d="M116 46 V546" stroke="#FFFFFF" stroke-opacity=".045"/><path d="M176 46 V546" stroke="#FFFFFF" stroke-opacity=".045"/><path d="M236 46 V546" stroke="#FFFFFF" stroke-opacity=".045"/><path d="M296 46 V546" stroke="#FFFFFF" stroke-opacity=".045"/><path d="M356 46 V546" stroke="#FFFFFF" stroke-opacity=".045"/><path d="M416 46 V546" stroke="#FFFFFF" stroke-opacity=".045"/><path d="M476 46 V546" stroke="#FFFFFF" stroke-opacity=".045"/><path d="M536 46 V546" stroke="#FFFFFF" stroke-opacity=".045"/><path d="M596 46 V546" stroke="#FFFFFF" stroke-opacity=".045"/><path d="M656 46 V546" stroke="#FFFFFF" stroke-opacity=".045"/><path d="M716 46 V546" stroke="#FFFFFF" stroke-opacity=".045"/><path d="M776 46 V546" stroke="#FFFFFF" stroke-opacity=".045"/><path d="M836 46 V546" stroke="#FFFFFF" stroke-opacity=".045"/><path d="M896 46 V546" stroke="#FFFFFF" stroke-opacity=".045"/><path d="M956 46 V546" stroke="#FFFFFF" stroke-opacity=".045"/><path d="M1016 46 V546" stroke="#FFFFFF" stroke-opacity=".045"/><path d="M1076 46 V546" stroke="#FFFFFF" stroke-opacity=".045"/><path d="M1136 46 V546" stroke="#FFFFFF" stroke-opacity=".045"/><path d="M52 70 H1148" stroke="#FFFFFF" stroke-opacity=".04"/><path d="M52 116 H1148" stroke="#FFFFFF" stroke-opacity=".04"/><path d="M52 162 H1148" stroke="#FFFFFF" stroke-opacity=".04"/><path d="M52 208 H1148" stroke="#FFFFFF" stroke-opacity=".04"/><path d="M52 254 H1148" stroke="#FFFFFF" stroke-opacity=".04"/><path d="M52 300 H1148" stroke="#FFFFFF" stroke-opacity=".04"/><path d="M52 346 H1148" stroke="#FFFFFF" stroke-opacity=".04"/><path d="M52 392 H1148" stroke="#FFFFFF" stroke-opacity=".04"/><path d="M52 438 H1148" stroke="#FFFFFF" stroke-opacity=".04"/><path d="M52 484 H1148" stroke="#FFFFFF" stroke-opacity=".04"/><path d="M52 530 H1148" stroke="#FFFFFF" stroke-opacity=".04"/></g>
+  <text x="64" y="58" class="eyebrow font aqua">INSPECTION INTELLIGENCE LOOP</text>
+  <text x="64" y="80" class="bodySm font" fill="#CFEFF6" opacity=".82">HRX capture + AI image evidence + Insights visibility</text>
+</g>
+
+<g id="data-paths" data-layer="06-data-paths" data-motion="connect-data">
+  <path id="path-machine-to-xray" d="M330 252 C370 230 395 180 438 168" stroke="url(#route)" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+  <path id="path-xray-to-alert" d="M708 204 C738 174 760 169 793 178" stroke="url(#route)" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+  <path id="path-xray-to-history" d="M708 315 C752 292 825 297 956 308" stroke="url(#route)" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".70"/>
+  <path id="path-xray-to-health" d="M697 448 C735 451 748 420 793 414" stroke="url(#route)" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".56"/>
+  <circle class="data-particle" cx="388" cy="210" r="3.2" fill="#59CFE8" filter="url(#aquaGlow)"/>
+  <circle class="data-particle" cx="744" cy="182" r="3" fill="#59CFE8" filter="url(#aquaGlow)"/>
+  <circle class="data-particle" cx="826" cy="298" r="2.6" fill="#00A09D"/>
+</g>
+
+<g id="hrx380aq-machine" data-layer="02-hrx380aq-machine" data-motion="inspect-machine">
+  <ellipse cx="210" cy="536" rx="150" ry="22" fill="#000" opacity=".28"/>
+  <ellipse cx="210" cy="530" rx="112" ry="10" fill="#59CFE8" opacity=".10" filter="url(#aquaGlow)"/>
+  <image id="hrx380aq-machine-render" href="../img/hero/platform/hrx380aq-render-clean.png" xlink:href="../img/hero/platform/hrx380aq-render-clean.png" x="70" y="88" width="285" height="452" preserveAspectRatio="xMidYMid meet" filter="url(#softShadow)"/>
+  <g id="machine-chip" transform="translate(78 98)"><rect width="104" height="28" rx="14" fill="#061627" fill-opacity=".86" stroke="#59CFE8" stroke-opacity=".42"/><text x="15" y="18" class="labelSm font white">HRX380AQ</text></g>
+  <g id="scan-beam" data-motion="scan-beam">
+    <rect x="211" y="220" width="14" height="226" rx="7" fill="url(#beam)" opacity=".40" filter="url(#aquaGlow)"/>
+    <path d="M218 220 L166 448 H276 Z" fill="#59CFE8" fill-opacity=".11" stroke="#59CFE8" stroke-opacity=".18"/>
+    <circle cx="218" cy="220" r="4" fill="#59CFE8" filter="url(#aquaGlow)"/>
+  </g>
+</g>
+
+<g id="product-packet" data-layer="03-product-packet" data-motion="product-pass">
+  <g transform="translate(0 -112)">
+    <path d="M72 420 C103 409 134 412 161 426 C137 441 103 443 74 433 C66 430 65 423 72 420Z" fill="#EEF6F8" stroke="#D8E5EB" stroke-width="1"/>
+    <path d="M88 424 C109 418 134 421 149 428" fill="none" stroke="#6A7A84" stroke-opacity=".42" stroke-width="3" stroke-linecap="round"/>
+    <path d="M96 435 C116 438 134 436 151 430" fill="none" stroke="#101820" stroke-opacity=".20" stroke-width="2" stroke-linecap="round"/>
+    <rect x="96" y="418" width="46" height="15" rx="7.5" fill="#00A09D"/><text x="107" y="429" class="labelSm font white">FISH</text>
+  </g>
+</g>
+
+<g id="xray-evidence" data-layer="04-xray-evidence" data-motion="xray-evidence">
+  <rect x="405" y="76" width="330" height="450" rx="30" fill="url(#xrayCard)" stroke="#59CFE8" stroke-opacity=".46" filter="url(#softShadow)"/>
+  <text x="438" y="112" class="eyebrow font aqua">IMAGE EVIDENCE</text>
+  <rect x="428" y="120" width="290" height="298" rx="28" fill="#EAF7FA" fill-opacity=".15" stroke="#FFFFFF" stroke-opacity=".16"/>
+  <g clip-path="url(#xrayClip)"><image id="xray-fish-main" href="../img/hero/platform/xray-fish-evidence-main.png" xlink:href="../img/hero/platform/xray-fish-evidence-main.png" x="438" y="132" width="270" height="270" preserveAspectRatio="xMidYMid slice"/><rect id="xray-scan-sheen" x="432" y="132" width="22" height="270" fill="url(#beam)" opacity=".34"/></g>
+  <rect x="438" y="132" width="270" height="270" rx="24" fill="none" stroke="#D7EEF4" stroke-opacity=".72"/>
+  <rect x="438" y="434" width="270" height="62" rx="18" fill="#061627" fill-opacity=".82" stroke="#59CFE8" stroke-opacity=".22"/>
+  <text x="456" y="457" class="label font white">AI image signal</text>
+  <text x="456" y="475" class="bodySm font" fill="#A9C9D3">Fish fillets  /  Line 4  /  Now</text>
+  <g transform="translate(610 449)"><rect width="80" height="23" rx="11.5" fill="#59CFE8" fill-opacity=".15" stroke="#59CFE8" stroke-opacity=".28"/><text x="14" y="15" class="labelSm font" fill="#CFEFF6">Image ID</text></g>
+</g>
+
+<g id="ai-overlays" data-layer="05-ai-overlays" data-motion="ai-analysis">
+  <path d="M500 190 C535 170 572 177 596 202 C568 221 529 219 500 198Z" fill="none" stroke="#00A09D" stroke-width="1.5" stroke-opacity=".65"/>
+  <path d="M557 234 C591 209 633 219 657 250 C624 274 584 271 557 246Z" fill="none" stroke="#00A09D" stroke-width="1.5" stroke-opacity=".55"/>
+  <rect id="dense-signal-box" x="642" y="205" width="40" height="105" rx="8" fill="none" stroke="#F4B942" stroke-width="2.2" filter="url(#amberGlow)"/>
+  <g id="dense-signal-label" transform="translate(618 181)"><rect width="82" height="22" rx="11" fill="#061627" fill-opacity=".92" stroke="#F4B942" stroke-opacity=".42"/><text x="13" y="15" class="labelSm font amber">AI signal</text></g>
+  <g id="ai-nodes"><circle class="ai-node" cx="420" cy="178" r="3" fill="#59CFE8" filter="url(#aquaGlow)"/><circle class="ai-node" cx="416" cy="262" r="3" fill="#59CFE8" filter="url(#aquaGlow)"/><circle class="ai-node" cx="424" cy="370" r="3" fill="#59CFE8" filter="url(#aquaGlow)"/><circle class="ai-node" cx="500" cy="100" r="3" fill="#59CFE8" filter="url(#aquaGlow)"/><circle class="ai-node" cx="574" cy="96" r="3" fill="#59CFE8" filter="url(#aquaGlow)"/><circle class="ai-node" cx="654" cy="108" r="3" fill="#59CFE8" filter="url(#aquaGlow)"/><circle class="ai-node" cx="724" cy="178" r="3" fill="#59CFE8" filter="url(#aquaGlow)"/><circle class="ai-node" cx="736" cy="282" r="3" fill="#59CFE8" filter="url(#aquaGlow)"/><circle class="ai-node" cx="716" cy="372" r="3" fill="#59CFE8" filter="url(#aquaGlow)"/><circle class="ai-node" cx="650" cy="430" r="3" fill="#59CFE8" filter="url(#aquaGlow)"/><circle class="ai-node" cx="540" cy="422" r="3" fill="#59CFE8" filter="url(#aquaGlow)"/></g>
+  <g id="feature-chips">
+    <g transform="translate(388 206)"><rect width="49" height="24" rx="12" fill="#061627" fill-opacity=".86" stroke="#59CFE8" stroke-opacity=".38"/><text x="16" y="16" class="labelSm font" fill="#CFEFF6">FM</text></g>
+    <g transform="translate(680 142)"><rect width="78" height="24" rx="12" fill="#061627" fill-opacity=".86" stroke="#59CFE8" stroke-opacity=".38"/><text x="14" y="16" class="labelSm font" fill="#CFEFF6">Density</text></g>
+    <g transform="translate(696 408)"><rect width="60" height="24" rx="12" fill="#061627" fill-opacity=".86" stroke="#59CFE8" stroke-opacity=".38"/><text x="14" y="16" class="labelSm font" fill="#CFEFF6">Grade</text></g>
+  </g>
+</g>
+
+<g id="insights-dashboard" data-layer="07-insights-dashboard" data-motion="dashboard-live">
+  <rect x="764" y="78" width="366" height="432" rx="28" fill="url(#dashFill)" stroke="#D8E5EB" stroke-width="1.2" filter="url(#softShadow)"/>
+  <text x="794" y="116" class="title font navy">GreyscaleAI Insights</text>
+  <g id="live-pill" transform="translate(1026 96)"><rect width="70" height="24" rx="12" fill="#E9F8F8" stroke="#00A09D" stroke-opacity=".25"/><circle cx="15" cy="12" r="4" fill="#00A09D"/><text x="27" y="15" class="labelSm font teal">LIVE</text></g>
+  <g id="alert-card"><rect x="793" y="141" width="310" height="86" rx="18" fill="url(#miniCard)" stroke="#F2B7B7" filter="url(#tightShadow)"/><text x="812" y="190" class="metric font red">12</text><text x="860" y="172" class="label font navy">Dense signal detected</text><text x="860" y="192" class="bodySm font muted">Line 4  /  fish fillets  /  now</text><text x="860" y="210" class="labelSm font teal">Evidence linked</text><g clip-path="url(#alertClip)"><image href="../img/hero/platform/xray-fish-alert-thumb.png" xlink:href="../img/hero/platform/xray-fish-alert-thumb.png" x="1032" y="157" width="55" height="48" preserveAspectRatio="xMidYMid slice"/></g><rect x="1032" y="157" width="55" height="48" rx="10" fill="none" stroke="#D8E5EB"/><rect x="1064" y="168" width="13" height="24" rx="3" fill="none" stroke="#F4B942" stroke-width="1.4" filter="url(#amberGlow)"/></g>
+  <g id="trend-card"><rect x="793" y="247" width="148" height="118" rx="18" fill="url(#miniCard)" stroke="#DDE8EC"/><text x="811" y="272" class="label font navy">Reject trend</text><text x="811" y="290" class="bodySm font muted">Last 7 days</text><path d="M812 320 H921M812 340 H921M812 300 H921" stroke="#D8E5EB" stroke-opacity=".7"/><path id="trend-area" d="M812 330 C826 314 840 324 853 314 C867 302 878 292 890 306 C904 326 916 329 925 326 L925 348 L812 348Z" fill="#59CFE8" fill-opacity=".12"/><path id="trend-line" d="M812 330 C826 314 840 324 853 314 C867 302 878 292 890 306 C904 326 916 329 925 326" fill="none" stroke="#00A09D" stroke-width="2.5" stroke-linecap="round"/><circle cx="879" cy="292" r="4.2" fill="#F4B942" filter="url(#amberGlow)"/></g>
+  <g id="image-history-card"><rect x="957" y="247" width="148" height="118" rx="18" fill="url(#miniCard)" stroke="#DDE8EC"/><text x="975" y="272" class="label font navy">Image history</text><text x="975" y="290" class="bodySm font muted">Same SKU</text><g clip-path="url(#hist1)"><image href="../img/hero/platform/xray-fish-history-01.png" xlink:href="../img/hero/platform/xray-fish-history-01.png" x="975" y="299" width="26" height="26" preserveAspectRatio="xMidYMid slice"/></g><g clip-path="url(#hist2)"><image href="../img/hero/platform/xray-fish-history-02.png" xlink:href="../img/hero/platform/xray-fish-history-02.png" x="1006" y="299" width="26" height="26" preserveAspectRatio="xMidYMid slice"/></g><g clip-path="url(#hist3)"><image href="../img/hero/platform/xray-fish-history-03.png" xlink:href="../img/hero/platform/xray-fish-history-03.png" x="1037" y="299" width="26" height="26" preserveAspectRatio="xMidYMid slice"/></g><g clip-path="url(#hist4)"><image href="../img/hero/platform/xray-fish-history-04.png" xlink:href="../img/hero/platform/xray-fish-history-04.png" x="1068" y="299" width="26" height="26" preserveAspectRatio="xMidYMid slice"/></g><rect x="975" y="299" width="26" height="26" rx="7" fill="none" stroke="#59CFE8" stroke-width="1.7"/><path d="M976 345 H1088" stroke="#D8E5EB" stroke-width="4" stroke-linecap="round"/><path d="M976 345 H1052" stroke="#00A09D" stroke-width="4" stroke-linecap="round"/></g>
+  <g id="system-health-card"><rect x="793" y="381" width="148" height="78" rx="18" fill="url(#miniCard)" stroke="#DDE8EC"/><circle cx="820" cy="421" r="18" fill="none" stroke="#D8E5EB" stroke-width="5"/><path id="health-ring" d="M820 403 A18 18 0 1 1 806 433" fill="none" stroke="#00A09D" stroke-width="5" stroke-linecap="round"/><text x="812" y="426" class="labelSm font navy">88</text><text x="852" y="414" class="label font navy">System health</text><text x="852" y="433" class="bodySm font muted">Operational</text></g>
+  <g id="support-card"><rect x="957" y="381" width="148" height="78" rx="18" fill="url(#miniCard)" stroke="#DDE8EC"/><path d="M984 437 C977 432 975 424 979 416 C983 408 991 405 1000 407 C1009 409 1016 418 1014 428 C1012 437 1004 442 994 441" fill="none" stroke="#00A09D" stroke-width="2.2" stroke-linecap="round"/><path d="M978 426 H987 L991 416 L997 435 L1003 426 H1016" fill="none" stroke="#00A09D" stroke-width="2" stroke-linecap="round"/><text x="1030" y="414" class="label font navy">Support</text><text x="1030" y="433" class="bodySm font muted">Monitored</text></g>
+</g>
+<g id="progress-rail" data-layer="08-progress-rail"><path d="M190 546 H990" stroke="#fff" stroke-opacity=".18" stroke-width="3" stroke-linecap="round"/><path id="progress-fill" d="M190 546 H990" stroke="#59CFE8" stroke-opacity=".9" stroke-width="3" stroke-linecap="round" filter="url(#aquaGlow)"/><g id="step-inspect" class="step step-1"><circle cx="190" cy="546" r="9" fill="#00A09D" stroke="#A7F3F2" stroke-opacity=".46" stroke-width="2"/><text x="190" y="527" text-anchor="middle" class="label font" fill="#DFFAFE">Inspect</text></g><g id="step-analyze" class="step step-2"><circle cx="390" cy="546" r="9" fill="#00A09D" stroke="#A7F3F2" stroke-opacity=".46" stroke-width="2"/><text x="390" y="527" text-anchor="middle" class="label font" fill="#DFFAFE">Analyze</text></g><g id="step-connect" class="step step-3"><circle cx="590" cy="546" r="9" fill="#00A09D" stroke="#A7F3F2" stroke-opacity=".46" stroke-width="2"/><text x="590" y="527" text-anchor="middle" class="label font" fill="#DFFAFE">Connect</text></g><g id="step-alert" class="step step-4"><circle cx="790" cy="546" r="9" fill="#00A09D" stroke="#A7F3F2" stroke-opacity=".46" stroke-width="2"/><text x="790" y="527" text-anchor="middle" class="label font" fill="#DFFAFE">Alert</text></g><g id="step-support" class="step step-5"><circle cx="990" cy="546" r="9" fill="#00A09D" stroke="#A7F3F2" stroke-opacity=".46" stroke-width="2"/><text x="990" y="527" text-anchor="middle" class="label font" fill="#DFFAFE">Support</text></g></g>
+</svg>
