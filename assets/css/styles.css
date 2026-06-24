@@ -927,6 +927,32 @@ h3 {
   margin-bottom: 0;
 }
 
+.page-subnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0 0;
+}
+
+.page-subnav a {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid rgba(89, 207, 232, 0.26);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.page-subnav a:hover,
+.page-subnav a:focus {
+  background: rgba(89, 207, 232, 0.12);
+  color: var(--teal);
+}
+
 .resource-card {
   min-height: 100%;
   display: flex;
@@ -944,6 +970,14 @@ h3 {
   max-height: 210px;
   object-fit: contain;
   margin-bottom: 8px;
+}
+
+.resource-card .image-link {
+  display: block;
+}
+
+.resource-card .image-link img {
+  margin-bottom: 0;
 }
 
 .resource-card .button {
@@ -992,6 +1026,15 @@ h3 {
 .spec-item img {
   max-height: 92px;
   object-fit: contain;
+}
+
+.spec-item .image-link {
+  display: block;
+}
+
+.spec-item .image-link img {
+  display: block;
+  margin: 0;
 }
 
 .industry-layout {
