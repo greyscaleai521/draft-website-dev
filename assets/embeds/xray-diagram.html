@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html,
+body { margin: 0; overflow: hidden; background: transparent; font-family: Inter, Arial, sans-serif; }
+/* X-Ray Diagram Styles */
+.xray-diagram-wrapper {
+    position: relative;
+    background: white;
+    padding: 20px;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+.xray-diagram-wrapper svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+@keyframes moveConveyor {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(590px); }
+}
+.xray-diagram-wrapper .conveyor-item {
+    animation: moveConveyor 8s linear infinite;
+}
+.xray-diagram-wrapper .conveyor-item:nth-child(2) {
+    animation-delay: -2.5s;
+}
+.xray-diagram-wrapper .conveyor-item:nth-child(3) {
+    animation-delay: -5s;
+}
+.xray-diagram-wrapper .conveyor-item.animating-to-result {
+    animation: none !important;
+}
+.xray-diagram-wrapper .conveyor-item.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+.xray-diagram-wrapper .xray-source {
+    animation: pulse 2s ease-in-out infinite;
+}
+.xray-diagram-wrapper .data-line {
+    stroke-dasharray: 8, 5;
+}
+.xray-diagram-wrapper .label-circle {
+    cursor: pointer;
+    fill: #93c5fd;
+    stroke: white;
+    stroke-width: 3;
+}
+.xray-diagram-wrapper .label-circle:hover {
+    fill: #60a5fa;
+    stroke-width: 4;
+    filter: drop-shadow(0 0 4px rgba(147, 197, 253, 0.6));
+}
+.xray-diagram-wrapper .label-text {
+    font-size: 14px;
+    font-weight: bold;
+    fill: white;
+    pointer-events: none;
+    user-select: none;
+}
+.xray-diagram-wrapper .xray-tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.5;
+    max-width: 300px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    /* Fix for Duda alignment issues */
+    margin: 0 !important;
+    text-align: left !important;
+    transform: none !important;
+}
+.xray-diagram-wrapper .xray-tooltip.visible {
+    opacity: 1;
+}
+.xray-diagram-wrapper .xray-tooltip::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.9);
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.xray-diagram-wrapper { max-width: 1120px; padding: 6px; }
+.xray-diagram-wrapper svg { max-height: 520px; }
+</style>
+</head>
+<body>
+<div class="u_1681161758 xray-diagram-wrapper" id="1681161758"> <svg viewBox="0 0 1200 590" xmlns="http://www.w3.org/2000/svg"><!-- Arrow marker definitions and gradients --> <defs> <marker id="arrowhead" markerwidth="10" markerheight="10" refx="5" refy="3" orient="auto"> <polygon points="0 0, 10 3, 0 6" fill="#2563eb"></polygon>
+</marker>
+ <marker id="arrowhead-green" markerwidth="8" markerheight="8" refx="4" refy="2.5" orient="auto"> <polygon points="0 0, 8 2.5, 0 5" fill="#10b981"></polygon>
+</marker>
+ <marker id="arrowhead-red" markerwidth="8" markerheight="8" refx="4" refy="2.5" orient="auto"> <polygon points="0 0, 8 2.5, 0 5" fill="#ef4444"></polygon>
+</marker>
+ <lineargradient id="silverGradient" x1="0%" y1="0%" x2="0%" y2="100%"> <stop offset="0%" style="stop-color:#c0c0c0;stop-opacity:1"></stop>
+ <stop offset="50%" style="stop-color:#e8e8e8;stop-opacity:1"></stop>
+ <stop offset="100%" style="stop-color:#a8a8a8;stop-opacity:1"></stop>
+</lineargradient>
+</defs>
+<!-- Conveyor Belt (blue outline only) --> <rect x="80" y="520" width="1040" height="40" fill="none" stroke="#2563eb" stroke-width="3" rx="5"></rect>
+<!-- Conveyor Rollers (circular) with rotation indicators --> <g transform="translate(120, 540)"> <circle r="10" fill="#93c5fd" stroke="#2563eb" stroke-width="1"></circle>
+ <line x1="0" y1="-10" x2="0" y2="10" stroke="#2563eb" stroke-width="1.5"> <animatetransform attributename="transform" type="rotate" values="0;360" dur="2s" repeatcount="indefinite"></animatetransform>
+</line>
+</g>
+ <g transform="translate(180, 540)"> <circle r="10" fill="#93c5fd" stroke="#2563eb" stroke-width="1"></circle>
+ <line x1="0" y1="-10" x2="0" y2="10" stroke="#2563eb" stroke-width="1.5"> <animatetransform attributename="transform" type="rotate" values="0;360" dur="2s" repeatcount="indefinite"></animatetransform>
+</line>
+</g>
+ <g transform="translate(240, 540)"> <circle r="10" fill="#93c5fd" stroke="#2563eb" stroke-width="1"></circle>
+ <line x1="0" y1="-10" x2="0" y2="10" stroke="#2563eb" stroke-width="1.5"> <animatetransform attributename="transform" type="rotate" values="0;360" dur="2s" repeatcount="indefinite"></animatetransform>
+</line>
+</g>
+ <g transform="translate(300, 540)"> <circle r="10" fill="#93c5fd" stroke="#2563eb" stroke-width="1"></circle>
+ <line x1="0" y1="-10" x2="0" y2="10" stroke="#2563eb" stroke-width="1.5"> <animatetransform attributename="transform" type="rotate" values="0;360" dur="2s" repeatcount="indefinite"></animatetransform>
+</line>
+</g>
+ <g transform="translate(360, 540)"> <circle r="10" fill="#93c5fd" stroke="#2563eb" stroke-width="1"></circle>
+ <line x1="0" y1="-10" x2="0" y2="10" stroke="#2563eb" stroke-width="1.5"> <animatetransform attributename="transform" type="rotate" values="0;360" dur="2s" repeatcount="indefinite"></animatetransform>
+</line>
+</g>
+ <g transform="translate(420, 540)"> <circle r="10" fill="#93c5fd" stroke="#2563eb" stroke-width="1"></circle>
+ <line x1="0" y1="-10" x2="0" y2="10" stroke="#2563eb" stroke-width="1.5"> <animatetransform attributename="transform" type="rotate" values="0;360" dur="2s" repeatcount="indefinite"></animatetransform>
+</line>
+</g>
+ <g transform="translate(480, 540)"> <circle r="10" fill="#93c5fd" stroke="#2563eb" stroke-width="1"></circle>
+ <line x1="0" y1="-10" x2="0" y2="10" stroke="#2563eb" stroke-width="1.5"> <animatetransform attributename="transform" type="rotate" values="0;360" dur="2s" repeatcount="indefinite"></animatetransform>
+</line>
+</g>
+ <g transform="translate(540, 540)"> <circle r="10" fill="#93c5fd" stroke="#2563eb" stroke-width="1"></circle>
+ <line x1="0" y1="-10" x2="0" y2="10" stroke="#2563eb" stroke-width="1.5"> <animatetransform attributename="transform" type="rotate" values="0;360" dur="2s" repeatcount="indefinite"></animatetransform>
+</line>
+</g>
+ <g transform="translate(600, 540)"> <circle r="10" fill="#93c5fd" stroke="#2563eb" stroke-width="1"></circle>
+ <line x1="0" y1="-10" x2="0" y2="10" stroke="#2563eb" stroke-width="1.5"> <animatetransform attributename="transform" type="rotate" values="0;360" dur="2s" repeatcount="indefinite"></animatetransform>
+</line>
+</g>
+ <g transform="translate(660, 540)"> <circle r="10" fill="#93c5fd" stroke="#2563eb" stroke-width="1"></circle>
+ <line x1="0" y1="-10" x2="0" y2="10" stroke="#2563eb" stroke-width="1.5"> <animatetransform attributename="transform" type="rotate" values="0;360" dur="2s" repeatcount="indefinite"></animatetransform>
+</line>
+</g>
+ <g transform="translate(720, 540)"> <circle r="10" fill="#93c5fd" stroke="#2563eb" stroke-width="1"></circle>
+ <line x1="0" y1="-10" x2="0" y2="10" stroke="#2563eb" stroke-width="1.5"> <animatetransform attributename="transform" type="rotate" values="0;360" dur="2s" repeatcount="indefinite"></animatetransform>
+</line>
+</g>
+ <g transform="translate(780, 540)"> <circle r="10" fill="#93c5fd" stroke="#2563eb" stroke-width="1"></circle>
+ <line x1="0" y1="-10" x2="0" y2="10" stroke="#2563eb" stroke-width="1.5"> <animatetransform attributename="transform" type="rotate" values="0;360" dur="2s" repeatcount="indefinite"></animatetransform>
+</line>
+</g>
+ <g transform="translate(840, 540)"> <circle r="10" fill="#93c5fd" stroke="#2563eb" stroke-width="1"></circle>
+ <line x1="0" y1="-10" x2="0" y2="10" stroke="#2563eb" stroke-width="1.5"> <animatetransform attributename="transform" type="rotate" values="0;360" dur="2s" repeatcount="indefinite"></animatetransform>
+</line>
+</g>
+ <g transform="translate(900, 540)"> <circle r="10" fill="#93c5fd" stroke="#2563eb" stroke-width="1"></circle>
+ <line x1="0" y1="-10" x2="0" y2="10" stroke="#2563eb" stroke-width="1.5"> <animatetransform attributename="transform" type="rotate" values="0;360" dur="2s" repeatcount="indefinite"></animatetransform>
+</line>
+</g>
+ <g transform="translate(960, 540)"> <circle r="10" fill="#93c5fd" stroke="#2563eb" stroke-width="1"></circle>
+ <line x1="0" y1="-10" x2="0" y2="10" stroke="#2563eb" stroke-width="1.5"> <animatetransform attributename="transform" type="rotate" values="0;360" dur="2s" repeatcount="indefinite"></animatetransform>
+</line>
+</g>
+ <g transform="translate(1020, 540)"> <circle r="10" fill="#93c5fd" stroke="#2563eb" stroke-width="1"></circle>
+ <line x1="0" y1="-10" x2="0" y2="10" stroke="#2563eb" stroke-width="1.5"> <animatetransform attributename="transform" type="rotate" values="0;360" dur="2s" repeatcount="indefinite"></animatetransform>
+</line>
+</g>
+ <g transform="translate(1080, 540)"> <circle r="10" fill="#93c5fd" stroke="#2563eb" stroke-width="1"></circle>
+ <line x1="0" y1="-10" x2="0" y2="10" stroke="#2563eb" stroke-width="1.5"> <animatetransform attributename="transform" type="rotate" values="0;360" dur="2s" repeatcount="indefinite"></animatetransform>
+</line>
+</g>
+<!-- Items on Conveyor (before inspection) - light blue with white borders --> <g class="conveyor-item" data-item-id="1"> <rect x="130" y="480" width="50" height="35" fill="#bfdbfe" stroke="white" stroke-width="2.5" rx="2"></rect>
+</g>
+ <g class="conveyor-item" data-item-id="2"> <rect x="220" y="480" width="50" height="35" fill="#bfdbfe" stroke="white" stroke-width="2.5" rx="2"></rect>
+</g>
+ <g class="conveyor-item" data-item-id="3"> <rect x="310" y="480" width="50" height="35" fill="#bfdbfe" stroke="white" stroke-width="2.5" rx="2"></rect>
+</g>
+<!-- X-Ray Inspection Machine (large silver machine) --> <rect x="480" y="190" width="180" height="320" fill="url(#silverGradient)" stroke="#888888" stroke-width="4" rx="8"></rect>
+<!-- Central white opening for items to pass through --> <rect x="510" y="280" width="120" height="100" fill="white" stroke="#d1d5db" stroke-width="2"></rect>
+<!-- X-Ray scanning animation in white opening when package passes through --> <g id="xray-symbol"><!-- Vertical scanning lines moving left to right (X-ray beam scanning) --> <line x1="520" y1="280" x2="520" y2="380" stroke="#3b82f6" stroke-width="3" opacity="0.8"> <animate attributename="x1" values="520;620;520" dur="2s" repeatcount="indefinite"></animate>
+ <animate attributename="x2" values="520;620;520" dur="2s" repeatcount="indefinite"></animate>
+ <animate attributename="opacity" values="0;0.9;0.9;0" dur="2s" repeatcount="indefinite"></animate>
+</line>
+ <line x1="530" y1="280" x2="530" y2="380" stroke="#60a5fa" stroke-width="2.5" opacity="0.7"> <animate attributename="x1" values="520;620;520" dur="2s" repeatcount="indefinite" begin="0.1s"></animate>
+ <animate attributename="x2" values="520;620;520" dur="2s" repeatcount="indefinite" begin="0.1s"></animate>
+ <animate attributename="opacity" values="0;0.8;0.8;0" dur="2s" repeatcount="indefinite" begin="0.1s"></animate>
+</line>
+ <line x1="540" y1="280" x2="540" y2="380" stroke="#93c5fd" stroke-width="2" opacity="0.6"> <animate attributename="x1" values="520;620;520" dur="2s" repeatcount="indefinite" begin="0.2s"></animate>
+ <animate attributename="x2" values="520;620;520" dur="2s" repeatcount="indefinite" begin="0.2s"></animate>
+ <animate attributename="opacity" values="0;0.7;0.7;0" dur="2s" repeatcount="indefinite" begin="0.2s"></animate>
+</line>
+<!-- X-ray beam pattern - diagonal rays from source to detector --> <line x1="570" y1="280" x2="530" y2="330" stroke="#3b82f6" stroke-width="2" opacity="0.6" stroke-dasharray="3,2"> <animate attributename="opacity" values="0.3;0.8;0.3" dur="1.5s" repeatcount="indefinite"></animate>
+</line>
+ <line x1="570" y1="280" x2="550" y2="330" stroke="#3b82f6" stroke-width="2" opacity="0.6" stroke-dasharray="3,2"> <animate attributename="opacity" values="0.3;0.8;0.3" dur="1.5s" repeatcount="indefinite" begin="0.2s"></animate>
+</line>
+ <line x1="570" y1="280" x2="570" y2="330" stroke="#3b82f6" stroke-width="2.5" opacity="0.7" stroke-dasharray="3,2"> <animate attributename="opacity" values="0.4;0.9;0.4" dur="1.5s" repeatcount="indefinite" begin="0.1s"></animate>
+</line>
+ <line x1="570" y1="280" x2="590" y2="330" stroke="#3b82f6" stroke-width="2" opacity="0.6" stroke-dasharray="3,2"> <animate attributename="opacity" values="0.3;0.8;0.3" dur="1.5s" repeatcount="indefinite" begin="0.2s"></animate>
+</line>
+ <line x1="570" y1="280" x2="610" y2="330" stroke="#3b82f6" stroke-width="2" opacity="0.6" stroke-dasharray="3,2"> <animate attributename="opacity" values="0.3;0.8;0.3" dur="1.5s" repeatcount="indefinite"></animate>
+</line>
+</g>
+<!-- Detector Section (A) - bottom section, dark blue --> <rect x="480" y="480" width="180" height="40" fill="#1e3a8a" stroke="#1e40af" stroke-width="2" rx="3"></rect>
+ <text x="570" y="505" text-anchor="middle" fill="white" font-size="14" font-weight="bold">DETECTOR</text>
+<!-- Computer Section (B) - top section, dark blue --> <rect x="480" y="195" width="180" height="50" fill="#1e3a8a" stroke="#1e40af" stroke-width="2" rx="3"></rect>
+ <text x="570" y="220" text-anchor="middle" fill="white" font-size="14" font-weight="bold">COMPUTER</text>
+<!-- X-Ray Source Section (C) - middle section, dark blue --> <rect x="480" y="250" width="180" height="30" fill="#1e3a8a" stroke="#1e40af" stroke-width="2" rx="3" class="xray-source"></rect>
+ <text x="570" y="270" text-anchor="middle" fill="white" font-size="14" font-weight="bold">XRAY SOURCE</text>
+<!-- Logo "G" on lower front of machine (on front face, in empty space between white opening and detector) - extracted from Greyscale AI logo (leftmost letter) --><!-- Combining line 17 (upper curved part) and line 18 (lower/vertical part) to form complete G --> <g transform="translate(570, 430) scale(0.27) translate(-214.7, -170.75)"><!-- G letter - upper curved part (line 17) --> <path d="M 126.4 155.8 L 150.8 155.8 C 152.7 155.8 154.3 154.5 154.7 152.7 C 160.6 128.8 174.2 107.4 193.2 91.8 C 241.6 52.3 312.9 59.4 352.5 107.6 C 353.9 109.3 356.3 109.6 358 108.3 L 367.6 100.9 L 377.1 93.7 C 378.9 92.3 379.2 89.8 377.9 88.1 C 377.9 88 377.8 88 377.8 88 C 327.1 25.7 235.5 16.3 173.2 67 C 147.1 88.3 129.1 118 122.5 151 C 122 153.2 123.5 155.3 125.7 155.7 C 125.9 155.7 126.2 155.8 126.4 155.8 L 126.4 155.8 Z" fill="white" opacity="1"></path>
+<!-- G letter - lower/vertical part (line 18) - moved up slightly to close gap --> <g transform="translate(0, -12)"> <path d="M 393.4 176.8 L 32 176.9 L 32 181.7 L 264.9 181.7 L 264.9 204.7 C 264.9 206.9 266.7 208.7 268.9 208.7 C 268.9 208.7 268.9 208.7 268.9 208.7 L 359.7 208.7 C 361.9 208.7 363.7 210.5 363.7 212.7 C 363.7 213 363.7 213.2 363.6 213.5 C 359.9 236.6 347.5 257.4 329 271.9 C 310.6 285.9 288.1 293.4 264.9 293.3 C 212.7 293.2 167.3 257.5 154.7 206.8 C 154.3 205 152.7 203.8 150.8 203.8 L 126.4 203.8 C 124.2 203.8 122.4 205.5 122.4 207.8 C 122.4 208 122.4 208.2 122.5 208.5 C 136.2 276.3 195.7 325.1 264.9 325.2 C 335.7 327.6 395 272.2 397.4 201.5 C 397.6 198.6 397.6 195.6 397.4 192.7 L 397.4 180.7 C 397.4 178.5 395.6 176.8 393.4 176.8 L 393.4 176.8 Z" fill="white" opacity="1"></path>
+</g>
+<!-- Thin horizontal line through G - positioned at visual center --> <line x1="32" y1="170.75" x2="397" y2="170.75" stroke="white" stroke-width="6.8" opacity="1"></line>
+</g>
+<!-- Data Line to Cloud (dashed blue line from COMPUTER) --> <path d="M 570 200 Q 750 140 820 110" stroke="#2563eb" stroke-width="3" fill="none" stroke-dasharray="8,5" class="data-line" opacity="0.8"></path>
+<!-- Cloud Icon - professional cloud shape using SVG path (bigger) --> <g id="cloud" transform="translate(910, 110)"><!-- Cloud shape - professional cloud icon path (scaled up 1.3x) --> <path d="M -104,0
+                           C -117,-26 -91,-39 -65,-39
+                           C -65,-65 -26,-65 -26,-39
+                           C 0,-65 39,-65 39,-39
+                           C 65,-65 104,-52 104,-26
+                           C 130,-26 143,0 117,13
+                           C 130,39 104,65 65,65
+                           C 39,91 0,91 -26,65
+                           C -52,91 -91,91 -117,65
+                           C -143,39 -130,13 -104,0 Z" fill="#e0e7ff" stroke="#3b82f6" stroke-width="2.5" opacity="0.95"></path>
+<!-- Database Icon (near Label D, left side) - moved closer to center --> <g transform="translate(-35, 30)"><!-- Database cylinder base --> <ellipse cx="0" cy="8" rx="12" ry="3" fill="#3b82f6" opacity="0.8"></ellipse>
+<!-- Database cylinder body --> <rect x="-12" y="-8" width="24" height="16" fill="#60a5fa" opacity="0.9" rx="2"></rect>
+<!-- Database cylinder top --> <ellipse cx="0" cy="-8" rx="12" ry="3" fill="#3b82f6" opacity="0.8"></ellipse>
+<!-- Horizontal lines on database --> <line x1="-10" y1="-2" x2="10" y2="-2" stroke="#2563eb" stroke-width="1.5" opacity="0.6"></line>
+ <line x1="-10" y1="2" x2="10" y2="2" stroke="#2563eb" stroke-width="1.5" opacity="0.6"></line>
+</g>
+<!-- Rotating Gear/Cog Icon (near Label E, right side) - moved closer to center --> <g transform="translate(35, 30)"> <g> <animatetransform attributename="transform" type="rotate" values="0;360" dur="4s" repeatcount="indefinite"></animatetransform>
+<!-- Gear outer circle --> <circle cx="0" cy="0" r="14" fill="#3b82f6" opacity="0.9"></circle>
+<!-- Gear center circle --> <circle cx="0" cy="0" r="6" fill="#e0e7ff"></circle>
+<!-- Gear teeth (8 teeth) --> <rect x="-2" y="-18" width="4" height="6" fill="#2563eb" opacity="0.9"></rect>
+ <rect x="-2" y="12" width="4" height="6" fill="#2563eb" opacity="0.9"></rect>
+ <rect x="-18" y="-2" width="6" height="4" fill="#2563eb" opacity="0.9"></rect>
+ <rect x="12" y="-2" width="6" height="4" fill="#2563eb" opacity="0.9"></rect>
+<!-- Diagonal teeth --> <rect x="-13" y="-13" width="4" height="6" fill="#2563eb" opacity="0.9" transform="rotate(45)"></rect>
+ <rect x="9" y="9" width="4" height="6" fill="#2563eb" opacity="0.9" transform="rotate(45)"></rect>
+ <rect x="9" y="-13" width="4" height="6" fill="#2563eb" opacity="0.9" transform="rotate(-45)"></rect>
+ <rect x="-13" y="9" width="4" height="6" fill="#2563eb" opacity="0.9" transform="rotate(-45)"></rect>
+</g>
+</g>
+<!-- Arrow from Database to Gear - moved 20px higher --> <path d="M -23 10 Q 0 0 23 10" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"></path>
+<!-- Arrow from Gear to Database - moved 20px lower --> <path d="M 23 50 Q 0 60 -23 50" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"></path>
+<!-- Label D - Data Storage (inside cloud, left side) --> <circle class="label-circle" cx="-70" cy="30" r="16" data-label="D"></circle>
+ <text x="-70" y="35" text-anchor="middle" class="label-text" font-size="15" font-weight="bold">D</text>
+<!-- Label E - Processing (inside cloud, right side) --> <circle class="label-circle" cx="70" cy="30" r="16" data-label="E"></circle>
+ <text x="70" y="35" text-anchor="middle" class="label-text" font-size="15" font-weight="bold">E</text>
+<!-- Label F - Cloud (inside cloud, top center) --> <circle class="label-circle" cx="0" cy="-25" r="16" data-label="F"></circle>
+ <text x="0" y="-20" text-anchor="middle" class="label-text" font-size="15" font-weight="bold">F</text>
+</g>
+<!-- Label A - Detector (overlapping from left side) --> <circle class="label-circle" cx="500" cy="500" r="16" data-label="A"></circle>
+ <text x="500" y="507" text-anchor="middle" class="label-text" font-size="15" font-weight="bold">A</text>
+<!-- Label B - Computer (overlapping from left side) --> <circle class="label-circle" cx="500" cy="220" r="16" data-label="B"></circle>
+ <text x="500" y="227" text-anchor="middle" class="label-text" font-size="15" font-weight="bold">B</text>
+<!-- Label C - Computer (overlapping from right side) --> <circle class="label-circle" cx="640" cy="220" r="16" data-label="C"></circle>
+ <text x="640" y="227" text-anchor="middle" class="label-text" font-size="15" font-weight="bold">C</text>
+<!-- Decision Point Icon - rotating arrows in circle --> <g transform="translate(745, 490)"><!-- Outer circle with solid edge and white fill --> <circle cx="0" cy="0" r="20" fill="white" stroke="#2563eb" stroke-width="3"></circle>
+<!-- Green rotating arrow --> <g> <animatetransform attributename="transform" type="rotate" values="0;360" dur="3s" repeatcount="indefinite"></animatetransform>
+ <path d="M 0 -12 L -4 -4 L 0 -2 L 4 -4 Z" fill="#10b981" stroke="#10b981" stroke-width="1"></path>
+ <line x1="0" y1="0" x2="0" y2="-12" stroke="#10b981" stroke-width="2.5" stroke-linecap="round"></line>
+</g>
+<!-- Red rotating arrow (rotating in opposite direction) --> <g> <animatetransform attributename="transform" type="rotate" values="360;0" dur="3s" repeatcount="indefinite"></animatetransform>
+ <path d="M 0 12 L -4 4 L 0 2 L 4 4 Z" fill="#ef4444" stroke="#ef4444" stroke-width="1"></path>
+ <line x1="0" y1="0" x2="0" y2="12" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"></line>
+</g>
+</g>
+<!-- Accept Arrow (Green) - starting from middle of top side of package box, with buffer before green box --> <path d="M 745 465 L 780 405" stroke="#10b981" stroke-width="4" fill="none" marker-end="url(#arrowhead-green)" class="accept-arrow" opacity="0.9"></path>
+ <rect x="790" y="360" width="90" height="60" fill="#bfdbfe" stroke="#10b981" stroke-width="3" rx="3"></rect>
+<!-- Green checkmark (larger) --> <path d="M 815 395 L 830 410 L 855 380" stroke="#10b981" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+<!-- Reject Arrow (Red) - starting from middle of right side of package box --> <path d="M 770 497.5 L 910 440" stroke="#ef4444" stroke-width="4" fill="none" marker-end="url(#arrowhead-red)" class="reject-arrow" opacity="0.9"></path>
+ <rect x="920" y="370" width="90" height="60" fill="#bfdbfe" stroke="#ef4444" stroke-width="3" rx="3"></rect>
+<!-- Red X (larger) --> <line x1="940" y1="385" x2="990" y2="415" stroke="#ef4444" stroke-width="6" stroke-linecap="round"></line>
+ <line x1="990" y1="385" x2="940" y2="415" stroke="#ef4444" stroke-width="6" stroke-linecap="round"></line>
+</svg>
+<!-- Tooltip --> <div class="xray-tooltip" id="xray-tooltip"></div>
+</div>
+ <script id="1141475530">
+
+
+         (function() {
+               // Tooltip content mapping
+               const tooltipContent = {
+                   'A': 'High Speed Image Capture',
+                   'B': 'Proprietary Software for Image Processing',
+                   'C': 'Deep Learning Decision Software Offering a Range of Inspection Solutions',
+                   'D': 'Cloud-Based Data Collection and "over the air" Software and Solutions Updates',
+                   'E': 'AI Driven Analysis, Solutions And Storage of All Operational Data',
+                   'F': 'Secure and Scalable SaaS Platform Offering Dynamic Customer Portal'
+               };
+             // Wait for DOM to be ready
+             function initTooltips() {
+                 const tooltip = document.getElementById('xray-tooltip');
+                 if (!tooltip) return;
+                 const wrapper = tooltip.parentElement;
+                 if (!wrapper) return;
+                 const labelCircles = wrapper.querySelectorAll('.label-circle');
+                 if (labelCircles.length === 0) return;
+                 labelCircles.forEach(circle => {
+                     const label = circle.getAttribute('data-label');
+                     const offset = 12; // Increased offset slightly
+                     circle.addEventListener('mouseenter', function(e) {
+                         const containerRect = wrapper.getBoundingClientRect();
+                         tooltip.textContent = tooltipContent[label];
+                         tooltip.style.display = 'block';
+                         const bbox = circle.getBoundingClientRect();
+                         // Calculate position relative to the tooltip's parent container
+                         const circleCenterX = bbox.left + bbox.width / 2 - containerRect.left;
+                         const circleCenterY = bbox.top + bbox.height / 2 - containerRect.top;
+                         const circleRadius = bbox.width / 2;
+                         // Force layout recalculation for offsetWidth/Height
+                         void tooltip.offsetWidth;
+                         let tooltipX = circleCenterX - tooltip.offsetWidth / 2;
+                         let tooltipY = circleCenterY - circleRadius - offset - tooltip.offsetHeight;
+                         // Bounds checking relative to container width
+                         if (tooltipX < 5) tooltipX = 5;
+                         if (tooltipX + tooltip.offsetWidth > containerRect.width - 5) {
+                             tooltipX = containerRect.width - tooltip.offsetWidth - 5;
+                         }
+                         // Prevent tooltip from going off the top of the container
+                         if (tooltipY < 5) {
+                             tooltipY = circleCenterY + circleRadius + offset;
+                             tooltip.classList.add('tooltip-bottom'); // Could be used for arrow positioning
+                         } else {
+                             tooltip.classList.remove('tooltip-bottom');
+                         }
+                         tooltip.style.left = Math.round(tooltipX) + 'px';
+                         tooltip.style.top = Math.round(tooltipY) + 'px';
+                         tooltip.classList.add('visible');
+                         tooltip.style.opacity = '1';
+                     });
+                     circle.addEventListener('mouseleave', function() {
+                         tooltip.classList.remove('visible');
+                         tooltip.style.opacity = '0';
+                         tooltip.style.display = 'none';
+                     });
+                 });
+             }
+               if (document.readyState === 'loading') {
+                   document.addEventListener('DOMContentLoaded', initTooltips);
+               } else {
+                   initTooltips();
+               }
+           })();
+
+
+                </script>
+ <script id="1614392615">
+
+
+         (function() {
+               // Conveyor box animation logic
+               function initConveyorAnimation() {
+                   const svg = document.querySelector('.xray-diagram-wrapper svg');
+                   if (!svg) return;
+                   const decisionPointX = 720; // X position where boxes make decision (in SVG coordinates)
+                   const greenArrowStart = { x: 745, y: 480 };
+                   const greenBoxCenter = { x: 835, y: 400 };
+                   const redArrowStart = { x: 770, y: 497.5 };
+                   const redBoxCenter = { x: 965, y: 400 };
+                   const processedItems = new Set();
+                   const itemPositions = new Map(); // Track positions for each item
+                   function getBoxPosition(item) {
+                       const rect = item.querySelector('rect');
+                       if (!rect) return null;
+                       const baseX = parseFloat(rect.getAttribute('x'));
+                       const computedStyle = window.getComputedStyle(item);
+                       const transform = computedStyle.transform;
+                       if (transform && transform !== 'none') {
+                           const matrix = transform.match(/matrix\(([^)]+)\)/);
+                           if (matrix) {
+                               const values = matrix[1].split(',').map(v => parseFloat(v.trim()));
+                               const translateX = values[4] || 0;
+                               // Convert pixel translation to SVG coordinates
+                               const svgRect = svg.getBoundingClientRect();
+                               const viewBox = svg.viewBox.baseVal;
+                               const scaleX = svgRect.width / viewBox.width;
+                               return baseX + (translateX / scaleX);
+                           }
+                       }
+                       return baseX;
+                   }
+                   function addMarkToBox(item, isGreen) {
+                       const rect = item.querySelector('rect');
+                       if (!rect) return;
+                       const boxX = parseFloat(rect.getAttribute('x'));
+                       const boxY = parseFloat(rect.getAttribute('y'));
+                       const boxWidth = parseFloat(rect.getAttribute('width'));
+                       const boxHeight = parseFloat(rect.getAttribute('height'));
+                       const centerX = boxX + boxWidth / 2;
+                       const centerY = boxY + boxHeight / 2;
+                       if (isGreen) {
+                           // Add green checkmark
+                           const checkmark = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                           checkmark.setAttribute('d', `M ${centerX - 8} ${centerY} L ${centerX - 2} ${centerY + 6} L ${centerX + 8} ${centerY - 4}`);
+                           checkmark.setAttribute('stroke', '#10b981');
+                           checkmark.setAttribute('stroke-width', '4');
+                           checkmark.setAttribute('fill', 'none');
+                           checkmark.setAttribute('stroke-linecap', 'round');
+                           checkmark.setAttribute('stroke-linejoin', 'round');
+                           item.appendChild(checkmark);
+                           rect.setAttribute('stroke', '#10b981');
+                           rect.setAttribute('stroke-width', '3');
+                       } else {
+                           // Add red X
+                           const line1 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                           line1.setAttribute('x1', centerX - 6);
+                           line1.setAttribute('y1', centerY - 6);
+                           line1.setAttribute('x2', centerX + 6);
+                           line1.setAttribute('y2', centerY + 6);
+                           line1.setAttribute('stroke', '#ef4444');
+                           line1.setAttribute('stroke-width', '4');
+                           line1.setAttribute('stroke-linecap', 'round');
+                           item.appendChild(line1);
+                           const line2 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                           line2.setAttribute('x1', centerX + 6);
+                           line2.setAttribute('y1', centerY - 6);
+                           line2.setAttribute('x2', centerX - 6);
+                           line2.setAttribute('y2', centerY + 6);
+                           line2.setAttribute('stroke', '#ef4444');
+                           line2.setAttribute('stroke-width', '4');
+                           line2.setAttribute('stroke-linecap', 'round');
+                           item.appendChild(line2);
+                           rect.setAttribute('stroke', '#ef4444');
+                           rect.setAttribute('stroke-width', '3');
+                       }
+                   }
+                   function animateToResult(item, isGreen) {
+                       const rect = item.querySelector('rect');
+                       if (!rect) return;
+                       const baseX = parseFloat(rect.getAttribute('x'));
+                       const baseY = parseFloat(rect.getAttribute('y'));
+                       // 1. Capture current visual state (exact matrix)
+                       const computedStyle = window.getComputedStyle(item);
+                       const currentTransform = computedStyle.transform;
+                       // 2. Stop the animation loop and lock position
+                       // Using inline style to override everything immediately
+                       item.style.animation = 'none';
+                       item.style.transform = currentTransform;
+                       item.classList.add('animating-to-result');
+                       // Calculate target position in SVG units
+                       let targetX, targetY;
+                       if (isGreen) {
+                           targetX = greenBoxCenter.x - 25;
+                           targetY = greenBoxCenter.y - 17.5;
+                       } else {
+                           targetX = redBoxCenter.x - 25;
+                           targetY = redBoxCenter.y - 17.5;
+                       }
+                       const dx = targetX - baseX;
+                       const dy = targetY - baseY;
+                       // 3. Use requestAnimationFrame to ensure the "lock" is rendered
+                       // before we start the transition to the new target.
+                       requestAnimationFrame(() => {
+                           requestAnimationFrame(() => {
+                               item.style.transition = 'transform 1.5s ease-in-out, opacity 0.3s ease-out 1.2s';
+                               // Note: 'px' in CSS transform on SVG refers to SVG user units
+                               item.style.transform = `translate(${dx}px, ${dy}px)`;
+                           });
+                       });
+                       // 4. Cleanup
+                       setTimeout(() => {
+                           item.style.opacity = '0';
+                           setTimeout(() => {
+                               if (item.parentNode) {
+                                   item.remove();
+                                   createNewItem(item.getAttribute('data-item-id'));
+                               }
+                           }, 350);
+                       }, 1500);
+                   }
+                   function createNewItem(itemId) {
+                       const svg = document.querySelector('.xray-diagram-wrapper svg');
+                       if (!svg) return;
+                       const startX = 130 + (parseInt(itemId) - 1) * 90;
+                       const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+                       g.setAttribute('class', 'conveyor-item');
+                       g.setAttribute('data-item-id', itemId);
+                       const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                       rect.setAttribute('x', startX);
+                       rect.setAttribute('y', '480');
+                       rect.setAttribute('width', '50');
+                       rect.setAttribute('height', '35');
+                       rect.setAttribute('fill', '#bfdbfe');
+                       rect.setAttribute('stroke', 'white');
+                       rect.setAttribute('stroke-width', '2.5');
+                       rect.setAttribute('rx', '2');
+                       g.appendChild(rect);
+                       // Find the last conveyor roller group to insert after it
+                       const allGroups = Array.from(svg.querySelectorAll('g'));
+                       const lastRollerGroup = allGroups.find(g => {
+                           const circle = g.querySelector('circle[fill="#93c5fd"]');
+                           return circle !== null;
+                       });
+                       if (lastRollerGroup && lastRollerGroup.nextSibling) {
+                           // Insert after the last roller, before other conveyor items
+                           svg.insertBefore(g, lastRollerGroup.nextSibling);
+                       } else {
+                           // Fallback: find first conveyor item and insert before it
+                           const firstConveyorItem = svg.querySelector('.conveyor-item');
+                           if (firstConveyorItem) {
+                               svg.insertBefore(g, firstConveyorItem);
+                           } else {
+                               // Last resort: append to SVG
+                               svg.appendChild(g);
+                           }
+                       }
+                   }
+                   function checkBoxPositions() {
+                       const items = Array.from(document.querySelectorAll('.conveyor-item'));
+                       items.forEach(item => {
+                           if (processedItems.has(item)) return;
+                           const currentX = getBoxPosition(item);
+                           if (currentX !== null && currentX >= decisionPointX && currentX < decisionPointX + 30) {
+                               processedItems.add(item);
+                               // Randomly choose green or red
+                               const isGreen = Math.random() > 0.5;
+                               // Add mark to box
+                               addMarkToBox(item, isGreen);
+                               // Animate to result box
+                               setTimeout(() => {
+                                   animateToResult(item, isGreen);
+                               }, 200);
+                           }
+                       });
+                   }
+                   // Check positions periodically
+                   setInterval(checkBoxPositions, 100);
+               }
+               if (document.readyState === 'loading') {
+                   document.addEventListener('DOMContentLoaded', initConveyorAnimation);
+               } else {
+                   initConveyorAnimation();
+               }
+           })();
+
+
+                </script>
+</body>
+</html>

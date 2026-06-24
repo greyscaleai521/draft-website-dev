@@ -780,6 +780,111 @@ h3 {
   background: linear-gradient(180deg, #fbfdfe, #eef6f8);
 }
 
+.inspection-system-visual {
+  margin: 34px auto 0;
+}
+
+.legacy-xray-visual {
+  width: min(1040px, 100%);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  box-shadow: 0 18px 44px rgba(16, 24, 32, 0.08);
+}
+
+.legacy-xray-visual iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1200 / 590;
+  border: 0;
+  background: #ffffff;
+}
+
+.inspection-system-visual figcaption {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  padding: 16px 18px 18px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.platform-steps {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 36px;
+}
+
+.platform-step-card {
+  position: relative;
+  display: flex;
+  min-height: 470px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, #ffffff, #f8fbfc);
+  box-shadow: 0 14px 34px rgba(16, 24, 32, 0.06);
+  flex-direction: column;
+}
+
+.platform-step-card:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  top: 58%;
+  right: -20px;
+  z-index: 2;
+  color: var(--teal);
+  font-size: 1.75rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.platform-step-heading {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.platform-step-heading span {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--teal);
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 900;
+}
+
+.platform-step-heading h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.platform-step-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.platform-step-visual {
+  display: flex;
+  min-height: 230px;
+  align-items: flex-end;
+  justify-content: center;
+  margin: auto 0 0;
+}
+
+.platform-step-visual img {
+  max-width: 100%;
+  max-height: 230px;
+  object-fit: contain;
+}
+
 .insights-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1456,8 +1561,13 @@ textarea {
   .card-grid.three,
   .card-grid.two,
   .markets-grid,
-  .architecture {
+  .architecture,
+  .platform-steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .platform-step-card:not(:last-child)::after {
+    display: none;
   }
 
   .product-strip {
@@ -1489,6 +1599,7 @@ textarea {
   .card-grid.two,
   .markets-grid,
   .architecture,
+  .platform-steps,
   .architecture-diagram,
   .insights-grid,
   .industry-examples,
@@ -1501,6 +1612,19 @@ textarea {
   .proof-band,
   .spec-item {
     grid-template-columns: 1fr;
+  }
+
+  .platform-step-card {
+    min-height: 0;
+  }
+
+  .platform-step-visual {
+    min-height: 0;
+    margin-top: 18px;
+  }
+
+  .platform-step-visual img {
+    max-height: 260px;
   }
 
   .spec-table-header {
