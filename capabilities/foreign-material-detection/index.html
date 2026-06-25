@@ -7,8 +7,8 @@
     <title>Foreign Material Detection | GreyscaleAI</title>
     <meta name="description" content="GreyscaleAI foreign material detection combines high-resolution x-ray inspection, AI review, and image evidence for food production teams.">
     <link rel="icon" href="../../assets/img/meta/favicon.ico">
-    <link rel="stylesheet" href="../../assets/css/styles.css">
-    <script defer src="../../assets/js/main.js"></script>
+    <link rel="stylesheet" href="../../assets/css/styles.css?v=fm-interactive-xray-cta">
+    <script defer src="../../assets/js/main.js?v=fm-interactive-xray-cta"></script>
   </head>
   <body>
     <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../index.html" aria-label="GreyscaleAI home"><img src="../../assets/img/logos/greyscale-ai-logo-white.png" alt="GreyscaleAI"></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle><span></span></button><ul class="nav-links" data-nav-links>
@@ -137,28 +137,67 @@
           <h2>Image evidence helps teams confirm what happened.</h2>
           <div class="xray-gallery">
             <article class="xray-card">
-              <div class="xray-sample">
-                <div class="xray-product"></div>
-                <span class="xray-highlight" data-label="Dense fragment" style="top:88px;left:96px;width:34px;height:34px;"></span>
-              </div>
-              <h3>Metal fragment in a formed product</h3>
-              <p>A compact dense object stands out clearly against the product body, making the event faster to verify.</p>
+              <figure class="fm-evidence-card" tabindex="0" role="button" aria-pressed="false" aria-label="X-ray evidence showing a small metal fragment in a finished product. Hover, focus, or tap to zoom into the highlighted red region." data-fm-evidence-card>
+                <div class="fm-evidence-card__stage">
+                  <img class="fm-evidence-card__base" src="../../assets/img/solutions/foreign-material/fm-metal-finished-product-base-canvas.png" alt="X-ray image of a finished food product with a small red detector region marking a metal fragment">
+                  <span class="fm-evidence-card__leader" aria-hidden="true"></span>
+                  <span class="fm-evidence-card__hotspot" aria-hidden="true"></span>
+                  <div class="fm-evidence-card__zoom" aria-hidden="true">
+                    <div class="fm-evidence-card__zoom-label">Zoomed evidence</div>
+                    <img src="../../assets/img/solutions/foreign-material/fm-metal-finished-product-zoom-crop.png" alt="Magnified crop of the highlighted metal fragment region">
+                    <strong>Metal fragment</strong>
+                    <span>Dense object inside the highlighted detector region.</span>
+                  </div>
+                </div>
+                <figcaption class="fm-evidence-card__hint">
+                  <span class="fm-evidence-card__eyebrow">Hover / Tap image</span>
+                  <span>Zoom highlighted evidence</span>
+                </figcaption>
+              </figure>
+              <h3>Metal fragment in a finished product</h3>
+              <p>A compact dense object can be reviewed directly in the X-ray evidence, even when the fragment is difficult to see at card size.</p>
             </article>
             <article class="xray-card">
-              <div class="xray-sample">
-                <div class="xray-product tray"></div>
-                <span class="xray-highlight" data-label="Bone suspect" style="top:118px;left:164px;width:42px;height:28px;border-radius:16px;"></span>
-              </div>
-              <h3>Bone risk in a tray-packed item</h3>
-              <p>Bone detection depends heavily on natural product density and package geometry, so application testing matters.</p>
+              <figure class="fm-evidence-card" tabindex="0" role="button" aria-pressed="false" aria-label="X-ray evidence showing a small bone fragment in a can of seafood. Hover, focus, or tap to zoom into the highlighted region." style="--fm-hotspot-x: 40.7250%; --fm-hotspot-y: 66.2380%; --fm-hotspot-size: clamp(40px, 15%, 62px); --fm-leader-angle: -16deg; --fm-leader-width: 46%;" data-fm-evidence-card>
+                <div class="fm-evidence-card__stage">
+                  <img class="fm-evidence-card__base" src="../../assets/img/solutions/foreign-material/bone-seafood-can-base-canvas.png" alt="X-ray image of a seafood can with a small bone fragment region marked for review">
+                  <span class="fm-evidence-card__leader" aria-hidden="true"></span>
+                  <span class="fm-evidence-card__hotspot" aria-hidden="true"></span>
+                  <div class="fm-evidence-card__zoom" aria-hidden="true">
+                    <div class="fm-evidence-card__zoom-label">Zoomed evidence</div>
+                    <img src="../../assets/img/solutions/foreign-material/bone-seafood-can-zoom-crop.png" alt="Magnified crop of the highlighted bone fragment region">
+                    <strong>Bone fragment</strong>
+                    <span>Small bone fragment inside the highlighted detector region.</span>
+                  </div>
+                </div>
+                <figcaption class="fm-evidence-card__hint">
+                  <span class="fm-evidence-card__eyebrow">Hover / Tap image</span>
+                  <span>Zoom highlighted evidence</span>
+                </figcaption>
+              </figure>
+              <h3>Bone fragment in a can of seafood</h3>
+              <p>A small bone fragment can be reviewed directly in the X-ray evidence, even when it is difficult to see at card size.</p>
             </article>
             <article class="xray-card">
-              <div class="xray-sample">
-                <div class="xray-product link"></div>
-                <span class="xray-highlight" data-label="Glass/stone" style="top:102px;left:212px;width:26px;height:26px;"></span>
-              </div>
-              <h3>Dense inclusion in linked product</h3>
-              <p>For irregular products, image review helps determine whether the event is a true contaminant or a benign density change.</p>
+              <figure class="fm-evidence-card" tabindex="0" role="button" aria-pressed="false" aria-label="X-ray evidence showing a bone in packaged chicken. Hover, focus, or tap to zoom into the highlighted region." style="--fm-hotspot-x: 31.9298%; --fm-hotspot-y: 48.9357%; --fm-hotspot-size: clamp(40px, 15%, 62px); --fm-leader-angle: -6deg; --fm-leader-width: 52%;" data-fm-evidence-card>
+                <div class="fm-evidence-card__stage">
+                  <img class="fm-evidence-card__base" src="../../assets/img/solutions/foreign-material/bone-packaged-chicken-base-canvas.png" alt="X-ray image of packaged chicken with a small bone marked for review">
+                  <span class="fm-evidence-card__leader" aria-hidden="true"></span>
+                  <span class="fm-evidence-card__hotspot" aria-hidden="true"></span>
+                  <div class="fm-evidence-card__zoom" aria-hidden="true">
+                    <div class="fm-evidence-card__zoom-label">Zoomed evidence</div>
+                    <img src="../../assets/img/solutions/foreign-material/bone-packaged-chicken-zoom-crop.png" alt="Magnified crop of the highlighted bone region">
+                    <strong>Bone in packaged chicken</strong>
+                    <span>Small bone inside the highlighted detector region.</span>
+                  </div>
+                </div>
+                <figcaption class="fm-evidence-card__hint">
+                  <span class="fm-evidence-card__eyebrow">Hover / Tap image</span>
+                  <span>Zoom highlighted evidence</span>
+                </figcaption>
+              </figure>
+              <h3>Bone in packaged chicken</h3>
+              <p>A small bone can be reviewed directly in the X-ray evidence, even when it is difficult to see at card size.</p>
             </article>
           </div>
         </div>

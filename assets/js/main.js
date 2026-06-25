@@ -24,3 +24,25 @@ if (hero && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     hero.style.setProperty("--hero-image", `url("${imageUrl}")`);
   }, 5200);
 }
+
+document.querySelectorAll("[data-fm-evidence-card]").forEach((card) => {
+  const setOpen = (isOpen) => {
+    card.classList.toggle("is-open", isOpen);
+    card.setAttribute("aria-pressed", String(isOpen));
+  };
+
+  card.addEventListener("click", () => {
+    setOpen(!card.classList.contains("is-open"));
+  });
+
+  card.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      setOpen(!card.classList.contains("is-open"));
+    }
+
+    if (event.key === "Escape") {
+      setOpen(false);
+    }
+  });
+});

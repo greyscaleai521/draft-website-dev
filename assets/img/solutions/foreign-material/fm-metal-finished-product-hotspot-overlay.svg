@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Hotspot highlighting small metal fragment">
+  <defs>
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0.91  0 1 0 0 0.31  0 0 1 0 0.23  0 0 0 0.70 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <circle cx="236.82" cy="208.34" r="38" fill="none" stroke="#e74e3a" stroke-width="4" filter="url(#softGlow)"/>
+  <circle cx="236.82" cy="208.34" r="6" fill="#e74e3a"/>
+  <path d="M 274.82 208.34 C 430 204.34, 620 118, 790 138" fill="none" stroke="#e74e3a" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 8"/>
+</svg>
