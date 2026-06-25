@@ -395,6 +395,19 @@ h3 {
   padding: 15px 16px;
 }
 
+.quality-summary,
+.traceability-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.quality-summary .feature-list,
+.traceability-summary .feature-list {
+  margin-top: 0;
+}
+
 .dark .feature-list li {
   border-color: rgba(255, 255, 255, 0.18);
   background: rgba(255, 255, 255, 0.08);
@@ -533,12 +546,28 @@ h3 {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--paper);
-  overflow: auto;
+  overflow: hidden;
 }
 
 .comparison img {
-  min-width: 720px;
+  display: block;
+  max-width: 100%;
   width: 100%;
+  height: auto;
+}
+
+.wide-chart {
+  margin-top: 36px;
+  padding: clamp(14px, 2vw, 26px);
+}
+
+.wide-chart h3 {
+  margin-bottom: 16px;
+}
+
+.wide-chart img {
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
 .capability-link {
@@ -1362,24 +1391,22 @@ h3 {
 .platform-page-hero {
   overflow: hidden;
   padding: 88px 0 64px;
-  background:
-    radial-gradient(circle at 78% 24%, rgba(89, 207, 232, 0.20), transparent 34%),
-    linear-gradient(135deg, #002060 0%, #0a2f4a 46%, #101820 100%);
+  background: linear-gradient(135deg, var(--navy), var(--blue));
 }
 
 .platform-hero-grid {
   display: grid;
-  grid-template-columns: minmax(300px, 0.86fr) minmax(540px, 1.14fr);
-  gap: 44px;
+  grid-template-columns: minmax(290px, 0.74fr) minmax(620px, 1.26fr);
+  gap: 32px;
   align-items: center;
 }
 
 .platform-hero-copy {
-  max-width: 560px;
+  max-width: 520px;
 }
 
 .platform-page-hero h1 {
-  font-size: clamp(2.7rem, 5vw, 4.35rem);
+  font-size: clamp(2.6rem, 4.55vw, 4.05rem);
 }
 
 .platform-page-hero .lead {
@@ -1605,6 +1632,8 @@ textarea {
 
   .split,
   .split.reverse,
+  .quality-summary,
+  .traceability-summary,
   .contact-grid,
   .news-card {
     grid-template-columns: 1fr;
