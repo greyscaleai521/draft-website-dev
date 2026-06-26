@@ -1203,6 +1203,506 @@ h3 {
   margin-bottom: 0;
 }
 
+.related-workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 34px;
+}
+
+.workflow-card {
+  min-height: 100%;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 28% 18%, rgba(89, 207, 232, 0.12), transparent 40%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.04));
+  color: var(--paper);
+  text-decoration: none;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.18);
+}
+
+.workflow-card--beyond-rejects {
+  border-color: rgba(89, 207, 232, 0.36);
+}
+
+.workflow-card:focus-visible {
+  outline: 3px solid rgba(89, 207, 232, 0.82);
+  outline-offset: 4px;
+}
+
+.workflow-card__visual {
+  aspect-ratio: 16 / 10;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  background: #071012;
+}
+
+.workflow-card__visual picture,
+.workflow-card__visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.workflow-card__visual img {
+  object-fit: cover;
+}
+
+.workflow-card__visual--pattern {
+  display: grid;
+  place-items: center;
+  padding: clamp(16px, 2.8vw, 28px);
+  background:
+    radial-gradient(circle at 16% 42%, rgba(255, 101, 77, 0.18), transparent 26%),
+    radial-gradient(circle at 78% 62%, rgba(0, 160, 157, 0.18), transparent 30%),
+    linear-gradient(135deg, rgba(238, 246, 248, 0.08), rgba(0, 32, 96, 0.18));
+}
+
+.pattern-diagram {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  display: grid;
+  grid-template-columns: minmax(112px, 0.82fr) minmax(132px, 1fr) minmax(148px, 1.06fr);
+  gap: clamp(10px, 2vw, 18px);
+  align-items: center;
+}
+
+.pattern-diagram::before,
+.pattern-diagram::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 101, 77, 0.44), rgba(89, 207, 232, 0.58));
+  opacity: 0.52;
+  transform: translateY(-50%) scaleX(0.72);
+  transition: opacity 220ms ease, transform 220ms ease, background 220ms ease;
+  transform-origin: left center;
+}
+
+.pattern-diagram::before {
+  left: 21%;
+  width: 19%;
+}
+
+.pattern-diagram::after {
+  left: 55%;
+  width: 17%;
+}
+
+.pattern-event,
+.pattern-context span,
+.pattern-outcome {
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.10);
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.pattern-event {
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+  padding: 16px;
+  border-color: rgba(255, 101, 77, 0.40);
+  background: rgba(255, 101, 77, 0.10);
+  transition: border-color 220ms ease, background 220ms ease, box-shadow 220ms ease;
+}
+
+.pattern-target {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border: 2px solid #ff654d;
+  border-radius: 50%;
+  box-shadow: 0 0 0 7px rgba(255, 101, 77, 0.10);
+}
+
+.pattern-target::before,
+.pattern-target::after {
+  content: "";
+  position: absolute;
+  background: #ff654d;
+}
+
+.pattern-target::before {
+  left: 50%;
+  top: 7px;
+  bottom: 7px;
+  width: 2px;
+  transform: translateX(-50%);
+}
+
+.pattern-target::after {
+  top: 50%;
+  left: 7px;
+  right: 7px;
+  height: 2px;
+  transform: translateY(-50%);
+}
+
+.pattern-event strong,
+.pattern-outcome strong {
+  font-size: 0.94rem;
+  line-height: 1.16;
+}
+
+.pattern-context {
+  display: grid;
+  gap: 9px;
+}
+
+.pattern-context span {
+  padding: 8px 10px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.18;
+  transition: border-color 220ms ease, background 220ms ease, color 220ms ease, transform 220ms ease;
+}
+
+.pattern-outcomes {
+  display: grid;
+  gap: 10px;
+}
+
+.pattern-outcome {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  transition: border-color 220ms ease, background 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+}
+
+.pattern-outcome span {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.76rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.workflow-card--beyond-rejects:is(:hover, :focus) .pattern-event {
+  border-color: rgba(255, 101, 77, 0.82);
+  background: rgba(255, 101, 77, 0.18);
+  box-shadow: 0 0 0 4px rgba(255, 101, 77, 0.08);
+}
+
+.workflow-card--beyond-rejects:is(:hover, :focus) .pattern-diagram::before,
+.workflow-card--beyond-rejects:is(:hover, :focus) .pattern-diagram::after {
+  opacity: 1;
+  background: linear-gradient(90deg, rgba(255, 101, 77, 0.84), rgba(89, 207, 232, 0.88));
+  transform: translateY(-50%) scaleX(1);
+}
+
+.workflow-card--beyond-rejects:is(:hover, :focus) .pattern-context span {
+  border-color: rgba(89, 207, 232, 0.48);
+  background: rgba(89, 207, 232, 0.14);
+  color: var(--paper);
+  transform: translateY(-1px);
+}
+
+.workflow-card--beyond-rejects:is(:hover, :focus) .pattern-context span:nth-child(2) {
+  transition-delay: 40ms;
+}
+
+.workflow-card--beyond-rejects:is(:hover, :focus) .pattern-context span:nth-child(3) {
+  transition-delay: 80ms;
+}
+
+.workflow-card--beyond-rejects:is(:hover, :focus) .pattern-context span:nth-child(4) {
+  transition-delay: 120ms;
+}
+
+.workflow-card--beyond-rejects:is(:hover, :focus) .pattern-outcome--pattern {
+  border-color: rgba(255, 101, 77, 0.86);
+  background: rgba(255, 101, 77, 0.16);
+  box-shadow: 0 0 0 4px rgba(255, 101, 77, 0.08);
+  transform: translateY(-1px);
+}
+
+.workflow-card--investigation {
+  border-color: rgba(109, 133, 255, 0.30);
+}
+
+.workflow-card__visual--investigation {
+  display: grid;
+  place-items: center;
+  padding: clamp(14px, 2.4vw, 24px);
+  background:
+    radial-gradient(circle at 22% 20%, rgba(109, 133, 255, 0.16), transparent 34%),
+    radial-gradient(circle at 76% 80%, rgba(255, 101, 77, 0.10), transparent 30%),
+    linear-gradient(135deg, rgba(238, 246, 248, 0.07), rgba(0, 32, 96, 0.16));
+}
+
+.insights-workspace {
+  width: 100%;
+  max-width: 520px;
+  display: grid;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius);
+  background: rgba(4, 18, 22, 0.72);
+  box-shadow: inset 0 0 0 1px rgba(89, 207, 232, 0.06);
+}
+
+.insights-workspace__search {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) repeat(3, auto);
+  gap: 8px;
+  align-items: center;
+  min-height: 38px;
+  padding: 7px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.60);
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.insights-workspace__search > span:not(.insights-search-icon) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.insights-workspace__search b {
+  padding: 7px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: calc(var(--radius) - 2px);
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.69rem;
+  line-height: 1;
+  transition: border-color 220ms ease, background 220ms ease, color 220ms ease;
+}
+
+.insights-search-icon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.82);
+  border-radius: 50%;
+}
+
+.insights-search-icon::after {
+  content: "";
+  position: absolute;
+  right: -7px;
+  bottom: -5px;
+  width: 9px;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  transform: rotate(45deg);
+}
+
+.insights-workspace__body {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.9fr) minmax(220px, 1.25fr);
+  gap: 12px;
+  min-height: 0;
+}
+
+.insights-events,
+.insights-evidence {
+  min-width: 0;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.insights-events > strong,
+.insights-evidence > strong {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.78rem;
+  line-height: 1.1;
+}
+
+.insights-event-row {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  min-width: 0;
+  padding: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: calc(var(--radius) - 2px);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.68rem;
+  font-weight: 800;
+  transition: border-color 220ms ease, background 220ms ease, box-shadow 220ms ease;
+}
+
+.insights-event-row img,
+.insights-evidence__grid img {
+  display: block;
+  width: 100%;
+  border-radius: calc(var(--radius) - 4px);
+  object-fit: cover;
+}
+
+.insights-event-row img {
+  height: 30px;
+  filter: grayscale(1) contrast(1.08);
+}
+
+.insights-event-row span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.insights-event-row small {
+  display: block;
+  margin-top: 2px;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.50);
+  font-size: 0.58rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.insights-event-row--selected {
+  border-color: rgba(255, 101, 77, 0.78);
+  background: rgba(255, 101, 77, 0.12);
+}
+
+.insights-evidence__grid {
+  display: grid;
+  grid-template-columns: minmax(104px, 0.68fr) minmax(154px, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+
+.insights-evidence__grid > img {
+  aspect-ratio: 4 / 3;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  filter: contrast(1.04);
+}
+
+.insights-evidence dl {
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+
+.insights-evidence dl div {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: 6px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.insights-evidence dt,
+.insights-evidence dd {
+  margin: 0;
+  overflow: hidden;
+  font-size: 0.61rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.insights-evidence dt {
+  color: rgba(255, 255, 255, 0.50);
+}
+
+.insights-evidence dd {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.insights-evidence dl div:first-child dd {
+  color: #ff654d;
+  text-transform: uppercase;
+}
+
+.workflow-card--investigation:is(:hover, :focus) .insights-workspace__search b {
+  border-color: rgba(109, 133, 255, 0.54);
+  background: rgba(109, 133, 255, 0.12);
+  color: var(--paper);
+}
+
+.workflow-card--investigation:is(:hover, :focus) .insights-event-row--selected,
+.workflow-card--investigation:is(:hover, :focus) .insights-evidence {
+  border-color: rgba(255, 101, 77, 0.72);
+  box-shadow: 0 0 0 4px rgba(255, 101, 77, 0.07);
+}
+
+.workflow-card--investigation:is(:hover, :focus) .insights-evidence__grid > img {
+  filter: contrast(1.14) brightness(1.06);
+}
+
+.workflow-card__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+}
+
+.workflow-card__eyebrow {
+  margin-bottom: 10px;
+  color: var(--aqua);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.workflow-card__content h3 {
+  margin-bottom: 12px;
+  font-size: clamp(1.55rem, 2.4vw, 2.15rem);
+  line-height: 1.08;
+}
+
+.workflow-card__content p {
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.workflow-card__content .button {
+  margin-top: auto;
+}
+
+.workflow-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 20px;
+  align-items: center;
+  margin-top: 22px;
+  padding: 20px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-left: 5px solid var(--teal);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.workflow-cta h3 {
+  margin-bottom: 6px;
+}
+
+.workflow-cta p {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.76);
+}
+
 .page-subnav {
   display: flex;
   flex-wrap: wrap;
@@ -1886,9 +2386,52 @@ textarea {
   .footer-inner,
   .hero-proof,
   .proof-band,
+  .related-workflow-grid,
   .spec-item,
+  .workflow-cta,
   .xray-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .workflow-card__visual--pattern {
+    aspect-ratio: auto;
+    min-height: 420px;
+  }
+
+  .workflow-card__visual--investigation {
+    aspect-ratio: auto;
+    min-height: 470px;
+  }
+
+  .pattern-diagram {
+    max-width: 360px;
+    grid-template-columns: 1fr;
+  }
+
+  .pattern-diagram::before,
+  .pattern-diagram::after {
+    display: none;
+  }
+
+  .insights-workspace {
+    max-width: 360px;
+  }
+
+  .insights-workspace__search {
+    grid-template-columns: 24px minmax(0, 1fr);
+  }
+
+  .insights-workspace__search b {
+    display: none;
+  }
+
+  .insights-workspace__body {
+    grid-template-columns: 1fr;
+  }
+
+  .insights-evidence dl div {
+    grid-template-columns: 54px minmax(0, 1fr);
+    padding: 5px 0;
   }
 
   .platform-step-card {

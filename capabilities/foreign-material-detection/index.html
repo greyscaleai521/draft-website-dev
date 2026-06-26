@@ -7,8 +7,8 @@
     <title>Foreign Material Detection | GreyscaleAI</title>
     <meta name="description" content="GreyscaleAI foreign material detection combines high-resolution x-ray inspection, AI review, and image evidence for food production teams.">
     <link rel="icon" href="../../assets/img/meta/favicon.ico">
-    <link rel="stylesheet" href="../../assets/css/styles.css?v=fm-interactive-xray-cta">
-    <script defer src="../../assets/js/main.js?v=fm-interactive-xray-cta"></script>
+    <link rel="stylesheet" href="../../assets/css/styles.css?v=fm-related-workflow-card2">
+    <script defer src="../../assets/js/main.js?v=fm-related-workflow-card2"></script>
   </head>
   <body>
     <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../index.html" aria-label="GreyscaleAI home"><img src="../../assets/img/logos/greyscale-ai-logo-white.png" alt="GreyscaleAI"></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle><span></span></button><ul class="nav-links" data-nav-links>
@@ -215,24 +215,97 @@
 </div>
 </div></section><section class="section dark">
         <div class="section-inner">
-          <p class="eyebrow">Related capabilities</p>
-          <h2>Foreign material detection works best as part of a broader inspection workflow.</h2>
-          <div class="card-grid three">
-            <a class="resource-card" href="../../capabilities/product-quality-inspection/"><div>
-<h3>Product Quality Inspection</h3>
-<p>Use the same image stream to monitor quality conditions that may matter alongside contaminant review.</p>
-</div>
-<span class="button">View capability</span></a>
-            <a class="resource-card" href="../../capabilities/image-history-traceability/"><div>
-<h3>Image History &amp; Traceability</h3>
-<p>Preserve event images and searchable records for QA and food safety investigations.</p>
-</div>
-<span class="button">See traceability</span></a>
-            <a class="resource-card" href="../../contact/"><div>
-<h3>Validate your application</h3>
-<p>Share the product, package, target contaminants, and line speed for a more realistic discussion of fit.</p>
-</div>
-<span class="button">Request a Demo</span></a>
+          <p class="eyebrow">RELATED WORKFLOW</p>
+          <h2>Foreign material detection is the start of the workflow, not the end.</h2>
+          <p class="lead">GreyscaleAI helps teams move from a reject event to the supporting image, machine context, inspection history, and broader review path needed for action.</p>
+          <div class="related-workflow-grid">
+            <a class="workflow-card workflow-card--beyond-rejects" href="../../insights/beyond-rejects/">
+              <div class="workflow-card__visual workflow-card__visual--pattern" role="img" aria-label="A foreign material event expands into product, lot, line, and nearby time-window context to determine whether it is isolated or part of a pattern.">
+                <div class="pattern-diagram">
+                  <div class="pattern-event">
+                    <span class="pattern-target" aria-hidden="true"></span>
+                    <strong>Reject detected</strong>
+                  </div>
+                  <div class="pattern-context">
+                    <span>Same product</span>
+                    <span>Same lot</span>
+                    <span>Same line</span>
+                    <span>Nearby time window</span>
+                  </div>
+                  <div class="pattern-outcomes">
+                    <div class="pattern-outcome">
+                      <strong>Isolated?</strong>
+                      <span>Review and record</span>
+                    </div>
+                    <div class="pattern-outcome pattern-outcome--pattern">
+                      <strong>Pattern?</strong>
+                      <span>Investigate source</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="workflow-card__content">
+                <p class="workflow-card__eyebrow">Beyond Rejects</p>
+                <h3>Isolated event or pattern?</h3>
+                <p>A foreign material reject should trigger the next question: is this a one-off event, or are related rejects appearing by product, lot, line, or time window?</p>
+                <span class="button">Explore Beyond Rejects</span>
+              </div>
+            </a>
+            <a class="workflow-card workflow-card--investigation" href="../../insights/">
+              <div class="workflow-card__visual workflow-card__visual--investigation" role="img" aria-label="Insights investigation card showing real X-ray evidence, event search, and comparison context.">
+                <div class="insights-workspace">
+                  <div class="insights-workspace__search">
+                    <span class="insights-search-icon" aria-hidden="true"></span>
+                    <span>Search inspection history...</span>
+                    <b>Product</b>
+                    <b>Lot</b>
+                    <b>Line</b>
+                  </div>
+                  <div class="insights-workspace__body">
+                    <div class="insights-events">
+                      <strong>Related event records</strong>
+                      <span class="insights-event-row">
+                        <img src="../../assets/img/solutions/foreign-material/insights-investigation-real-xray-thumb.png" alt="">
+                        <span>No FM event<small>Same line</small></span>
+                      </span>
+                      <span class="insights-event-row insights-event-row--selected">
+                        <img src="../../assets/img/solutions/foreign-material/insights-investigation-real-xray-thumb.png" alt="">
+                        <span>FM event selected<small>Same product + same lot</small></span>
+                      </span>
+                      <span class="insights-event-row">
+                        <img src="../../assets/img/solutions/foreign-material/insights-investigation-real-xray-thumb.png" alt="">
+                        <span>Related image<small>Same time window</small></span>
+                      </span>
+                    </div>
+                    <div class="insights-evidence">
+                      <strong>Review selected evidence</strong>
+                      <div class="insights-evidence__grid">
+                        <img src="../../assets/img/solutions/foreign-material/insights-investigation-real-xray-tile.png" alt="">
+                        <dl>
+                          <div><dt>Decision</dt><dd>FM event</dd></div>
+                          <div><dt>Product</dt><dd>Selected product</dd></div>
+                          <div><dt>Lot</dt><dd>Selected lot</dd></div>
+                          <div><dt>Line</dt><dd>Selected line</dd></div>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="workflow-card__content">
+                <p class="workflow-card__eyebrow">Insights for Investigation</p>
+                <h3>Search, review, and compare events.</h3>
+                <p>Use Insights to search inspection history, review image evidence, and compare events by product, lot, line, and time window before deciding what changed.</p>
+                <span class="button">See Insights</span>
+              </div>
+            </a>
+          </div>
+          <div class="workflow-cta">
+            <div>
+              <h3>Need to know if your product is a fit?</h3>
+              <p>Share the product, package, target contaminants, and line speed so GreyscaleAI can talk through validation under real operating conditions.</p>
+            </div>
+            <a class="button" href="../../contact/">Talk Through Your Product</a>
           </div>
         </div>
       </section>
