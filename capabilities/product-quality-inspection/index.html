@@ -7,8 +7,8 @@
     <title>Product Quality Inspection | GreyscaleAI</title>
     <meta name="description" content="GreyscaleAI product quality inspection uses x-ray images and AI analysis to identify density, count, fill, shape, and breakage signals in food production.">
     <link rel="icon" href="../../assets/img/meta/favicon.ico">
-    <link rel="stylesheet" href="../../assets/css/styles.css?v=product-quality-scroll-fix">
-    <script defer src="../../assets/js/main.js"></script>
+    <link rel="stylesheet" href="../../assets/css/styles.css?v=product-quality-signal-cards-v2">
+    <script defer src="../../assets/js/main.js?v=product-quality-signal-cards-v2"></script>
   </head>
   <body>
     <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../index.html" aria-label="GreyscaleAI home"><img src="../../assets/img/logos/greyscale-ai-logo-white.png" alt="GreyscaleAI"></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle><span></span></button><ul class="nav-links" data-nav-links>
@@ -104,32 +104,110 @@
 
       <section class="section tint">
         <div class="section-inner">
-          <p class="eyebrow">Example image conditions</p>
-          <h2>Images give teams a shared view of what changed.</h2>
-          <div class="xray-gallery">
-            <article class="xray-card">
-              <div class="xray-sample">
-                <div class="xray-product"></div>
-                <span class="xray-highlight" data-label="Void" style="top:102px;left:156px;width:46px;height:46px;"></span>
+          <p class="eyebrow">Quality inspection examples</p>
+          <h2>Quality signals hidden in every image</h2>
+          <p class="lead quality-section-intro">GreyscaleAI turns inspection images into product-specific quality checks, so teams can see breakage, missing pieces, voids, clumps, and other defects before they become complaints.</p>
+          <div class="xray-gallery quality-signal-gallery">
+            <article class="xray-card quality-card quality-card--torn-cheese">
+              <div class="quality-card__visual" data-compare-card>
+                <span class="quality-card__badge quality-card__badge--good">Good</span>
+                <span class="quality-card__badge quality-card__badge--defect">Torn edge detected</span>
+                <div class="compare-visual" data-compare-visual>
+                  <img class="compare-visual__image compare-visual__image--defect" src="../../assets/product-quality/torn-cheese-card/images/cheese-torn-card.webp" alt="X-ray image of a cheese slice with a torn edge detected on the right side.">
+                  <img class="compare-visual__mask" src="../../assets/product-quality/torn-cheese-card/overlays/torn-edge-contour.svg" alt="" aria-hidden="true">
+                  <div class="compare-visual__reveal" data-compare-reveal>
+                    <img class="compare-visual__image compare-visual__image--good" src="../../assets/product-quality/torn-cheese-card/images/cheese-good-card.webp" alt="X-ray image of an intact cheese slice used as a good reference.">
+                  </div>
+                  <button class="compare-visual__handle" type="button" role="slider" aria-label="Compare good and torn cheese examples" aria-valuemin="8" aria-valuemax="92" aria-valuenow="50" aria-valuetext="50 percent good reference shown" data-compare-handle>
+                    <img src="../../assets/product-quality/torn-cheese-card/overlays/compare-divider-handle.svg" alt="" aria-hidden="true">
+                  </button>
+                </div>
               </div>
-              <h3>Internal void</h3>
-              <p>Low-density gaps can indicate underfill or structural inconsistency that is not obvious from the outside.</p>
+              <div class="quality-card__body">
+                <p class="quality-card__eyebrow">Shape &amp; edge quality</p>
+                <h3>Torn, broken, or malformed product</h3>
+                <p>AI models learn what good looks like for a specific product, then flag pieces that are torn, broken, folded, collapsed, or malformed before they reach customers.</p>
+                <ul class="quality-card__proofs" aria-label="Example quality benefits">
+                  <li>
+                    <img src="../../assets/product-quality/torn-cheese-card/icons/icon-edge-break.svg" alt="" aria-hidden="true">
+                    <span>Detect subtle edge breaks</span>
+                  </li>
+                  <li>
+                    <img src="../../assets/product-quality/torn-cheese-card/icons/icon-complaints.svg" alt="" aria-hidden="true">
+                    <span>Reduce customer complaints</span>
+                  </li>
+                  <li>
+                    <img src="../../assets/product-quality/torn-cheese-card/icons/icon-line-speed.svg" alt="" aria-hidden="true">
+                    <span>Consistent quality at line speed</span>
+                  </li>
+                </ul>
+              </div>
             </article>
-            <article class="xray-card">
-              <div class="xray-sample">
-                <div class="xray-product nuggets"></div>
-                <span class="xray-highlight" data-label="Missing piece" style="top:98px;left:130px;width:56px;height:40px;border-radius:12px;"></span>
+            <article class="xray-card quality-card quality-card--assembly">
+              <div class="quality-card__visual">
+                <div class="assembly-evidence" aria-label="Burger Sliders complete reference compared with a missing component example">
+                  <div class="assembly-evidence__pane assembly-evidence__pane--complete">
+                    <span class="assembly-evidence__label assembly-evidence__label--complete">Complete</span>
+                    <img class="assembly-evidence__image" src="../../assets/product-quality/burger-sliders-card/images/burger-sliders-good.webp" alt="X-ray image of complete Burger Sliders with expected components present.">
+                    <img class="assembly-evidence__outline assembly-evidence__outline--expected" src="../../assets/product-quality/burger-sliders-card/overlays/expected-component-outline.svg" alt="" aria-hidden="true">
+                  </div>
+                  <span class="assembly-evidence__divider" aria-hidden="true"></span>
+                  <button class="assembly-evidence__pane assembly-evidence__pane--missing" type="button" aria-pressed="false" aria-label="Zoom the lower Burger Slider missing cheese and bun" data-assembly-toggle>
+                    <span class="assembly-evidence__label assembly-evidence__label--missing">Missing component</span>
+                    <img class="assembly-evidence__image" src="../../assets/product-quality/burger-sliders-card/images/burger-sliders-missing-component.webp" alt="X-ray image of Burger Sliders where the lower slider is missing cheese and bun.">
+                    <span class="assembly-evidence__target assembly-evidence__target--missing" aria-hidden="true"></span>
+                    <span class="assembly-evidence__callout">Lower slider missing cheese + bun</span>
+                  </button>
+                </div>
               </div>
-              <h3>Missing component</h3>
-              <p>Count-based models help confirm whether an expected portion or inclusion is absent.</p>
+              <div class="quality-card__body">
+                <p class="quality-card__eyebrow">Count &amp; assembly checks</p>
+                <h3>Missing or malformed components</h3>
+                <p>Count-based and shape-aware models confirm that expected components are present, correctly placed, and intact&mdash;even when defects are subtle or partially hidden.</p>
+                <ul class="quality-card__proofs" aria-label="Burger Sliders assembly benefits">
+                  <li>
+                    <img src="../../assets/product-quality/burger-sliders-card/overlays/component-checks.svg" alt="" aria-hidden="true">
+                    <span>Verify expected components</span>
+                  </li>
+                  <li>
+                    <img src="../../assets/product-quality/burger-sliders-card/overlays/component-checks.svg" alt="" aria-hidden="true">
+                    <span>Prevent short packs</span>
+                  </li>
+                  <li>
+                    <img src="../../assets/product-quality/burger-sliders-card/overlays/component-checks.svg" alt="" aria-hidden="true">
+                    <span>Consistent assembly quality at line speed</span>
+                  </li>
+                </ul>
+              </div>
             </article>
-            <article class="xray-card">
-              <div class="xray-sample">
-                <div class="xray-product tray"></div>
-                <span class="xray-highlight" data-label="Density drift" style="top:82px;left:88px;width:88px;height:68px;border-radius:20px;"></span>
+            <article class="xray-card quality-card quality-card--voids">
+              <div class="quality-card__visual">
+                <div class="void-evidence" aria-label="Internal structure X-ray with void cluster highlighted">
+                  <span class="void-evidence__label">Void analysis</span>
+                  <img class="void-evidence__image" src="../../assets/product-quality/cheese-voids-card/images/cheese-voids.webp" alt="X-ray image showing a vertical cluster of internal voids in the right-center region.">
+                  <span class="void-evidence__cluster" aria-hidden="true"></span>
+                  <span class="void-evidence__callout">Void cluster, right-center region.</span>
+                </div>
               </div>
-              <h3>Density variation</h3>
-              <p>Broader regions of changed density can point to clumping, settling, or other process-related quality drift.</p>
+              <div class="quality-card__body">
+                <p class="quality-card__eyebrow">Fill, density &amp; structure</p>
+                <h3>Voids, holes, and internal structure</h3>
+                <p>Image-based grading can measure internal product structure, including holes, voids, clumps, and density pockets that are difficult to judge from the outside.</p>
+                <ul class="quality-card__proofs" aria-label="Internal structure inspection benefits">
+                  <li>
+                    <span class="quality-card__proof-icon" aria-hidden="true"></span>
+                    <span>Measure internal quality</span>
+                  </li>
+                  <li>
+                    <span class="quality-card__proof-icon" aria-hidden="true"></span>
+                    <span>Grade every product</span>
+                  </li>
+                  <li>
+                    <span class="quality-card__proof-icon" aria-hidden="true"></span>
+                    <span>Catch process drift early</span>
+                  </li>
+                </ul>
+              </div>
             </article>
           </div>
         </div>
