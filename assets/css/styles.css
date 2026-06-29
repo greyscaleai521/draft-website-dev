@@ -890,6 +890,526 @@ h3 {
   min-height: 100%;
 }
 
+.traceability-carousel {
+  --carousel-orange: #d84c00;
+  position: relative;
+  overflow: hidden;
+  padding: clamp(38px, 5vw, 62px) 0 26px;
+  background:
+    radial-gradient(circle at 82% 14%, rgba(216, 76, 0, 0.08), transparent 28%),
+    linear-gradient(135deg, #ffffff 0%, #f6f8fb 58%, #eef2f5 100%);
+  color: var(--ink);
+}
+
+.traceability-carousel__inner {
+  position: relative;
+  min-height: 540px;
+}
+
+.traceability-carousel__slide {
+  display: none;
+  grid-template-columns: minmax(0, 0.82fr) minmax(420px, 1.18fr);
+  gap: clamp(30px, 4vw, 64px);
+  align-items: center;
+  min-height: 540px;
+}
+
+.traceability-carousel__slide.is-active {
+  display: grid;
+}
+
+.traceability-carousel__copy {
+  max-width: 600px;
+  padding-bottom: 34px;
+}
+
+.traceability-carousel__eyebrow {
+  margin: 0 0 18px;
+  color: var(--carousel-orange);
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.traceability-carousel h1 {
+  max-width: 680px;
+  margin-bottom: 22px;
+  color: var(--ink);
+  font-size: clamp(2.8rem, 4.95vw, 4.45rem);
+}
+
+.traceability-carousel .lead {
+  max-width: 610px;
+  color: #57616d;
+  font-size: clamp(1.08rem, 1.38vw, 1.28rem);
+  line-height: 1.55;
+}
+
+.traceability-carousel__visual {
+  margin: 0;
+}
+
+.traceability-carousel__visual img {
+  width: 100%;
+  max-height: 455px;
+  min-height: 0;
+  object-fit: contain;
+  filter: drop-shadow(0 28px 46px rgba(16, 24, 32, 0.14));
+}
+
+.traceability-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin: clamp(30px, 4vw, 46px) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.traceability-steps li {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  color: #5f6670;
+  font-weight: 900;
+  text-align: center;
+}
+
+.traceability-steps strong {
+  display: block;
+  max-width: 100%;
+  min-width: 0;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+}
+
+.traceability-steps li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 39px;
+  left: calc(50% + 43px);
+  width: calc(100% - 24px);
+  border-top: 3px dotted #9aa0a6;
+}
+
+.traceability-steps li.is-active {
+  color: var(--carousel-orange);
+}
+
+.traceability-step-icon {
+  position: relative;
+  width: 78px;
+  height: 78px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #8e969e;
+  border-radius: 999px;
+  color: #6f7780;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.traceability-steps li.is-active .traceability-step-icon {
+  border-color: var(--carousel-orange);
+  color: var(--carousel-orange);
+}
+
+.traceability-step-icon::before,
+.traceability-step-icon::after {
+  content: "";
+  position: absolute;
+}
+
+.traceability-step-icon--card::before {
+  width: 32px;
+  height: 20px;
+  border: 2px solid currentColor;
+  border-radius: 3px;
+  transform: translate(10px, -8px);
+}
+
+.traceability-step-icon--card::after {
+  width: 18px;
+  height: 29px;
+  border-left: 3px solid currentColor;
+  border-bottom: 3px solid currentColor;
+  transform: translate(-9px, 10px) rotate(32deg);
+}
+
+.traceability-step-icon--capture::before {
+  width: 31px;
+  height: 31px;
+  border: 2px dashed currentColor;
+  border-radius: 4px;
+}
+
+.traceability-step-icon--capture::after {
+  width: 50px;
+  height: 50px;
+  border: 2px solid currentColor;
+  border-color: currentColor transparent transparent currentColor;
+  border-radius: 8px 0 0;
+  transform: rotate(0deg);
+  opacity: 0.45;
+}
+
+.traceability-step-icon--record::before {
+  width: 29px;
+  height: 39px;
+  border: 2px solid currentColor;
+  border-radius: 4px;
+  transform: translate(-4px, -1px);
+}
+
+.traceability-step-icon--record::after {
+  width: 21px;
+  height: 21px;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  transform: translate(15px, 17px);
+  box-shadow: inset 0 0 0 7px rgba(255, 255, 255, 0.7);
+}
+
+.traceability-carousel__dots {
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  display: flex;
+  gap: 18px;
+  transform: translateX(-50%);
+}
+
+.traceability-carousel__dots button {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: #a7abb0;
+  cursor: pointer;
+}
+
+.traceability-carousel__dots button.is-active {
+  background: var(--carousel-orange);
+}
+
+.traceability-console,
+.challenge-flow,
+.traceability-bridge {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.traceability-hero {
+  overflow: hidden;
+}
+
+.traceability-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.traceability-hero-copy {
+  max-width: 640px;
+}
+
+.traceability-hero h1 {
+  font-size: clamp(2.65rem, 5.6vw, 4.65rem);
+}
+
+.traceability-hero .lead {
+  max-width: 680px;
+}
+
+.traceability-hero-console {
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 28px 64px rgba(0, 0, 0, 0.30);
+}
+
+.traceability-console {
+  overflow: hidden;
+}
+
+.traceability-console__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px 18px;
+  background: #132434;
+  color: var(--paper);
+  font-weight: 800;
+}
+
+.traceability-console__top span {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.traceability-console__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(180px, 0.85fr);
+  gap: 16px;
+  padding: 18px;
+  background: linear-gradient(180deg, #102232, #0f1720);
+}
+
+.traceability-xray,
+.traceability-mini-xray {
+  position: relative;
+  min-height: 270px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05), transparent 28%, rgba(255, 255, 255, 0.04) 56%, transparent),
+    radial-gradient(circle at 62% 46%, rgba(244, 185, 66, 0.34), transparent 0 3%, rgba(244, 185, 66, 0.08) 4%, transparent 15%),
+    #1b2f40;
+}
+
+.traceability-xray__product,
+.traceability-mini-xray::before {
+  position: absolute;
+  inset: 72px 24px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 12% 50%, rgba(255, 255, 255, 0.2), transparent 12%),
+    radial-gradient(circle at 28% 52%, rgba(255, 255, 255, 0.18), transparent 13%),
+    radial-gradient(circle at 46% 48%, rgba(255, 255, 255, 0.2), transparent 14%),
+    radial-gradient(circle at 64% 51%, rgba(255, 255, 255, 0.18), transparent 13%),
+    radial-gradient(circle at 82% 49%, rgba(255, 255, 255, 0.2), transparent 12%);
+  content: "";
+}
+
+.traceability-xray__signal,
+.traceability-mini-xray span {
+  position: absolute;
+  top: 44%;
+  left: 61%;
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  box-shadow: 0 0 0 999px rgba(16, 24, 32, 0.08);
+}
+
+.traceability-meta {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  color: var(--paper);
+}
+
+.traceability-meta div {
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.traceability-meta dt,
+.traceability-meta dd {
+  margin: 0;
+}
+
+.traceability-meta dt {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.74rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.traceability-meta dd {
+  font-weight: 800;
+}
+
+.traceability-timeline {
+  display: grid;
+  gap: 10px;
+  padding: 0 18px 18px;
+  background: #0f1720;
+  color: var(--paper);
+}
+
+.traceability-timeline div {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.8rem;
+}
+
+.traceability-timeline b {
+  display: block;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--aqua), var(--teal));
+}
+
+.traceability-timeline strong {
+  color: var(--paper);
+}
+
+.traceability-section-head {
+  max-width: 820px;
+  margin-bottom: 34px;
+}
+
+.traceability-section-head p:not(.eyebrow) {
+  margin-bottom: 16px;
+}
+
+.traceability-feature-cards .capability,
+.traceability-step-grid .capability {
+  display: flex;
+  flex-direction: column;
+}
+
+.traceability-card-number,
+.traceability-step-number {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+  border-radius: var(--radius);
+  background: var(--mist);
+  color: var(--teal);
+  font-size: 0.88rem;
+  font-weight: 900;
+}
+
+.traceability-step-number {
+  border-radius: 999px;
+  background: var(--navy);
+  color: var(--paper);
+}
+
+.traceability-risk-section .split {
+  align-items: start;
+}
+
+.traceability-risk-list {
+  margin-top: 0;
+}
+
+.challenge-flow {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+.challenge-flow div {
+  display: grid;
+  gap: 6px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius);
+  background: rgba(16, 24, 32, 0.22);
+}
+
+.challenge-flow strong {
+  color: var(--paper);
+}
+
+.challenge-flow span {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.traceability-dashboard-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.traceability-mini-xray {
+  min-height: 126px;
+  margin-top: 10px;
+}
+
+.traceability-mini-xray::before {
+  inset: 42px 12px;
+}
+
+.traceability-mini-xray span {
+  top: 42%;
+  width: 24px;
+  height: 24px;
+}
+
+.traceability-bridge {
+  display: grid;
+  grid-template-columns: 1fr 34px 1fr 34px 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+}
+
+.traceability-bridge div {
+  min-height: 118px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--soft);
+  color: var(--navy);
+  font-weight: 900;
+  text-align: center;
+}
+
+.traceability-bridge span {
+  position: relative;
+  height: 2px;
+  background: var(--teal);
+}
+
+.traceability-bridge span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -2px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid var(--teal);
+  border-right: 2px solid var(--teal);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.record-elements {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin: 34px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.record-elements li {
+  display: flex;
+  min-height: 92px;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--navy);
+  font-weight: 800;
+}
+
+.traceability-cta {
+  align-items: center;
+}
+
+.traceability-cta .section-actions {
+  justify-content: flex-end;
+  margin-top: 0;
+}
+
 .support-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -2293,11 +2813,33 @@ textarea {
     padding: 76px 0 52px;
   }
 
+  .traceability-carousel__inner {
+    min-height: 0;
+    padding-bottom: 58px;
+  }
+
+  .traceability-carousel__slide {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .traceability-carousel__copy {
+    max-width: 760px;
+    padding-bottom: 0;
+  }
+
+  .traceability-carousel__visual img {
+    max-height: 440px;
+    min-height: 0;
+  }
+
+  .traceability-hero-grid,
   .platform-hero-grid {
     grid-template-columns: 1fr;
     gap: 34px;
   }
 
+  .traceability-hero-copy,
   .platform-hero-copy {
     max-width: 760px;
   }
@@ -2316,7 +2858,9 @@ textarea {
   .card-grid.two,
   .markets-grid,
   .architecture,
-  .platform-steps {
+  .platform-steps,
+  .record-elements,
+  .traceability-dashboard-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -2369,10 +2913,80 @@ textarea {
     padding: 64px 0;
   }
 
+  .traceability-carousel {
+    padding: 52px 0 34px;
+  }
+
+  .traceability-carousel h1 {
+    font-size: clamp(2.8rem, 13vw, 4.2rem);
+  }
+
+  .traceability-carousel .lead {
+    font-size: 1.08rem;
+  }
+
+  .traceability-steps {
+    gap: 12px;
+    margin-top: 34px;
+  }
+
+  .traceability-steps li {
+    gap: 10px;
+    font-size: 0.76rem;
+  }
+
+  .traceability-steps li:not(:last-child)::after {
+    display: none;
+  }
+
+  .traceability-step-icon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .traceability-step-icon--card::before {
+    width: 25px;
+    height: 16px;
+    transform: translate(6px, -6px);
+  }
+
+  .traceability-step-icon--card::after {
+    width: 14px;
+    height: 24px;
+    transform: translate(-6px, 7px) rotate(32deg);
+  }
+
+  .traceability-step-icon--capture::before {
+    width: 24px;
+    height: 24px;
+  }
+
+  .traceability-step-icon--capture::after {
+    width: 38px;
+    height: 38px;
+  }
+
+  .traceability-step-icon--record::before {
+    width: 23px;
+    height: 32px;
+  }
+
+  .traceability-step-icon--record::after {
+    width: 17px;
+    height: 17px;
+    transform: translate(10px, 12px);
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.7);
+  }
+
+  .traceability-carousel__visual img {
+    max-height: none;
+  }
+
   .feature-list,
   .card-grid,
   .card-grid.three,
   .card-grid.two,
+  .dashboard-grid,
   .markets-grid,
   .architecture,
   .platform-steps,
@@ -2387,10 +3001,30 @@ textarea {
   .hero-proof,
   .proof-band,
   .related-workflow-grid,
+  .record-elements,
   .spec-item,
+  .traceability-console__body,
+  .traceability-bridge,
   .workflow-cta,
   .xray-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .traceability-bridge span {
+    width: 2px;
+    height: 28px;
+    margin: 0 auto;
+  }
+
+  .traceability-bridge span::after {
+    top: auto;
+    right: 50%;
+    bottom: -2px;
+    transform: translateX(50%) rotate(135deg);
+  }
+
+  .traceability-cta .section-actions {
+    justify-content: flex-start;
   }
 
   .workflow-card__visual--pattern {

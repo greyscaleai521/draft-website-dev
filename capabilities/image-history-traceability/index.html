@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
     <title>Image History &amp; Traceability | GreyscaleAI</title>
-    <meta name="description" content="GreyscaleAI image history and traceability keep inspection images, event metadata, and search tools available for review and documentation workflows.">
+    <meta name="description" content="Turn inspection images into a searchable FSQA investigation library with GreyscaleAI image history and traceability.">
     <link rel="icon" href="../../assets/img/meta/favicon.ico">
-    <link rel="stylesheet" href="../../assets/css/styles.css?v=image-history-chart-layout">
-    <script defer src="../../assets/js/main.js"></script>
+    <link rel="stylesheet" href="../../assets/css/styles.css?v=image-history-carousel">
+    <script defer src="../../assets/js/main.js?v=image-history-carousel"></script>
   </head>
   <body>
     <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../index.html" aria-label="GreyscaleAI home"><img src="../../assets/img/logos/greyscale-ai-logo-white.png" alt="GreyscaleAI"></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle><span></span></button><ul class="nav-links" data-nav-links>
@@ -68,34 +68,122 @@
 </ul></nav></header>
 
     <main>
-      <section class="page-hero">
-        <div class="section-inner">
-          <p class="eyebrow">Capability</p>
-          <h1>Image History &amp; Traceability</h1>
-          <p class="lead">Store inspection images, event metadata, and machine context so QA and operations teams can search, review, and document what happened.</p>
+      <section class="traceability-carousel" data-traceability-carousel aria-label="Image history and traceability hero carousel">
+        <div class="section-inner traceability-carousel__inner">
+          <article class="traceability-carousel__slide is-active" data-carousel-slide aria-hidden="false">
+            <div class="traceability-carousel__copy">
+              <p class="traceability-carousel__eyebrow">Hands-free challenge workflow</p>
+              <h1>Run the challenge</h1>
+              <p class="lead">Plant personnel use a GreyscaleAI test card to verify system performance without navigating the operator interface.</p>
+              <ol class="traceability-steps" aria-label="Hands-free challenge workflow steps">
+                <li class="is-active"><span class="traceability-step-icon traceability-step-icon--card" aria-hidden="true"></span><strong>1. Run the challenge</strong></li>
+                <li><span class="traceability-step-icon traceability-step-icon--capture" aria-hidden="true"></span><strong>2. Capture the x-ray</strong></li>
+                <li><span class="traceability-step-icon traceability-step-icon--record" aria-hidden="true"></span><strong>3. Review the validation record</strong></li>
+              </ol>
+            </div>
+            <figure class="traceability-carousel__visual">
+              <img src="../../assets/img/solutions/image-history-traceability/hero-carousel-slot-1.png" alt="GreyscaleAI test card used to run a hands-free challenge.">
+            </figure>
+          </article>
+          <article class="traceability-carousel__slide" data-carousel-slide aria-hidden="true">
+            <div class="traceability-carousel__copy">
+              <p class="traceability-carousel__eyebrow">Hands-free challenge workflow</p>
+              <h1>Capture the x-ray</h1>
+              <p class="lead">The system records the challenge image automatically, creating a digital inspection record without a manual UI workflow.</p>
+              <ol class="traceability-steps" aria-label="Hands-free challenge workflow steps">
+                <li><span class="traceability-step-icon traceability-step-icon--card" aria-hidden="true"></span><strong>1. Run the challenge</strong></li>
+                <li class="is-active"><span class="traceability-step-icon traceability-step-icon--capture" aria-hidden="true"></span><strong>2. Capture the x-ray</strong></li>
+                <li><span class="traceability-step-icon traceability-step-icon--record" aria-hidden="true"></span><strong>3. Review the validation record</strong></li>
+              </ol>
+            </div>
+            <figure class="traceability-carousel__visual">
+              <img src="../../assets/img/solutions/image-history-traceability/hero-carousel-slot-2.png" alt="X-ray capture panel showing a recorded challenge image with timestamp and status.">
+            </figure>
+          </article>
+          <article class="traceability-carousel__slide" data-carousel-slide aria-hidden="true">
+            <div class="traceability-carousel__copy">
+              <p class="traceability-carousel__eyebrow">Image History &amp; Traceability</p>
+              <h1>Review the validation record</h1>
+              <p class="lead">Plant teams can review challenge history away from the machine, confirm what happened, and follow the trail into Insights when deeper investigation is needed.</p>
+              <ol class="traceability-steps" aria-label="Hands-free challenge workflow steps">
+                <li><span class="traceability-step-icon traceability-step-icon--card" aria-hidden="true"></span><strong>1. Run the challenge</strong></li>
+                <li><span class="traceability-step-icon traceability-step-icon--capture" aria-hidden="true"></span><strong>2. Capture the x-ray</strong></li>
+                <li class="is-active"><span class="traceability-step-icon traceability-step-icon--record" aria-hidden="true"></span><strong>3. Review the validation record</strong></li>
+              </ol>
+            </div>
+            <figure class="traceability-carousel__visual">
+              <img src="../../assets/img/solutions/image-history-traceability/hero-carousel-slot-3.png" alt="Validation record dashboard showing x-ray image, metadata, and a timeline of test validations.">
+            </figure>
+          </article>
+          <div class="traceability-carousel__dots" aria-label="Choose hero slide">
+            <button class="is-active" type="button" aria-label="Show slide 1: Run the challenge" aria-current="true" data-carousel-dot></button>
+            <button type="button" aria-label="Show slide 2: Capture the x-ray" aria-current="false" data-carousel-dot></button>
+            <button type="button" aria-label="Show slide 3: Review the validation record" aria-current="false" data-carousel-dot></button>
+          </div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="live-investigation-library">
         <div class="section-inner">
-          <div class="traceability-summary">
-            <div>
-            <p class="eyebrow">Retention and review</p>
-            <h2>Keep the evidence, not just the outcome.</h2>
-            <p class="lead">Images and events are stored for agreed retention periods based on the customer deployment. Teams can search by time, SKU, line, event type, and related metadata to support investigations, traceability requests, and recurring quality review.</p>
-            </div>
-            <ul class="feature-list compact">
-              <li>
-<strong>Retention policy</strong><br>Image and event retention is defined with the customer rather than assumed as a fixed generic setting.</li>
-              <li>
-<strong>Searchable metadata</strong><br>Time, product, line, event type, and machine details help narrow the record quickly.</li>
-              <li>
-<strong>Controlled access</strong><br>Authorized users can export, review, or delete records according to the agreed workflow.</li>
-            </ul>
+          <div class="traceability-section-head">
+            <p class="eyebrow">Live investigation library</p>
+            <h2>See what the machine is rejecting without standing at the machine.</h2>
+            <p class="lead">The reject bin tells operators that something was removed. It does not always tell FSQA what the concern looked like, whether similar events are repeating, or whether the pattern needs follow-up.</p>
+            <p>GreyscaleAI gives authorized users a cloud-accessible image library so teams can review inspection events in near real time, away from the production floor. A QA manager, food-safety lead, plant manager, or technical support user can open the record, inspect the image, review the context, and decide whether the issue needs escalation, reinspection, supplier follow-up, or deeper analysis.</p>
           </div>
-          <div class="comparison wide-chart">
-            <h3>Image history and traceability comparison</h3>
-            <img src="../../assets/img/solutions/data-analytics-table.png" alt="Comparison matrix for GreyscaleAI, single X-ray, dual X-ray, and metal detectors across image capture and retention, real-time production analysis, OEE data capture, over-the-air updates, and hardware monitoring.">
+          <div class="card-grid three traceability-feature-cards">
+            <article class="capability"><div class="traceability-card-number">01</div><h3>Near-real-time review</h3><p>Review what the system is rejecting while production is still running, instead of waiting for end-of-shift summaries or manual reports.</p></article>
+            <article class="capability"><div class="traceability-card-number">02</div><h3>Cloud access for authorized users</h3><p>Permissioned users can access the image history through the cloud, including from mobile devices when appropriate.</p></article>
+            <article class="capability"><div class="traceability-card-number">03</div><h3>FSQA investigation context</h3><p>Images, event type, product, line, lot, machine, and timestamp help teams understand what happened and what should happen next.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tint">
+        <div class="section-inner">
+          <div class="traceability-section-head">
+            <p class="eyebrow">Retention and review</p>
+            <h2>Keep the evidence that matters.</h2>
+            <p class="lead">Food-safety questions rarely come at a convenient time. A customer complaint, audit request, foreign-material review, or repeat reject pattern can require teams to reconstruct what happened hours, days, or weeks later.</p>
+            <p>GreyscaleAI stores inspection images, event metadata, and machine context according to customer-defined retention policies. Teams can search by time, SKU, line, event type, machine, lot, and related metadata to support investigations, traceability requests, and recurring quality review.</p>
+          </div>
+          <div class="card-grid three traceability-feature-cards">
+            <article class="capability"><div class="traceability-card-number">01</div><h3>Retention by policy</h3><p>Image and event retention is configured with the customer rather than assumed as a fixed generic setting.</p></article>
+            <article class="capability"><div class="traceability-card-number">02</div><h3>Searchable metadata</h3><p>Time, product, line, event type, lot, and machine details help teams narrow the record quickly.</p></article>
+            <article class="capability"><div class="traceability-card-number">03</div><h3>Controlled access</h3><p>Authorized users can review, export, and manage records according to approved access and retention workflows.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark traceability-risk-section">
+        <div class="section-inner split">
+          <div>
+            <p class="eyebrow">Governed evidence</p>
+            <h2>Controlled records reduce risk better than scattered records.</h2>
+            <p class="lead">Some teams worry that image history creates liability. The real risk is usually less obvious: incomplete paper logs, screenshots saved outside the process, handwritten notes that are hard to read, and records that are difficult to find when a serious question comes up.</p>
+            <p>GreyscaleAI is designed to make inspection evidence governed and useful. The goal is not to keep more data for its own sake. The goal is to keep the right inspection evidence, under the right retention policy, so QA and food-safety teams can answer hard questions quickly.</p>
+          </div>
+          <ul class="feature-list compact traceability-risk-list">
+            <li><strong>Policy-controlled retention</strong><br>Records are retained according to the customer’s deployment and QA requirements.</li>
+            <li><strong>Permissioned review</strong><br>Access can be limited to appropriate QA, operations, technical, and management users.</li>
+            <li><strong>Exportable evidence</strong><br>Teams can pull supporting records for internal review, customer reporting, audit support, and corrective-action documentation.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="challenge">
+        <div class="section-inner">
+          <div class="traceability-section-head">
+            <p class="eyebrow">HACCP challenge records</p>
+            <h2>Hands-free challenge documentation.</h2>
+            <p class="lead">Routine system challenges are essential, but the workflow is often manual. An operator runs a challenge, interacts with the machine interface, writes down the result, and someone later has to prove when it happened and what the system saw.</p>
+            <p>GreyscaleAI supports proprietary challenge cards that allow authorized teams to challenge the inspection system without navigating the operator interface during production. When a challenge event occurs, the system can capture the inspection image, timestamp, product context, line, machine, and result as part of the image history.</p>
+            <p>QA teams can search and export challenge records for verification, internal review, customer reporting, and audit support. Where aligned with the customer’s approved QA and HACCP procedures, this can reduce handwritten challenge logs and make reporting easier.</p>
+          </div>
+          <div class="card-grid three traceability-step-grid">
+            <article class="capability"><div class="traceability-step-number">1</div><h3>Run the challenge</h3><p>An authorized team member runs the routine challenge using GreyscaleAI challenge cards, without stopping to operate the UI.</p></article>
+            <article class="capability"><div class="traceability-step-number">2</div><h3>Capture the record</h3><p>The system captures the image, timestamp, line, product context, machine context, and result.</p></article>
+            <article class="capability"><div class="traceability-step-number">3</div><h3>Review and report</h3><p>QA can search, review, and export challenge records by date, line, SKU, machine, or audit period.</p></article>
           </div>
         </div>
       </section>
@@ -103,73 +191,137 @@
       <section class="section tint">
         <div class="section-inner">
           <p class="eyebrow">Search interface</p>
-          <h2>Search filters should get teams to the right event quickly.</h2>
-          <div class="dashboard-grid">
+          <h2>Find the right event before the question escalates.</h2>
+          <p class="lead">Image history is only useful if teams can find the right record quickly. GreyscaleAI brings the inspection image, AI decision, machine metadata, and production context into one review workflow.</p>
+          <div class="dashboard-grid traceability-dashboard-grid">
             <figure class="screenshot-card">
               <div class="mock-screen">
-                <div class="mock-toolbar">
-<span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
-</div>
+                <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
                 <div class="mock-body">
                   <p class="caption">Search filters</p>
                   <div class="mock-list">
-                    <div>
-<span>Time</span><span>Last 8 hrs</span>
-</div>
-                    <div>
-<span>SKU</span><span>2418-3</span>
-</div>
-                    <div>
-<span>Line</span><span>Protein 2</span>
-</div>
-                    <div>
-<span>Event</span><span>Reject</span>
-</div>
+                    <div><span>Time</span><span>Last 8 hrs</span></div>
+                    <div><span>SKU</span><span>2418-3</span></div>
+                    <div><span>Lot</span><span>L-0826</span></div>
+                    <div><span>Line</span><span>Protein 2</span></div>
+                    <div><span>Machine</span><span>HRX 660</span></div>
+                    <div><span>Event type</span><span>Challenge</span></div>
+                    <div><span>Disposition</span><span>Review</span></div>
                   </div>
                 </div>
               </div>
-              <figcaption>Filter by time, SKU, line, or event type to narrow the image history before review.</figcaption>
+              <figcaption>Time, SKU, lot, line, machine, event type, challenge type, disposition, review status, and related metadata.</figcaption>
             </figure>
             <figure class="screenshot-card">
               <div class="mock-screen">
-                <div class="mock-toolbar">
-<span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
-</div>
+                <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
                 <div class="mock-body">
                   <p class="caption">Event record</p>
                   <div class="mock-grid">
                     <div class="mock-panel">
-<p class="muted">X-ray image</p>
-<div class="meter"><span style="width:88%"></span></div>
-<div class="meter"><span style="width:62%"></span></div>
-<div class="meter"><span style="width:74%"></span></div>
-</div>
+                      <p class="muted">Inspection image</p>
+                      <div class="traceability-mini-xray"><span></span></div>
+                    </div>
                     <div class="mock-panel small">
-<p class="muted">Metadata</p>
-<div class="meter"><span style="width:72%"></span></div>
-<div class="meter"><span style="width:54%"></span></div>
-<div class="meter"><span style="width:66%"></span></div>
-</div>
+                      <p class="muted">Metadata</p>
+                      <div class="meter"><span style="width:72%"></span></div>
+                      <div class="meter"><span style="width:54%"></span></div>
+                      <div class="meter"><span style="width:66%"></span></div>
+                      <div class="meter"><span style="width:84%"></span></div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <figcaption>Open the X-ray image, AI decision, and machine metadata in one review screen for traceability.</figcaption>
+              <figcaption>Inspection image, timestamp, AI result, operator or QA review status, product context, machine status, and export options.</figcaption>
+            </figure>
+            <figure class="screenshot-card">
+              <div class="mock-screen">
+                <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+                <div class="mock-body">
+                  <p class="caption">Review actions</p>
+                  <div class="mock-list">
+                    <div><span>Open event</span><span>Ready</span></div>
+                    <div><span>Compare images</span><span>3 related</span></div>
+                    <div><span>Export evidence</span><span>PDF / CSV</span></div>
+                    <div><span>Follow-up</span><span>Documented</span></div>
+                    <div><span>Insights</span><span>Open</span></div>
+                  </div>
+                </div>
+              </div>
+              <figcaption>Open the event, compare related images, export supporting evidence, document follow-up actions, or move into Insights for broader analysis.</figcaption>
             </figure>
           </div>
         </div>
       </section>
 
       <section class="section">
+        <div class="section-inner split">
+          <div>
+            <p class="eyebrow">From image history to Insights</p>
+            <h2>Start with the image. Then look beyond the reject.</h2>
+            <p class="lead">Image history helps teams answer, “What did the machine reject?” Insights helps teams answer the next questions: Is this happening repeatedly? Is it tied to a product, shift, supplier, machine state, or process change? Are there elevated-risk windows around the reject that deserve review?</p>
+            <p>When a single event raises a larger question, teams can use GreyscaleAI Insights to move from image review into reject trends, machine visibility, alerts, and Beyond Rejects workflows.</p>
+            <div class="section-actions">
+              <a class="button" href="../../insights/">Explore GreyscaleAI Insights</a>
+              <a class="button secondary" href="../../insights/beyond-rejects/">Explore Beyond Rejects</a>
+            </div>
+          </div>
+          <div class="traceability-bridge" role="img" aria-label="Event review flowing into Insights trend, alert, and Beyond Rejects workflows.">
+            <div>Image history</div>
+            <span></span>
+            <div>Insights</div>
+            <span></span>
+            <div>Beyond Rejects</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tint">
         <div class="section-inner">
           <p class="eyebrow">Common uses</p>
           <h2>Traceability matters when the question is urgent.</h2>
           <div class="card-grid three">
-            <article class="capability"><h3>QA investigations</h3>
-<p>Confirm whether a suspect event was foreign material, quality drift, or a false alarm before escalating further.</p></article>
-            <article class="capability"><h3>Food safety review</h3>
-<p>Bring image evidence and event history into internal review rather than relying on memory or handwritten notes.</p></article>
-            <article class="capability"><h3>Operational context</h3>
-<p>Connect what happened on the line to shifts, products, and machine state around the same time.</p></article>
+            <article class="capability"><h3>QA investigations</h3><p>Confirm whether a suspect event was foreign material, product quality drift, packaging variation, or a false alarm before escalating further.</p></article>
+            <article class="capability"><h3>Live reject review</h3><p>See what the system is rejecting during production, away from the machine, so FSQA can spot patterns earlier.</p></article>
+            <article class="capability"><h3>Food-safety review</h3><p>Bring image evidence and event history into internal review instead of relying on memory, screenshots, or handwritten notes.</p></article>
+            <article class="capability"><h3>HACCP challenge reporting</h3><p>Retrieve challenge images, timestamps, product context, line, machine, and result history for verification and audit support.</p></article>
+            <article class="capability"><h3>Corrective-action support</h3><p>Use actual inspection records to support hold, reinspection, supplier follow-up, sanitation review, or process troubleshooting.</p></article>
+            <article class="capability"><h3>Operational context</h3><p>Connect what happened on the line to shifts, products, reject trends, machine state, and review activity around the same time.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner">
+          <p class="eyebrow">What gets captured</p>
+          <h2>One inspection event. One complete record.</h2>
+          <p class="lead">Each event can bring together the information QA teams need to understand what happened, investigate the cause, and document the result.</p>
+          <ul class="record-elements">
+            <li>Inspection image</li>
+            <li>Event timestamp</li>
+            <li>Product and SKU</li>
+            <li>Lot or production context, where available</li>
+            <li>Line and machine</li>
+            <li>Event type</li>
+            <li>AI decision or inspection result</li>
+            <li>Challenge record, where applicable</li>
+            <li>Review status</li>
+            <li>Export history and supporting metadata</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section compact">
+        <div class="section-inner">
+          <div class="proof-band traceability-cta">
+            <div>
+              <h2>Turn inspection history into usable FSQA intelligence.</h2>
+              <p>GreyscaleAI helps QA and operations teams see what the system is rejecting, investigate events remotely, document HACCP challenge activity, and move into Insights when the question requires broader trend or root-cause analysis.</p>
+            </div>
+            <div class="section-actions">
+              <a class="button" href="../../contact/">Request a demo</a>
+              <a class="button secondary" href="../../insights/">Explore Insights</a>
+            </div>
           </div>
         </div>
       </section>
