@@ -46,3 +46,100 @@ document.querySelectorAll("[data-fm-evidence-card]").forEach((card) => {
     }
   });
 });
+
+document.querySelectorAll("[data-compare-card]").forEach((card) => {
+  const visual = card.querySelector("[data-compare-visual]");
+  const handle = card.querySelector("[data-compare-handle]");
+
+  if (!visual || !handle) {
+    return;
+  }
+
+  let activePointerId = null;
+  let value = 50;
+
+  const clampValue = (nextValue) => Math.max(8, Math.min(92, nextValue));
+
+  const setValue = (nextValue) => {
+    value = clampValue(nextValue);
+    const roundedValue = Math.round(value);
+
+    visual.style.setProperty("--compare-position", `${value}%`);
+    handle.setAttribute("aria-valuenow", String(roundedValue));
+    handle.setAttribute("aria-valuetext", `${roundedValue} percent good reference shown`);
+  };
+
+  const getValueFromPointer = (clientX) => {
+    const rect = visual.getBoundingClientRect();
+    return ((clientX - rect.left) / rect.width) * 100;
+  };
+
+  visual.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "mouse" && event.button !== 0) {
+      return;
+    }
+
+    activePointerId = event.pointerId;
+    visual.setPointerCapture(activePointerId);
+    setValue(getValueFromPointer(event.clientX));
+  });
+
+  visual.addEventListener("pointermove", (event) => {
+    if (event.pointerId !== activePointerId) {
+      return;
+    }
+
+    setValue(getValueFromPointer(event.clientX));
+  });
+
+  const endDrag = (event) => {
+    if (event.pointerId === activePointerId) {
+      activePointerId = null;
+    }
+  };
+
+  visual.addEventListener("pointerup", endDrag);
+  visual.addEventListener("pointercancel", endDrag);
+  visual.addEventListener("lostpointercapture", () => {
+    activePointerId = null;
+  });
+
+  handle.addEventListener("keydown", (event) => {
+    const step = event.shiftKey ? 10 : 5;
+    let nextValue = value;
+
+    if (event.key === "ArrowLeft") {
+      nextValue = value - step;
+    } else if (event.key === "ArrowRight") {
+      nextValue = value + step;
+    } else if (event.key === "Home") {
+      nextValue = 8;
+    } else if (event.key === "End") {
+      nextValue = 92;
+    } else {
+      return;
+    }
+
+    event.preventDefault();
+    setValue(nextValue);
+  });
+
+  setValue(value);
+});
+
+document.querySelectorAll("[data-assembly-toggle]").forEach((toggle) => {
+  const setZoomed = (isZoomed) => {
+    toggle.classList.toggle("is-zoomed", isZoomed);
+    toggle.setAttribute("aria-pressed", String(isZoomed));
+  };
+
+  toggle.addEventListener("click", () => {
+    setZoomed(!toggle.classList.contains("is-zoomed"));
+  });
+
+  toggle.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      setZoomed(false);
+    }
+  });
+});

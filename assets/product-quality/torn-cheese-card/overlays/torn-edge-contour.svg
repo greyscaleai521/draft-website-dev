@@ -1,0 +1,9 @@
+<svg viewBox="0 0 1200 750" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M898 198 C930 208 912 238 965 260 C930 300 985 340 950 385 C1005 438 965 512 974 553 C945 550 918 548 895 545 C910 475 890 390 905 315 C882 255 884 220 898 198 Z"
+    fill="rgba(239,68,68,0.28)"
+    stroke="#ef4444"
+    stroke-width="5"
+    vector-effect="non-scaling-stroke"
+  />
+</svg>
