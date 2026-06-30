@@ -7,8 +7,8 @@
     <title>Image History &amp; Traceability | GreyscaleAI</title>
     <meta name="description" content="Turn inspection images into a searchable FSQA investigation library with GreyscaleAI image history and traceability.">
     <link rel="icon" href="../../assets/img/meta/favicon.ico">
-    <link rel="stylesheet" href="../../assets/css/styles.css?v=image-history-carousel-v4">
-    <script defer src="../../assets/js/main.js?v=image-history-carousel-v4"></script>
+    <link rel="stylesheet" href="../../assets/css/styles.css?v=image-history-stepper-v1">
+    <script defer src="../../assets/js/main.js?v=image-history-stepper-v1"></script>
   </head>
   <body>
     <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../index.html" aria-label="GreyscaleAI home"><img src="../../assets/img/logos/greyscale-ai-logo-white.png" alt="GreyscaleAI"></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle><span></span></button><ul class="nav-links" data-nav-links>
@@ -67,7 +67,7 @@
 <li><a class="nav-cta" href="../../contact/">Request a Demo</a></li>
 </ul></nav></header>
 
-    <main>
+    <main class="traceability-page">
       <section class="section dark traceability-hero">
         <span class="traceability-hero-wave" aria-hidden="true"></span>
         <div class="section-inner traceability-hero-grid">
@@ -173,35 +173,18 @@
         </div>
       </section>
 
-      <section class="section" id="live-investigation-library">
+      <section class="section traceability-soft-section" id="reviewable-records">
         <div class="section-inner">
           <div class="traceability-section-head">
-            <p class="eyebrow">Live investigation library</p>
-            <h2>See what the machine is rejecting without standing at the machine.</h2>
-            <p class="lead">The reject bin tells operators that something was removed. It does not always tell FSQA what the concern looked like, whether similar events are repeating, or whether the pattern needs follow-up.</p>
-            <p>GreyscaleAI gives plant teams a cloud-accessible image library so QA, food safety, operations, and technical users can review inspection events away from the production floor. Teams can inspect the image, review the context, and decide whether the issue needs escalation, reinspection, supplier follow-up, or deeper analysis.</p>
+            <p class="eyebrow">Reviewable inspection records</p>
+            <h2>Turn every inspection event into a reviewable record.</h2>
+            <p class="lead">Each image-history event connects what the machine saw with the production context FSQA needs to understand what happened and decide what should happen next.</p>
           </div>
-          <div class="card-grid traceability-icon-cards">
-            <article class="capability traceability-icon-card"><span class="traceability-benefit-icon traceability-benefit-icon--access" aria-hidden="true"></span><h3>Review away from the machine</h3><p>FSQA and plant teams can review image history from desktop or mobile without standing at the inspection system.</p></article>
-            <article class="capability traceability-icon-card"><span class="traceability-benefit-icon traceability-benefit-icon--search" aria-hidden="true"></span><h3>Search the right event fast</h3><p>Filter by time, SKU, lot, line, machine, event type, result, or review status.</p></article>
-            <article class="capability traceability-icon-card"><span class="traceability-benefit-icon traceability-benefit-icon--challenge" aria-hidden="true"></span><h3>Document HACCP challenges</h3><p>Capture routine challenge activity as part of the inspection record, including the image, timestamp, product, line, machine, and result.</p></article>
-            <article class="capability traceability-icon-card"><span class="traceability-benefit-icon traceability-benefit-icon--insights" aria-hidden="true"></span><h3>Go deeper in Insights</h3><p>Move from image review into Insights when a single event raises broader questions about trends, risk windows, or root cause.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section tint">
-        <div class="section-inner">
-          <div class="traceability-section-head">
-            <p class="eyebrow">Reviewable records</p>
-            <h2>A complete record for review, investigation, and reporting.</h2>
-            <p class="lead">Image history should not be a passive archive. Each event can connect the inspection image, timestamp, product context, line, machine, event type, result, and review status so teams can understand what happened and support follow-up.</p>
-            <p>Records are managed according to the customer’s deployment, access, and QA requirements. That gives teams a more useful record than scattered screenshots, handwritten notes, or end-of-shift summaries.</p>
-          </div>
-          <div class="card-grid three traceability-feature-cards">
-            <article class="capability"><h3>Actual image evidence</h3><p>Review what the system saw instead of relying only on reject counts, alarms, or memory.</p></article>
-            <article class="capability"><h3>Production context</h3><p>Connect the image to product, line, machine, timestamp, lot, event type, and review status where available.</p></article>
-            <article class="capability"><h3>Exportable support</h3><p>Pull records for internal review, customer reporting, audit support, corrective-action documentation, or supplier follow-up.</p></article>
+          <div class="card-grid traceability-plain-cards">
+            <article class="capability"><h3>Actual image evidence</h3><p>Review the inspection image instead of relying only on reject counts, alarms, or end-of-shift notes.</p></article>
+            <article class="capability"><h3>Production context</h3><p>Connect the event to product, line, machine, lot, timestamp, event type, and result where available.</p></article>
+            <article class="capability"><h3>Searchable history</h3><p>Find the right event by time, SKU, line, machine, lot, event type, result, or review status.</p></article>
+            <article class="capability"><h3>Review and export</h3><p>Open the record, compare related images, export evidence, or move the issue into follow-up.</p></article>
           </div>
         </div>
       </section>
@@ -211,8 +194,7 @@
           <div class="traceability-section-head">
             <p class="eyebrow">HACCP challenge records</p>
             <h2>Hands-free challenge documentation.</h2>
-            <p class="lead">Routine system challenges are essential, but the workflow is often manual. Plant personnel run a challenge, interact with the machine interface, write down the result, and someone later has to prove when it happened and what the system saw.</p>
-            <p>GreyscaleAI challenge cards allow plant teams to run routine challenges without navigating the operator interface during production. When a challenge event occurs, the system captures the inspection image, timestamp, product context, line, machine, and result as part of the image history.</p>
+            <p class="lead">Plant teams can run routine challenges without navigating the operator interface during production. When a challenge event occurs, GreyscaleAI captures the inspection image, timestamp, product context, line, machine, and result as part of the image history.</p>
           </div>
           <div class="traceability-carousel traceability-carousel--embedded" data-traceability-carousel role="region" aria-label="Hands-free challenge workflow carousel">
             <div class="traceability-carousel__inner">
@@ -271,128 +253,127 @@
         </div>
       </section>
 
-      <section class="section tint">
+      <section class="section traceability-soft-section" id="search-review-decide" aria-labelledby="srdecide-heading">
         <div class="section-inner">
-          <p class="eyebrow">Search interface</p>
-          <h2>Find the right event before the question escalates.</h2>
-          <p class="lead">Image history is only useful if teams can find the right record quickly. GreyscaleAI brings the inspection image, inspection result, machine metadata, and production context into one review workflow.</p>
-          <div class="dashboard-grid traceability-dashboard-grid">
-            <figure class="screenshot-card">
-              <div class="mock-screen">
-                <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
-                <div class="mock-body">
-                  <p class="caption">Search filters</p>
-                  <div class="mock-list">
-                    <div><span>Time</span><span>Last 8 hrs</span></div>
-                    <div><span>SKU</span><span>2418-3</span></div>
-                    <div><span>Lot</span><span>L-0826</span></div>
-                    <div><span>Line</span><span>Protein 2</span></div>
-                    <div><span>Machine</span><span>HRX 660</span></div>
-                    <div><span>Event type</span><span>Challenge</span></div>
-                    <div><span>Challenge type</span><span>Routine</span></div>
-                    <div><span>Result</span><span>Passed</span></div>
-                    <div><span>Review status</span><span>Needs review</span></div>
-                  </div>
-                </div>
-              </div>
-              <figcaption>Time, SKU, lot, line, machine, event type, challenge type, result, review status, and related metadata.</figcaption>
-            </figure>
-            <figure class="screenshot-card">
-              <div class="mock-screen">
-                <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
-                <div class="mock-body">
-                  <p class="caption">Event record</p>
-                  <div class="mock-grid">
-                    <div class="mock-panel">
-                      <p class="muted">Inspection image</p>
-                      <div class="traceability-mini-xray"><span></span></div>
-                    </div>
-                    <div class="mock-panel small">
-                      <p class="muted">Metadata</p>
-                      <div class="meter"><span style="width:72%"></span></div>
-                      <div class="meter"><span style="width:54%"></span></div>
-                      <div class="meter"><span style="width:66%"></span></div>
-                      <div class="meter"><span style="width:84%"></span></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <figcaption>Inspection image, timestamp, result, QA review status, product context, machine context, and export options.</figcaption>
-            </figure>
-            <figure class="screenshot-card">
-              <div class="mock-screen">
-                <div class="mock-toolbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
-                <div class="mock-body">
-                  <p class="caption">Review actions</p>
-                  <div class="mock-list">
-                    <div><span>Open event</span><span>Ready</span></div>
-                    <div><span>Compare images</span><span>3 related</span></div>
-                    <div><span>Export evidence</span><span>PDF / CSV</span></div>
-                    <div><span>Follow-up</span><span>Documented</span></div>
-                    <div><span>Insights</span><span>Open</span></div>
-                  </div>
-                </div>
-              </div>
-              <figcaption>Open the event, compare related images, export supporting evidence, document follow-up actions, or move into Insights for broader analysis.</figcaption>
-            </figure>
+          <div class="traceability-section-head srdecide-header">
+            <div>
+              <p class="eyebrow">SEARCH, REVIEW, DECIDE</p>
+              <h2 id="srdecide-heading">Find the event. Then see what happened around it.</h2>
+            </div>
+            <p class="lead">Image History helps FSQA teams find the inspection record they need, review the image and production context, and decide whether the event needs follow-up. When the question goes beyond one record, Beyond Rejects helps surface related images and nearby events faster than searching one at a time.</p>
           </div>
-        </div>
-      </section>
 
-      <section class="section">
-        <div class="section-inner split">
-          <div>
-            <p class="eyebrow">From image history to Insights</p>
-            <h2>Start with the image. Then look beyond the reject.</h2>
-            <p class="lead">Image History helps teams answer, “What did the machine reject?” Insights helps teams answer the next questions: Is this happening repeatedly? Is it tied to a product, shift, supplier, machine state, or process change? Are there elevated-risk windows around the reject that deserve review?</p>
-            <p>When a single event raises a larger question, teams can use GreyscaleAI Insights to move from image review into reject trends, machine visibility, alerts, and Beyond Rejects workflows.</p>
-            <div class="section-actions">
-              <a class="button" href="../../insights/">Explore GreyscaleAI Insights</a>
-              <a class="button secondary" href="../../insights/beyond-rejects/">Explore Beyond Rejects</a>
+          <div class="srdecide-stepper" data-srdecide-stepper>
+            <div class="srdecide-tabs" role="tablist" aria-label="Search Review Decide">
+              <button class="srdecide-tab is-active" id="srdecide-tab-search" type="button" role="tab" aria-selected="true" aria-controls="srdecide-panel-search" data-step="search">
+                <img src="../../assets/img/solutions/image-history-traceability/stepper-icons/icon-search.svg" alt="" aria-hidden="true">
+                <span><strong>Search the record</strong><small>Filter down to the event set.</small></span>
+              </button>
+              <button class="srdecide-tab" id="srdecide-tab-review" type="button" role="tab" aria-selected="false" aria-controls="srdecide-panel-review" data-step="review">
+                <img src="../../assets/img/solutions/image-history-traceability/stepper-icons/icon-evidence.svg" alt="" aria-hidden="true">
+                <span><strong>Review the evidence</strong><small>Open the image and context.</small></span>
+              </button>
+              <button class="srdecide-tab" id="srdecide-tab-decide" type="button" role="tab" aria-selected="false" aria-controls="srdecide-panel-decide" data-step="decide">
+                <img src="../../assets/img/solutions/image-history-traceability/stepper-icons/icon-decide.svg" alt="" aria-hidden="true">
+                <span><strong>Decide what needs follow-up</strong><small>Use surrounding context to act or clear.</small></span>
+              </button>
+            </div>
+
+            <div class="srdecide-panels">
+              <div class="srdecide-panel is-active" id="srdecide-panel-search" role="tabpanel" aria-labelledby="srdecide-tab-search" data-panel="search">
+                <div class="srdecide-panel-heading">
+                  <p>Image History Library</p>
+                  <h3>Search the record</h3>
+                </div>
+                <div class="srdecide-filter-grid" aria-label="Search filters">
+                  <button class="srdecide-filter" type="button"><span>Time</span><strong>Last 8 hrs</strong><img src="../../assets/img/solutions/image-history-traceability/stepper-icons/icon-chevron-down.svg" alt="" aria-hidden="true"></button>
+                  <button class="srdecide-filter" type="button"><span>SKU</span><strong>2418-3</strong><img src="../../assets/img/solutions/image-history-traceability/stepper-icons/icon-chevron-down.svg" alt="" aria-hidden="true"></button>
+                  <button class="srdecide-filter" type="button"><span>Lot</span><strong>L-0826</strong><img src="../../assets/img/solutions/image-history-traceability/stepper-icons/icon-chevron-down.svg" alt="" aria-hidden="true"></button>
+                  <button class="srdecide-filter" type="button"><span>Line</span><strong>Protein 2</strong><img src="../../assets/img/solutions/image-history-traceability/stepper-icons/icon-chevron-down.svg" alt="" aria-hidden="true"></button>
+                  <button class="srdecide-filter" type="button"><span>Machine</span><strong>HRX 660</strong><img src="../../assets/img/solutions/image-history-traceability/stepper-icons/icon-chevron-down.svg" alt="" aria-hidden="true"></button>
+                  <button class="srdecide-filter" type="button"><span>Event type</span><strong>Challenge</strong><img src="../../assets/img/solutions/image-history-traceability/stepper-icons/icon-chevron-down.svg" alt="" aria-hidden="true"></button>
+                  <button class="srdecide-filter" type="button"><span>Result</span><strong>Review</strong><img src="../../assets/img/solutions/image-history-traceability/stepper-icons/icon-chevron-down.svg" alt="" aria-hidden="true"></button>
+                  <button class="srdecide-filter" type="button"><span>Review status</span><strong>Open</strong><img src="../../assets/img/solutions/image-history-traceability/stepper-icons/icon-chevron-down.svg" alt="" aria-hidden="true"></button>
+                </div>
+                <div class="srdecide-results">
+                  <article><div class="xray-thumb" aria-hidden="true"></div><small>10:42 AM · Line 2</small><strong>Routine test validation</strong><span>Review</span></article>
+                  <article><div class="xray-thumb" aria-hidden="true"></div><small>11:08 AM · Line 2</small><strong>Related inspection event</strong><span>Open</span></article>
+                  <article><div class="xray-thumb" aria-hidden="true"></div><small>11:31 AM · Line 2</small><strong>Image ready for review</strong><span>Ready</span></article>
+                  <article><div class="xray-thumb" aria-hidden="true"></div><small>12:05 PM · Line 2</small><strong>Follow-up record</strong><span>Pending</span></article>
+                </div>
+              </div>
+
+              <div class="srdecide-panel" id="srdecide-panel-review" role="tabpanel" aria-labelledby="srdecide-tab-review" data-panel="review" hidden>
+                <div class="srdecide-panel-heading">
+                  <p>Selected event</p>
+                  <h3>Review the evidence</h3>
+                </div>
+                <div class="srdecide-event-layout">
+                  <div class="srdecide-xray-viewer" role="img" aria-label="Inspection image placeholder with review markers."><span></span></div>
+                  <div class="srdecide-metadata">
+                    <dl>
+                      <div><dt>Product</dt><dd>18 oz Yellow Rice</dd></div>
+                      <div><dt>Line</dt><dd>Protein 2</dd></div>
+                      <div><dt>Machine</dt><dd>HRX 660</dd></div>
+                      <div><dt>Timestamp</dt><dd>2026-02-18 10:42 AM</dd></div>
+                      <div><dt>Event type</dt><dd>Routine test validation</dd></div>
+                      <div><dt>Result</dt><dd>Review</dd></div>
+                      <div><dt>QA status</dt><dd>Open</dd></div>
+                    </dl>
+                    <div class="srdecide-actions"><span>Open event</span><span>Export evidence</span><span>Document follow-up</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="srdecide-panel" id="srdecide-panel-decide" role="tabpanel" aria-labelledby="srdecide-tab-decide" data-panel="decide" hidden>
+                <div class="srdecide-panel-heading">
+                  <p>Beyond Rejects context</p>
+                  <h3>Decide what needs follow-up</h3>
+                </div>
+                <div class="srdecide-timeline">
+                  <div class="srdecide-timeline-header"><strong>Surrounding production window</strong><span>Review window · 8 hrs</span></div>
+                  <div class="srdecide-time-items">
+                    <span>09:12</span><span>09:54</span><span>10:18</span><span class="is-selected">10:42 Selected</span><span>11:08</span><span>11:31</span><span>12:05</span>
+                  </div>
+                </div>
+                <div class="srdecide-related">
+                  <div><span>Before</span><i class="xray-thumb" aria-hidden="true"></i></div>
+                  <div class="is-selected"><span>Selected event</span><i class="xray-thumb" aria-hidden="true"></i></div>
+                  <div><span>After</span><i class="xray-thumb" aria-hidden="true"></i></div>
+                  <strong>3 related images found</strong>
+                </div>
+                <div class="srdecide-decision-chips"><span>No action</span><span>Document</span><span>Reinspect</span><span>Supplier follow-up</span><span>Broader investigation</span></div>
+                <div class="srdecide-beyond-callout">
+                  <div><strong>Open in Beyond Rejects</strong><span>Review related images and decide whether the event needs follow-up.</span></div>
+                  <a href="../../insights/beyond-rejects/">View context <img src="../../assets/img/solutions/image-history-traceability/stepper-icons/icon-external.svg" alt="" aria-hidden="true"></a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="traceability-bridge" role="img" aria-label="Event review flowing into Insights trend, alert, and Beyond Rejects workflows.">
-            <div>Image history</div>
-            <span></span>
-            <div>Insights</div>
-            <span></span>
-            <div>Beyond Rejects</div>
+
+          <div class="callout traceability-decision-callout">
+            <div>
+              <h3>Faster context for better decisions</h3>
+              <p>Search helps when the team knows the record they need. Beyond Rejects helps when the question is broader: what happened around this event?</p>
+            </div>
+            <div class="section-actions">
+              <a class="button" href="../../insights/beyond-rejects/">Explore Beyond Rejects</a>
+              <a class="button secondary" href="../../insights/">Explore GreyscaleAI Insights</a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section tint">
+      <section class="section traceability-soft-section">
         <div class="section-inner">
           <p class="eyebrow">Common uses</p>
           <h2>Traceability matters when the question is urgent.</h2>
-          <div class="card-grid three">
-            <article class="capability"><h3>QA investigations</h3><p>Confirm whether a suspect event was foreign material, product quality drift, packaging variation, or a false alarm before escalating further.</p></article>
-            <article class="capability"><h3>Live reject review</h3><p>See what the system is rejecting during production, away from the machine, so FSQA can spot patterns earlier.</p></article>
-            <article class="capability"><h3>Food-safety review</h3><p>Bring image evidence and event history into internal review instead of relying on memory, screenshots, or handwritten notes.</p></article>
+          <div class="card-grid traceability-plain-cards">
+            <article class="capability"><h3>Live reject review</h3><p>See what the system is rejecting during production, away from the machine.</p></article>
             <article class="capability"><h3>HACCP challenge reporting</h3><p>Retrieve challenge images, timestamps, product context, line, machine, and result history for verification and audit support.</p></article>
-            <article class="capability"><h3>Corrective-action support</h3><p>Use actual inspection records to support hold, reinspection, supplier follow-up, sanitation review, or process troubleshooting.</p></article>
-            <article class="capability"><h3>Operational context</h3><p>Connect what happened on the line to shifts, products, reject trends, machine state, and review activity around the same time.</p></article>
+            <article class="capability"><h3>FSQA investigations</h3><p>Review image evidence and event context for complaints, suspect events, corrective actions, or supplier follow-up.</p></article>
+            <article class="capability"><h3>Operational follow-up</h3><p>Connect events to products, shifts, machines, lots, and review activity.</p></article>
           </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-inner">
-          <p class="eyebrow">What gets captured</p>
-          <h2>One inspection event. One complete record.</h2>
-          <p class="lead">Each event can bring together the information QA teams need to understand what happened, investigate the cause, and document the result.</p>
-          <ul class="record-elements">
-            <li>Inspection image</li>
-            <li>Event timestamp</li>
-            <li>Product and SKU</li>
-            <li>Lot or production context, where available</li>
-            <li>Line and machine</li>
-            <li>Event type</li>
-            <li>Inspection result</li>
-            <li>Challenge record, where applicable</li>
-            <li>Review status</li>
-            <li>Export history and supporting metadata</li>
-          </ul>
         </div>
       </section>
 
@@ -401,7 +382,7 @@
           <div class="proof-band traceability-cta">
             <div>
               <h2>Turn inspection history into usable FSQA intelligence.</h2>
-              <p>GreyscaleAI helps QA and operations teams see what the system is rejecting, investigate events remotely, document HACCP challenge activity, and move into Insights when the question requires broader trend or root-cause analysis.</p>
+              <p>GreyscaleAI helps QA and operations teams review inspection images, document challenge activity, investigate events remotely, and move into Insights when a question requires broader trend or root-cause analysis.</p>
             </div>
             <div class="section-actions">
               <a class="button" href="../../contact/">Request a demo</a>
