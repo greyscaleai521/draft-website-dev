@@ -25,6 +25,26 @@ if (hero && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   }, 5200);
 }
 
+document.querySelectorAll("[data-motion-section]").forEach((section) => {
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+    section.classList.add("is-visible");
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        section.classList.add("is-visible");
+        observer.unobserve(section);
+      }
+    });
+  }, { threshold: 0.35 });
+
+  observer.observe(section);
+});
+
 document.querySelectorAll("[data-traceability-carousel]").forEach((carousel) => {
   const slides = Array.from(carousel.querySelectorAll("[data-carousel-slide]"));
   const dots = Array.from(carousel.querySelectorAll("[data-carousel-dot]"));
@@ -126,6 +146,92 @@ document.querySelectorAll("[data-srdecide-stepper]").forEach((stepper) => {
       tabs[nextIndex].focus();
       activateStep(tabs[nextIndex].dataset.step);
     });
+  });
+});
+
+document.querySelectorAll("[data-tabs]").forEach((tabGroup) => {
+  const tabs = Array.from(tabGroup.querySelectorAll("[data-tab-target]"));
+  const panels = Array.from(tabGroup.querySelectorAll("[data-tab-panel]"));
+
+  if (!tabs.length || !panels.length) {
+    return;
+  }
+
+  const activateTab = (target, shouldFocus = false, syncHash = false) => {
+    tabs.forEach((tab) => {
+      const isActive = tab.dataset.tabTarget === target;
+      tab.classList.toggle("is-active", isActive);
+      tab.setAttribute("aria-selected", String(isActive));
+      tab.setAttribute("tabindex", isActive ? "0" : "-1");
+
+      if (isActive && shouldFocus) {
+        tab.focus();
+      }
+    });
+
+    panels.forEach((panel) => {
+      const isActive = panel.dataset.tabPanel === target;
+      panel.classList.toggle("is-active", isActive);
+      panel.hidden = !isActive;
+    });
+
+    if (syncHash && tabGroup.dataset.tabs === "applications") {
+      window.history.replaceState(null, "", `#${target}`);
+    }
+  };
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => activateTab(tab.dataset.tabTarget, false, true));
+
+    tab.addEventListener("keydown", (event) => {
+      let nextIndex = index;
+
+      if (event.key === "ArrowDown" || event.key === "ArrowRight") {
+        nextIndex = (index + 1) % tabs.length;
+      } else if (event.key === "ArrowUp" || event.key === "ArrowLeft") {
+        nextIndex = (index - 1 + tabs.length) % tabs.length;
+      } else if (event.key === "Home") {
+        nextIndex = 0;
+      } else if (event.key === "End") {
+        nextIndex = tabs.length - 1;
+      } else if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        activateTab(tab.dataset.tabTarget, false, true);
+        return;
+      } else {
+        return;
+      }
+
+      event.preventDefault();
+      activateTab(tabs[nextIndex].dataset.tabTarget, true, true);
+    });
+  });
+
+  const tabForHash = () => {
+    const hash = window.location.hash.slice(1);
+    return hash ? tabs.find((tab) => tab.dataset.tabTarget === hash) : null;
+  };
+
+  const initialTab = tabForHash() || tabs.find((tab) => tab.classList.contains("is-active")) || tabs[0];
+  activateTab(initialTab.dataset.tabTarget);
+
+  window.addEventListener("hashchange", () => {
+    const hashedTab = tabForHash();
+
+    if (hashedTab) {
+      activateTab(hashedTab.dataset.tabTarget);
+    }
+  });
+});
+
+document.querySelectorAll("[data-activate-tab]").forEach((link) => {
+  link.addEventListener("click", () => {
+    const target = link.dataset.activateTab;
+    const tab = document.querySelector(`[data-tab-target="${target}"]`);
+
+    if (tab) {
+      tab.click();
+    }
   });
 });
 

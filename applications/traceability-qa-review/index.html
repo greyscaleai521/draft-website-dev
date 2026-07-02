@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Traceability &amp; QA Review | GreyscaleAI</title>
+    <meta name="description" content="Search inspection images, event records, lot and line context, review status, and exportable evidence for FSQA investigations, challenge documentation, and operational follow-up.">
+    <link rel="icon" href="../../assets/img/meta/favicon.ico">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <script defer src="../../assets/js/main.js"></script>
+  </head>
+  <body>
+    <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="icon-clipboard-check" viewBox="0 0 24 24"><path d="M9 5h6"/><path d="M9 3h6v4H9z"/><path d="M8 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><path d="m8 14 2.5 2.5L16 11"/></symbol>
+      <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+      <symbol id="icon-file-search" viewBox="0 0 24 24"><path d="M14 2v6h6"/><path d="M16 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8l6 6v4"/><circle cx="14" cy="16" r="3"/><path d="m16.5 18.5 2.5 2.5"/></symbol>
+      <symbol id="icon-image" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10.5" r="1.5"/><path d="m21 15-5-5L5 19"/></symbol>
+      <symbol id="icon-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></symbol>
+      <symbol id="icon-badge-check" viewBox="0 0 24 24"><path d="M12 2 9.5 5 5.7 4.7 5.4 8.5 2 11l3.4 2.5.3 3.8 3.8-.3L12 22l2.5-5 3.8.3.3-3.8L22 11l-3.4-2.5-.3-3.8-3.8.3z"/><path d="m8.5 11.5 2.2 2.2 4.8-5"/></symbol>
+      <symbol id="icon-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.4 8.8a2 2 0 0 1-1.2 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.4a1.3 1.3 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="icon-activity" viewBox="0 0 24 24"><path d="M22 12h-4l-3 8-6-16-3 8H2"/></symbol>
+      <symbol id="icon-clipboard-list" viewBox="0 0 24 24"><path d="M9 5h6"/><path d="M9 3h6v4H9z"/><path d="M8 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><path d="M8 12h.01"/><path d="M12 12h4"/><path d="M8 16h.01"/><path d="M12 16h4"/></symbol>
+      <symbol id="icon-search-check" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="m8.5 11 1.7 1.7 3.8-4"/></symbol>
+      <symbol id="icon-workflow" viewBox="0 0 24 24"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="15" width="6" height="6" rx="1"/><path d="M9 6h4a3 3 0 0 1 3 3v6"/><path d="M6 9v4a3 3 0 0 0 3 3h6"/></symbol>
+    </svg>
+    <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../index.html" aria-label="GreyscaleAI home"><img src="../../assets/img/logos/greyscale-ai-logo-white.png" alt="GreyscaleAI"></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle><span></span></button><ul class="nav-links" data-nav-links>
+<li class="nav-item has-menu">
+<a href="../../platform/">Platform</a><ul class="nav-menu">
+<li><a href="../../platform/">Overview</a></li>
+<li><a href="../../platform/managed-service-support/">Managed Service &amp; Support</a></li>
+<li><a href="../../request-demo/">Application Fit &amp; Validation</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../applications/" aria-current="page">Applications</a><ul class="nav-menu">
+<li><a href="../../applications/">Overview</a></li>
+<li><a href="../../applications/foreign-material-detection/">Foreign Material Detection</a></li>
+<li><a href="../../applications/product-quality-package-integrity/">Product Quality &amp; Package Integrity</a></li>
+<li><a href="../../applications/weight-count-intelligence/">Weight &amp; Count Intelligence</a></li>
+<li><a href="../../applications/traceability-qa-review/" aria-current="page">Traceability &amp; QA Review</a></li>
+<li><a href="../../applications/production-analytics/">Production Analytics</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../insights/">Insights Software</a><ul class="nav-menu">
+<li><a href="../../insights/">Overview</a></li>
+<li><a href="../../insights/beyond-rejects/">Beyond Rejects</a></li>
+<li><a href="../../insights/machine-visibility-alerts/">Machine Visibility &amp; Alerts</a></li>
+<li><a href="../../insights/#enterprise-access">Enterprise Access</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../machines/">Inspection Systems</a><ul class="nav-menu">
+<li><a href="../../machines/">HRX Systems</a></li>
+<li><a href="../../resources/spec-sheets/">Spec Sheets</a></li>
+<li><a href="../../contact/">Talk Through Fit</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../industries/protein/">Industries</a><ul class="nav-menu">
+<li><a href="../../industries/protein/">Protein</a></li>
+<li><a href="../../industries/dairy-cheese/">Dairy &amp; Cheese</a></li>
+<li><a href="../../industries/frozen-prepared-foods/">Frozen Foods</a></li>
+<li><a href="../../industries/pet-food/">Pet Food</a></li>
+<li><a href="../../industries/produce/">Produce</a></li>
+<li><a href="../../industries/seafood/">Seafood</a></li>
+<li><a href="../../industries/beverage-packaged-goods/">Beverage &amp; Packaged Goods</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../resources/case-studies/">Case Studies</a><ul class="nav-menu">
+<li><a href="../../resources/case-studies/">All Case Studies</a></li>
+<li><a href="../../resources/case-studies/bone-detection/">Bone Detection</a></li>
+<li><a href="../../resources/case-studies/product-in-seal/">Product-in-Seal</a></li>
+<li><a href="../../resources/case-studies/dent-detection/">Dent Detection</a></li>
+<li><a href="../../contact/">Discuss Your Line</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../resources/spec-sheets/">Spec Sheets</a><ul class="nav-menu">
+<li><a href="../../resources/spec-sheets/">All Spec Sheets</a></li>
+<li><a href="../../machines/">HRX Systems</a></li>
+<li><a href="../../contact/">Request a Spec Sheet</a></li>
+</ul>
+</li>
+<li><a class="nav-cta" href="../../contact/">Request a Demo</a></li>
+</ul></nav></header>
+
+    <main>
+      <section class="page-hero">
+        <div class="section-inner split">
+          <div>
+            <p class="meta"><a href="../">Applications</a> / Traceability &amp; QA Review</p>
+            <p class="eyebrow">Application</p>
+            <h1>Traceability &amp; QA review for inspection events.</h1>
+            <p class="lead">When a reject, challenge, complaint, or suspect event needs review, GreyscaleAI helps QA teams find the image, event record, and production context behind it, then move into follow-up with evidence.</p>
+            <div class="section-actions">
+              <a class="button" href="../../insights/image-history-event-review/">See Insights</a>
+              <a class="button secondary" href="../../contact/">Talk Through Fit</a>
+            </div>
+            <div class="hero-proof" aria-label="Traceability outcomes">
+              <span>Search by SKU, lot, line, machine, and time</span>
+              <span>Review image-backed evidence</span>
+              <span>Export records for follow-up</span>
+            </div>
+          </div>
+          <figure class="media-frame traceability-qa-hero-card">
+            <img src="../../assets/img/solutions/image-history-traceability/hero-carousel-slot-3.png" alt="Validation record dashboard showing an X-ray image, event metadata, review status, and validation history.">
+          </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner">
+          <p class="eyebrow">The QA problem</p>
+          <h2>Inspection questions rarely end at the reject bin.</h2>
+          <p class="lead">FSQA teams often need to answer what happened, when it happened, which product, lot, line, and machine were involved, and whether the event needs documentation, reinspection, supplier follow-up, or corrective action. A machine alarm or reject count is not enough context when the question is urgent.</p>
+          <div class="card-grid three icon-card-grid">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-clipboard-check"></use></svg></span><h3>Audit and verification pressure</h3><p>Challenge records, timestamps, and review status need to be easy to find when QA is preparing for internal review, customer questions, or audit support.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-search"></use></svg></span><h3>Investigations take too long</h3><p>Teams lose time when images, event context, and notes live in separate places or require someone to review only from the line.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-file-search"></use></svg></span><h3>Disposition decisions need evidence</h3><p>Hold, release, rework, supplier follow-up, and corrective-action decisions are easier when reviewers can see the inspection image and event context together.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tint">
+        <div class="section-inner">
+          <p class="eyebrow">Why pass/fail is not enough</p>
+          <h2>Traditional inspection gives a result, not a review workflow.</h2>
+          <p class="lead">Conventional inspection systems are built to remove product from the line. They may not give QA an easy way to search past events, compare nearby records, document review status, or export evidence for investigation and audit support.</p>
+          <div class="comparison-columns">
+            <article class="capability">
+              <p class="meta">Pass/fail inspection</p>
+              <ul class="plain-check-list">
+                <li>Reject count</li>
+                <li>Alarm screen</li>
+                <li>Manual notes</li>
+                <li>Line-side review</li>
+                <li>Limited event context</li>
+              </ul>
+            </article>
+            <article class="capability highlight">
+              <p class="meta">GreyscaleAI inspection intelligence</p>
+              <ul class="plain-check-list">
+                <li>Searchable inspection records</li>
+                <li>X-ray image evidence</li>
+                <li>Event and machine metadata</li>
+                <li>Review status and notes</li>
+                <li>Exportable evidence</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner split">
+          <div>
+            <p class="eyebrow">What GreyscaleAI sees</p>
+            <h2>Turn inspection events into reviewable records.</h2>
+            <p class="lead">Each inspection record can connect the X-ray image with the production and machine context available for that line. The result is a searchable record set that helps QA understand what happened and decide what should happen next.</p>
+            <p class="matrix-note">Available metadata depends on line integration, product setup, inspection goal, and system configuration.</p>
+          </div>
+          <figure class="media-frame">
+            <img src="../../assets/img/solutions/image-history-traceability/hero-carousel-slot-2.png" alt="X-ray capture panel showing a captured inspection image, timestamp, density, and status.">
+          </figure>
+        </div>
+        <div class="section-inner">
+          <div class="card-grid four icon-card-grid">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-image"></use></svg></span><h3>X-ray image evidence</h3><p>Open the actual inspection image instead of relying only on counts, alarms, or shift notes.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-database"></use></svg></span><h3>Event metadata</h3><p>Review event type, result, timestamp, machine, line, product, SKU, lot, and available AI decision context.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-badge-check"></use></svg></span><h3>Review status and notes</h3><p>Track whether an event is open, reviewed, passed, documented, or moved into follow-up.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-shield-check"></use></svg></span><h3>Challenge and verification records</h3><p>Capture challenge images and timestamps to support routine verification and audit preparation.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tint">
+        <div class="section-inner">
+          <p class="eyebrow">What Insights shows</p>
+          <h2>Search the record, review the evidence, decide the follow-up.</h2>
+          <p class="lead">Traceability is the buyer outcome. GreyscaleAI Insights is the software layer where authorized users search inspection history, open event records, review image evidence, document status, and export records for follow-up.</p>
+          <div class="card-grid three">
+            <article class="capability icon-card"><img src="../../assets/img/solutions/image-history-traceability/stepper-icons/icon-search.svg" alt="" aria-hidden="true"><h3>Search the record</h3><p>Filter by time, SKU, lot, line, machine, event type, result, or review status.</p></article>
+            <article class="capability icon-card"><img src="../../assets/img/solutions/image-history-traceability/stepper-icons/icon-evidence.svg" alt="" aria-hidden="true"><h3>Review the evidence</h3><p>Open the X-ray image with available AI decision, machine metadata, timestamp, and product context.</p></article>
+            <article class="capability icon-card"><img src="../../assets/img/solutions/image-history-traceability/stepper-icons/icon-decide.svg" alt="" aria-hidden="true"><h3>Decide the follow-up</h3><p>Export evidence, document notes, open related context in Beyond Rejects, or route the issue into QA action.</p></article>
+          </div>
+          <div class="section-actions">
+            <a class="button" href="../../insights/image-history-event-review/">Explore Image History &amp; Event Review</a>
+            <a class="button secondary" href="../../insights/beyond-rejects/">Explore Beyond Rejects</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner">
+          <p class="eyebrow">Common uses</p>
+          <h2>Traceability matters when the question is urgent.</h2>
+          <p class="lead">Use traceability and QA review content to show practical scenarios for food safety, quality, operations, and follow-up. Keep these as outcome cards, not software feature descriptions.</p>
+          <div class="card-grid two icon-card-grid">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-activity"></use></svg></span><h3>Live reject review</h3><p>See what the system is rejecting during production, away from the machine.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-clipboard-list"></use></svg></span><h3>Challenge reporting</h3><p>Retrieve challenge images, timestamps, product context, line, machine, and result history for verification and audit support.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-search-check"></use></svg></span><h3>FSQA investigations</h3><p>Review image evidence and event context for complaints, suspect events, corrective actions, or supplier follow-up.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-workflow"></use></svg></span><h3>Operational follow-up</h3><p>Connect events to products, shifts, machines, lots, and review activity so the right team can decide what happens next.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tint">
+        <div class="section-inner">
+          <p class="eyebrow">Team workflows</p>
+          <h2>Give every team the context it needs to act.</h2>
+          <div class="card-grid four">
+            <article class="capability"><p class="meta">FSQA</p><p>Investigate complaints, suspect events, challenge records, corrective actions, and audit questions from a searchable set of inspection records.</p></article>
+            <article class="capability"><p class="meta">Plant operations</p><p>Understand what was happening by line, product, shift, and machine when the issue occurred.</p></article>
+            <article class="capability"><p class="meta">Maintenance and support</p><p>Use event context and machine metadata to support troubleshooting instead of starting from a vague alarm.</p></article>
+            <article class="capability"><p class="meta">Corporate QA</p><p>Review events across sites where Insights access, permissions, and data structures are configured.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner">
+          <p class="eyebrow">Related proof</p>
+          <h2>See where image-backed review supports real inspection questions.</h2>
+          <p class="lead">These examples should not make new performance claims. Use them to route visitors into relevant proof and adjacent applications.</p>
+          <div class="card-grid three">
+            <a class="resource-card proof-card" href="../../resources/case-studies/bone-detection/"><div><h3>Bone Detection</h3><p>Image-backed review helps teams distinguish true foreign-material risk from natural product variation.</p></div><span class="button">View case study</span></a>
+            <a class="resource-card proof-card" href="../../resources/case-studies/product-in-seal/"><div><h3>Product-in-Seal</h3><p>Package-integrity questions often require image evidence and event context, not just a pass/fail result.</p></div><span class="button">View case study</span></a>
+            <a class="resource-card proof-card" href="../../resources/case-studies/dent-detection/"><div><h3>Dent Detection</h3><p>Quality defects can become reviewable inspection signals that QA and operations teams can track.</p></div><span class="button">View case study</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tint">
+        <div class="section-inner">
+          <p class="eyebrow">Related pages</p>
+          <h2>Connect traceability to the rest of the inspection system.</h2>
+          <div class="card-grid five">
+            <a class="resource-card" href="../../insights/image-history-event-review/"><div><h3>Image History &amp; Event Review</h3><p>See the Insights software workflow for searching, reviewing, documenting, and exporting inspection records.</p></div><span class="button">View workflow</span></a>
+            <a class="resource-card" href="../../insights/beyond-rejects/"><div><h3>Beyond Rejects</h3><p>Review broader context around elevated-risk events, not only the rejected unit.</p></div><span class="button">Explore workflow</span></a>
+            <a class="resource-card" href="../production-analytics/"><div><h3>Production Analytics</h3><p>Move from individual events to trends by line, SKU, shift, plant, or supplier context.</p></div><span class="button">View application</span></a>
+            <a class="resource-card" href="../../inspection-systems/"><div><h3>Inspection Systems</h3><p>See the HRX inspection systems that capture the X-ray images and machine metadata.</p></div><span class="button">View systems</span></a>
+            <a class="resource-card" href="../../contact/"><div><h3>Application Fit &amp; Validation</h3><p>Talk through product, package, line speed, target concerns, available metadata, and validation needs.</p></div><span class="button">Talk Through Fit</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark">
+        <div class="section-inner">
+          <p class="eyebrow">Next step</p>
+          <h2>Make inspection history usable when QA needs answers.</h2>
+          <p class="lead">Talk through your product, package, line speed, traceability needs, and review workflow. GreyscaleAI can help determine what records, metadata, and Insights workflows make sense for your application.</p>
+          <div class="section-actions">
+            <a class="button" href="../../contact/">Talk Through Fit</a>
+            <a class="button secondary" href="../../insights/image-history-event-review/">See Insights</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="footer-inner">
+<div>
+<img src="../../assets/img/logos/greyscale-ai-logo-footer.png" alt="GreyscaleAI"><p>435 Brady Road, Unit H<br>Tarpon Springs, FL 34689<br>(727) 938-5041</p>
+<p>© 2026 GreyscaleAI. All rights reserved.</p>
+</div>
+<div class="footer-links">
+<a href="mailto:info@greyscaleai.com">info@greyscaleai.com</a><a href="../../contact/">Request a Demo</a>
+</div>
+</div></footer>
+  </body>
+</html>

@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Product Quality &amp; Package Integrity | GreyscaleAI</title>
+    <meta name="description" content="Use X-ray image analysis and camera-based checks to review product defects, product-in-seal, open seals, and date/time stamps at production speed.">
+    <link rel="icon" href="../../assets/img/meta/favicon.ico">
+    <link rel="stylesheet" href="../../assets/css/styles.css?v=product-quality-package-integrity-v1">
+    <script defer src="../../assets/js/main.js?v=product-quality-package-integrity-v1"></script>
+  </head>
+  <body>
+    <svg class="icon-sprite" aria-hidden="true" focusable="false">
+      <symbol id="icon-package-check" viewBox="0 0 24 24"><path d="m16 16 2 2 4-4"/><path d="M21 10V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l2-1.1"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></symbol>
+      <symbol id="icon-scan-search" viewBox="0 0 24 24"><path d="M7 3H5a2 2 0 0 0-2 2v2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><circle cx="11" cy="11" r="3"/><path d="m16 16-2.1-2.1"/></symbol>
+      <symbol id="icon-scan-line" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/><path d="M9 9h6"/><path d="M9 15h6"/></symbol>
+      <symbol id="icon-camera" viewBox="0 0 24 24"><path d="M14.5 4 16 7h3a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h3l1.5-3z"/><circle cx="12" cy="13" r="3"/></symbol>
+      <symbol id="icon-calendar-clock" viewBox="0 0 24 24"><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/><path d="M7 4h10a4 4 0 0 1 4 4v3.5"/><path d="M3 8a4 4 0 0 1 4-4"/><path d="M3 8v9a4 4 0 0 0 4 4h4"/><circle cx="17" cy="17" r="4"/><path d="M17 15v2l1.5 1"/></symbol>
+      <symbol id="icon-package-open" viewBox="0 0 24 24"><path d="m3 7 9 5 9-5"/><path d="m3 7 9-4 9 4v10l-9 4-9-4z"/><path d="M12 12v9"/><path d="m7.5 4.9 9 5"/></symbol>
+      <symbol id="icon-clipboard-check" viewBox="0 0 24 24"><path d="M9 5h6"/><path d="M9 3h6v4H9z"/><path d="M8 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><path d="m8 14 2.5 2.5L16 11"/></symbol>
+      <symbol id="icon-image" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10.5" r="1.5"/><path d="m21 15-5-5L5 19"/></symbol>
+      <symbol id="icon-trending-up" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 7-7"/><path d="M14 8h6v6"/></symbol>
+      <symbol id="icon-factory" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V8l5 3V8l5 3V5h4v16"/><path d="M9 17h1"/><path d="M14 17h1"/></symbol>
+    </svg>
+    <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../index.html" aria-label="GreyscaleAI home"><img src="../../assets/img/logos/greyscale-ai-logo-white.png" alt="GreyscaleAI"></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle><span></span></button><ul class="nav-links" data-nav-links>
+<li class="nav-item has-menu">
+<a href="../../platform/">Platform</a><ul class="nav-menu">
+<li><a href="../../platform/">Overview</a></li>
+<li><a href="../../platform/managed-service-support/">Managed Service &amp; Support</a></li>
+<li><a href="../../request-demo/">Application Fit &amp; Validation</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../applications/" aria-current="page">Applications</a><ul class="nav-menu">
+<li><a href="../../applications/">Overview</a></li>
+<li><a href="../../applications/foreign-material-detection/">Foreign Material Detection</a></li>
+<li><a href="../../applications/product-quality-package-integrity/">Product Quality &amp; Package Integrity</a></li>
+<li><a href="../../applications/weight-count-intelligence/">Weight &amp; Count Intelligence</a></li>
+<li><a href="../../applications/traceability-qa-review/">Traceability &amp; QA Review</a></li>
+<li><a href="../../applications/production-analytics/">Production Analytics</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../insights/">Insights Software</a><ul class="nav-menu">
+<li><a href="../../insights/">Overview</a></li>
+<li><a href="../../insights/beyond-rejects/">Beyond Rejects</a></li>
+<li><a href="../../insights/machine-visibility-alerts/">Machine Visibility &amp; Alerts</a></li>
+<li><a href="../../insights/#enterprise-access">Enterprise Access</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../machines/">Inspection Systems</a><ul class="nav-menu">
+<li><a href="../../machines/">HRX Systems</a></li>
+<li><a href="../../resources/spec-sheets/">Spec Sheets</a></li>
+<li><a href="../../contact/">Talk Through Fit</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../industries/protein/">Industries</a><ul class="nav-menu">
+<li><a href="../../industries/protein/">Protein</a></li>
+<li><a href="../../industries/dairy-cheese/">Dairy &amp; Cheese</a></li>
+<li><a href="../../industries/frozen-prepared-foods/">Frozen Foods</a></li>
+<li><a href="../../industries/pet-food/">Pet Food</a></li>
+<li><a href="../../industries/produce/">Produce</a></li>
+<li><a href="../../industries/seafood/">Seafood</a></li>
+<li><a href="../../industries/beverage-packaged-goods/">Beverage &amp; Packaged Goods</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../resources/case-studies/">Case Studies</a><ul class="nav-menu">
+<li><a href="../../resources/case-studies/">All Case Studies</a></li>
+<li><a href="../../resources/case-studies/bone-detection/">Bone Detection</a></li>
+<li><a href="../../resources/case-studies/product-in-seal/">Product-in-Seal</a></li>
+<li><a href="../../resources/case-studies/dent-detection/">Dent Detection</a></li>
+<li><a href="../../contact/">Discuss Your Line</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../resources/spec-sheets/">Spec Sheets</a><ul class="nav-menu">
+<li><a href="../../resources/spec-sheets/">All Spec Sheets</a></li>
+<li><a href="../../machines/">HRX Systems</a></li>
+<li><a href="../../contact/">Request a Spec Sheet</a></li>
+</ul>
+</li>
+<li><a class="nav-cta" href="../../contact/">Request a Demo</a></li>
+</ul></nav></header>
+
+    <main>
+      <section class="page-hero product-quality-app-hero">
+        <div class="section-inner hero-grid">
+          <div>
+            <p class="eyebrow">Application</p>
+            <h1>See product quality and package integrity issues before they become complaints.</h1>
+            <p class="lead">GreyscaleAI helps food producers turn inspection images into product-specific quality signals: broken pieces, missing components, voids, clumps, product-in-seal events, date/time stamp checks, and open-seal review. The goal is not just to reject a unit. It is to give QA and operations teams image-backed evidence they can use to understand what happened and what is changing.</p>
+            <div class="section-actions">
+              <a class="button" href="../../request-demo/">Talk Through Fit</a>
+              <a class="button secondary" href="../../resources/case-studies/product-in-seal/">View Product-in-Seal Case Study</a>
+            </div>
+          </div>
+          <div class="pq-hero-collage" aria-label="Product quality and package integrity image examples">
+            <figure><img src="../../assets/product-quality/torn-cheese-card/images/cheese-torn-card.webp" alt="X-ray image showing torn edge detection on a cheese slice"><figcaption>Broken edge</figcaption></figure>
+            <figure><img src="../../assets/product-quality/burger-sliders-card/images/burger-sliders-missing-component.webp" alt="X-ray image showing a missing component in a prepared food product"><figcaption>Missing component</figcaption></figure>
+            <figure><img src="../../assets/product-quality/cheese-voids-card/images/cheese-voids.webp" alt="X-ray image showing internal voids in a cheese product"><figcaption>Internal void</figcaption></figure>
+            <figure><img src="../../assets/img/case-studies/product-in-seal-02.png" alt="X-ray image of product-in-seal package condition"><figcaption>Product-in-seal</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <nav class="page-subnav" aria-label="On this page"><a href="#product-quality-signals">Product Quality Signals</a><a href="#package-integrity">Product-in-Seal Review</a><a href="#camera-package-checks">Camera-Based Package Checks</a></nav>
+
+      <section class="section">
+        <div class="section-inner">
+          <p class="eyebrow">Production problem</p>
+          <h2>Quality defects and package issues create expensive ambiguity.</h2>
+          <p class="lead">A broken piece, missing component, seal contamination, unreadable code, or open seal can trigger complaints, rework, hold-backs, and manual QA review. The harder part is knowing whether the issue is isolated, tied to a SKU, caused by upstream process drift, or showing up across shifts and lines.</p>
+          <div class="card-grid three">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-package-check"></use></svg></span><h3>Product defects</h3><p>Voids, clumps, broken pieces, missing components, malformed product, and fill distribution can be difficult to confirm from the outside.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-scan-line"></use></svg></span><h3>Package integrity</h3><p>Product-in-seal, open seals, date/time stamp problems, and other visible package conditions need clear review paths.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-clipboard-check"></use></svg></span><h3>QA workload</h3><p>Manual sampling and one-off rejects do not give teams enough evidence to see patterns or make faster disposition decisions.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section product-quality-overview">
+        <div class="section-inner">
+          <div class="quality-summary">
+            <div>
+              <p class="eyebrow">Why it is hard</p>
+              <h2>Pass/fail inspection does not always explain the defect.</h2>
+              <p class="lead">Traditional inspection often treats quality and package issues as a reject count. That can remove a bad unit, but it does not always show the product image, seal region, package condition, line context, or trend that helps teams prevent the next one.</p>
+            </div>
+            <ul class="feature-list">
+              <li><strong>Product variation</strong><br>Real food products vary in shape, density, fill, and presentation. A useful quality model has to separate normal variation from a defect that matters.</li>
+              <li><strong>Hidden internal structure</strong><br>Voids, holes, clumps, and missing components may not be visible from the outside, especially inside packaged or formed products.</li>
+              <li><strong>Subtle seal conditions</strong><br>Product-in-seal and open-seal conditions can be subtle, inconsistent, and package-dependent. The image source matters: X-ray for seal-region product, cameras for visible package conditions.</li>
+              <li><strong>Disconnected review</strong><br>A reject event is more useful when QA can see the image, classify the reason, review surrounding context, and compare trends by SKU, line, or shift.</li>
+            </ul>
+          </div>
+          <figure class="comparison wide-chart">
+            <h3>Product quality inspection comparison</h3>
+            <img src="../../assets/img/solutions/product-quality-table.png" alt="Comparison matrix for GreyscaleAI, single X-ray, dual X-ray, and metal detectors across defect classification, seal defects, and product grading.">
+            <figcaption>Classification matters because product and package issues need to become specific, reviewable signals, not just a generic reject count.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section tint" id="product-quality-signals">
+        <div class="section-inner">
+          <p class="eyebrow">Product quality signals</p>
+          <h2>Quality signals hidden in every image.</h2>
+          <p class="lead quality-section-intro">GreyscaleAI turns inspection images into product-specific quality checks, so teams can see breakage, missing pieces, voids, clumps, and other defects before they become complaints.</p>
+          <div class="xray-gallery quality-signal-gallery">
+            <article class="xray-card quality-card quality-card--torn-cheese">
+              <div class="quality-card__visual" data-compare-card>
+                <span class="quality-card__badge quality-card__badge--good">Good</span>
+                <span class="quality-card__badge quality-card__badge--defect">Torn edge detected</span>
+                <div class="compare-visual" data-compare-visual>
+                  <img class="compare-visual__image compare-visual__image--defect" src="../../assets/product-quality/torn-cheese-card/images/cheese-torn-card.webp" alt="X-ray image showing torn or broken edge detection on a cheese product">
+                  <img class="compare-visual__mask" src="../../assets/product-quality/torn-cheese-card/overlays/torn-edge-contour.svg" alt="" aria-hidden="true">
+                  <div class="compare-visual__reveal" data-compare-reveal>
+                    <img class="compare-visual__image compare-visual__image--good" src="../../assets/product-quality/torn-cheese-card/images/cheese-good-card.webp" alt="X-ray image of an intact cheese slice used as a good reference.">
+                  </div>
+                  <button class="compare-visual__handle" type="button" role="slider" aria-label="Compare good and torn cheese examples" aria-valuemin="8" aria-valuemax="92" aria-valuenow="50" aria-valuetext="50 percent good reference shown" data-compare-handle>
+                    <img src="../../assets/product-quality/torn-cheese-card/overlays/compare-divider-handle.svg" alt="" aria-hidden="true">
+                  </button>
+                </div>
+              </div>
+              <div class="quality-card__body">
+                <p class="quality-card__eyebrow">Shape &amp; edge quality</p>
+                <h3>Torn, broken, or malformed product</h3>
+                <p>AI models learn what good looks like for a specific product, then flag pieces that are torn, broken, folded, collapsed, or malformed before they reach customers.</p>
+                <ul class="quality-card__proofs" aria-label="Example quality benefits">
+                  <li><img src="../../assets/product-quality/torn-cheese-card/icons/icon-edge-break.svg" alt="" aria-hidden="true"><span>Detect subtle edge breaks</span></li>
+                  <li><img src="../../assets/product-quality/torn-cheese-card/icons/icon-complaints.svg" alt="" aria-hidden="true"><span>Reduce customer complaints</span></li>
+                  <li><img src="../../assets/product-quality/torn-cheese-card/icons/icon-line-speed.svg" alt="" aria-hidden="true"><span>Consistent quality at line speed</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="xray-card quality-card quality-card--assembly">
+              <div class="quality-card__visual">
+                <div class="assembly-evidence" aria-label="Burger Sliders complete reference compared with a missing component example">
+                  <div class="assembly-evidence__pane assembly-evidence__pane--complete">
+                    <span class="assembly-evidence__label assembly-evidence__label--complete">Complete</span>
+                    <img class="assembly-evidence__image" src="../../assets/product-quality/burger-sliders-card/images/burger-sliders-good.webp" alt="X-ray image of complete Burger Sliders with expected components present.">
+                    <img class="assembly-evidence__outline assembly-evidence__outline--expected" src="../../assets/product-quality/burger-sliders-card/overlays/expected-component-outline.svg" alt="" aria-hidden="true">
+                  </div>
+                  <span class="assembly-evidence__divider" aria-hidden="true"></span>
+                  <button class="assembly-evidence__pane assembly-evidence__pane--missing" type="button" aria-pressed="false" aria-label="Zoom the lower Burger Slider missing cheese and bun" data-assembly-toggle>
+                    <span class="assembly-evidence__label assembly-evidence__label--missing">Missing component</span>
+                    <img class="assembly-evidence__image" src="../../assets/product-quality/burger-sliders-card/images/burger-sliders-missing-component.webp" alt="X-ray image showing a missing component in a prepared food product">
+                    <span class="assembly-evidence__target assembly-evidence__target--missing" aria-hidden="true"></span>
+                    <span class="assembly-evidence__callout">Lower slider missing cheese + bun</span>
+                  </button>
+                </div>
+              </div>
+              <div class="quality-card__body">
+                <p class="quality-card__eyebrow">Count &amp; assembly checks</p>
+                <h3>Missing or malformed components</h3>
+                <p>Count-based and shape-aware models confirm that expected components are present, correctly placed, and intact, even when defects are subtle or partially hidden.</p>
+                <ul class="quality-card__proofs" aria-label="Burger Sliders assembly benefits">
+                  <li><img src="../../assets/product-quality/burger-sliders-card/overlays/component-checks.svg" alt="" aria-hidden="true"><span>Verify expected components</span></li>
+                  <li><img src="../../assets/product-quality/burger-sliders-card/overlays/component-checks.svg" alt="" aria-hidden="true"><span>Prevent short packs</span></li>
+                  <li><img src="../../assets/product-quality/burger-sliders-card/overlays/component-checks.svg" alt="" aria-hidden="true"><span>Consistent assembly quality at line speed</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="xray-card quality-card quality-card--voids">
+              <div class="quality-card__visual">
+                <div class="void-evidence" aria-label="Internal structure X-ray with void cluster highlighted">
+                  <span class="void-evidence__label">Void analysis</span>
+                  <img class="void-evidence__image" src="../../assets/product-quality/cheese-voids-card/images/cheese-voids.webp" alt="X-ray image showing internal voids in a cheese product">
+                  <span class="void-evidence__cluster" aria-hidden="true"></span>
+                  <span class="void-evidence__callout">Void cluster, right-center region.</span>
+                </div>
+              </div>
+              <div class="quality-card__body">
+                <p class="quality-card__eyebrow">Fill, density &amp; structure</p>
+                <h3>Voids, holes, and internal structure</h3>
+                <p>Image-based grading can measure internal product structure, including holes, voids, clumps, and density pockets that are difficult to judge from the outside.</p>
+                <ul class="quality-card__proofs" aria-label="Internal structure inspection benefits">
+                  <li><span class="quality-card__proof-icon" aria-hidden="true"></span><span>Measure internal quality</span></li>
+                  <li><span class="quality-card__proof-icon" aria-hidden="true"></span><span>Grade every product</span></li>
+                  <li><span class="quality-card__proof-icon" aria-hidden="true"></span><span>Catch process drift early</span></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="package-integrity">
+        <div class="section-inner">
+          <p class="eyebrow">Package integrity</p>
+          <h2>Lead package integrity with product-in-seal.</h2>
+          <p class="lead">Package integrity belongs on this page as a focused addition, not a replacement for the product-quality story. <a href="../../resources/case-studies/product-in-seal/">Product-in-seal</a> is the primary package-integrity use case to feature. Other package checks should appear as supporting use cases where GreyscaleAI has the right image source and application fit.</p>
+          <div class="package-integrity-feature">
+            <div>
+              <p class="eyebrow">Product-in-seal review by X-ray</p>
+              <h3>Review seal-region product at production speed.</h3>
+              <p>When product enters the seal region, a small amount of food can create leaks, rework, hold-backs, and complaints. GreyscaleAI can use X-ray image analysis to review the seal region at production speed and help separate true product-in-seal events from normal package and fill variation.</p>
+              <div class="product-seal-gallery">
+                <figure><img src="../../assets/img/case-studies/product-in-seal-02.png" alt="X-ray image showing product in the seal region of a packaged food product"><figcaption>Product-in-seal reject</figcaption></figure>
+                <figure><img src="../../assets/img/case-studies/product-in-seal-05.png" alt="X-ray image showing variation near a package seal region"><figcaption>Seal-region variation</figcaption></figure>
+                <figure><img src="../../assets/img/case-studies/product-in-seal-03.png" alt="X-ray image showing a clean seal comparison for product-in-seal review"><figcaption>Clean seal comparison</figcaption></figure>
+                <figure><img src="../../assets/img/case-studies/product-in-seal-04.png" alt="X-ray image showing another clean seal comparison for product-in-seal review"><figcaption>Clean seal comparison</figcaption></figure>
+              </div>
+            </div>
+            <article class="capability icon-card package-review-card">
+              <span class="card-icon"><svg><use href="#icon-scan-line"></use></svg></span>
+              <h3>What the model reviews</h3>
+              <ul class="plain-check-list">
+                <li>Seal-region image patterns</li>
+                <li>Product presence in or near the seal area</li>
+                <li>Clean-seal comparison images</li>
+                <li>Normal package and fill variation</li>
+                <li>Reviewable events for QA follow-up</li>
+              </ul>
+              <a class="button" href="../../resources/case-studies/product-in-seal/">View Product-in-Seal Case Study</a>
+            </article>
+          </div>
+
+          <div class="camera-checks" id="camera-package-checks">
+            <p class="eyebrow">Camera-based package checks</p>
+            <h2>Use cameras where the package issue is visible, not X-ray dependent.</h2>
+            <p class="lead">Not every package issue belongs in the X-ray story. Date/time stamp inspection and open-seal inspection should be presented as camera-based checks. The application story is the same: capture the image, classify the condition, store the event, and make it reviewable for QA and operations.</p>
+            <div class="card-grid three">
+              <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-calendar-clock"></use></svg></span><h3>Date/time stamp inspection</h3><p>Use camera images to check for the presence, placement, and basic readability of production date, time, lot, or code information where image quality supports it.</p></article>
+              <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-package-open"></use></svg></span><h3>Open seal inspection</h3><p>Use camera images to review package closure or open-seal conditions when the seal presentation is visible. This is a camera-based check, separate from X-ray inspection.</p></article>
+              <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-image"></use></svg></span><h3>Reviewable package evidence</h3><p>Store package-check images and event context so QA can review what happened, compare recurring issues, and support hold, release, rework, or escalation decisions.</p></article>
+            </div>
+            <div class="camera-placeholder-grid">
+              <figure class="camera-placeholder-card" role="img" aria-label="Placeholder camera view showing a package date and time stamp inspection area">
+                <span class="proof-tag">Camera-based</span>
+                <div class="camera-placeholder-visual camera-placeholder-visual--stamp" aria-hidden="true"><span></span></div>
+                <figcaption>Placeholder: date/time stamp camera view</figcaption>
+              </figure>
+              <figure class="camera-placeholder-card" role="img" aria-label="Placeholder camera view showing an open package seal inspection area">
+                <span class="proof-tag">Camera-based</span>
+                <div class="camera-placeholder-visual camera-placeholder-visual--seal" aria-hidden="true"><span></span></div>
+                <figcaption>Placeholder: open-seal camera view</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tint">
+        <div class="section-inner">
+          <p class="eyebrow">Insights Software</p>
+          <h2>Make quality and package events reviewable after the reject.</h2>
+          <p class="lead">Quality and package checks become more useful when the image, AI decision, event reason, line context, and review status are available in <a href="../../insights/">GreyscaleAI Insights</a>. QA and operations teams should be able to see what happened, search similar events, and compare patterns across production context.</p>
+          <!-- TODO: Update these inline links to /insights/image-history-event-review/ and /insights/production-analytics/ when those final routes are built. -->
+          <p>Related workflows include <a href="../../insights/image-history-event-review/">Image History &amp; Event Review</a> and <a href="../../applications/production-analytics/">Production Analytics</a>.</p>
+          <div class="card-grid four">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-image"></use></svg></span><h3>Image history</h3><p>Review product and package images tied to inspection events instead of relying only on reject counts or alarm codes.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-clipboard-check"></use></svg></span><h3>QA review status</h3><p>Track whether an event needs review, has been dispositioned, or should be escalated for hold, rework, or release decisions.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-trending-up"></use></svg></span><h3>Defect trends</h3><p>Compare recurring quality and package conditions by SKU, line, shift, supplier, or plant when the needed context is available.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-factory"></use></svg></span><h3>Production context</h3><p>Connect quality signals to line speed, product changeovers, packaging setup, and other operating conditions where available.</p></article>
+          </div>
+          <div class="section-actions"><a class="button" href="../../insights/">See Insights Software</a></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner">
+          <p class="eyebrow">What teams can do</p>
+          <h2>Turn quality signals into action.</h2>
+          <p class="lead">The value is not only detecting a defect. The value is giving each team enough evidence to decide what to do next.</p>
+          <div class="card-grid four">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-clipboard-check"></use></svg></span><h3>FSQA</h3><p>Review image-backed events, support hold and release decisions, investigate complaints, and document recurring quality or package concerns.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-factory"></use></svg></span><h3>Operations</h3><p>See when breakage, missing components, fill variation, or seal issues start to drift so the line team can respond before the issue spreads.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-package-open"></use></svg></span><h3>Packaging and maintenance</h3><p>Investigate seal setup, package handling, camera positioning, and recurring package conditions with more context than a reject count alone.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-trending-up"></use></svg></span><h3>Quality leaders</h3><p>Compare quality and package trends across lines, shifts, SKUs, or plants using common event definitions where available.</p></article>
+          </div>
+          <aside class="callout application-fit-note">
+            <h3>Application fit matters.</h3>
+            <p>Detection and classification performance depends on the product, package, target defect, line speed, image contrast, camera placement, and available production context. Use this page to start a fit discussion, not to promise universal detection across every product or package format.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section tint">
+        <div class="section-inner">
+          <p class="eyebrow">Related proof</p>
+          <h2>Proof that quality and package defects can become dedicated signals.</h2>
+          <div class="related-proof-grid">
+            <a class="resource-card proof-card proof-card-featured" href="../../resources/case-studies/product-in-seal/">
+              <img src="../../assets/img/case-studies/product-in-seal-02.png" alt="X-ray image showing product-in-seal package condition">
+              <div><span class="proof-tag">Primary package proof</span><h3>Product-in-Seal Detection</h3><p>See how AI image analysis was applied to subtle seal-region inspection in a packaged-food application, using real production rejects and clean-seal comparisons.</p></div>
+              <span class="button">View Case Study</span>
+            </a>
+            <a class="resource-card proof-card" href="../../resources/case-studies/dent-detection/"><div><span class="proof-tag">Package-quality signal</span><h3>Dent Detection</h3><p>See how a package-quality issue can be classified as its own inspection signal instead of being blended into a generic reject bucket.</p></div><span class="button">View Case Study</span></a>
+            <a class="resource-card proof-card" href="../../resources/case-studies/bone-detection/"><div><span class="proof-tag">Product variation proof</span><h3>Bone Detection</h3><p>See how AI image analysis can help distinguish true concern signals from normal product variation in a demanding production environment.</p></div><span class="button">View Case Study</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner">
+          <p class="eyebrow">Fit and next steps</p>
+          <h2>Fit depends on product, package, line speed, and inspection goal.</h2>
+          <p class="lead">Product quality and package integrity applications should route buyers to the right next page: application fit, inspection systems, relevant industries, and proof.</p>
+          <div class="card-grid four">
+            <!-- TODO: Update to /platform/application-fit-validation/ when the final route is built. -->
+            <a class="capability-link" href="../../request-demo/"><article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-scan-search"></use></svg></span><h3>Application Fit &amp; Validation</h3><p>Talk through product format, package type, target defects, line speed, image source, and validation approach.</p><span class="button">Talk Through Fit</span></article></a>
+            <a class="capability-link" href="../../inspection-systems/"><article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-factory"></use></svg></span><h3>Inspection Systems</h3><p>Review how HRX inspection systems connect to AI image analysis and Insights workflows.</p><span class="button">Explore Systems</span></article></a>
+            <a class="capability-link" href="../../industries/dairy-cheese/"><article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-package-check"></use></svg></span><h3>Dairy &amp; Cheese</h3><p>Relevant for product quality, package integrity, product-in-seal, weight/count, and QA review workflows.</p><span class="button">View Industry</span></article></a>
+            <a class="capability-link" href="../../industries/beverage-packaged-goods/"><article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-package-open"></use></svg></span><h3>Beverage &amp; Packaged Goods</h3><p>Relevant for package integrity, dents, quality signals, code checks, and reviewable package events.</p><span class="button">View Industry</span></article></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark">
+        <div class="section-inner">
+          <p class="eyebrow">Next step</p>
+          <h2>Talk through your product, package, line speed, and inspection goals.</h2>
+          <p class="lead">Share the product format, package type, target defects, current QA process, line speed, and any sample imagery you already have. GreyscaleAI can help determine whether X-ray inspection, camera-based inspection, Insights review, or a combination is the right fit.</p>
+          <div class="section-actions">
+            <a class="button" href="../../contact/">Request a Demo</a>
+            <a class="button secondary" href="../../request-demo/">Talk Through Fit</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="footer-inner">
+<div>
+<img src="../../assets/img/logos/greyscale-ai-logo-footer.png" alt="GreyscaleAI"><p>435 Brady Road, Unit H<br>Tarpon Springs, FL 34689<br>(727) 938-5041</p>
+<p>© 2026 GreyscaleAI. All rights reserved.</p>
+</div>
+<div class="footer-links">
+<a href="mailto:info@greyscaleai.com">info@greyscaleai.com</a><a href="../../contact/">Request a Demo</a>
+</div>
+</div></footer>
+  </body>
+</html>

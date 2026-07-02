@@ -4,29 +4,64 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
-    <title>GreyscaleAI Insights | Machine Visibility and Multi-Plant Inspection Intelligence</title>
-    <meta name="description" content="GreyscaleAI Insights gives authorized users visibility into inspection systems across machines, lines, and plants.">
+    <title>GreyscaleAI Insights Software | Inspection Visibility, Alerts &amp; Machine Context</title>
+    <meta name="description" content="GreyscaleAI Insights is the secure software layer for inspection images, AI decisions, event history, machine visibility, alerts, dashboards, and support context across lines and plants.">
     <link rel="icon" href="../assets/img/meta/favicon.ico">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <script defer src="../assets/js/main.js"></script>
   </head>
   <body>
+    <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="icon-monitor-up" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="m8 12 3-3 2 2 4-5"/><path d="M15 6h2v2"/></symbol>
+      <symbol id="icon-activity" viewBox="0 0 24 24"><path d="M22 12h-4l-3 8-6-16-3 8H2"/></symbol>
+      <symbol id="icon-bell-ring" viewBox="0 0 24 24"><path d="M10 21h4"/><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M4 2C2.8 3.2 2 4.7 2 6.5"/><path d="M22 6.5c0-1.8-.8-3.3-2-4.5"/></symbol>
+      <symbol id="icon-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.4 8.8a2 2 0 0 1-1.2 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.4a1.3 1.3 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="icon-image" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10.5" r="1.5"/><path d="m21 15-5-5L5 19"/></symbol>
+      <symbol id="icon-brain" viewBox="0 0 24 24"><path d="M9 3a3 3 0 0 0-3 3v1a3 3 0 0 0-2 5.2A3.5 3.5 0 0 0 8 18h1"/><path d="M15 3a3 3 0 0 1 3 3v1a3 3 0 0 1 2 5.2A3.5 3.5 0 0 1 16 18h-1"/><path d="M12 3v18"/><path d="M8 9h2"/><path d="M14 9h2"/><path d="M8 14h2"/><path d="M14 14h2"/></symbol>
+      <symbol id="icon-gauge" viewBox="0 0 24 24"><path d="M12 14 16 8"/><path d="M3.3 19a9 9 0 1 1 17.4 0"/><path d="M7 19h10"/></symbol>
+      <symbol id="icon-list-tree" viewBox="0 0 24 24"><path d="M6 3v12"/><path d="M6 7h6"/><path d="M6 15h6"/><path d="M12 7v4h6"/><path d="M12 15v4h6"/><path d="M18 10v2"/><path d="M18 18v2"/></symbol>
+      <symbol id="icon-package-search" viewBox="0 0 24 24"><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/><path d="m21 8-9-5-9 5v8l9 5 4-2.2"/><circle cx="18" cy="18" r="3"/><path d="m20.3 20.3 1.7 1.7"/></symbol>
+      <symbol id="icon-clipboard-check" viewBox="0 0 24 24"><path d="M9 5h6"/><path d="M9 3h6v4H9z"/><path d="M8 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><path d="m8 14 2.5 2.5L16 11"/></symbol>
+      <symbol id="icon-file-down" viewBox="0 0 24 24"><path d="M14 2v6h6"/><path d="M16 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8l6 6v4"/><path d="M12 12v6"/><path d="m9 15 3 3 3-3"/></symbol>
+      <symbol id="icon-search-check" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="m8.5 11 1.7 1.7 3.8-4"/></symbol>
+      <symbol id="icon-scan-search" viewBox="0 0 24 24"><path d="M7 3H5a2 2 0 0 0-2 2v2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><circle cx="11" cy="11" r="3"/><path d="m16 16-2.1-2.1"/></symbol>
+      <symbol id="icon-bar-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 16V9"/><path d="M12 16V5"/><path d="M17 16v-4"/></symbol>
+      <symbol id="icon-monitor-cog" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 21h8"/><path d="M12 16v5"/><circle cx="16.5" cy="10" r="1.8"/><path d="M16.5 6.5v1"/><path d="M16.5 12.5v1"/><path d="m13.5 8.2.8.5"/><path d="m18.7 11.3.8.5"/><path d="m13.5 11.8.8-.5"/><path d="m18.7 8.7.8-.5"/></symbol>
+      <symbol id="icon-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v6h6"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="icon-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.4 2.4-3-3z"/></symbol>
+      <symbol id="icon-mouse-click" viewBox="0 0 24 24"><path d="M10 4a2 2 0 0 1 4 0v6"/><path d="M12 10V4"/><path d="M12 20a6 6 0 0 0 6-6v-2a2 2 0 0 0-4 0"/><path d="M14 12a2 2 0 0 0-4 0"/><path d="M10 12a2 2 0 0 0-4 0v2a6 6 0 0 0 6 6"/></symbol>
+      <symbol id="icon-headset" viewBox="0 0 24 24"><path d="M3 13a9 9 0 0 1 18 0"/><path d="M5 13v4a2 2 0 0 0 2 2h1v-8H7a2 2 0 0 0-2 2Z"/><path d="M16 11v8h1a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Z"/><path d="M12 21h2a3 3 0 0 0 3-3"/></symbol>
+      <symbol id="icon-line-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m5 15 4-4 4 3 6-8"/></symbol>
+      <symbol id="icon-building" viewBox="0 0 24 24"><path d="M4 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/><path d="M16 8h2a2 2 0 0 1 2 2v11"/><path d="M8 7h4"/><path d="M8 11h4"/><path d="M8 15h4"/><path d="M3 21h18"/></symbol>
+      <symbol id="icon-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m11 12 9-9"/><path d="m16 7 2 2"/><path d="m14 9 2 2"/></symbol>
+      <symbol id="icon-cloud" viewBox="0 0 24 24"><path d="M17.5 19H7a5 5 0 1 1 1.2-9.9A7 7 0 0 1 21 12.5 3.5 3.5 0 0 1 17.5 19Z"/></symbol>
+      <symbol id="icon-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+      <symbol id="icon-factory" viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M4 20V9l6 4V9l6 4V4h4v16"/><path d="M8 18h1"/><path d="M13 18h1"/><path d="M18 18h1"/></symbol>
+      <symbol id="icon-scan-line" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/><path d="M9 9h6"/><path d="M9 15h6"/></symbol>
+    </svg>
     <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../index.html" aria-label="GreyscaleAI home"><img src="../assets/img/logos/greyscale-ai-logo-white.png" alt="GreyscaleAI"></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle><span></span></button><ul class="nav-links" data-nav-links>
 <li class="nav-item has-menu">
 <a href="../platform/">Platform</a><ul class="nav-menu">
 <li><a href="../platform/">Overview</a></li>
-<li><a href="../capabilities/foreign-material-detection/">Foreign Material</a></li>
-<li><a href="../capabilities/product-quality-inspection/">Product Quality</a></li>
-<li><a href="../capabilities/weight-count-intelligence/">Weight &amp; Count Intelligence</a></li>
-<li><a href="../capabilities/image-history-traceability/">Image History</a></li>
-<li><a href="../inspection-as-a-service/">Inspection as a Service</a></li>
+<li><a href="../platform/managed-service-support/">Managed Service &amp; Support</a></li>
+<li><a href="../request-demo/">Application Fit &amp; Validation</a></li>
 </ul>
 </li>
 <li class="nav-item has-menu">
-<a href="../insights/">Insights</a><ul class="nav-menu">
-<li><a href="../insights/">Overview</a></li>
+<a href="../applications/">Applications</a><ul class="nav-menu">
+<li><a href="../applications/">Overview</a></li>
+<li><a href="../applications/foreign-material-detection/">Foreign Material Detection</a></li>
+<li><a href="../applications/product-quality-package-integrity/">Product Quality &amp; Package Integrity</a></li>
+<li><a href="../applications/weight-count-intelligence/">Weight &amp; Count Intelligence</a></li>
+<li><a href="../applications/traceability-qa-review/">Traceability &amp; QA Review</a></li>
+<li><a href="../applications/production-analytics/">Production Analytics</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../insights/" aria-current="page">Insights Software</a><ul class="nav-menu">
+<li><a href="../insights/" aria-current="page">Overview</a></li>
 <li><a href="../insights/beyond-rejects/">Beyond Rejects</a></li>
-<li><a href="../insights/#machine-visibility">Machine Visibility</a></li>
+<li><a href="../insights/machine-visibility-alerts/">Machine Visibility &amp; Alerts</a></li>
 <li><a href="../insights/#enterprise-access">Enterprise Access</a></li>
 </ul>
 </li>
@@ -66,205 +101,170 @@
 </li>
 <li><a class="nav-cta" href="../contact/">Request a Demo</a></li>
 </ul></nav></header>
+
     <main>
-      <section class="page-hero">
-        <div class="section-inner">
-          <p class="eyebrow">Application layer</p>
-          <h1>GreyscaleAI Insights</h1>
-          <p class="lead">The application for seeing what your inspection systems are telling you across machines, lines, and plants.</p>
-        </div>
-      </section>
-      <nav class="page-subnav" aria-label="On this page"><a href="#features">Features</a><a href="#machine-visibility">Machine Visibility</a><a href="#enterprise-access">Enterprise Access</a><a href="#connected-offering">Connected Offering</a></nav>
-      <section class="section compact">
-        <div class="section-inner">
-          <div class="proof-band">
-            <div>
-              <p class="meta">Beyond Rejects</p>
-              <h3>Inspection data can support more than a pass/fail reject decision.</h3>
-              <p>Beyond Rejects is now a dedicated Insights workflow for reviewing elevated-risk production windows, image evidence, and QA decision context.</p>
-            </div>
-            <a class="button" href="../insights/beyond-rejects/">Explore Beyond Rejects</a>
-          </div>
-        </div>
-      </section>
-      <section class="section tint" id="features">
-        <div class="section-inner">
-          <p class="eyebrow">Features</p>
-          <h2>Visibility across inspection activity.</h2>
-          <div class="card-grid three">
-            <article class="capability"><h3>Live machine visibility</h3>
-<p>See current inspection status, line speed, and reject counts in real time.</p></article>
-            <article class="capability"><h3>Event review</h3>
-<p>Search by time, SKU, line, or event type, then view the X-ray image, AI decision, and machine metadata to support root-cause investigations.</p></article>
-            <article class="capability"><h3>Reject pattern analysis</h3>
-<p>Identify recurring issues by product, shift, or supplier so corrective actions are based on evidence instead of guesswork.</p></article>
-            <article class="capability"><h3>Multi-plant dashboard</h3>
-<p>Compare inspection performance across facilities and lines using standard metrics.</p></article>
-            <article class="capability"><h3>Meaningful alerts</h3>
-<p>Define thresholds for reject rates or quality deviations. Insights notifies the right people with supporting data.</p></article>
-            <article class="capability"><h3>Image history</h3>
-<p>Keep traceable records of inspected units and related inspection events for QA and food safety workflows.</p></article>
-          </div>
-          </div>
-      </section>
-      <section class="section tint" id="machine-visibility"><div class="section-inner">
-<p class="eyebrow">Machine visibility</p>
-<h2>See what your inspection systems are telling you.</h2>
-<div class="insights-grid">
-            <figure class="screenshot-card">
-              <div class="mock-screen">
-                <div class="mock-toolbar">
-<span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
-</div>
-                <div class="mock-body">
-                  <p class="caption">Live status</p>
-                  <div class="mock-grid">
-                    <div class="mock-panel">
-                      <p class="muted">Line speed</p>
-                      <p style="font-size:2rem;font-weight:900;margin:8px 0 0;">214 ppm</p>
-                      <p class="muted">Reject count: 3</p>
-                    </div>
-                    <div class="mock-panel small">
-                      <p class="muted">Machine health</p>
-                      <div class="meter"><span style="width:84%"></span></div>
-                      <div class="meter"><span style="width:68%"></span></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <figcaption>Live machine visibility: See current inspection status, line speed and reject counts in real time.</figcaption>
-            </figure>
-            <figure class="screenshot-card">
-              <div class="mock-screen">
-                <div class="mock-toolbar">
-<span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
-</div>
-                <div class="mock-body">
-                  <p class="caption">Review screen</p>
-                  <div class="mock-list">
-                    <div>
-<span>SKU 2418-3</span><span>AI match</span>
-</div>
-                    <div>
-<span>X-ray image</span><span>Opened</span>
-</div>
-                    <div>
-<span>Machine metadata</span><span>Line 2</span>
-</div>
-                  </div>
-                </div>
-              </div>
-              <figcaption>Event review: Search by time, SKU, line or event type. View the X-ray image, AI decision and machine metadata to support root-cause investigations.</figcaption>
-            </figure>
-            <figure class="screenshot-card">
-              <div class="mock-screen">
-                <div class="mock-toolbar">
-<span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
-</div>
-                <div class="mock-body">
-                  <p class="caption">Pattern analysis</p>
-                  <div class="mock-chart" aria-hidden="true">
-                    <span style="height:18%"></span><span style="height:34%"></span><span style="height:64%"></span><span style="height:42%"></span><span style="height:74%"></span><span style="height:58%"></span>
-                  </div>
-                  <div class="mock-list">
-                    <div>
-<span>Product</span><span>Jerky</span>
-</div>
-                    <div>
-<span>Shift</span><span>Night</span>
-</div>
-                    <div>
-<span>Supplier</span><span>Batch 42</span>
-</div>
-                  </div>
-                </div>
-              </div>
-              <figcaption>Reject pattern analysis: Identify recurring issues by product, shift or supplier so corrective actions are based on evidence instead of guesswork.</figcaption>
-            </figure>
-            <figure class="screenshot-card">
-              <div class="mock-screen">
-                <div class="mock-toolbar">
-<span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
-</div>
-                <div class="mock-body">
-                  <p class="caption">Plant compare</p>
-                  <div class="mock-grid">
-                    <div class="mock-panel small">
-                      <p class="muted">Plant A</p>
-                      <div class="meter"><span style="width:82%"></span></div>
-                      <div class="meter"><span style="width:51%"></span></div>
-                      <div class="meter"><span style="width:69%"></span></div>
-                    </div>
-                    <div class="mock-panel small">
-                      <p class="muted">Plant B</p>
-                      <div class="meter"><span style="width:63%"></span></div>
-                      <div class="meter"><span style="width:74%"></span></div>
-                      <div class="meter"><span style="width:46%"></span></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <figcaption>Multi-plant dashboard: Compare inspection performance across facilities and lines using standard metrics.</figcaption>
-            </figure>
-            <figure class="screenshot-card">
-              <div class="mock-screen">
-                <div class="mock-toolbar">
-<span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
-</div>
-                <div class="mock-body">
-                  <p class="caption">Alert feed</p>
-                  <div class="mock-list">
-                    <div>
-<span>Reject rate above threshold</span><span>Now</span>
-</div>
-                    <div>
-<span>Quality deviation trend</span><span>12 min</span>
-</div>
-                    <div>
-<span>Machine health warning</span><span>27 min</span>
-</div>
-                  </div>
-                </div>
-              </div>
-              <figcaption>Meaningful alerts: Define thresholds for reject rates or quality deviations and see supporting data before issues grow.</figcaption>
-            </figure>
-          </div>
-        </div></section><section class="section" id="enterprise-access">
-        <div class="section-inner split reverse">
-          <div class="media-frame"><img src="../assets/img/solutions/data-analytics-table.png" alt="Inspection analytics comparison asset"></div>
+      <section class="page-hero insights-software-hero" id="insights-hero">
+        <div class="section-inner split">
           <div>
-            <p class="eyebrow">No added IT maintenance burden</p>
-            <h2>Secure application layer, managed by GreyscaleAI.</h2>
-            <p class="lead">Insights is delivered as a secure, cloud-hosted web application under the standard service agreement. GreyscaleAI handles maintenance, updates, backups, and application support. Customers access it through single sign-on with their existing authentication.</p>
-            <div class="callout">
-<strong>Built for enterprise access.</strong> Authorized users can access Insights through their existing authentication, without extra logins or a local application to maintain.</div>
+            <p class="eyebrow">INSIGHTS SOFTWARE</p>
+            <h1>The software layer for inspection intelligence.</h1>
+            <p class="lead">GreyscaleAI Insights gives authorized users a live, searchable view of inspection images, AI decisions, event history, alerts, dashboards, trends, and machine context across lines and plants.</p>
+            <p class="hero-support">It is not just a reject log. It is the shared operating record that helps QA, operations, maintenance, corporate teams, and GreyscaleAI support understand what is happening faster.</p>
+            <div class="section-actions">
+              <a class="button" href="../request-demo/">Request a Demo</a>
+              <a class="button secondary" href="#software-modules">Explore software modules</a>
+            </div>
+          </div>
+          <div class="insights-dashboard-card" aria-label="GreyscaleAI Insights dashboard mockup showing live inspection activity, alerts, machine context, and support monitoring status.">
+            <div class="insights-dashboard-card__bar"><span class="status-pill">Live view</span><span>GreyscaleAI Insights</span></div>
+            <div class="insights-dashboard-card__header">
+              <span class="card-icon"><svg><use href="#icon-monitor-up"></use></svg></span>
+              <div>
+                <h2>Insights operating record</h2>
+                <p>Live inspection activity, alerts, machine context, and support monitoring status</p>
+              </div>
+            </div>
+            <div class="insights-dashboard-card__metrics">
+              <div><span>Inspection activity</span><strong>Images, events, and AI decisions</strong></div>
+              <div><span>Machine context</span><strong>Status, health, and alerts</strong></div>
+              <div><span>Review workflow</span><strong>Open, document, export</strong></div>
+              <div><span>Support visibility</span><strong>24/7 monitoring active</strong></div>
+            </div>
+            <div class="insights-dashboard-card__activity">
+              <div><span class="card-icon"><svg><use href="#icon-image"></use></svg></span><p><strong>X-ray image record opened</strong><span>Inspection image + AI decision</span></p></div>
+              <div><span class="card-icon"><svg><use href="#icon-bell-ring"></use></svg></span><p><strong>Machine alert reviewed</strong><span>Health signal + recent activity</span></p></div>
+              <div><span class="card-icon"><svg><use href="#icon-shield-check"></use></svg></span><p><strong>QA follow-up documented</strong><span>Review status + exportable evidence</span></p></div>
+            </div>
+            <div class="insights-dashboard-card__footer"><span>24/7 monitoring active</span><span><svg><use href="#icon-shield-check"></use></svg></span></div>
           </div>
         </div>
       </section>
-      <section class="section dark" id="connected-offering">
+
+      <section class="section compact" id="what-insights-connects">
         <div class="section-inner">
-          <p class="eyebrow">Connected offering</p>
-          <h2>Insights shows what is happening. Inspection as a Service helps support and improve the system.</h2>
-          <div class="card-grid three">
-            <a class="resource-card" href="../capabilities/production-analytics/"><div>
-<h3>Production Analytics</h3>
-<p>See dashboard examples for reject trends, recurring reasons, and shift correlation.</p>
-</div>
-<span class="button">View capability</span></a>
-            <a class="resource-card" href="../capabilities/image-history-traceability/"><div>
-<h3>Image History &amp; Traceability</h3>
-<p>See how searchable image records support investigations and documentation.</p>
-</div>
-<span class="button">View capability</span></a>
-            <a class="resource-card" href="../capabilities/machine-monitoring-support/"><div>
-<h3>Machine Monitoring &amp; Support</h3>
-<p>Review health dashboards and remote diagnostics tied to the service model.</p>
-</div>
-<span class="button">View capability</span></a>
+          <p class="eyebrow">What Insights connects</p>
+          <div class="card-grid four icon-card-grid">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-image"></use></svg></span><h3>Inspection images</h3><p>Review the X-ray evidence behind events, challenges, and follow-up decisions.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-brain"></use></svg></span><h3>AI decisions</h3><p>See the model output, event type, result, and review status in context.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-gauge"></use></svg></span><h3>Machine context</h3><p>View machine status, health signals, uptime, line speed, and recent activity.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-bell-ring"></use></svg></span><h3>Alerts and trends</h3><p>Surface issues that need attention before they become larger quality, support, or downtime problems.</p></article>
           </div>
+        </div>
+      </section>
+
+      <section class="section tint" id="what-insights-stores">
+        <div class="section-inner">
+          <p class="eyebrow">WHAT INSIGHTS STORES</p>
+          <h2>Every inspection event becomes a usable record.</h2>
+          <p class="lead">Insights connects what the machine saw, what the AI decided, what was happening on the line, and what the team did next. That gives customers and GreyscaleAI support a shared source of context when questions come up.</p>
+          <div class="card-grid four icon-card-grid">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-image"></use></svg></span><h3>Inspection image</h3><p>The X-ray image or inspection evidence associated with the event.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-brain"></use></svg></span><h3>AI decision</h3><p>The classification, match, or signal that made the event important to review.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-list-tree"></use></svg></span><h3>Event metadata</h3><p>Event type, result, review status, and related event details.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-gauge"></use></svg></span><h3>Machine metadata</h3><p>Machine, line, status, health signals, alerts, and recent activity.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-package-search"></use></svg></span><h3>Production context</h3><p>Product, SKU, lot, line, shift, supplier, or other available operating context.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-clipboard-check"></use></svg></span><h3>Review activity</h3><p>Who reviewed the record, what status was assigned, and what follow-up was documented.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-bell-ring"></use></svg></span><h3>Alerts</h3><p>Machine, quality, reject-rate, or trend alerts routed with supporting context.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-file-down"></use></svg></span><h3>Evidence export</h3><p>Records and supporting context that can be used for QA review, investigation, and documentation.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="software-modules">
+        <div class="section-inner">
+          <p class="eyebrow">SOFTWARE MODULES</p>
+          <h2>One application for inspection review, production visibility, and machine context.</h2>
+          <p class="lead">Insights gives different teams a common place to review images, events, alerts, dashboards, and system activity. Each module helps answer a different operating question without separating the evidence from the context.</p>
+          <div class="card-grid five icon-card-grid">
+            <a class="resource-card" href="../capabilities/image-history-traceability/"><div><span class="card-icon"><svg><use href="#icon-search-check"></use></svg></span><h3>Image History &amp; Event Review</h3><p>Search inspection records by time, SKU, line, machine, lot, event type, result, or review status. Open the image, review the context, document follow-up, and export evidence when needed.</p></div><span class="button">Explore Image History</span></a>
+            <a class="resource-card" href="beyond-rejects/"><div><span class="card-icon"><svg><use href="#icon-scan-search"></use></svg></span><h3>Beyond Rejects</h3><p>Review the images, signals, and production window around elevated-risk events so teams can make better hold, release, reinspection, or follow-up decisions.</p></div><span class="button">Explore Beyond Rejects</span></a>
+            <a class="resource-card" href="machine-visibility-alerts/"><div><span class="card-icon"><svg><use href="#icon-activity"></use></svg></span><h3>Machine Visibility &amp; Alerts</h3><p>See machine status, remote screen context, health signals, alerts, event activity, and machine-history context in the same software environment as inspection records.</p></div><span class="button">Explore Machine Visibility</span></a>
+            <a class="resource-card" href="../capabilities/production-analytics/"><div><span class="card-icon"><svg><use href="#icon-bar-chart"></use></svg></span><h3>Production Analytics</h3><p>Turn inspection and machine activity into dashboards for reject trends, recurring reasons, shift comparisons, supplier patterns, and quality correlations.</p></div><span class="button">Explore Production Analytics</span></a>
+            <a class="resource-card" href="#enterprise-access"><div><span class="card-icon"><svg><use href="#icon-shield-check"></use></svg></span><h3>Enterprise Access</h3><p>Give authorized users secure access through the cloud application, with roles, permissions, updates, backups, and support language ready for enterprise review.</p></div><span class="button">Explore Enterprise Access</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark insights-support-band" id="machine-visibility-support">
+        <div class="section-inner insights-support-layout">
+          <div>
+            <p class="eyebrow">MACHINE VISIBILITY + SUPPORT CONTEXT</p>
+            <h2>Faster answers when a machine question becomes urgent.</h2>
+            <p class="lead">Insights does more than show inspection results. It also surfaces machine information, alerts, event history, and user interactions that help explain what was happening before, during, and after a question on the line.</p>
+            <p>Customer teams can see the machine context that matters to their operation. GreyscaleAI support can use relevant system history to help troubleshoot with context, instead of starting from a blank ticket. That shared visibility helps teams respond faster, helps shorten troubleshooting, and helps reduce avoidable downtime.</p>
+            <p class="matrix-note">Managed monitoring and support remain part of the GreyscaleAI service model. Insights is where much of that machine visibility becomes useful to customers. Inspection decisions and product disposition remain with the customer.</p>
+            <div class="card-grid three icon-card-grid insights-support-cards">
+              <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-monitor-cog"></use></svg></span><h3>Customer-visible status</h3><p>Show running state, inspection activity, alert feed, machine health, and recent events in a form customers can understand.</p></article>
+              <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-history"></use></svg></span><h3>Granular machine history</h3><p>Keep a timeline of events, alerts, user interactions, status changes, and machine activity so questions can be reviewed with context.</p></article>
+              <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-wrench"></use></svg></span><h3>Support with context</h3><p>Give the service team relevant recent machine and event context to help customers faster and reduce back-and-forth troubleshooting.</p></article>
+            </div>
+            <div class="section-actions">
+              <a class="button" href="../platform/managed-service-support/">See Managed Service &amp; Support</a>
+            </div>
+          </div>
+          <div class="insights-support-panel" aria-label="Support-ready machine context panel showing the categories of machine information available for troubleshooting.">
+            <p class="eyebrow">SUPPORT-READY CONTEXT</p>
+            <h3>Shared machine context</h3>
+            <p>A single view connects inspection activity, machine state, alerts, and review actions so support starts with context.</p>
+            <div class="insights-support-panel__rows">
+              <div><span class="card-icon"><svg><use href="#icon-activity"></use></svg></span><p><span class="insights-support-panel__label">Activity</span><strong>Machine state</strong><span>Running state, inspection mode, and recent status changes</span></p></div>
+              <div><span class="card-icon"><svg><use href="#icon-image"></use></svg></span><p><span class="insights-support-panel__label">Image</span><strong>Inspection activity</strong><span>Images, events, challenges, and reviewable records</span></p></div>
+              <div><span class="card-icon"><svg><use href="#icon-bell-ring"></use></svg></span><p><span class="insights-support-panel__label">BellRing</span><strong>Alert context</strong><span>Machine, quality, reject-rate, and trend alerts with supporting data</span></p></div>
+              <div><span class="card-icon"><svg><use href="#icon-mouse-click"></use></svg></span><p><span class="insights-support-panel__label">MousePointerClick</span><strong>User interactions</strong><span>Records opened, review status changes, notes, and follow-up activity</span></p></div>
+              <div><span class="card-icon"><svg><use href="#icon-headset"></use></svg></span><p><span class="insights-support-panel__label">Headset</span><strong>Support view</strong><span>Recent context summarized for faster troubleshooting conversations</span></p></div>
+            </div>
+            <div class="insights-support-panel__footer">24/7 monitoring active</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="who-uses-insights">
+        <div class="section-inner">
+          <p class="eyebrow">WHO USES IT</p>
+          <h2>Shared visibility for QA, operations, maintenance, and enterprise teams.</h2>
+          <p class="lead">Different teams come to Insights with different questions. The value is that they can work from the same images, events, alerts, and machine context instead of separate notes, screenshots, or assumptions.</p>
+          <div class="card-grid four icon-card-grid">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-clipboard-check"></use></svg></span><h3>FSQA</h3><p>Review images and event records, document challenge activity, investigate complaints or suspect events, and export supporting evidence.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-line-chart"></use></svg></span><h3>Operations</h3><p>Compare trends by product, line, shift, supplier, or plant so recurring issues can be acted on with evidence.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-wrench"></use></svg></span><h3>Maintenance</h3><p>See machine health signals, status changes, uptime, alert history, and recent activity before troubleshooting begins.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-building"></use></svg></span><h3>Corporate and enterprise teams</h3><p>View performance across authorized lines, plants, and teams through a secure cloud application with role-based access.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tint" id="enterprise-access">
+        <div class="section-inner">
+          <p class="eyebrow">SECURE APPLICATION LAYER</p>
+          <h2>Cloud access without adding another local system to maintain.</h2>
+          <p class="lead">Insights is delivered as a secure, cloud-hosted web application for authorized users. GreyscaleAI manages the application layer, including updates, backups, and support, so customers can focus on inspection review and operational follow-up rather than local software maintenance.</p>
+          <!-- TODO: Confirm exact SSO, role, retention, backup, and permission language before production launch. -->
+          <div class="card-grid three icon-card-grid">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-key"></use></svg></span><h3>Authorized access</h3><p>Use roles and permissions so the right users can access the inspection and machine context they need.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-cloud"></use></svg></span><h3>Managed application</h3><p>GreyscaleAI handles the application layer, software updates, backups, and support responsibilities described in the service model.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-users"></use></svg></span><h3>Shared review</h3><p>QA, operations, maintenance, and enterprise users can work from the same source of inspection and machine context.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="where-to-go-next">
+        <div class="section-inner">
+          <p class="eyebrow">WHERE TO GO NEXT</p>
+          <h2>Connect software visibility to the rest of the platform.</h2>
+          <div class="card-grid three icon-card-grid">
+            <a class="resource-card" href="../applications/"><div><span class="card-icon"><svg><use href="#icon-factory"></use></svg></span><h3>Applications</h3><p>See the production problems GreyscaleAI helps teams solve, from foreign material and package integrity to traceability and analytics.</p></div><span class="button">Explore Applications</span></a>
+            <a class="resource-card" href="../platform/managed-service-support/"><div><span class="card-icon"><svg><use href="#icon-monitor-cog"></use></svg></span><h3>Managed Service &amp; Support</h3><p>See how monitoring, updates, technical support, analytics, and application support fit into the GreyscaleAI service model.</p></div><span class="button">See the support model</span></a>
+            <a class="resource-card" href="../inspection-systems/"><div><span class="card-icon"><svg><use href="#icon-scan-line"></use></svg></span><h3>Inspection Systems</h3><p>Review the HRX inspection systems that capture the images and machine context used by Insights.</p></div><span class="button">View Inspection Systems</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark" id="insights-final-cta">
+        <div class="section-inner">
+          <h2>See what your inspection systems are telling you.</h2>
+          <p class="lead">Talk through your products, lines, inspection goals, software users, and support expectations. GreyscaleAI can help map what Insights should show and how machine visibility fits your operation.</p>
           <div class="section-actions">
-            <a class="button" href="../inspection-as-a-service/">See Inspection as a Service</a>
-            <a class="button secondary" href="../contact/">Request a Demo</a>
+            <a class="button" href="../request-demo/">Request a Demo</a>
+            <a class="button secondary" href="../inspection-systems/talk-through-fit/">Talk Through Fit</a>
           </div>
         </div>
       </section>

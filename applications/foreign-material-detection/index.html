@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Foreign Material Detection for Food Production | GreyscaleAI</title>
+    <meta name="description" content="Detect foreign material risk with high-resolution x-ray inspection, AI review, and image-backed evidence for food production teams.">
+    <meta property="og:title" content="Foreign Material Detection for Food Production">
+    <meta property="og:description" content="See how GreyscaleAI helps food producers inspect for metal, bone, glass, stone, and dense plastic risks while preserving image evidence for QA review.">
+    <link rel="icon" href="../../assets/img/meta/favicon.ico">
+    <link rel="stylesheet" href="../../assets/css/styles.css?v=fm-evidence-expand-v2">
+    <script defer src="../../assets/js/main.js?v=fm-evidence-expand-v2"></script>
+  </head>
+  <body>
+    <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="icon-shield-alert" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.4 8.8a2 2 0 0 1-1.2 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.4a1.3 1.3 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M12 8v4"/><path d="M12 16h.01"/></symbol>
+      <symbol id="icon-alert-triangle" viewBox="0 0 24 24"><path d="m21.7 18-8-14a2 2 0 0 0-3.4 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+      <symbol id="icon-file-search" viewBox="0 0 24 24"><path d="M14 2v6h6"/><path d="M16 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8l6 6v4"/><circle cx="14" cy="16" r="3"/><path d="m16.5 18.5 2.5 2.5"/></symbol>
+      <symbol id="icon-magnet" viewBox="0 0 24 24"><path d="M6 15V6h4v9a2 2 0 0 0 4 0V6h4v9a6 6 0 0 1-12 0Z"/><path d="M6 6V3h4v3"/><path d="M14 6V3h4v3"/></symbol>
+      <symbol id="icon-bone" viewBox="0 0 24 24"><path d="M17 3a3 3 0 0 1 3 3 3 3 0 0 1-3 3L9 17a3 3 0 1 1-4-4 3 3 0 1 1 4-4l8-6Z"/><path d="M15 5 7 13"/></symbol>
+      <symbol id="icon-gem" viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="m12 21 4-12-4-6-4 6z"/><path d="M2 9h20"/></symbol>
+      <symbol id="icon-layers" viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></symbol>
+      <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+      <symbol id="icon-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></symbol>
+      <symbol id="icon-git-compare" viewBox="0 0 24 24"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><path d="M11 18H8a2 2 0 0 1-2-2V9"/></symbol>
+      <symbol id="icon-clipboard-check" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><path d="M9 5a3 3 0 0 1 6 0v1H9z"/><path d="m9 14 2 2 4-4"/></symbol>
+      <symbol id="icon-factory" viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M4 20V9l6 4V9l6 4V4h4v16"/><path d="M8 18h1"/><path d="M13 18h1"/><path d="M18 18h1"/></symbol>
+      <symbol id="icon-messages" viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/><path d="M8 8h8"/><path d="M8 12h6"/></symbol>
+      <symbol id="icon-fish" viewBox="0 0 24 24"><path d="M6.5 12C8.5 7.5 13 5 20 5c-2 3-2 7 0 10-7 0-11.5-2.5-13.5-7Z"/><path d="m6.5 12-4-4v8z"/><circle cx="16" cy="9" r=".5"/></symbol>
+    </svg>
+    <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../index.html" aria-label="GreyscaleAI home"><img src="../../assets/img/logos/greyscale-ai-logo-white.png" alt="GreyscaleAI"></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle><span></span></button><ul class="nav-links" data-nav-links>
+<li class="nav-item has-menu">
+<a href="../../platform/">Platform</a><ul class="nav-menu">
+<li><a href="../../platform/">Overview</a></li>
+<li><a href="../../platform/managed-service-support/">Managed Service &amp; Support</a></li>
+<li><a href="../../request-demo/">Application Fit &amp; Validation</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../applications/" aria-current="page">Applications</a><ul class="nav-menu">
+<li><a href="../../applications/">Overview</a></li>
+<li><a href="../../applications/foreign-material-detection/">Foreign Material Detection</a></li>
+<li><a href="../../applications/product-quality-package-integrity/">Product Quality &amp; Package Integrity</a></li>
+<li><a href="../../applications/weight-count-intelligence/">Weight &amp; Count Intelligence</a></li>
+<li><a href="../../applications/traceability-qa-review/">Traceability &amp; QA Review</a></li>
+<li><a href="../../applications/production-analytics/">Production Analytics</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../insights/">Insights Software</a><ul class="nav-menu">
+<li><a href="../../insights/">Overview</a></li>
+<li><a href="../../insights/beyond-rejects/">Beyond Rejects</a></li>
+<li><a href="../../insights/machine-visibility-alerts/">Machine Visibility &amp; Alerts</a></li>
+<li><a href="../../insights/#enterprise-access">Enterprise Access</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../machines/">Inspection Systems</a><ul class="nav-menu">
+<li><a href="../../machines/">HRX Systems</a></li>
+<li><a href="../../resources/spec-sheets/">Spec Sheets</a></li>
+<li><a href="../../contact/">Talk Through Fit</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../industries/protein/">Industries</a><ul class="nav-menu">
+<li><a href="../../industries/protein/">Protein</a></li>
+<li><a href="../../industries/dairy-cheese/">Dairy &amp; Cheese</a></li>
+<li><a href="../../industries/frozen-prepared-foods/">Frozen Foods</a></li>
+<li><a href="../../industries/pet-food/">Pet Food</a></li>
+<li><a href="../../industries/produce/">Produce</a></li>
+<li><a href="../../industries/seafood/">Seafood</a></li>
+<li><a href="../../industries/beverage-packaged-goods/">Beverage &amp; Packaged Goods</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../resources/case-studies/">Case Studies</a><ul class="nav-menu">
+<li><a href="../../resources/case-studies/">All Case Studies</a></li>
+<li><a href="../../resources/case-studies/bone-detection/">Bone Detection</a></li>
+<li><a href="../../resources/case-studies/product-in-seal/">Product-in-Seal</a></li>
+<li><a href="../../resources/case-studies/dent-detection/">Dent Detection</a></li>
+<li><a href="../../contact/">Discuss Your Line</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../resources/spec-sheets/">Spec Sheets</a><ul class="nav-menu">
+<li><a href="../../resources/spec-sheets/">All Spec Sheets</a></li>
+<li><a href="../../machines/">HRX Systems</a></li>
+<li><a href="../../contact/">Request a Spec Sheet</a></li>
+</ul>
+</li>
+<li><a class="nav-cta" href="../../contact/">Request a Demo</a></li>
+</ul></nav></header>
+
+    <main>
+      <section class="page-hero fm-application-hero">
+        <div class="section-inner split">
+          <div>
+            <p class="eyebrow">Application</p>
+            <h1>Foreign material detection for food production.</h1>
+            <p class="lead">GreyscaleAI helps food producers inspect for metal, bone, glass, stone, and dense plastic risks while preserving the x-ray image evidence teams need for QA review.</p>
+            <p class="hero-support">Detection performance depends on the product, package, target material, size, density, orientation, and line conditions. Use this page to understand where the application is a fit and what evidence your team can review in Insights.</p>
+            <div class="section-actions">
+              <a class="button" href="../../inspection-systems/talk-through-fit/">Talk Through Your Product</a>
+              <a class="button secondary" href="../../insights/">See Insights Software</a>
+            </div>
+          </div>
+          <figure class="fm-hero-evidence-card">
+            <img src="../../assets/img/solutions/foreign-material/fm-metal-finished-product-base-canvas.png" alt="X-ray image of a finished food product with a small red detector region marking a metal fragment.">
+            <figcaption>Example x-ray evidence: finished product with highlighted dense foreign material region.</figcaption>
+            <div class="fm-hero-chips" aria-label="Evidence workflow">
+              <span>Image evidence</span>
+              <span>AI review</span>
+              <span>Event history</span>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner">
+          <p class="eyebrow">The production problem</p>
+          <h2>A reject signal is not enough context.</h2>
+          <p class="lead">Food safety teams need to confirm what the machine saw, how the event was classified, and whether the product and package create blind spots. GreyscaleAI combines inspection images, AI review, and event history so teams can move from a reject signal to a reviewable record.</p>
+          <div class="card-grid three icon-card-grid">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-shield-alert"></use></svg></span><h3>Detectable risks</h3><p>Common targets include metal, calcified bone, glass, stones, and dense plastics where contrast against the product is sufficient.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-alert-triangle"></use></svg></span><h3>Application caveats</h3><p>Performance depends on product thickness, moisture, density, orientation, packaging format, contaminant size, and line speed.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-file-search"></use></svg></span><h3>Review workflow</h3><p>Rejected units can be traced back to the underlying x-ray image and machine context for QA investigation.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tint">
+        <div class="section-inner">
+          <p class="eyebrow">Why traditional inspection struggles</p>
+          <h2>Foreign material detection depends on more than contaminant type.</h2>
+          <p class="lead">A contaminant that is easy to detect in one product can be difficult in another. Product thickness, density, moisture, packaging, orientation, and line speed all affect whether the target creates enough contrast for reliable inspection.</p>
+          <div class="comparison-columns">
+            <article class="capability">
+              <h3>Simple pass/fail inspection</h3>
+              <ul class="plain-check-list">
+                <li>Rejects product from the line</li>
+                <li>Provides limited review context</li>
+                <li>Can leave QA dependent on manual notes</li>
+                <li>May not explain whether similar events are appearing nearby</li>
+              </ul>
+            </article>
+            <article class="capability highlight">
+              <h3>Image-backed inspection intelligence</h3>
+              <ul class="plain-check-list">
+                <li>Stores the x-ray image tied to the event</li>
+                <li>Connects the event to product, lot, line, time, and machine context</li>
+                <li>Supports AI-assisted review where the application is a fit</li>
+                <li>Makes related event review possible in Insights</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner">
+          <p class="eyebrow">Detection matrix</p>
+          <h2>Detection depends on product and packaging, not just contaminant type.</h2>
+          <div class="table-grid">
+            <div class="comparison">
+              <img src="../../assets/img/solutions/foreign-material-table.png" alt="Foreign material detection comparison matrix across metal, glass, stone, rubber, bone, dense plastic, x-ray, and metal detector technologies.">
+            </div>
+          </div>
+          <p class="matrix-note">This matrix is directional, not a blanket guarantee. Validation should always be done with your actual product, package, contaminant set, and line conditions.</p>
+        </div>
+      </section>
+
+      <section class="section tint">
+        <div class="section-inner">
+          <p class="eyebrow">What GreyscaleAI sees</p>
+          <h2>Dense materials create the strongest x-ray signals.</h2>
+          <div class="metric-strip">
+            <div class="metric-card icon-card"><span class="card-icon"><svg><use href="#icon-magnet"></use></svg></span><p class="meta">Metal</p><strong>High contrast</strong><p>Often among the easiest contaminants to detect when product density is moderate.</p></div>
+            <div class="metric-card icon-card"><span class="card-icon"><svg><use href="#icon-bone"></use></svg></span><p class="meta">Bone</p><strong>Product-specific</strong><p>Detection varies widely with product thickness, natural density, and bone composition.</p></div>
+            <div class="metric-card icon-card"><span class="card-icon"><svg><use href="#icon-gem"></use></svg></span><p class="meta">Glass &amp; stone</p><strong>Dense targets</strong><p>Usually strong candidates where the product does not mask the contaminant.</p></div>
+            <div class="metric-card icon-card"><span class="card-icon"><svg><use href="#icon-layers"></use></svg></span><p class="meta">Dense plastic</p><strong>Case by case</strong><p>Some dense plastics can be detected, but contrast is usually lower than metal or glass.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner">
+          <p class="eyebrow">Image evidence</p>
+          <h2>Image evidence helps teams confirm what happened.</h2>
+          <p class="lead">The value is not only the reject. Teams need the x-ray image, the highlighted region, the machine context, and a way to review related events before deciding what to do next.</p>
+          <div class="xray-gallery">
+            <article class="xray-card">
+              <figure class="fm-evidence-card" tabindex="0" role="button" aria-pressed="false" aria-label="X-ray evidence showing a small metal fragment in a finished product. Hover image or tap image to zoom into the highlighted red region." data-fm-evidence-card>
+                <div class="fm-evidence-card__stage">
+                  <img class="fm-evidence-card__base" src="../../assets/img/solutions/foreign-material/fm-metal-finished-product-base-canvas.png" alt="X-ray image of a finished food product with a small red detector region marking a metal fragment.">
+                  <span class="fm-evidence-card__leader" aria-hidden="true"></span>
+                  <span class="fm-evidence-card__hotspot" aria-hidden="true"></span>
+                  <div class="fm-evidence-card__zoom" aria-hidden="true">
+                    <div class="fm-evidence-card__zoom-label">Zoomed evidence</div>
+                    <img src="../../assets/img/solutions/foreign-material/fm-metal-finished-product-zoom-crop.png" alt="Magnified x-ray crop of the highlighted metal fragment region.">
+                    <strong>Metal fragment</strong>
+                    <span>Dense object inside the highlighted detector region.</span>
+                  </div>
+                </div>
+                <figcaption class="fm-evidence-card__hint"><span class="fm-evidence-card__eyebrow">Hover image / Tap image</span><span>Zoom highlighted evidence</span></figcaption>
+              </figure>
+              <h3>Metal fragment in a finished product</h3>
+              <p>A compact dense object can be reviewed directly in the x-ray evidence, even when the fragment is difficult to see at card size.</p>
+            </article>
+            <article class="xray-card">
+              <figure class="fm-evidence-card" tabindex="0" role="button" aria-pressed="false" aria-label="X-ray evidence showing a small bone fragment in a can of seafood. Hover image or tap image to zoom into the highlighted region." style="--fm-hotspot-x: 40.7250%; --fm-hotspot-y: 66.2380%; --fm-hotspot-size: clamp(40px, 15%, 62px); --fm-leader-angle: -16deg; --fm-leader-width: 46%;" data-fm-evidence-card>
+                <div class="fm-evidence-card__stage">
+                  <img class="fm-evidence-card__base" src="../../assets/img/solutions/foreign-material/bone-seafood-can-base-canvas.png" alt="X-ray image of a seafood can with a small bone fragment region marked for review.">
+                  <span class="fm-evidence-card__leader" aria-hidden="true"></span>
+                  <span class="fm-evidence-card__hotspot" aria-hidden="true"></span>
+                  <div class="fm-evidence-card__zoom" aria-hidden="true">
+                    <div class="fm-evidence-card__zoom-label">Zoomed evidence</div>
+                    <img src="../../assets/img/solutions/foreign-material/bone-seafood-can-zoom-crop.png" alt="Magnified x-ray crop of the highlighted bone fragment region in a seafood can.">
+                    <strong>Bone fragment</strong>
+                    <span>Small bone fragment inside the highlighted detector region.</span>
+                  </div>
+                </div>
+                <figcaption class="fm-evidence-card__hint"><span class="fm-evidence-card__eyebrow">Hover image / Tap image</span><span>Zoom highlighted evidence</span></figcaption>
+              </figure>
+              <h3>Bone fragment in a can of seafood</h3>
+              <p>A small bone fragment can be reviewed directly in the x-ray evidence, even when it is difficult to see at card size.</p>
+            </article>
+            <article class="xray-card">
+              <figure class="fm-evidence-card" tabindex="0" role="button" aria-pressed="false" aria-label="X-ray evidence showing a bone in packaged chicken. Hover image or tap image to zoom into the highlighted region." style="--fm-hotspot-x: 31.9298%; --fm-hotspot-y: 48.9357%; --fm-hotspot-size: clamp(40px, 15%, 62px); --fm-leader-angle: -6deg; --fm-leader-width: 52%;" data-fm-evidence-card>
+                <div class="fm-evidence-card__stage">
+                  <img class="fm-evidence-card__base" src="../../assets/img/solutions/foreign-material/bone-packaged-chicken-base-canvas.png" alt="X-ray image of packaged chicken with a small bone marked for review.">
+                  <span class="fm-evidence-card__leader" aria-hidden="true"></span>
+                  <span class="fm-evidence-card__hotspot" aria-hidden="true"></span>
+                  <div class="fm-evidence-card__zoom" aria-hidden="true">
+                    <div class="fm-evidence-card__zoom-label">Zoomed evidence</div>
+                    <img src="../../assets/img/solutions/foreign-material/bone-packaged-chicken-zoom-crop.png" alt="Magnified x-ray crop of the highlighted bone region in packaged chicken.">
+                    <strong>Bone in packaged chicken</strong>
+                    <span>Small bone inside the highlighted detector region.</span>
+                  </div>
+                </div>
+                <figcaption class="fm-evidence-card__hint"><span class="fm-evidence-card__eyebrow">Hover image / Tap image</span><span>Zoom highlighted evidence</span></figcaption>
+              </figure>
+              <h3>Bone in packaged chicken</h3>
+              <p>A small bone can be reviewed directly in the x-ray evidence, even when it is difficult to see at card size.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark">
+        <div class="section-inner">
+          <p class="eyebrow">Insights workflow</p>
+          <h2>Foreign material detection is the start of the workflow, not the end.</h2>
+          <p class="lead">GreyscaleAI helps teams move from a reject event to the supporting image, machine context, inspection history, and broader review path needed for action.</p>
+          <div class="card-grid four insights-workflow-cards">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-search"></use></svg></span><h3>Search inspection history</h3><p>Search by product, lot, line, time window, event type, and related inspection records.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-image"></use></svg></span><h3>Review selected evidence</h3><p>Open the x-ray image, highlighted region, AI decision, and machine context tied to the event.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-git-compare"></use></svg></span><h3>Compare related events</h3><p>Look for similar events by same product, same lot, same line, or nearby time window.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-clipboard-check"></use></svg></span><h3>Decide next action</h3><p>Use the record to support QA review, reinspection, hold/release decisions, or source investigation.</p></article>
+          </div>
+          <div class="section-actions">
+            <a class="button" href="../../insights/">See Insights Software</a>
+            <a class="button secondary" href="../../insights/beyond-rejects/">Explore Beyond Rejects</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner">
+          <p class="eyebrow">Related proof</p>
+          <h2>See foreign material detection in production applications.</h2>
+          <div class="card-grid two">
+            <a class="resource-card" href="../../resources/case-studies/bone-detection/"><div><h3>AI bone detection in poultry production</h3><p>An anonymized protein application showing how AI models helped distinguish true bone from normal poultry variation.</p></div><span class="button">Read case study</span></a>
+            <a class="resource-card" href="../../industries/protein/"><div><h3>Protein inspection applications</h3><p>Protein products often combine foreign material risk, natural product variation, bone-related concerns, and QA review needs.</p></div><span class="button">Explore protein</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tint">
+        <div class="section-inner">
+          <p class="eyebrow">Related systems and fit</p>
+          <h2>The right detection path depends on the line.</h2>
+          <p class="lead">Foreign material detection should be reviewed against the actual product, package, target contaminants, and operating conditions. Use these pages to route hardware, validation, and product-category questions.</p>
+          <div class="card-grid three related-system-cards">
+            <a class="resource-card" href="../../inspection-systems/"><img src="../../assets/img/products/hrx660.jpg" alt="GreyscaleAI HRX660 x-ray inspection system."><div><span class="card-icon"><svg><use href="#icon-factory"></use></svg></span><h3>Inspection Systems</h3><p>Review HRX system options for aperture, conveyor, throughput, and production environment.</p></div><span class="button">View inspection systems</span></a>
+            <a class="resource-card" href="../../inspection-systems/talk-through-fit/"><div><span class="card-icon"><svg><use href="#icon-messages"></use></svg></span><h3>Talk through fit</h3><p>Share your product, package, target contaminants, and line speed so GreyscaleAI can discuss validation under real operating conditions.</p></div><span class="button">Talk Through Your Product</span></a>
+            <a class="resource-card" href="../../industries/seafood/"><div><span class="card-icon"><svg><use href="#icon-fish"></use></svg></span><h3>Seafood applications</h3><p>Seafood applications can involve foreign material, bone, package issues, image history, and production analytics.</p></div><span class="button">Explore seafood</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark">
+        <div class="section-inner">
+          <p class="eyebrow">Next step</p>
+          <h2>Need to know if your product is a fit?</h2>
+          <p class="lead">Share the product, package, target contaminants, and line speed so GreyscaleAI can talk through validation under real operating conditions.</p>
+          <div class="section-actions">
+            <a class="button" href="../../inspection-systems/talk-through-fit/">Talk Through Your Product</a>
+            <a class="button secondary" href="../../request-demo/">Request a Demo</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="footer-inner">
+<div>
+<img src="../../assets/img/logos/greyscale-ai-logo-footer.png" alt="GreyscaleAI"><p>435 Brady Road, Unit H<br>Tarpon Springs, FL 34689<br>(727) 938-5041</p>
+<p>&copy; 2026 GreyscaleAI. All rights reserved.</p>
+</div>
+<div class="footer-links">
+<a href="mailto:info@greyscaleai.com">info@greyscaleai.com</a><a href="../../contact/">Request a Demo</a>
+</div>
+</div></footer>
+  </body>
+</html>

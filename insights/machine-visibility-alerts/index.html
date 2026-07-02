@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Machine Visibility &amp; Alerts | GreyscaleAI Insights</title>
+    <meta name="description" content="See live machine status, remote machine screen context, health signals, alerts, event history, and support context in GreyscaleAI Insights.">
+    <link rel="icon" href="../../assets/img/meta/favicon.ico">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <script defer src="../../assets/js/main.js"></script>
+  </head>
+  <body>
+    <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="icon-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+      <symbol id="icon-activity" viewBox="0 0 24 24"><path d="M22 12h-4l-3 8-6-16-3 8H2"/></symbol>
+      <symbol id="icon-heart-pulse" viewBox="0 0 24 24"><path d="M19.5 12.6 12 20l-7.5-7.4A5 5 0 0 1 12 6a5 5 0 0 1 7.5 6.6Z"/><path d="M3 13h4l2-4 3 8 2-4h7"/></symbol>
+      <symbol id="icon-bell" viewBox="0 0 24 24"><path d="M10 21h4"/><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/></symbol>
+      <symbol id="icon-alert-triangle" viewBox="0 0 24 24"><path d="m12 3 10 18H2z"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+      <symbol id="icon-clock3" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="icon-lifebuoy" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.9 4.9 4.3 4.3"/><path d="m14.8 14.8 4.3 4.3"/><path d="m19.1 4.9-4.3 4.3"/><path d="m9.2 14.8-4.3 4.3"/></symbol>
+      <symbol id="icon-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.4 8.8a2 2 0 0 1-1.2 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.4a1.3 1.3 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="icon-gauge" viewBox="0 0 24 24"><path d="M12 14 16 8"/><path d="M3.3 19a9 9 0 1 1 17.4 0"/><path d="M7 19h10"/></symbol>
+      <symbol id="icon-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.4 2.4-3-3z"/></symbol>
+      <symbol id="icon-image" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10.5" r="1.5"/><path d="m21 15-5-5L5 19"/></symbol>
+      <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+      <symbol id="icon-bar-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 16V9"/><path d="M12 16V5"/><path d="M17 16v-4"/></symbol>
+      <symbol id="icon-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+    </svg>
+    <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../index.html" aria-label="GreyscaleAI home"><img src="../../assets/img/logos/greyscale-ai-logo-white.png" alt="GreyscaleAI"></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle><span></span></button><ul class="nav-links" data-nav-links>
+<li class="nav-item has-menu">
+<a href="../../platform/">Platform</a><ul class="nav-menu">
+<li><a href="../../platform/">Overview</a></li>
+<li><a href="../../platform/managed-service-support/">Managed Service &amp; Support</a></li>
+<li><a href="../../request-demo/">Application Fit &amp; Validation</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../applications/">Applications</a><ul class="nav-menu">
+<li><a href="../../applications/">Overview</a></li>
+<li><a href="../../applications/foreign-material-detection/">Foreign Material Detection</a></li>
+<li><a href="../../applications/product-quality-package-integrity/">Product Quality &amp; Package Integrity</a></li>
+<li><a href="../../applications/weight-count-intelligence/">Weight &amp; Count Intelligence</a></li>
+<li><a href="../../applications/traceability-qa-review/">Traceability &amp; QA Review</a></li>
+<li><a href="../../applications/production-analytics/">Production Analytics</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../insights/" aria-current="page">Insights Software</a><ul class="nav-menu">
+<li><a href="../../insights/">Overview</a></li>
+<li><a href="../../insights/beyond-rejects/">Beyond Rejects</a></li>
+<li><a href="../../insights/machine-visibility-alerts/" aria-current="page">Machine Visibility &amp; Alerts</a></li>
+<li><a href="../../insights/#enterprise-access">Enterprise Access</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../machines/">Inspection Systems</a><ul class="nav-menu">
+<li><a href="../../machines/">HRX Systems</a></li>
+<li><a href="../../resources/spec-sheets/">Spec Sheets</a></li>
+<li><a href="../../contact/">Talk Through Fit</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../industries/protein/">Industries</a><ul class="nav-menu">
+<li><a href="../../industries/protein/">Protein</a></li>
+<li><a href="../../industries/dairy-cheese/">Dairy &amp; Cheese</a></li>
+<li><a href="../../industries/frozen-prepared-foods/">Frozen Foods</a></li>
+<li><a href="../../industries/pet-food/">Pet Food</a></li>
+<li><a href="../../industries/produce/">Produce</a></li>
+<li><a href="../../industries/seafood/">Seafood</a></li>
+<li><a href="../../industries/beverage-packaged-goods/">Beverage &amp; Packaged Goods</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../resources/case-studies/">Case Studies</a><ul class="nav-menu">
+<li><a href="../../resources/case-studies/">All Case Studies</a></li>
+<li><a href="../../resources/case-studies/bone-detection/">Bone Detection</a></li>
+<li><a href="../../resources/case-studies/product-in-seal/">Product-in-Seal</a></li>
+<li><a href="../../resources/case-studies/dent-detection/">Dent Detection</a></li>
+<li><a href="../../contact/">Discuss Your Line</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../resources/spec-sheets/">Spec Sheets</a><ul class="nav-menu">
+<li><a href="../../resources/spec-sheets/">All Spec Sheets</a></li>
+<li><a href="../../machines/">HRX Systems</a></li>
+<li><a href="../../contact/">Request a Spec Sheet</a></li>
+</ul>
+</li>
+<li><a class="nav-cta" href="../../contact/">Request a Demo</a></li>
+</ul></nav></header>
+
+    <main>
+      <section class="page-hero machine-visibility-hero">
+        <div class="section-inner machine-visibility-hero__grid">
+          <div>
+            <p class="eyebrow">GREYSCALEAI INSIGHTS</p>
+            <h1>See the machine, the alerts, and the inspection context in one view.</h1>
+            <p class="lead">Machine Visibility &amp; Alerts gives authorized teams a live operating view inside GreyscaleAI Insights. See machine status, health signals, remote screen context, recent events, user activity, and alerts so QA, operations, maintenance, and support can respond with the same information in front of them.</p>
+            <div class="section-actions">
+              <a class="button" href="/request-demo/">Request a Demo</a>
+              <a class="button secondary" href="/platform/managed-service-support/">See Managed Service &amp; Support</a>
+            </div>
+          </div>
+          <div class="machine-hero-placeholder" aria-label="Hero graphic placeholder - Machine Visibility and Alerts">
+            <span class="status-pill">Visual pending</span>
+            <h2>Hero graphic placeholder - Machine Visibility &amp; Alerts</h2>
+            <p>Final hero visual will be supplied separately. Reserve space for a live Insights dashboard showing machine screen, status, alerts, and recent activity.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section compact" id="live-operating-context">
+        <div class="section-inner">
+          <p class="eyebrow">LIVE OPERATING CONTEXT</p>
+          <h2>Start from the same machine context.</h2>
+          <p class="lead">When something changes on the line, Insights helps teams see the machine state, the screen context, the alerts, and the event history together.</p>
+          <div class="machine-feature-strip">
+            <article class="machine-feature-card"><span class="card-icon"><svg><use href="#icon-monitor"></use></svg></span><div><small>Machine Screen - Live</small><h3>Remote screen view</h3><p>View the machine screen through Insights so authorized teams can see the current operating context before they call the line or escalate an issue.</p></div></article>
+            <article class="machine-feature-card"><span class="card-icon"><svg><use href="#icon-activity"></use></svg></span><div><small>Status - Running</small><h3>Live status</h3><p>See whether connected inspection systems are running, paused, warning, offline, or waiting for attention.</p></div></article>
+            <article class="machine-feature-card"><span class="card-icon"><svg><use href="#icon-heart-pulse"></use></svg></span><div><small>Health - Stable</small><h3>Health signals</h3><p>Surface monitored machine signals such as uptime, detector status, temperature, readiness, and other configured indicators.</p></div></article>
+            <article class="machine-feature-card"><span class="card-icon"><svg><use href="#icon-bell"></use></svg></span><div><small>Alert - Open</small><h3>Alerts with context</h3><p>Connect alerts to the affected machine, line, recent inspection activity, user actions, and event timeline.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tint" id="remote-machine-screen-view">
+        <div class="section-inner machine-screen-spotlight">
+          <div class="machine-browser-mockup" aria-label="GreyscaleAI Insights remote machine screen viewer mockup">
+            <div class="machine-browser-mockup__bar"><span>GreyscaleAI Insights</span><span class="status-pill">Live view</span></div>
+            <div class="machine-browser-mockup__body">
+              <div class="machine-screen-viewer">
+                <div class="machine-screen-viewer__head"><h3>Machine Screen - Line 2</h3><span>Live view</span></div>
+                <div class="machine-screen-viewer__screen" aria-label="Simplified machine screen context">
+                  <div class="screen-state screen-state--large">Inspection Running</div>
+                  <div class="screen-state">Review Queue</div>
+                  <div class="screen-state screen-state--alert">Reject Event Open</div>
+                  <div class="screen-state">System Health: Stable</div>
+                </div>
+              </div>
+              <aside class="machine-context-panel">
+                <h3>Context Panel</h3>
+                <dl>
+                  <div><dt>Machine:</dt><dd>HRX660AQ</dd></div>
+                  <div><dt>Line speed:</dt><dd>214 ppm</dd></div>
+                  <div><dt>Last alert:</dt><dd>Reject-rate change</dd></div>
+                  <div><dt>Last user action:</dt><dd>Review opened</dd></div>
+                  <div><dt>Support context:</dt><dd>Available</dd></div>
+                </dl>
+              </aside>
+            </div>
+          </div>
+          <div>
+            <p class="eyebrow">REMOTE MACHINE SCREEN VIEW</p>
+            <h2>See the same screen context before the conversation starts.</h2>
+            <p class="lead">Authorized users can view the machine screen through Insights, giving QA, operations, maintenance, and GreyscaleAI support the same visual context the line team is seeing. That makes troubleshooting and escalation more specific from the first conversation.</p>
+            <div class="machine-benefit-stack">
+              <article><h3>Confirm current machine state</h3><p>Check whether the system is running, paused, reviewing an event, warning, or waiting for action.</p></article>
+              <article><h3>Reduce back-and-forth</h3><p>Start support and operations conversations with the machine screen, alert, and recent activity already in view.</p></article>
+              <article><h3>Escalate with better context</h3><p>Share what changed, when it changed, and what the machine was showing when the question came up.</p></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="alert-to-action">
+        <div class="section-inner">
+          <p class="eyebrow">FROM ALERT TO ACTION</p>
+          <h2>Alerts are more useful when the next context is one click away.</h2>
+          <p class="lead">Insights turns alerts into a triage workflow. Teams can move from an alert to the machine screen, recent events, and support context without piecing the story together from separate systems.</p>
+          <div class="machine-workflow" aria-label="Alert to action workflow">
+            <article><span class="machine-workflow__number">1</span><span class="card-icon"><svg><use href="#icon-bell"></use></svg></span><h3>Alert fires</h3><p>A reject-rate change, machine warning, readiness change, or review event needs attention.</p></article>
+            <article><span class="machine-workflow__number">2</span><span class="card-icon"><svg><use href="#icon-monitor"></use></svg></span><h3>Open machine view</h3><p>Authorized users check the current machine screen and operating state.</p></article>
+            <article><span class="machine-workflow__number">3</span><span class="card-icon"><svg><use href="#icon-clock3"></use></svg></span><h3>Review recent history</h3><p>Teams see related events, alerts, user interactions, and inspection activity in sequence.</p></article>
+            <article><span class="machine-workflow__number">4</span><span class="card-icon"><svg><use href="#icon-lifebuoy"></use></svg></span><h3>Respond with context</h3><p>QA, operations, maintenance, or GreyscaleAI support can decide the next step with the same information visible.</p></article>
+          </div>
+          <div class="machine-chip-row"><span>Live screen</span><span>Health signals</span><span>Event timeline</span><span>Support context</span></div>
+        </div>
+      </section>
+
+      <section class="section tint" id="machine-history">
+        <div class="section-inner machine-history-layout">
+          <div>
+            <p class="eyebrow">MACHINE HISTORY</p>
+            <h2>Every alert has a before and after.</h2>
+            <p class="lead">Insights keeps machine context close to the inspection record. Teams can review what happened before, during, and after an event: machine status, screen context, health signals, alert history, user activity, and nearby inspection events.</p>
+            <div class="machine-history-timeline">
+              <div>10:42 AM - Challenge validation passed</div>
+              <div>10:51 AM - Foreign material reject</div>
+              <div>11:08 AM - Operator review opened</div>
+              <div>11:26 AM - Machine health warning</div>
+              <div>11:42 AM - Alert acknowledged</div>
+            </div>
+          </div>
+          <aside class="machine-event-detail">
+            <span class="card-icon"><svg><use href="#icon-alert-triangle"></use></svg></span>
+            <h3>Event Detail</h3>
+            <dl>
+              <div><dt>Machine:</dt><dd>HRX660AQ</dd></div>
+              <div><dt>Line:</dt><dd>Line 2</dd></div>
+              <div><dt>Status at event:</dt><dd>Running</dd></div>
+              <div><dt>Screen context:</dt><dd>Review queue open</dd></div>
+              <div><dt>User action:</dt><dd>Operator review opened</dd></div>
+              <div><dt>Related alert:</dt><dd>Reject-rate change</dd></div>
+              <div><dt>Support context:</dt><dd>Available</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section dark machine-support-band" id="support-context">
+        <div class="section-inner machine-support-layout">
+          <div>
+            <p class="eyebrow">SUPPORT CONTEXT</p>
+            <h2>Support can see the story, not just the ticket.</h2>
+            <p class="lead">Machine Visibility &amp; Alerts is the customer-facing view of the same context that helps GreyscaleAI support respond faster. As part of Managed Service &amp; Support, GreyscaleAI actively monitors connected solutions 24/7 and can review relevant machine signals, alerts, screen context, event history, and recent user interactions when a customer has a question.</p>
+            <p>That creates a faster path from question to action and helps reduce time spent diagnosing issues that can contribute to downtime.</p>
+            <p class="matrix-note">GreyscaleAI provides monitoring, context, and support. Customer teams retain control over inspection decisions, escalation paths, and final product disposition.</p>
+            <div class="section-actions"><a class="button" href="/platform/managed-service-support/">See Managed Service &amp; Support</a></div>
+          </div>
+          <aside class="machine-support-sidecar">
+            <span class="card-icon"><svg><use href="#icon-lifebuoy"></use></svg></span>
+            <h3>Support Context</h3>
+            <dl>
+              <div><dt>Machine screen:</dt><dd>Available</dd></div>
+              <div><dt>Recent alerts:</dt><dd>3</dd></div>
+              <div><dt>Health signals:</dt><dd>Stable</dd></div>
+              <div><dt>Last user action:</dt><dd>Review opened</dd></div>
+              <div><dt>Event history:</dt><dd>Synced</dd></div>
+              <div><dt>Recommended next step:</dt><dd>Review with support</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="who-uses-it">
+        <div class="section-inner">
+          <p class="eyebrow">WHO USES IT</p>
+          <h2>One live view for the teams around the line.</h2>
+          <p class="lead">Machine visibility is useful beyond maintenance. It gives FSQA, operations, maintenance, and GreyscaleAI support a shared view of what happened, what changed, and what may need attention.</p>
+          <div class="card-grid two icon-card-grid">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-shield-check"></use></svg></span><h3>FSQA</h3><p>Review inspection events, challenge activity, screen context, and alert history when investigating exceptions or QA follow-up.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-gauge"></use></svg></span><h3>Operations</h3><p>See machine status, line speed, reject activity, and recurring alerts across lines, shifts, or plants.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-wrench"></use></svg></span><h3>Maintenance</h3><p>Use machine health signals, readiness changes, event timing, and screen context to prioritize review.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-lifebuoy"></use></svg></span><h3>GreyscaleAI Support</h3><p>Start support conversations with machine screen context, recent alerts, event history, and user activity already visible.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tint" id="related-insights-software">
+        <div class="section-inner">
+          <p class="eyebrow">RELATED INSIGHTS SOFTWARE</p>
+          <h2>Machine visibility connects to the rest of Insights.</h2>
+          <div class="card-grid four icon-card-grid">
+            <a class="resource-card" href="/insights/image-history-event-review/"><div><span class="card-icon"><svg><use href="#icon-image"></use></svg></span><h3>Image History &amp; Event Review</h3><p>Search and review inspection images, AI decisions, event metadata, and QA context.</p></div><span class="button">Explore Image History</span></a>
+            <a class="resource-card" href="/insights/beyond-rejects/"><div><span class="card-icon"><svg><use href="#icon-search"></use></svg></span><h3>Beyond Rejects</h3><p>Review what happened around elevated-risk events, not only the rejected unit.</p></div><span class="button">Explore Beyond Rejects</span></a>
+            <a class="resource-card" href="/insights/production-analytics/"><div><span class="card-icon"><svg><use href="#icon-bar-chart"></use></svg></span><h3>Production Analytics</h3><p>Turn inspection and machine activity into trends by line, SKU, shift, plant, or machine condition.</p></div><span class="button">Explore Production Analytics</span></a>
+            <a class="resource-card" href="/insights/enterprise-access/"><div><span class="card-icon"><svg><use href="#icon-users"></use></svg></span><h3>Enterprise Access</h3><p>Give authorized users secure access to inspection records, dashboards, alerts, and machine context.</p></div><span class="button">Explore Enterprise Access</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="connected-service-model">
+        <div class="section-inner">
+          <div class="machine-service-callout">
+            <span class="card-icon"><svg><use href="#icon-lifebuoy"></use></svg></span>
+            <div>
+              <p class="eyebrow">CONNECTED SERVICE MODEL</p>
+              <h2>Visibility is more powerful when support can use the same context.</h2>
+              <p>Machine Visibility &amp; Alerts gives customers a clear view of what is happening in Insights. Managed Service &amp; Support explains how GreyscaleAI monitors, supports, updates, and improves connected inspection solutions over time.</p>
+            </div>
+            <a class="button" href="/platform/managed-service-support/">See Managed Service &amp; Support</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark" id="machine-final-cta">
+        <div class="section-inner">
+          <p class="eyebrow">NEXT STEP</p>
+          <h2>See what your inspection systems are telling you.</h2>
+          <p class="lead">Talk with GreyscaleAI about your lines, machines, alert workflows, remote visibility needs, and support expectations.</p>
+          <div class="section-actions">
+            <a class="button" href="/request-demo/">Request a Demo</a>
+            <a class="button secondary" href="/insights/">Explore Insights Software</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="footer-inner">
+<div>
+<img src="../../assets/img/logos/greyscale-ai-logo-footer.png" alt="GreyscaleAI"><p>435 Brady Road, Unit H<br>Tarpon Springs, FL 34689<br>(727) 938-5041</p>
+<p>© 2026 GreyscaleAI. All rights reserved.</p>
+</div>
+<div class="footer-links">
+<a href="mailto:info@greyscaleai.com">info@greyscaleai.com</a><a href="../../contact/">Request a Demo</a>
+</div>
+</div></footer>
+  </body>
+</html>
