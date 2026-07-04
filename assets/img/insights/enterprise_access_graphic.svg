@@ -1,0 +1,72 @@
+<svg width="920" height="560" viewBox="0 0 920 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise access flow for GreyscaleAI Insights</title>
+  <desc id="desc">A dark interface graphic showing customer identity access flowing into GreyscaleAI Insights, then into role-based views for QA, operations, maintenance, and enterprise teams.</desc>
+  <rect width="920" height="560" rx="34" fill="#07111F"/>
+  <rect x="28" y="28" width="864" height="504" rx="28" fill="#0B1626" stroke="#203044" stroke-width="2"/>
+
+  <text x="60" y="78" fill="#E6F3FF" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700">Enterprise access for GreyscaleAI Insights</text>
+  <text x="60" y="108" fill="#9FB3C8" font-family="Inter, Arial, sans-serif" font-size="15">Customer-controlled access, secure cloud review, separated customer data</text>
+
+  <g transform="translate(60,150)">
+    <rect width="220" height="122" rx="20" fill="#101F33" stroke="#2B3C54" stroke-width="1.5"/>
+    <circle cx="42" cy="42" r="20" fill="#102C3F" stroke="#39D0C8" stroke-width="1.5"/>
+    <path d="M35 42L40 47L50 36" stroke="#39D0C8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="72" y="38" fill="#E6F3FF" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Customer identity</text>
+    <text x="72" y="62" fill="#9FB3C8" font-family="Inter, Arial, sans-serif" font-size="13">SSO or approved</text>
+    <text x="72" y="80" fill="#9FB3C8" font-family="Inter, Arial, sans-serif" font-size="13">authorization workflow</text>
+    <text x="26" y="106" fill="#7DB7FF" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">CONTROLLED BY CUSTOMER</text>
+  </g>
+
+  <path d="M300 211H386" stroke="#39D0C8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M374 199L386 211L374 223" stroke="#39D0C8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(386,132)">
+    <rect width="220" height="280" rx="24" fill="#0E2134" stroke="#39D0C8" stroke-width="2"/>
+    <rect x="20" y="22" width="180" height="46" rx="14" fill="#102C3F" stroke="#2B7180" stroke-width="1"/>
+    <text x="42" y="51" fill="#E6F3FF" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">GreyscaleAI Insights</text>
+    <rect x="26" y="92" width="168" height="36" rx="10" fill="#14273B"/>
+    <text x="42" y="115" fill="#D7E8F8" font-family="Inter, Arial, sans-serif" font-size="13">Inspection images</text>
+    <rect x="26" y="140" width="168" height="36" rx="10" fill="#14273B"/>
+    <text x="42" y="163" fill="#D7E8F8" font-family="Inter, Arial, sans-serif" font-size="13">AI decisions</text>
+    <rect x="26" y="188" width="168" height="36" rx="10" fill="#14273B"/>
+    <text x="42" y="211" fill="#D7E8F8" font-family="Inter, Arial, sans-serif" font-size="13">Alerts and dashboards</text>
+    <rect x="26" y="236" width="168" height="26" rx="8" fill="#0B1626" stroke="#2B3C54"/>
+    <text x="43" y="254" fill="#9FB3C8" font-family="Inter, Arial, sans-serif" font-size="11">Customer data separated</text>
+  </g>
+
+  <path d="M606 211H690" stroke="#39D0C8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M678 199L690 211L678 223" stroke="#39D0C8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(690,132)">
+    <rect width="170" height="58" rx="16" fill="#101F33" stroke="#2B3C54" stroke-width="1.5"/>
+    <text x="22" y="35" fill="#E6F3FF" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">FSQA</text>
+    <text x="22" y="51" fill="#9FB3C8" font-family="Inter, Arial, sans-serif" font-size="11">Review evidence</text>
+  </g>
+  <g transform="translate(690,204)">
+    <rect width="170" height="58" rx="16" fill="#101F33" stroke="#2B3C54" stroke-width="1.5"/>
+    <text x="22" y="35" fill="#E6F3FF" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Operations</text>
+    <text x="22" y="51" fill="#9FB3C8" font-family="Inter, Arial, sans-serif" font-size="11">See trends</text>
+  </g>
+  <g transform="translate(690,276)">
+    <rect width="170" height="58" rx="16" fill="#101F33" stroke="#2B3C54" stroke-width="1.5"/>
+    <text x="22" y="35" fill="#E6F3FF" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Maintenance</text>
+    <text x="22" y="51" fill="#9FB3C8" font-family="Inter, Arial, sans-serif" font-size="11">Use machine context</text>
+  </g>
+  <g transform="translate(690,348)">
+    <rect width="170" height="58" rx="16" fill="#101F33" stroke="#2B3C54" stroke-width="1.5"/>
+    <text x="22" y="35" fill="#E6F3FF" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Enterprise</text>
+    <text x="22" y="51" fill="#9FB3C8" font-family="Inter, Arial, sans-serif" font-size="11">Approved visibility</text>
+  </g>
+
+  <g transform="translate(60,336)">
+    <rect width="266" height="76" rx="18" fill="#101F33" stroke="#2B3C54" stroke-width="1.5"/>
+    <text x="24" y="32" fill="#E6F3FF" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Production line stays secure</text>
+    <text x="24" y="55" fill="#9FB3C8" font-family="Inter, Arial, sans-serif" font-size="12">The machine runs on the line while authorized users review cloud data.</text>
+  </g>
+
+  <g transform="translate(60,444)">
+    <rect width="800" height="52" rx="16" fill="#081321" stroke="#203044" stroke-width="1"/>
+    <circle cx="30" cy="26" r="9" fill="#39D0C8"/>
+    <text x="50" y="31" fill="#D7E8F8" font-family="Inter, Arial, sans-serif" font-size="14">IT review: access, roles, data separation, updates, backups, support responsibilities</text>
+  </g>
+</svg>

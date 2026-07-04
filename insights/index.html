@@ -36,6 +36,7 @@
       <symbol id="icon-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m11 12 9-9"/><path d="m16 7 2 2"/><path d="m14 9 2 2"/></symbol>
       <symbol id="icon-cloud" viewBox="0 0 24 24"><path d="M17.5 19H7a5 5 0 1 1 1.2-9.9A7 7 0 0 1 21 12.5 3.5 3.5 0 0 1 17.5 19Z"/></symbol>
       <symbol id="icon-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+      <symbol id="icon-server-cog" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 8h.01"/><path d="M7 17h.01"/><circle cx="16.5" cy="16.5" r="1.5"/><path d="M16.5 13.5v1"/><path d="M16.5 18.5v1"/><path d="m14 15.1.8.5"/><path d="m18.2 17.4.8.5"/><path d="m14 17.9.8-.5"/><path d="m18.2 15.6.8-.5"/></symbol>
       <symbol id="icon-factory" viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M4 20V9l6 4V9l6 4V4h4v16"/><path d="M8 18h1"/><path d="M13 18h1"/><path d="M18 18h1"/></symbol>
       <symbol id="icon-scan-line" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/><path d="M9 9h6"/><path d="M9 15h6"/></symbol>
     </svg>
@@ -62,7 +63,7 @@
 <li><a href="../insights/" aria-current="page">Overview</a></li>
 <li><a href="../insights/beyond-rejects/">Beyond Rejects</a></li>
 <li><a href="../insights/machine-visibility-alerts/">Machine Visibility &amp; Alerts</a></li>
-<li><a href="../insights/#enterprise-access">Enterprise Access</a></li>
+<li><a href="../insights/enterprise-access/">Enterprise Access</a></li>
 </ul>
 </li>
 <li class="nav-item has-menu">
@@ -179,8 +180,8 @@
             <a class="resource-card" href="../capabilities/image-history-traceability/"><div><span class="card-icon"><svg><use href="#icon-search-check"></use></svg></span><h3>Image History &amp; Event Review</h3><p>Search inspection records by time, SKU, line, machine, lot, event type, result, or review status. Open the image, review the context, document follow-up, and export evidence when needed.</p></div><span class="button">Explore Image History</span></a>
             <a class="resource-card" href="beyond-rejects/"><div><span class="card-icon"><svg><use href="#icon-scan-search"></use></svg></span><h3>Beyond Rejects</h3><p>Review the images, signals, and production window around elevated-risk events so teams can make better hold, release, reinspection, or follow-up decisions.</p></div><span class="button">Explore Beyond Rejects</span></a>
             <a class="resource-card" href="machine-visibility-alerts/"><div><span class="card-icon"><svg><use href="#icon-activity"></use></svg></span><h3>Machine Visibility &amp; Alerts</h3><p>See machine status, remote screen context, health signals, alerts, event activity, and machine-history context in the same software environment as inspection records.</p></div><span class="button">Explore Machine Visibility</span></a>
-            <a class="resource-card" href="../capabilities/production-analytics/"><div><span class="card-icon"><svg><use href="#icon-bar-chart"></use></svg></span><h3>Production Analytics</h3><p>Turn inspection and machine activity into dashboards for reject trends, recurring reasons, shift comparisons, supplier patterns, and quality correlations.</p></div><span class="button">Explore Production Analytics</span></a>
-            <a class="resource-card" href="#enterprise-access"><div><span class="card-icon"><svg><use href="#icon-shield-check"></use></svg></span><h3>Enterprise Access</h3><p>Give authorized users secure access through the cloud application, with roles, permissions, updates, backups, and support language ready for enterprise review.</p></div><span class="button">Explore Enterprise Access</span></a>
+            <a class="resource-card" id="production-analytics" href="../capabilities/production-analytics/"><div><span class="card-icon"><svg><use href="#icon-bar-chart"></use></svg></span><h3>Production Analytics</h3><p>Turn inspection and machine activity into dashboards for reject trends, recurring reasons, shift comparisons, supplier patterns, and quality correlations.</p></div><span class="button">Explore Production Analytics</span></a>
+            <a class="resource-card" href="/insights/enterprise-access/"><div><span class="card-icon"><svg><use href="#icon-shield-check"></use></svg></span><h3>Enterprise Access</h3><p>Give authorized customer users secure cloud access to inspection records, dashboards, alerts, and machine context through customer-controlled authorization, roles, and permissions.</p></div><span class="button">Explore Enterprise Access</span></a>
           </div>
         </div>
       </section>
@@ -239,9 +240,12 @@
           <p class="lead">Insights is delivered as a secure, cloud-hosted web application for authorized users. GreyscaleAI manages the application layer, including updates, backups, and support, so customers can focus on inspection review and operational follow-up rather than local software maintenance.</p>
           <!-- TODO: Confirm exact SSO, role, retention, backup, and permission language before production launch. -->
           <div class="card-grid three icon-card-grid">
-            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-key"></use></svg></span><h3>Authorized access</h3><p>Use roles and permissions so the right users can access the inspection and machine context they need.</p></article>
-            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-cloud"></use></svg></span><h3>Managed application</h3><p>GreyscaleAI handles the application layer, software updates, backups, and support responsibilities described in the service model.</p></article>
-            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-users"></use></svg></span><h3>Shared review</h3><p>QA, operations, maintenance, and enterprise users can work from the same source of inspection and machine context.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-key"></use></svg></span><h3>Customer-controlled access</h3><p>Access is handled through the customer's preferred authorization and access system.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-users"></use></svg></span><h3>Roles and permissions</h3><p>Roles and permissions limit access to approved records, dashboards, alerts, and machine context.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-server-cog"></use></svg></span><h3>Managed application layer</h3><p>GreyscaleAI handles software updates, backups, and support responsibilities.</p></article>
+          </div>
+          <div class="section-actions">
+            <a class="button" href="/insights/enterprise-access/">Explore Enterprise Access</a>
           </div>
         </div>
       </section>

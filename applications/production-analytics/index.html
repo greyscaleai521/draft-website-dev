@@ -4,12 +4,260 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
-    <title>Production Analytics | GreyscaleAI</title>
-    <!-- Temporary application route alias until tasks 2.2 through 2.6 replace this page. -->
-    <meta http-equiv="refresh" content="0; url=../../capabilities/production-analytics/">
-    <link rel="canonical" href="../../capabilities/production-analytics/">
+    <title>Production Analytics for Food Inspection | GreyscaleAI</title>
+    <meta name="description" content="See inspection trends by product, line, shift, plant, reason code, and machine context. GreyscaleAI turns x-ray inspection events into production intelligence.">
+    <link rel="icon" href="../../assets/img/meta/favicon.ico">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <script defer src="../../assets/js/main.js"></script>
   </head>
   <body>
-    <p><a href="../../capabilities/production-analytics/">Continue to Production Analytics</a></p>
+    <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="icon-line-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m5 15 4-4 4 3 6-8"/></symbol>
+      <symbol id="icon-bar-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 16V9"/><path d="M12 16V5"/><path d="M17 16v-4"/></symbol>
+      <symbol id="icon-filter" viewBox="0 0 24 24"><path d="M4 5h16"/><path d="M7 12h10"/><path d="M10 19h4"/></symbol>
+      <symbol id="icon-factory" viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M4 20V9l6 4V9l6 4V4h4v16"/><path d="M8 18h1"/><path d="M13 18h1"/><path d="M18 18h1"/></symbol>
+      <symbol id="icon-bell-ring" viewBox="0 0 24 24"><path d="M10 21h4"/><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M4 2C2.8 3.2 2 4.7 2 6.5"/><path d="M22 6.5c0-1.8-.8-3.3-2-4.5"/></symbol>
+      <symbol id="icon-image" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10.5" r="1.5"/><path d="m21 15-5-5L5 19"/></symbol>
+      <symbol id="icon-sparkles" viewBox="0 0 24 24"><path d="m12 3-1.9 5.1L5 10l5.1 1.9L12 17l1.9-5.1L19 10l-5.1-1.9z"/><path d="M5 3v4"/><path d="M3 5h4"/><path d="M19 17v4"/><path d="M17 19h4"/></symbol>
+      <symbol id="icon-file-text" viewBox="0 0 24 24"><path d="M14 2v6h6"/><path d="M16 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8l6 6v12a2 2 0 0 1-2 2h-2"/><path d="M8 13h8"/><path d="M8 17h6"/></symbol>
+      <symbol id="icon-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.4 2.4-3-3z"/></symbol>
+      <symbol id="icon-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+      <symbol id="icon-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.4 8.8a2 2 0 0 1-1.2 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.4a1.3 1.3 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="icon-building" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18"/><path d="M4 22h16"/><path d="M10 6h.01"/><path d="M14 6h.01"/><path d="M10 10h.01"/><path d="M14 10h.01"/><path d="M10 14h.01"/><path d="M14 14h.01"/></symbol>
+      <symbol id="icon-clock3" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    </svg>
+    <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../index.html" aria-label="GreyscaleAI home"><img src="../../assets/img/logos/greyscale-ai-logo-white.png" alt="GreyscaleAI"></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle><span></span></button><ul class="nav-links" data-nav-links>
+<li class="nav-item has-menu">
+<a href="../../platform/">Platform</a><ul class="nav-menu">
+<li><a href="../../platform/">Overview</a></li>
+<li><a href="../../platform/managed-service-support/">Managed Service &amp; Support</a></li>
+<li><a href="../../request-demo/">Application Fit &amp; Validation</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../applications/" aria-current="page">Applications</a><ul class="nav-menu">
+<li><a href="../../applications/">Overview</a></li>
+<li><a href="../../applications/foreign-material-detection/">Foreign Material Detection</a></li>
+<li><a href="../../applications/product-quality-package-integrity/">Product Quality &amp; Package Integrity</a></li>
+<li><a href="../../applications/weight-count-intelligence/">Weight &amp; Count Intelligence</a></li>
+<li><a href="../../applications/traceability-qa-review/">Traceability &amp; QA Review</a></li>
+<li><a href="../../applications/production-analytics/" aria-current="page">Production Analytics</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../insights/">Insights Software</a><ul class="nav-menu">
+<li><a href="../../insights/">Overview</a></li>
+<li><a href="../../insights/beyond-rejects/">Beyond Rejects</a></li>
+<li><a href="../../insights/machine-visibility-alerts/">Machine Visibility &amp; Alerts</a></li>
+<li><a href="../../insights/enterprise-access/">Enterprise Access</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../machines/">Inspection Systems</a><ul class="nav-menu">
+<li><a href="../../machines/">HRX Systems</a></li>
+<li><a href="../../resources/spec-sheets/">Spec Sheets</a></li>
+<li><a href="../../contact/">Talk Through Fit</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../industries/protein/">Industries</a><ul class="nav-menu">
+<li><a href="../../industries/protein/">Protein</a></li>
+<li><a href="../../industries/dairy-cheese/">Dairy &amp; Cheese</a></li>
+<li><a href="../../industries/frozen-prepared-foods/">Frozen Foods</a></li>
+<li><a href="../../industries/pet-food/">Pet Food</a></li>
+<li><a href="../../industries/produce/">Produce</a></li>
+<li><a href="../../industries/seafood/">Seafood</a></li>
+<li><a href="../../industries/beverage-packaged-goods/">Beverage &amp; Packaged Goods</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../resources/case-studies/">Case Studies</a><ul class="nav-menu">
+<li><a href="../../resources/case-studies/">All Case Studies</a></li>
+<li><a href="../../resources/case-studies/bone-detection/">Bone Detection</a></li>
+<li><a href="../../resources/case-studies/product-in-seal/">Product-in-Seal</a></li>
+<li><a href="../../resources/case-studies/dent-detection/">Dent Detection</a></li>
+<li><a href="../../contact/">Discuss Your Line</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../resources/spec-sheets/">Spec Sheets</a><ul class="nav-menu">
+<li><a href="../../resources/spec-sheets/">All Spec Sheets</a></li>
+<li><a href="../../machines/">HRX Systems</a></li>
+<li><a href="../../contact/">Request a Spec Sheet</a></li>
+</ul>
+</li>
+<li><a class="nav-cta" href="../../contact/">Request a Demo</a></li>
+</ul></nav></header>
+
+    <main>
+      <section class="page-hero production-analytics-hero">
+        <div class="section-inner production-analytics-hero__grid">
+          <div>
+            <p class="eyebrow">Application</p>
+            <h1>Production Analytics</h1>
+            <h2>See the patterns hiding inside inspection events.</h2>
+            <p class="lead">Every reject, alert, image, and machine signal has context. GreyscaleAI helps teams compare inspection activity by product, line, shift, plant, lot, supplier, reason code, and time window so recurring issues become easier to find and act on.</p>
+            <div class="section-actions">
+              <a class="button" href="/insights/#production-analytics">See Insights</a>
+              <a class="button secondary" href="/request-demo/">Talk Through Fit</a>
+            </div>
+            <div class="hero-proof production-analytics-badges" aria-label="Production analytics focus areas">
+              <span>Reject trends</span><span>Shift comparisons</span><span>SKU and lot context</span><span>Machine context</span>
+            </div>
+          </div>
+          <div class="visual-placeholder production-analytics-hero-placeholder">
+            <div class="visual-placeholder__icon"><svg><use href="#icon-bar-chart"></use></svg></div>
+            <div class="visual-placeholder__label">VISUAL PLACEHOLDER</div>
+            <h3>Production analytics dashboard graphic</h3>
+            <p>Future visual: dark dashboard mockup showing filters, KPI tiles, reject-rate trend, top review reasons, line x shift comparison, and a What changed callout.</p>
+            <div class="visual-placeholder__note">Do not replace with stock photography.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="production-problem">
+        <div class="section-inner">
+          <p class="eyebrow">Production problem</p>
+          <h2>Rejects are events. Patterns are the real opportunity.</h2>
+          <p class="lead">A single reject tells you what happened at one moment. Production analytics helps reveal whether the same issue is building over a shift, tied to a SKU, concentrated on one line, or appearing across plants.</p>
+          <div class="card-grid three icon-card-grid">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-line-chart"></use></svg></span><h3>Recurring issues stay hidden</h3><p>Small changes in reject rate, fill, package condition, or review reasons can build slowly before they become obvious on the floor.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-filter"></use></svg></span><h3>Context gets separated</h3><p>Images, rejects, lot details, shift notes, and machine activity often live in different places, making root-cause conversations slower.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-factory"></use></svg></span><h3>Multi-line visibility is hard</h3><p>Plant and corporate teams need a way to compare lines and facilities without waiting for manual screenshots, spreadsheets, or one-off reports.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tint" id="traditional-inspection-struggle">
+        <div class="section-inner">
+          <p class="eyebrow">Why traditional inspection struggles</p>
+          <h2>Pass/fail systems stop product. They do not explain production.</h2>
+          <p class="lead">Traditional inspection equipment can remove suspect product, but the records are often too isolated to answer bigger operating questions: Which SKU changed? Did the issue start after a shift change? Is the pattern tied to a supplier lot, machine health signal, or line-speed change?</p>
+          <div class="analytics-comparison">
+            <article>
+              <h3>Pass/fail view</h3>
+              <ul>
+                <li>One event at a time</li>
+                <li>Limited trend context</li>
+                <li>Manual screenshots and exports</li>
+                <li>Hard to compare lines or plants</li>
+              </ul>
+            </article>
+            <article>
+              <h3>Production analytics view</h3>
+              <ul>
+                <li>Trends by product, line, shift, plant, and time window</li>
+                <li>Reason-code and review-status visibility</li>
+                <li>Image-backed event context</li>
+                <li>Machine and alert context connected to quality trends</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="what-greyscaleai-connects">
+        <div class="section-inner">
+          <p class="eyebrow">What GreyscaleAI connects</p>
+          <h2>Turn inspection activity into production context.</h2>
+          <p class="lead">GreyscaleAI captures high-resolution inspection images and AI decisions, then connects them with machine, product, line, lot, shift, and time-window context where available. The result is a clearer view of where issues are repeating and what changed around them.</p>
+          <div class="analytics-flow" aria-label="Production analytics context flow">
+            <article><span class="card-icon"><svg><use href="#icon-image"></use></svg></span><h3>Inspection image</h3><p>What the system saw</p></article>
+            <article><span class="card-icon"><svg><use href="#icon-sparkles"></use></svg></span><h3>AI decision</h3><p>How the event was classified</p></article>
+            <article><span class="card-icon"><svg><use href="#icon-file-text"></use></svg></span><h3>Event record</h3><p>Reason, result, and review status</p></article>
+            <article><span class="card-icon"><svg><use href="#icon-factory"></use></svg></span><h3>Production context</h3><p>Product, line, lot, shift, facility</p></article>
+            <article><span class="card-icon"><svg><use href="#icon-bell-ring"></use></svg></span><h3>Trend or alert</h3><p>Pattern worth reviewing</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tint production-analytics-demo-section" id="analytics-view">
+        <div class="section-inner">
+          <p class="eyebrow">Analytics view</p>
+          <h2>A dashboard built around the questions production teams actually ask.</h2>
+          <p class="lead">The point is not to add another chart. The point is to make inspection activity easier to compare, filter, and investigate so teams can decide where to focus.</p>
+          <div class="visual-placeholder production-analytics-demo-placeholder">
+            <div class="visual-placeholder__icon"><svg><use href="#icon-line-chart"></use></svg></div>
+            <div class="visual-placeholder__label">VISUAL PLACEHOLDER</div>
+            <h3>Production analytics dashboard mockup</h3>
+            <p>Future visual: an example dashboard with a filter bar, KPI tiles, reject and review trend, top review reasons, line x shift heatmap, and a What changed callout.</p>
+            <div class="visual-placeholder__chips">
+              <span>Filter bar</span>
+              <span>KPI tiles</span>
+              <span>Trend chart</span>
+              <span>Top reasons</span>
+              <span>Line x shift heatmap</span>
+              <span>What changed</span>
+            </div>
+            <div class="visual-placeholder__note">Use example data only. Do not use customer data, real plant names, real machine names, dates, or timestamps.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="what-insights-shows">
+        <div class="section-inner">
+          <p class="eyebrow">What Insights shows</p>
+          <h2>The application outcome lives in GreyscaleAI Insights.</h2>
+          <p class="lead">Production analytics becomes useful when teams can move from a trend to the evidence behind it. Insights connects dashboards, filters, event history, images, alerts, and machine context so QA, operations, maintenance, and corporate teams can work from the same record.</p>
+          <div class="card-grid four icon-card-grid">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-filter"></use></svg></span><h3>Filter by production context</h3><p>Compare inspection activity by product, SKU, lot, line, shift, facility, reason code, and time window where that context is available.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-bar-chart"></use></svg></span><h3>Rank recurring reasons</h3><p>See which review reasons, rejects, or quality signals are creating the most follow-up work or production loss.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-image"></use></svg></span><h3>Drill back to evidence</h3><p>Move from a trend to the image-backed events and review records behind the pattern.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-bell-ring"></use></svg></span><h3>Connect alerts to trends</h3><p>Use alerts and machine context to understand when production or machine behavior starts moving away from baseline.</p></article>
+          </div>
+          <div class="section-actions">
+            <a class="button" href="/insights/#production-analytics">See Insights</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tint" id="what-teams-can-do">
+        <div class="section-inner">
+          <p class="eyebrow">What teams can do</p>
+          <h2>Analytics are most useful when they lead to action.</h2>
+          <p class="lead">Different teams need different views of the same production record. Production analytics helps each group focus on the pattern that matters to them without separating the chart from the inspection evidence.</p>
+          <div class="card-grid four icon-card-grid">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-shield-check"></use></svg></span><h3>FSQA</h3><p>Prioritize review windows, investigate recurring events, and use image-backed records when follow-up or documentation is needed.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-factory"></use></svg></span><h3>Operations</h3><p>Compare lines, products, shifts, and plants so recurring production issues can be discussed with evidence instead of anecdotes.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-wrench"></use></svg></span><h3>Maintenance</h3><p>Review quality trends alongside machine health signals, alerts, and recent activity to decide whether a machine condition deserves attention.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-building"></use></svg></span><h3>Corporate teams</h3><p>Compare authorized plants and lines with a shared set of definitions so leaders can see where issues are isolated or spreading.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="related-pages">
+        <div class="section-inner">
+          <p class="eyebrow">Related pages</p>
+          <h2>Keep production analytics connected to the rest of the platform.</h2>
+          <div class="card-grid four">
+            <a class="resource-card" href="/applications/weight-count-intelligence/"><div><h3>Weight &amp; Count Intelligence</h3><p>See how giveaway, underfill, count, presence, and checkweigher-related signals connect to analytics.</p></div><span class="button">View application</span></a>
+            <a class="resource-card" href="/insights/machine-visibility-alerts/"><div><h3>Machine Visibility &amp; Alerts</h3><p>Connect production trends with machine status, alerts, health signals, and recent activity.</p></div><span class="button">Explore Insights module</span></a>
+            <a class="resource-card" href="/insights/enterprise-access/"><div><h3>Enterprise Access</h3><p>Give authorized users access to production analytics, inspection records, alerts, and machine context through Insights.</p></div><span class="button">Explore Enterprise Access</span></a>
+            <a class="resource-card" href="/machines/"><div><h3>Inspection Systems</h3><p>Review the HRX systems that capture the images, events, and machine context used by Insights.</p></div><span class="button">View systems</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark" id="production-analytics-final-cta">
+        <div class="section-inner">
+          <p class="eyebrow">Next step</p>
+          <h2>Find the patterns your inspection system is already seeing.</h2>
+          <p class="lead">Share your products, lines, inspection goals, software users, and production questions. GreyscaleAI can help map which analytics views would be useful for your operation and what context needs to be connected.</p>
+          <div class="section-actions">
+            <a class="button" href="/request-demo/">Talk Through Fit</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="footer-inner">
+<div>
+<img src="../../assets/img/logos/greyscale-ai-logo-footer.png" alt="GreyscaleAI"><p>435 Brady Road, Unit H<br>Tarpon Springs, FL 34689<br>(727) 938-5041</p>
+<p>© 2026 GreyscaleAI. All rights reserved.</p>
+</div>
+<div class="footer-links">
+<a href="mailto:info@greyscaleai.com">info@greyscaleai.com</a><a href="../../contact/">Request a Demo</a>
+</div>
+</div></footer>
   </body>
 </html>
