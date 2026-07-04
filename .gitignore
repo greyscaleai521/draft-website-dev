@@ -1,0 +1,9 @@
+# macOS metadata
+.DS_Store
+
+# Local scratch and generated review artifacts
+/tmp/
+/output/
+
+# Accidental root favicon export; the site favicon lives in assets/img/meta/
+/favicon.ico
