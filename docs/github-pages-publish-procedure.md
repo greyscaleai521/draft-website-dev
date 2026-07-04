@@ -124,6 +124,14 @@ Look for:
 "status": "built"
 ```
 
+If the Actions page shows `pages build and deployment` failed with `Deployment failed, try again later`, the site content may have packaged correctly but GitHub's deploy step had a transient failure. First try rerunning the failed workflow in GitHub Actions or with:
+
+```bash
+gh run rerun RUN_ID --repo greyscaleai521/draft-website-dev --failed
+```
+
+If the rerun stays queued or does not publish, make a small follow-up commit on `main` and push it to trigger a fresh Pages deployment.
+
 Then confirm the expected commit is on `origin/main`:
 
 ```bash
