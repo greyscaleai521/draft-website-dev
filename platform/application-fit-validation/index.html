@@ -5,10 +5,252 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
     <title>Application Fit &amp; Validation | GreyscaleAI</title>
-    <meta http-equiv="refresh" content="0; url=../../request-demo/">
-    <link rel="canonical" href="../../request-demo/">
+    <meta name="description" content="See how GreyscaleAI reviews products, packages, inspection targets, line conditions, system fit, and validation evidence before production deployment.">
+    <link rel="icon" href="../../assets/img/meta/favicon.ico">
+    <link rel="stylesheet" href="../../assets/css/styles.css?v=application-fit-validation-4-3d">
+    <script defer src="../../assets/js/main.js"></script>
   </head>
   <body>
-    <p><a href="../../request-demo/">Continue to Application Fit &amp; Validation</a></p>
+    <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="icon-package" viewBox="0 0 24 24"><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/><path d="m21 8-9-5-9 5v8l9 5 9-5z"/></symbol>
+      <symbol id="icon-scan-search" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M13 13a4 4 0 1 0-5.7 3.6"/><path d="m14 14 4 4"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/></symbol>
+      <symbol id="icon-factory" viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M4 20V9l6 4V9l6 4V4h4v16"/><path d="M8 18h1"/><path d="M13 18h1"/><path d="M18 18h1"/></symbol>
+      <symbol id="icon-clipboard-list" viewBox="0 0 24 24"><path d="M9 5h6"/><path d="M9 3h6v4H9z"/><path d="M8 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><path d="M8 12h8"/><path d="M8 16h5"/></symbol>
+      <symbol id="icon-ruler" viewBox="0 0 24 24"><path d="M21.3 15.3 8.7 2.7a2.4 2.4 0 0 0-3.4 0L2.7 5.3a2.4 2.4 0 0 0 0 3.4l12.6 12.6a2.4 2.4 0 0 0 3.4 0l2.6-2.6a2.4 2.4 0 0 0 0-3.4Z"/><path d="m7.5 10.5 2-2"/><path d="m10.5 13.5 2-2"/><path d="m13.5 16.5 2-2"/></symbol>
+      <symbol id="icon-images" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M3 17V7a4 4 0 0 1 4-4h10"/><circle cx="10" cy="10" r="1.5"/><path d="m19 15-3-3-4 4-2-2-3 3"/></symbol>
+      <symbol id="icon-settings" viewBox="0 0 24 24"><path d="M20 7h-9"/><path d="M7 7H4"/><path d="M17 17H4"/><path d="M20 17h-3"/><circle cx="9" cy="7" r="2"/><circle cx="15" cy="17" r="2"/></symbol>
+      <symbol id="icon-scan-line" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M17 21h2a2 2 0 0 0 2-2v-2"/><path d="M7 12h10"/><path d="M9 9h6"/><path d="M9 15h6"/></symbol>
+      <symbol id="icon-badge-check" viewBox="0 0 24 24"><path d="M3.9 8.2 2.8 12l1.1 3.8 3.3 2.1L9.3 21H14.7l2.1-3.1 3.3-2.1 1.1-3.8-1.1-3.8-3.3-2.1L14.7 3H9.3L7.2 6.1z"/><path d="m8.8 12.3 2.2 2.2 4.3-5"/></symbol>
+      <symbol id="icon-file-check" viewBox="0 0 24 24"><path d="M14 2v6h6"/><path d="M16 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8l6 6v12a2 2 0 0 1-2 2h-2"/><path d="m8 15 2 2 5-5"/></symbol>
+      <symbol id="icon-workflow" viewBox="0 0 24 24"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="15" width="6" height="6" rx="1"/><path d="M9 6h4a3 3 0 0 1 3 3v6"/><path d="M6 9v4a3 3 0 0 0 3 3h6"/></symbol>
+      <symbol id="icon-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-15.6 6.1"/><path d="M3 12A9 9 0 0 1 18.6 5.9"/><path d="M18 2v4h4"/><path d="M6 22v-4H2"/></symbol>
+      <symbol id="icon-archive" viewBox="0 0 24 24"><path d="M21 8v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8"/><path d="M3 4h18v4H3z"/><path d="M10 12h4"/></symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></symbol>
+    </svg>
+
+    <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../index.html" aria-label="GreyscaleAI home"><img src="../../assets/img/logos/greyscale-ai-logo-white.png" alt="GreyscaleAI"></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle><span></span></button><ul class="nav-links" data-nav-links>
+<li class="nav-item has-menu">
+<a href="../../platform/" aria-current="page">Platform</a><ul class="nav-menu">
+<li><a href="../../platform/">Overview</a></li>
+<li><a href="../../platform/ai-image-analysis/">AI Image Analysis</a></li>
+<li><a href="../../platform/managed-service-support/">Managed Service &amp; Support</a></li>
+<li><a href="../../platform/application-fit-validation/" aria-current="page">Application Fit &amp; Validation</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../applications/">Applications</a><ul class="nav-menu">
+<li><a href="../../applications/">Overview</a></li>
+<li><a href="../../applications/foreign-material-detection/">Foreign Material Detection</a></li>
+<li><a href="../../applications/product-quality-package-integrity/">Product Quality &amp; Package Integrity</a></li>
+<li><a href="../../applications/weight-count-intelligence/">Weight &amp; Count Intelligence</a></li>
+<li><a href="../../applications/traceability-qa-review/">Traceability &amp; QA Review</a></li>
+<li><a href="../../applications/production-analytics/">Production Analytics</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../insights/">Insights Software</a><ul class="nav-menu">
+<li><a href="../../insights/">Overview</a></li>
+<li><a href="../../insights/beyond-rejects/">Beyond Rejects</a></li>
+<li><a href="../../insights/machine-visibility-alerts/">Machine Visibility &amp; Alerts</a></li>
+<li><a href="../../insights/enterprise-access/">Enterprise Access</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../machines/">Inspection Systems</a><ul class="nav-menu">
+<li><a href="../../machines/">HRX Systems</a></li>
+<li><a href="../../inspection-systems/spec-sheets/">Spec Sheets</a></li>
+<li><a href="../../contact/">Talk Through Fit</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../industries/">Industries</a><ul class="nav-menu">
+<li><a href="../../industries/protein/">Protein</a></li>
+<li><a href="../../industries/dairy-cheese/">Dairy &amp; Cheese</a></li>
+<li><a href="../../industries/frozen-prepared-foods/">Frozen &amp; Prepared Foods</a></li>
+<li><a href="../../industries/pet-food/">Pet Food</a></li>
+<li><a href="../../industries/produce/">Produce</a></li>
+<li><a href="../../industries/seafood/">Seafood</a></li>
+<li><a href="../../industries/beverage-packaged-goods/">Beverage &amp; Packaged Goods</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../resources/case-studies/">Case Studies</a><ul class="nav-menu">
+<li><a href="../../resources/case-studies/">All Case Studies</a></li>
+<li><a href="../../resources/case-studies/bone-detection/">Bone Detection</a></li>
+<li><a href="../../resources/case-studies/product-in-seal/">Product-in-Seal</a></li>
+<li><a href="../../resources/case-studies/dent-detection/">Dent Detection</a></li>
+<li><a href="../../contact/">Discuss Your Line</a></li>
+</ul>
+</li>
+<li><a class="nav-cta" href="../../contact/">Request a Demo</a></li>
+</ul></nav></header>
+
+    <main>
+      <section class="page-hero fit-validation-hero">
+        <div class="section-inner fit-validation-hero__grid">
+          <div>
+            <nav class="fit-crumb" aria-label="Breadcrumb"><a href="../../platform/">Platform</a><span>Application Fit &amp; Validation</span></nav>
+            <p class="eyebrow">APPLICATION FIT &amp; VALIDATION</p>
+            <h1>Prove the application before it reaches production.</h1>
+            <p class="lead">Successful inspection depends on the product, package, target condition, line speed, image quality, and production environment. GreyscaleAI reviews those conditions, tests the application with representative product, and builds a validation plan around the performance your team needs.</p>
+            <div class="section-actions">
+              <a class="button" href="/contact/">Start an Application Review</a>
+              <a class="button secondary" href="/machines/">View Inspection Systems</a>
+            </div>
+            <div class="platform-proof-chips" aria-label="Application fit proof points">
+              <span>Representative product testing</span>
+              <span>Image-backed validation</span>
+              <span>Production acceptance criteria</span>
+            </div>
+          </div>
+          <figure class="fit-hero-visual" role="img" aria-label="Product and package progressing through x-ray image review to documented validation evidence.">
+            <div class="fit-hero-stage fit-hero-stage--product">
+              <div class="fit-package-graphic"><span></span></div>
+              <p>Your product and package</p>
+            </div>
+            <div class="fit-hero-connector" aria-hidden="true"></div>
+            <div class="fit-hero-stage fit-hero-stage--xray">
+              <img src="../../assets/img/solutions/foreign-material/bone-packaged-chicken-source-xray-clean.png" alt="" loading="eager">
+              <span class="fit-target-outline" aria-hidden="true"></span>
+              <p>Inspection image and target signal</p>
+            </div>
+            <div class="fit-hero-connector" aria-hidden="true"></div>
+            <div class="fit-result-card">
+              <h3>Validation evidence</h3>
+              <ul>
+                <li><svg aria-hidden="true"><use href="#icon-check"></use></svg>Target conditions reviewed</li>
+                <li><svg aria-hidden="true"><use href="#icon-check"></use></svg>Line conditions represented</li>
+                <li><svg aria-hidden="true"><use href="#icon-check"></use></svg>Acceptance criteria documented</li>
+              </ul>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section fit-matters" id="why-fit-matters">
+        <div class="section-inner">
+          <p class="eyebrow">WHY FIT MATTERS</p>
+          <h2>Inspection performance is application-specific.</h2>
+          <p class="lead">X-ray inspection is influenced by the physical differences visible in the image. A target that is distinct in one product or package may be difficult to separate from normal variation in another. The right answer comes from evaluating the real application, not from relying on a generic detection claim.</p>
+          <div class="card-grid three icon-card-grid">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-package"></use></svg></span><h3>The product creates the background.</h3><p>Thickness, density, shape, ingredients, natural variation, and product presentation all affect what appears in the x-ray image.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-scan-search"></use></svg></span><h3>The target must be distinguishable.</h3><p>Foreign material, bone, missing components, voids, clumps, dents, seal-area product, and other conditions create different image signals.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-factory"></use></svg></span><h3>The line sets the operating conditions.</h3><p>Package orientation, spacing, throughput, vibration, environment, reject handling, and integration requirements shape the final solution.</p></article>
+          </div>
+          <div class="fit-note">The purpose of application review is not to force every use case into the same system. It is to identify what can be measured reliably, under which conditions, and how that performance will be confirmed.</div>
+        </div>
+      </section>
+
+      <section class="section dark fit-process-section" id="validation-path">
+        <div class="section-inner">
+          <p class="eyebrow">THE VALIDATION PATH</p>
+          <h2>From production question to validated inspection.</h2>
+          <p class="lead">GreyscaleAI combines application review, representative testing, system selection, image analysis, and production acceptance into one connected process.</p>
+          <div class="fit-process-timeline">
+            <article class="fit-process-step"><span class="fit-step-number">01</span><span class="card-icon"><svg><use href="#icon-clipboard-list"></use></svg></span><h3>Define the inspection goal</h3><p>Document the product, package, target condition, current risk or quality issue, line speed, and the decision the inspection result must support.</p><small>OUTPUT: APPLICATION BRIEF</small></article>
+            <article class="fit-process-step"><span class="fit-step-number">02</span><span class="card-icon"><svg><use href="#icon-ruler"></use></svg></span><h3>Review product and line conditions</h3><p>Evaluate product dimensions, density, normal variation, packaging, presentation, spacing, throughput, washdown needs, and available line space.</p><small>OUTPUT: FIT REQUIREMENTS</small></article>
+            <article class="fit-process-step"><span class="fit-step-number">03</span><span class="card-icon"><svg><use href="#icon-images"></use></svg></span><h3>Capture representative images</h3><p>Inspect representative good product and known target conditions so the image signal can be compared with normal production variation.</p><small>OUTPUT: IMAGE SET</small></article>
+            <article class="fit-process-step"><span class="fit-step-number">04</span><span class="card-icon"><svg><use href="#icon-settings"></use></svg></span><h3>Select the system configuration</h3><p>Match aperture, conveyor, detector, line speed, environment, reject handling, and integration requirements to the application.</p><small>OUTPUT: SYSTEM RECOMMENDATION</small></article>
+            <article class="fit-process-step"><span class="fit-step-number">05</span><span class="card-icon"><svg><use href="#icon-scan-line"></use></svg></span><h3>Build and test the inspection approach</h3><p>Configure image analysis for the target condition and test performance against real product variation, known examples, and agreed operating conditions.</p><small>OUTPUT: TEST RESULTS</small></article>
+            <article class="fit-process-step"><span class="fit-step-number">06</span><span class="card-icon"><svg><use href="#icon-badge-check"></use></svg></span><h3>Validate in production</h3><p>Confirm performance on the installed line, document acceptance criteria, establish review workflows in Insights, and transition the application into ongoing support.</p><small>OUTPUT: ACCEPTED APPLICATION</small></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="what-we-review">
+        <div class="section-inner">
+          <p class="eyebrow">WHAT WE REVIEW</p>
+          <h2>The conditions that determine fit.</h2>
+          <p class="lead">Application fit is based on the combined inspection environment. No single specification, sample image, or contaminant size determines performance by itself.</p>
+          <div class="fit-review-grid">
+            <figure class="fit-application-diagram" aria-label="Annotated application diagram showing product, HRX inspection opening, X-ray image, reject point, and Insights connection.">
+              <div class="fit-diagram-product"><span>1</span>Product</div>
+              <div class="fit-diagram-machine"><span>2</span><img src="../../assets/img/products/hrx660aq.jpg" alt="GreyscaleAI HRX inspection system used for application fit review." loading="lazy"></div>
+              <div class="fit-diagram-xray"><span>3</span><img src="../../assets/img/hero/platform/xray-fish-evidence-main.png" alt="GreyscaleAI X-ray image evidence used during inspection review." loading="lazy"></div>
+              <div class="fit-diagram-reject"><span>4</span>Reject or divert</div>
+              <div class="fit-diagram-insights"><span>5</span>Insights review</div>
+              <div class="fit-diagram-workflow"><span>6</span>Acceptance criteria</div>
+            </figure>
+            <div class="fit-factor-list">
+              <article><span>1</span><div><h3>Product composition and variation</h3><p>Density, thickness, ingredients, shape, temperature, and natural variation determine the image background against which a target must be found.</p></div></article>
+              <article><span>2</span><div><h3>Package and presentation</h3><p>Packaging material, folds, clips, seals, overlap, orientation, spacing, and movement can add image features or change consistency.</p></div></article>
+              <article><span>3</span><div><h3>Inspection target</h3><p>Material type, size, shape, location, orientation, contrast, and frequency affect how reliably the target can be separated from normal product.</p></div></article>
+              <article><span>4</span><div><h3>Throughput and image capture</h3><p>Line speed, product spacing, detector selection, image resolution, exposure, and field of view must work together under production conditions.</p></div></article>
+              <article><span>5</span><div><h3>Machine and line integration</h3><p>Aperture, conveyor, reject mechanism, controls, footprint, washdown requirements, upstream and downstream equipment, and plant standards shape the physical solution.</p></div></article>
+              <article><span>6</span><div><h3>Workflow and acceptance criteria</h3><p>The team must agree how results will be reviewed, what constitutes acceptable performance, how challenges are documented, and what happens after an event.</p></div></article>
+            </div>
+          </div>
+          <div class="fit-dark-band">A strong validation plan defines both what the system is expected to detect and the conditions under which that expectation applies.</div>
+        </div>
+      </section>
+
+      <section class="section tint fit-evidence-section" id="validation-evidence">
+        <div class="section-inner">
+          <p class="eyebrow">VALIDATION EVIDENCE</p>
+          <h2>A documented basis for the production decision.</h2>
+          <p class="lead">The result of validation should be more than a successful demonstration. It should give FSQA, operations, engineering, procurement, and leadership a shared understanding of the proposed application.</p>
+          <div class="card-grid four icon-card-grid">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-images"></use></svg></span><h3>Representative image evidence</h3><p>Images of normal product variation, known target conditions, and relevant production scenarios used during evaluation.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-scan-search"></use></svg></span><h3>Defined acceptance criteria</h3><p>Documented target conditions, operating assumptions, review methods, and agreed measures for production acceptance.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-settings"></use></svg></span><h3>Recommended configuration</h3><p>The inspection system, image-capture approach, reject handling, controls, integration, and environmental requirements for the application.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-workflow"></use></svg></span><h3>Review and support workflow</h3><p>How inspection events, images, alerts, trends, validation records, and follow-up will be handled in GreyscaleAI Insights and ongoing support.</p></article>
+          </div>
+          <figure class="fit-insights-mockup">
+            <div class="fit-browser-bar"><span></span><span></span><span></span></div>
+            <img src="../../assets/img/solutions/platform-step-alert.png" alt="GreyscaleAI Insights alert and trend panels used for image-backed event review." loading="lazy">
+            <span class="fit-annotation fit-annotation--image">Inspection image</span>
+            <span class="fit-annotation fit-annotation--context">Event context</span>
+            <span class="fit-annotation fit-annotation--evidence">Reviewable evidence</span>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="after-validation">
+        <div class="section-inner">
+          <p class="eyebrow">AFTER VALIDATION</p>
+          <h2>Validation starts the operating model.</h2>
+          <p class="lead">Once the application is accepted, the inspection system, AI configuration, Insights workflows, alerts, monitoring, and support become part of the production process. GreyscaleAI retains the image and event context needed to review performance, investigate issues, and support future improvements.</p>
+          <div class="card-grid three icon-card-grid">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-badge-check"></use></svg></span><h3>Commission with known conditions</h3><p>The production team begins with documented products, targets, settings, assumptions, and acceptance criteria.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-archive"></use></svg></span><h3>Keep image-backed evidence</h3><p>Inspection events and images create a reviewable operating history instead of leaving teams with only a reject count or alarm code.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-refresh"></use></svg></span><h3>Improve with real production data</h3><p>Representative production images can support troubleshooting, application review, model updates, and expansion to new products or target conditions.</p></article>
+          </div>
+          <a class="text-link fit-support-link" href="/platform/managed-service-support/">See how GreyscaleAI supports the system after installation →</a>
+        </div>
+      </section>
+
+      <section class="section tint" id="related-fit-links">
+        <div class="section-inner">
+          <p class="eyebrow">CONTINUE EXPLORING</p>
+          <h2>Connect fit, system selection, and application outcomes.</h2>
+          <div class="card-grid three fit-related-grid">
+            <a class="resource-card fit-related-card" href="/machines/"><img src="../../assets/img/products/hrx660.jpg" alt="GreyscaleAI HRX inspection system rendering." loading="lazy"><div><span class="proof-tag">INSPECTION SYSTEMS</span><h3>Review the HRX system family.</h3><p>Compare standard inspection openings, conveyor configurations, throughput ranges, environments, and typical application fit.</p></div><span class="button">View Inspection Systems</span></a>
+            <a class="resource-card fit-related-card" href="/applications/"><img src="../../assets/img/solutions/platform-step-analyze.png" alt="X-ray inspection image with detection overlays used for application review." loading="lazy"><div><span class="proof-tag">APPLICATIONS</span><h3>Start with the production outcome.</h3><p>Explore foreign material, product quality, package integrity, weight and count, traceability, and production analytics applications.</p></div><span class="button">Explore Applications</span></a>
+            <a class="resource-card fit-related-card" href="/platform/ai-image-analysis/"><img src="../../assets/img/solutions/foreign-material/insights-investigation-real-xray-tile.png" alt="GreyscaleAI X-ray image evidence with restrained inspection target context." loading="lazy"><div><span class="proof-tag">AI IMAGE ANALYSIS</span><h3>See how image analysis handles real variation.</h3><p>Understand how GreyscaleAI uses representative images, product-specific signals, reviewable evidence, and production feedback.</p></div><span class="button">Explore AI Image Analysis</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark fit-final-cta" id="start-application-review">
+        <div class="section-inner">
+          <p class="eyebrow">START WITH YOUR APPLICATION</p>
+          <h2>Bring the product, package, line, and inspection question.</h2>
+          <p class="lead">Share representative product information, package format, line speed, target conditions, and the decision your team needs to make. GreyscaleAI will help define the right review and validation path.</p>
+          <div class="section-actions">
+            <a class="button" href="/contact/">Start an Application Review</a>
+            <a class="button secondary" href="/machines/">View Inspection Systems</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><div class="footer-inner">
+<div>
+<img src="../../assets/img/logos/greyscale-ai-logo-footer.png" alt="GreyscaleAI"><p>435 Brady Road, Unit H<br>Tarpon Springs, FL 34689<br>(727) 938-5041</p>
+<p>&copy; 2026 GreyscaleAI. All rights reserved.</p>
+</div>
+<div class="footer-links">
+<a href="mailto:info@greyscaleai.com">info@greyscaleai.com</a><a href="../../contact/">Request a Demo</a>
+</div>
+</div></footer>
   </body>
 </html>

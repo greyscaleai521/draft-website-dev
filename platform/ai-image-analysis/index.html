@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>AI Image Analysis for Food Inspection | GreyscaleAI</title>
+    <meta name="description" content="GreyscaleAI uses customer-specific x-ray image history, application-specific AI models, and reviewable evidence to help food producers classify foreign material, product quality, and package integrity signals.">
+    <link rel="icon" href="../../assets/img/meta/favicon.ico">
+    <link rel="stylesheet" href="../../assets/css/styles.css?v=ai-image-analysis-4-4">
+    <script defer src="../../assets/js/main.js"></script>
+  </head>
+  <body>
+    <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="icon-image" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="m21 15-4-4-5 5-2-2-4 4"/></symbol>
+      <symbol id="icon-images" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M3 17V7a4 4 0 0 1 4-4h10"/><circle cx="10" cy="10" r="1.5"/><path d="m19 15-3-3-4 4-2-2-3 3"/></symbol>
+      <symbol id="icon-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.4 8.8a2 2 0 0 1-1.2 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.4a1.3 1.3 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+      <symbol id="icon-sliders" viewBox="0 0 24 24"><path d="M4 21v-7"/><path d="M4 10V3"/><path d="M12 21v-9"/><path d="M12 8V3"/><path d="M20 21v-5"/><path d="M20 12V3"/><path d="M2 14h4"/><path d="M10 8h4"/><path d="M18 16h4"/></symbol>
+      <symbol id="icon-sparkles" viewBox="0 0 24 24"><path d="m12 3-1.9 5.1L5 10l5.1 1.9L12 17l1.9-5.1L19 10l-5.1-1.9z"/><path d="M5 3v4"/><path d="M3 5h4"/><path d="M19 17v4"/><path d="M17 19h4"/></symbol>
+      <symbol id="icon-brain" viewBox="0 0 24 24"><path d="M9 3a3 3 0 0 0-3 3v1a3 3 0 0 0-2 5.2A3.5 3.5 0 0 0 8 18h1"/><path d="M15 3a3 3 0 0 1 3 3v1a3 3 0 0 1 2 5.2A3.5 3.5 0 0 1 16 18h-1"/><path d="M12 3v18"/><path d="M8 9h2"/><path d="M14 9h2"/><path d="M8 14h2"/><path d="M14 14h2"/></symbol>
+      <symbol id="icon-clipboard-check" viewBox="0 0 24 24"><path d="M9 5h6"/><path d="M9 3h6v4H9z"/><path d="M8 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><path d="m8 14 2.5 2.5L16 11"/></symbol>
+      <symbol id="icon-scan-search" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M13 13a4 4 0 1 0-5.7 3.6"/><path d="m14 14 4 4"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/></symbol>
+      <symbol id="icon-package-check" viewBox="0 0 24 24"><path d="m7.5 4.3 4.5 2.6 4.5-2.6"/><path d="M12 6.9v5.2"/><path d="M4 6.2 12 2l8 4.2v8.6L12 19l-8-4.2z"/><path d="m15 18 2 2 4-4"/></symbol>
+      <symbol id="icon-alert-triangle" viewBox="0 0 24 24"><path d="m12 3 10 18H2z"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+      <symbol id="icon-line-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m5 15 4-4 4 3 6-8"/></symbol>
+      <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+      <symbol id="icon-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    </svg>
+    <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../index.html" aria-label="GreyscaleAI home"><img src="../../assets/img/logos/greyscale-ai-logo-white.png" alt="GreyscaleAI"></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle><span></span></button><ul class="nav-links" data-nav-links>
+<li class="nav-item has-menu">
+<a href="../../platform/" aria-current="page">Platform</a><ul class="nav-menu">
+<li><a href="../../platform/">Overview</a></li>
+<li><a href="../../platform/ai-image-analysis/" aria-current="page">AI Image Analysis</a></li>
+<li><a href="../../platform/managed-service-support/">Managed Service &amp; Support</a></li>
+<li><a href="../../platform/application-fit-validation/">Application Fit &amp; Validation</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../applications/">Applications</a><ul class="nav-menu">
+<li><a href="../../applications/">Overview</a></li>
+<li><a href="../../applications/foreign-material-detection/">Foreign Material Detection</a></li>
+<li><a href="../../applications/product-quality-package-integrity/">Product Quality &amp; Package Integrity</a></li>
+<li><a href="../../applications/weight-count-intelligence/">Weight &amp; Count Intelligence</a></li>
+<li><a href="../../applications/traceability-qa-review/">Traceability &amp; QA Review</a></li>
+<li><a href="../../applications/production-analytics/">Production Analytics</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../insights/">Insights Software</a><ul class="nav-menu">
+<li><a href="../../insights/">Overview</a></li>
+<li><a href="../../insights/beyond-rejects/">Beyond Rejects</a></li>
+<li><a href="../../insights/machine-visibility-alerts/">Machine Visibility &amp; Alerts</a></li>
+<li><a href="../../insights/enterprise-access/">Enterprise Access</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../machines/">Inspection Systems</a><ul class="nav-menu">
+<li><a href="../../machines/">HRX Systems</a></li>
+<li><a href="../../inspection-systems/spec-sheets/">Spec Sheets</a></li>
+<li><a href="../../contact/">Talk Through Fit</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../industries/">Industries</a><ul class="nav-menu">
+<li><a href="../../industries/protein/">Protein</a></li>
+<li><a href="../../industries/dairy-cheese/">Dairy &amp; Cheese</a></li>
+<li><a href="../../industries/frozen-prepared-foods/">Frozen &amp; Prepared Foods</a></li>
+<li><a href="../../industries/pet-food/">Pet Food</a></li>
+<li><a href="../../industries/produce/">Produce</a></li>
+<li><a href="../../industries/seafood/">Seafood</a></li>
+<li><a href="../../industries/beverage-packaged-goods/">Beverage &amp; Packaged Goods</a></li>
+</ul>
+</li>
+<li class="nav-item has-menu">
+<a href="../../resources/case-studies/">Case Studies</a><ul class="nav-menu">
+<li><a href="../../resources/case-studies/">All Case Studies</a></li>
+<li><a href="../../resources/case-studies/bone-detection/">Bone Detection</a></li>
+<li><a href="../../resources/case-studies/product-in-seal/">Product-in-Seal</a></li>
+<li><a href="../../resources/case-studies/dent-detection/">Dent Detection</a></li>
+<li><a href="../../contact/">Discuss Your Line</a></li>
+</ul>
+</li>
+<li><a class="nav-cta" href="../../contact/">Request a Demo</a></li>
+</ul></nav></header>
+    <main>
+      <section class="page-hero ai-analysis-hero">
+        <div class="section-inner split">
+          <div>
+            <p class="eyebrow">AI IMAGE ANALYSIS</p>
+            <h1>AI that learns from real production variation.</h1>
+            <p class="lead">Traditional inspection tools are often hand-configured around a small set of setup images. GreyscaleAI AI image analysis is built around customer-specific inspection images, so models can be trained, tested, compared, and improved against the real product variation running on the line.</p>
+            <div class="section-actions">
+              <a class="button" href="/platform/application-fit-validation/">Talk Through Fit</a>
+              <a class="button secondary" href="/applications/product-quality-package-integrity/">See Product Quality Applications</a>
+            </div>
+            <div class="platform-proof-chips" aria-label="AI image analysis proof points">
+              <span>Customer-specific image history</span>
+              <span>Application-specific models</span>
+              <span>Reviewable image evidence</span>
+            </div>
+          </div>
+          <div class="customer-image-library" role="img" aria-label="Grid of customer production x-ray images used as evidence for AI model development and review.">
+            <div class="ai-visual-card__bar"><span>Customer Image Library</span><span>Evidence set</span></div>
+            <div class="xray-tile-grid">
+              <div class="xray-tile"><img src="../../assets/img/hero/platform/xray-fish-history-01.png" alt=""><span>Normal variation</span></div>
+              <div class="xray-tile"><img src="../../assets/img/hero/platform/xray-fish-history-02.png" alt=""></div>
+              <div class="xray-tile"><img src="../../assets/img/solutions/platform-step-analyze.png" alt=""></div>
+              <div class="xray-tile"><img src="../../assets/img/case-studies/product-in-seal-02.png" alt=""><span>Quality signal</span></div>
+              <div class="xray-tile"><img src="../../assets/img/case-studies/bone-detection-02.png" alt=""></div>
+              <div class="xray-tile"><img src="../../assets/img/case-studies/dent-detection-02.png" alt=""></div>
+              <div class="xray-tile"><img src="../../assets/img/solutions/foreign-material/fm-metal-finished-product-source-xray.png" alt=""><span>Foreign material risk</span></div>
+              <div class="xray-tile"><img src="../../assets/img/hero/platform/xray-fish-history-03.png" alt=""></div>
+              <div class="xray-tile"><img src="../../assets/img/case-studies/product-in-seal-05.png" alt=""></div>
+            </div>
+            <div class="ai-visual-status">Real production images become model-development evidence.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="why-buyers-care">
+        <div class="section-inner centered-section">
+          <p class="eyebrow">WHY BUYERS CARE</p>
+          <h2>The question is not whether a vendor says it has AI. The question is whether the AI works on your product.</h2>
+          <p class="lead">Food producers do not run perfect demo samples all day. They run products that vary by lot, supplier, temperature, moisture, shape, density, fill, packaging, line speed, and setup conditions. Useful AI has to handle that real variation, not just perform well on a small set of staged examples.</p>
+          <div class="card-grid three icon-card-grid">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-image"></use></svg></span><h3>Will it work on our real product?</h3><p>The model needs to be evaluated against real production images, including normal variation and edge cases, not only a few setup samples.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-shield-check"></use></svg></span><h3>Can we trust it before rollout?</h3><p>Before a model affects production behavior, customers need to review expected performance, likely false positives, likely missed conditions, and example detections.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-search"></use></svg></span><h3>Can it find patterns we are not measuring today?</h3><p>AI can surface repeatable quality patterns that are hard to define with simple thresholds, especially when the issue is visual, variable, or product-specific.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark ai-analysis-dark" id="inspection-comparison">
+        <div class="section-inner">
+          <p class="eyebrow">WHY AI CHANGES THE INSPECTION PROBLEM</p>
+          <h2>Traditional tools are tuned to rules. GreyscaleAI AI is developed against image evidence.</h2>
+          <p class="lead">Traditional inspection can be effective when the target is simple, consistent, and easy to express as a rule. Many food quality and package conditions are not like that. They involve subtle patterns, natural product variation, and conditions that change across products, lots, shifts, and lines.</p>
+          <div class="platform-model-grid ai-comparison-grid">
+            <article class="platform-model-card platform-model-card--traditional">
+              <span class="card-icon"><svg><use href="#icon-sliders"></use></svg></span>
+              <h3>Traditional hand-configured inspection</h3>
+              <ul>
+                <li>Configured around a limited set of setup images.</li>
+                <li>Relies heavily on thresholds, regions, contrast, size, density, or rule-based tools.</li>
+                <li>Works best when the defect is simple, consistent, and visually obvious.</li>
+                <li>Can struggle when normal product variation looks similar to the target issue.</li>
+                <li>Often produces a reject signal without enough evidence to explain the pattern.</li>
+              </ul>
+            </article>
+            <article class="platform-model-card platform-model-card--greyscale">
+              <span class="card-icon"><svg><use href="#icon-sparkles"></use></svg></span>
+              <h3>GreyscaleAI AI image analysis</h3>
+              <ul>
+                <li>Uses customer-specific image history from real production conditions.</li>
+                <li>Learns from examples of normal variation and meaningful inspection signals.</li>
+                <li>Supports classification of foreign material, product quality, and package conditions where the application is a fit.</li>
+                <li>Can be tested against prior production images before model changes are deployed.</li>
+                <li>Connects model output to reviewable image evidence in GreyscaleAI Insights.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="image-library-advantage">
+        <div class="section-inner split">
+          <div>
+            <p class="eyebrow">THE IMAGE LIBRARY ADVANTAGE</p>
+            <h2>Every inspection image can make the next model decision more grounded.</h2>
+            <p class="lead">GreyscaleAI stores customer inspection images and event history in Insights. Over time, that creates a practical image library of the products, packages, line conditions, and variation the customer actually runs.</p>
+            <p>When a new or improved AI model is developed, that library can be used to back-check model behavior against real production images. Customers can review examples, understand what the model would have found, and discuss expected performance before changes are put into production.</p>
+            <p>That is different from tuning a system around a small sample set and hoping it behaves the same once the line changes. The model-development process is grounded in the customer’s own production evidence.</p>
+          </div>
+          <div class="ai-process-card">
+            <h3>Back-check model behavior</h3>
+            <div class="ai-process-row"><span class="card-icon"><svg><use href="#icon-images"></use></svg></span><p><strong>Historical production images</strong><span>Normal variation, rejects, edge cases, and product changes.</span></p></div>
+            <div class="ai-process-row"><span class="card-icon"><svg><use href="#icon-brain"></use></svg></span><p><strong>Candidate AI model</strong><span>Run against prior image evidence before production rollout.</span></p></div>
+            <div class="ai-process-row"><span class="card-icon"><svg><use href="#icon-clipboard-check"></use></svg></span><p><strong>Expected performance review</strong><span>Example detections, likely misses, likely nuisance rejects, and customer discussion.</span></p></div>
+            <div class="ai-process-callout">The customer sees model behavior against their own production evidence, not only a staged test set.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tint" id="where-ai-matters">
+        <div class="section-inner">
+          <p class="eyebrow">WHERE AI MATTERS MOST</p>
+          <h2>AI is most valuable when the inspection problem is variable, visual, or hard to express as a simple rule.</h2>
+          <p class="lead">GreyscaleAI AI can support foreign material workflows, but the biggest step change is often in product quality and package integrity. Many of those conditions cannot be handled effectively with traditional threshold-only tools because the difference between acceptable variation and a true quality issue is product-specific.</p>
+          <div class="card-grid four icon-card-grid">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-scan-search"></use></svg></span><h3>Product quality</h3><p>Classify conditions such as broken pieces, missing components, voids, clumps, malformed product, density variation, and internal structure when the product and image evidence support the application.</p><a class="text-link" href="/applications/product-quality-package-integrity/">See Product Quality &amp; Package Integrity</a></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-package-check"></use></svg></span><h3>Package integrity</h3><p>Review subtle conditions such as product-in-seal, seal-region variation, dents, open seals, and visible package checks where the image source and validation approach are a fit.</p><a class="text-link" href="/resources/case-studies/product-in-seal/">View Product-in-Seal Proof</a></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-alert-triangle"></use></svg></span><h3>Foreign material classification</h3><p>Support classification of dense foreign material risks and difficult product-specific signals, such as separating true bone concerns from normal product variation where the application supports it.</p><a class="text-link" href="/applications/foreign-material-detection/">See Foreign Material Detection</a></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-line-chart"></use></svg></span><h3>Quality discovery</h3><p>Use image history to find repeatable quality patterns across products, lots, shifts, lines, or plants that were not previously measured as dedicated inspection signals.</p><a class="text-link" href="/applications/production-analytics/">See Production Analytics</a></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark ai-analysis-dark" id="why-greyscaleai-is-different">
+        <div class="section-inner">
+          <p class="eyebrow">WHY GREYSCALEAI IS DIFFERENT</p>
+          <h2>AI is not a checkbox. The difference is the evidence, validation, and improvement workflow around it.</h2>
+          <div class="card-grid four icon-card-grid">
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-images"></use></svg></span><h3>Customer-specific image history</h3><p>GreyscaleAI uses the customer’s own production image history to understand real product variation, not just staged samples or generic demo images.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-target"></use></svg></span><h3>Application-specific models</h3><p>Models are developed around defined inspection goals, such as bone risk, product-in-seal, dents, missing components, voids, clumps, count issues, or other validated signals.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-clipboard-check"></use></svg></span><h3>Back-checked before rollout</h3><p>New or improved models can be compared against prior production images so customers can understand expected behavior before production changes are deployed.</p></article>
+            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-eye"></use></svg></span><h3>Reviewable evidence in Insights</h3><p>AI decisions connect to images, event metadata, production context, review status, alerts, and trends so teams can see what the model found and act with context.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="proof-examples">
+        <div class="section-inner">
+          <p class="eyebrow">PROOF EXAMPLES</p>
+          <h2>Examples of AI turning difficult image patterns into dedicated inspection signals.</h2>
+          <p class="lead">Use these examples to show the kind of inspection problems where product-specific image analysis matters. Do not present these examples as universal guarantees. Detection and classification performance still depends on the product, package, target condition, line speed, image contrast, and validation approach.</p>
+          <div class="card-grid three ai-proof-grid">
+            <a class="resource-card proof-card ai-proof-card" href="/resources/case-studies/bone-detection/"><img src="../../assets/img/case-studies/bone-detection-02.png" alt="X-ray image evidence used for AI bone detection in poultry production."><div><span class="proof-tag">Product variation proof</span><h3>AI bone detection in poultry production</h3><p>AI models helped distinguish true bone concerns from cartilage, ligament, tendon, and normal poultry variation in a demanding protein application.</p></div><span class="button">Read Bone Detection Case Study</span></a>
+            <a class="resource-card proof-card ai-proof-card" href="/resources/case-studies/product-in-seal/"><img src="../../assets/img/case-studies/product-in-seal-02.png" alt="X-ray image showing product-in-seal evidence for package integrity review."><div><span class="proof-tag">Package integrity proof</span><h3>Product-in-seal detection</h3><p>AI image analysis was applied to subtle seal-region inspection using real production rejects, clean-seal comparisons, and normal package variation.</p></div><span class="button">Read Product-in-Seal Case Study</span></a>
+            <a class="resource-card proof-card ai-proof-card" href="/resources/case-studies/dent-detection/"><img src="../../assets/img/case-studies/dent-detection-02.png" alt="Inspection image evidence showing a dent condition classified as a dedicated quality signal."><div><span class="proof-tag">Quality classification proof</span><h3>Dent detection as its own signal</h3><p>A package-quality issue can be classified and tracked as a dedicated signal instead of being blended into a generic reject bucket.</p></div><span class="button">Read Dent Detection Case Study</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tint" id="insights-connection">
+        <div class="section-inner split">
+          <div>
+            <p class="eyebrow">CONNECTED TO INSIGHTS</p>
+            <h2>AI decisions become reviewable records, not black-box outputs.</h2>
+            <p class="lead">The value of AI does not end at the reject. GreyscaleAI Insights connects the model output to the image, event details, machine context, production context, review activity, alerts, trends, and exportable evidence.</p>
+            <ul class="feature-list">
+              <li>Open the image behind the event.</li>
+              <li>Review the AI classification or signal.</li>
+              <li>Compare similar events by product, lot, line, shift, or plant.</li>
+              <li>Track review status and follow-up activity.</li>
+              <li>Use trends to find recurring quality or production patterns.</li>
+            </ul>
+            <div class="section-actions">
+              <a class="button" href="/insights/">Explore Insights Software</a>
+            </div>
+          </div>
+          <div class="ai-event-record">
+            <div class="ai-event-record__image"><img src="../../assets/img/hero/platform/xray-fish-evidence-main.png" alt=""></div>
+            <h3>AI event record</h3>
+            <div class="support-context-panel__rows">
+              <div><span>Image</span><strong>X-ray evidence attached</strong></div>
+              <div><span>Signal</span><strong>Product quality variation</strong></div>
+              <div><span>Context</span><strong>Product, line, lot, shift, machine</strong></div>
+              <div><span>Review</span><strong>Open / disposition / export</strong></div>
+              <div><span>Trend</span><strong>Compare similar events</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="application-fit-guardrail">
+        <div class="section-inner">
+          <div class="ai-guardrail-callout">
+            <h2>Application fit still matters.</h2>
+            <p>AI image analysis is not a universal promise to detect every possible condition. Performance depends on the product, package, target defect, image source, line speed, operating conditions, and validation approach. The right next step is to review the application against real product and production conditions.</p>
+            <a class="button" href="/platform/application-fit-validation/">Talk Through Application Fit</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark" id="ai-analysis-final-cta">
+        <div class="section-inner">
+          <p class="eyebrow">NEXT STEP</p>
+          <h2>See what AI image analysis could learn from your production evidence.</h2>
+          <p class="lead">Share your product, package, line speed, inspection goals, and available image history. GreyscaleAI can help determine where AI image analysis is a fit, what evidence should be reviewed, and how model performance should be validated before production rollout.</p>
+          <div class="section-actions">
+            <a class="button" href="/contact/">Request a Demo</a>
+            <a class="button secondary" href="/platform/application-fit-validation/">Talk Through Fit</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><div class="footer-inner">
+<div>
+<img src="../../assets/img/logos/greyscale-ai-logo-footer.png" alt="GreyscaleAI"><p>435 Brady Road, Unit H<br>Tarpon Springs, FL 34689<br>(727) 938-5041</p>
+<p>&copy; 2026 GreyscaleAI. All rights reserved.</p>
+</div>
+<div class="footer-links">
+<a href="mailto:info@greyscaleai.com">info@greyscaleai.com</a><a href="../../contact/">Request a Demo</a>
+</div>
+</div></footer>
+  </body>
+</html>

@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://greyscaleai521.github.io/draft-website-dev/</loc></url>
   <url><loc>https://greyscaleai521.github.io/draft-website-dev/platform/</loc></url>
+  <url><loc>https://greyscaleai521.github.io/draft-website-dev/platform/ai-image-analysis/</loc></url>
+  <url><loc>https://greyscaleai521.github.io/draft-website-dev/platform/application-fit-validation/</loc></url>
   <url><loc>https://greyscaleai521.github.io/draft-website-dev/applications/</loc></url>
   <url><loc>https://greyscaleai521.github.io/draft-website-dev/applications/foreign-material-detection/</loc></url>
   <url><loc>https://greyscaleai521.github.io/draft-website-dev/applications/product-quality-package-integrity/</loc></url>
@@ -24,7 +26,7 @@
   <url><loc>https://greyscaleai521.github.io/draft-website-dev/industries/seafood/</loc></url>
   <url><loc>https://greyscaleai521.github.io/draft-website-dev/industries/beverage-packaged-goods/</loc></url>
   <url><loc>https://greyscaleai521.github.io/draft-website-dev/resources/case-studies/</loc></url>
-  <url><loc>https://greyscaleai521.github.io/draft-website-dev/resources/spec-sheets/</loc></url>
+  <url><loc>https://greyscaleai521.github.io/draft-website-dev/inspection-systems/spec-sheets/</loc></url>
   <url><loc>https://greyscaleai521.github.io/draft-website-dev/careers/</loc></url>
   <url><loc>https://greyscaleai521.github.io/draft-website-dev/contact/</loc></url>
 </urlset>
