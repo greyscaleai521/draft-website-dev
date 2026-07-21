@@ -29,62 +29,132 @@
       <symbol id="icon-messages" viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/><path d="M8 8h8"/><path d="M8 12h6"/></symbol>
       <symbol id="icon-fish" viewBox="0 0 24 24"><path d="M6.5 12C8.5 7.5 13 5 20 5c-2 3-2 7 0 10-7 0-11.5-2.5-13.5-7Z"/><path d="m6.5 12-4-4v8z"/><circle cx="16" cy="9" r=".5"/></symbol>
     </svg>
-    <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../index.html" aria-label="GreyscaleAI home"><img src="../../assets/img/logos/greyscale-ai-logo-white.png" alt="GreyscaleAI"></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle><span></span></button><ul class="nav-links" data-nav-links>
-<li class="nav-item has-menu">
-<a href="../../platform/">Platform</a><ul class="nav-menu">
-<li><a href="../../platform/">Overview</a></li>
-<li><a href="../../platform/ai-image-analysis/">AI Image Analysis</a></li>
-<li><a href="../../platform/managed-service-support/">Managed Service &amp; Support</a></li>
-<li><a href="../../platform/application-fit-validation/">Application Fit &amp; Validation</a></li>
-</ul>
-</li>
-<li class="nav-item has-menu">
-<a href="../../applications/" aria-current="page">Applications</a><ul class="nav-menu">
-<li><a href="../../applications/">Overview</a></li>
-<li><a href="../../applications/foreign-material-detection/">Foreign Material Detection</a></li>
-<li><a href="../../applications/product-quality-package-integrity/">Product Quality &amp; Package Integrity</a></li>
-<li><a href="../../applications/weight-count-intelligence/">Weight &amp; Count Intelligence</a></li>
-<li><a href="../../applications/traceability-qa-review/">Traceability &amp; QA Review</a></li>
-<li><a href="../../applications/production-analytics/">Production Analytics</a></li>
-</ul>
-</li>
-<li class="nav-item has-menu">
-<a href="../../insights/">Insights Software</a><ul class="nav-menu">
-<li><a href="../../insights/">Overview</a></li>
-<li><a href="../../insights/beyond-rejects/">Beyond Rejects</a></li>
-<li><a href="../../insights/machine-visibility-alerts/">Machine Visibility &amp; Alerts</a></li>
-<li><a href="../../insights/enterprise-access/">Enterprise Access</a></li>
-</ul>
-</li>
-<li class="nav-item has-menu">
-<a href="../../machines/">Inspection Systems</a><ul class="nav-menu">
-<li><a href="../../machines/">HRX Systems</a></li>
-<li><a href="../../inspection-systems/spec-sheets/">Spec Sheets</a></li>
-<li><a href="../../contact/">Talk Through Fit</a></li>
-</ul>
-</li>
-<li class="nav-item has-menu">
-<a href="../../industries/">Industries</a><ul class="nav-menu">
-<li><a href="../../industries/protein/">Protein</a></li>
-<li><a href="../../industries/dairy-cheese/">Dairy &amp; Cheese</a></li>
-<li><a href="../../industries/frozen-prepared-foods/">Frozen &amp; Prepared Foods</a></li>
-<li><a href="../../industries/pet-food/">Pet Food</a></li>
-<li><a href="../../industries/produce/">Produce</a></li>
-<li><a href="../../industries/seafood/">Seafood</a></li>
-<li><a href="../../industries/beverage-packaged-goods/">Beverage &amp; Packaged Goods</a></li>
-</ul>
-</li>
-<li class="nav-item has-menu">
-<a href="../../resources/case-studies/">Case Studies</a><ul class="nav-menu">
-<li><a href="../../resources/case-studies/">All Case Studies</a></li>
-<li><a href="../../resources/case-studies/bone-detection/">Bone Detection</a></li>
-<li><a href="../../resources/case-studies/product-in-seal/">Product-in-Seal</a></li>
-<li><a href="../../resources/case-studies/dent-detection/">Dent Detection</a></li>
-<li><a href="../../contact/">Discuss Your Line</a></li>
-</ul>
-</li>
-<li><a class="nav-cta" href="../../contact/">Request a Demo</a></li>
-</ul></nav></header>
+    <!-- SITE_HEADER_START -->
+<header class="site-header" data-site-header>
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="../../" aria-label="GreyscaleAI home"><img src="../../assets/img/logos/greyscale-ai-logo-white.png" alt="GreyscaleAI"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation" data-nav-toggle><svg class="nav-toggle__icon nav-toggle__icon--menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg><svg class="nav-toggle__icon nav-toggle__icon--close" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <ul class="nav-links" id="primary-navigation" data-nav-links>
+      <li class="nav-item has-menu" data-nav-item data-nav-section="platform">
+        <div class="nav-item__topline">
+          <a class="nav-link" href="../../platform/">Platform</a>
+          <button class="nav-submenu-toggle" type="button" aria-expanded="false" aria-controls="nav-platform-menu" aria-label="Open Platform menu" data-nav-submenu-toggle><svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        </div>
+        <div class="nav-menu nav-menu--platform" id="nav-platform-menu" data-nav-menu>
+          <div class="nav-menu__intro">
+            <svg class="nav-menu__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>
+            <p>See how HRX systems, AI, Insights, and support work as one platform.</p>
+          </div>
+          <ul class="nav-menu__links">
+            <li><a href="../../platform/"><span>Overview</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../platform/ai-image-analysis/"><span>AI Image Analysis</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../platform/managed-service-support/"><span>Managed Service &amp; Support</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../platform/application-fit-validation/"><span>Application Fit &amp; Validation</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item has-menu is-current-section" data-nav-item data-nav-section="applications">
+        <div class="nav-item__topline">
+          <a class="nav-link" href="../../applications/">Applications</a>
+          <button class="nav-submenu-toggle" type="button" aria-expanded="false" aria-controls="nav-applications-menu" aria-label="Open Applications menu" data-nav-submenu-toggle><svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        </div>
+        <div class="nav-menu nav-menu--applications" id="nav-applications-menu" data-nav-menu>
+          <div class="nav-menu__intro">
+            <svg class="nav-menu__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="11" cy="11" r="3"/><path d="m16 16-2.2-2.2"/></svg>
+            <p>Start with the inspection, quality, traceability, or production question.</p>
+          </div>
+          <ul class="nav-menu__links">
+            <li><a href="../../applications/"><span>Overview</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../applications/foreign-material-detection/" aria-current="page"><span>Foreign Material Detection</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../applications/product-quality-package-integrity/"><span>Product Quality &amp; Package Integrity</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../applications/weight-count-intelligence/"><span>Weight &amp; Count Intelligence</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../applications/traceability-qa-review/"><span>Traceability &amp; QA Review</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../applications/production-analytics/"><span>Production Analytics</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item has-menu" data-nav-item data-nav-section="insights">
+        <div class="nav-item__topline">
+          <a class="nav-link" href="../../insights/">Insights Software</a>
+          <button class="nav-submenu-toggle" type="button" aria-expanded="false" aria-controls="nav-insights-menu" aria-label="Open Insights Software menu" data-nav-submenu-toggle><svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        </div>
+        <div class="nav-menu nav-menu--insights" id="nav-insights-menu" data-nav-menu>
+          <div class="nav-menu__intro">
+            <svg class="nav-menu__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+            <p>Review images, events, alerts, and machine context in one software layer.</p>
+          </div>
+          <ul class="nav-menu__links">
+            <li><a href="../../insights/"><span>Overview</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../insights/image-history-event-review/"><span>Image History &amp; Event Review</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../insights/beyond-rejects/"><span>Beyond Rejects</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../insights/machine-visibility-alerts/"><span>Machine Visibility &amp; Alerts</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../insights/enterprise-access/"><span>Enterprise Access</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item has-menu" data-nav-item data-nav-section="systems">
+        <div class="nav-item__topline">
+          <a class="nav-link" href="../../machines/">Inspection Systems</a>
+          <button class="nav-submenu-toggle" type="button" aria-expanded="false" aria-controls="nav-systems-menu" aria-label="Open Inspection Systems menu" data-nav-submenu-toggle><svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        </div>
+        <div class="nav-menu nav-menu--systems" id="nav-systems-menu" data-nav-menu>
+          <div class="nav-menu__intro">
+            <svg class="nav-menu__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>
+            <p>Compare HRX systems, technical specifications, and line fit.</p>
+          </div>
+          <ul class="nav-menu__links">
+            <li><a href="../../machines/"><span>HRX Systems</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../machines/#comparison"><span>Compare HRX Models</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../inspection-systems/spec-sheets/"><span>Spec Sheets</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../contact/"><span>Talk Through Fit</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item has-menu" data-nav-item data-nav-section="industries">
+        <div class="nav-item__topline">
+          <a class="nav-link" href="../../industries/">Industries</a>
+          <button class="nav-submenu-toggle" type="button" aria-expanded="false" aria-controls="nav-industries-menu" aria-label="Open Industries menu" data-nav-submenu-toggle><svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        </div>
+        <div class="nav-menu nav-menu--industries" id="nav-industries-menu" data-nav-menu>
+          <div class="nav-menu__intro">
+            <svg class="nav-menu__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 20h20"/><path d="M4 20V9l5 3V9l5 3V4h4v16"/><path d="M8 16h1"/><path d="M13 16h1"/></svg>
+            <p>Explore application fit by food and beverage category.</p>
+          </div>
+          <ul class="nav-menu__links">
+            <li><a href="../../industries/"><span>Overview</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../industries/protein/"><span>Protein</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../industries/dairy-cheese/"><span>Dairy &amp; Cheese</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../industries/frozen-prepared-foods/"><span>Frozen &amp; Prepared Foods</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../industries/pet-food/"><span>Pet Food</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../industries/produce/"><span>Produce</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../industries/seafood/"><span>Seafood</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../industries/beverage-packaged-goods/"><span>Beverage &amp; Packaged Goods</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item has-menu" data-nav-item data-nav-section="case-studies">
+        <div class="nav-item__topline">
+          <a class="nav-link" href="../../resources/case-studies/">Case Studies</a>
+          <button class="nav-submenu-toggle" type="button" aria-expanded="false" aria-controls="nav-case-studies-menu" aria-label="Open Case Studies menu" data-nav-submenu-toggle><svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        </div>
+        <div class="nav-menu nav-menu--case-studies" id="nav-case-studies-menu" data-nav-menu>
+          <div class="nav-menu__intro">
+            <svg class="nav-menu__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
+            <p>See image-backed proof from application-specific production challenges.</p>
+          </div>
+          <ul class="nav-menu__links">
+            <li><a href="../../resources/case-studies/"><span>All Case Studies</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../resources/case-studies/bone-detection/"><span>Bone Detection</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../resources/case-studies/product-in-seal/"><span>Product-in-Seal</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../resources/case-studies/dent-detection/"><span>Dent Detection</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a class="nav-cta" href="../../contact/">Request a Demo</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- SITE_HEADER_END -->
 
     <main>
       <section class="page-hero fm-application-hero">

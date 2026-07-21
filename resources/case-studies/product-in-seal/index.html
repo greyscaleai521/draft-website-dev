@@ -4,118 +4,283 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
-    <title>Product-in-Seal Detection Case Study | GreyscaleAI</title>
-    <meta name="description" content="An anonymized case study showing how GreyscaleAI AI image analysis helps detect product-in-seal events at production speed.">
+    <title>Product-in-Seal Detection at Production Speed | GreyscaleAI</title>
+    <meta name="description" content="See how application-specific AI reviewed subtle product-in-seal events in an anonymized packaged-food application running at a reported 200 fpm.">
+    <meta property="og:title" content="Separating Product-in-Seal Events from Normal Package Variation">
+    <meta property="og:description" content="An anonymized case study showing how application-specific X-ray image analysis supported seal-region review at a reported 200 fpm.">
+    <meta property="og:image" content="https://greyscaleai521.github.io/draft-website-dev/assets/img/case-studies/product-in-seal-02.png">
+    <link rel="canonical" href="https://greyscaleai521.github.io/draft-website-dev/resources/case-studies/product-in-seal/">
     <link rel="icon" href="../../../assets/img/meta/favicon.ico">
     <link rel="stylesheet" href="../../../assets/css/styles.css">
     <script defer src="../../../assets/js/main.js"></script>
   </head>
   <body>
-    <header class="site-header"><nav class="nav" aria-label="Primary"><a class="brand" href="../../../index.html" aria-label="GreyscaleAI home"><img src="../../../assets/img/logos/greyscale-ai-logo-white.png" alt="GreyscaleAI"></a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle><span></span></button><ul class="nav-links" data-nav-links>
-<li class="nav-item has-menu">
-<a href="../../../platform/">Platform</a><ul class="nav-menu">
-<li><a href="../../../platform/">Overview</a></li>
-<li><a href="../../../platform/ai-image-analysis/">AI Image Analysis</a></li>
-<li><a href="../../../platform/managed-service-support/">Managed Service &amp; Support</a></li>
-<li><a href="../../../platform/application-fit-validation/">Application Fit &amp; Validation</a></li>
-</ul>
-</li>
-<li class="nav-item has-menu">
-<a href="../../../applications/">Applications</a><ul class="nav-menu">
-<li><a href="../../../applications/">Overview</a></li>
-<li><a href="../../../applications/foreign-material-detection/">Foreign Material Detection</a></li>
-<li><a href="../../../applications/product-quality-package-integrity/">Product Quality &amp; Package Integrity</a></li>
-<li><a href="../../../applications/weight-count-intelligence/">Weight &amp; Count Intelligence</a></li>
-<li><a href="../../../applications/traceability-qa-review/">Traceability &amp; QA Review</a></li>
-<li><a href="../../../applications/production-analytics/">Production Analytics</a></li>
-</ul>
-</li>
-<li class="nav-item has-menu">
-<a href="../../../insights/">Insights Software</a><ul class="nav-menu">
-<li><a href="../../../insights/">Overview</a></li>
-<li><a href="../../../insights/beyond-rejects/">Beyond Rejects</a></li>
-<li><a href="../../../insights/machine-visibility-alerts/">Machine Visibility &amp; Alerts</a></li>
-<li><a href="../../../insights/enterprise-access/">Enterprise Access</a></li>
-</ul>
-</li>
-<li class="nav-item has-menu">
-<a href="../../../machines/">Inspection Systems</a><ul class="nav-menu">
-<li><a href="../../../machines/">HRX Systems</a></li>
-<li><a href="../../../inspection-systems/spec-sheets/">Spec Sheets</a></li>
-<li><a href="../../../contact/">Talk Through Fit</a></li>
-</ul>
-</li>
-<li class="nav-item has-menu">
-<a href="../../../industries/">Industries</a><ul class="nav-menu">
-<li><a href="../../../industries/protein/">Protein</a></li>
-<li><a href="../../../industries/dairy-cheese/">Dairy &amp; Cheese</a></li>
-<li><a href="../../../industries/frozen-prepared-foods/">Frozen &amp; Prepared Foods</a></li>
-<li><a href="../../../industries/pet-food/">Pet Food</a></li>
-<li><a href="../../../industries/produce/">Produce</a></li>
-<li><a href="../../../industries/seafood/">Seafood</a></li>
-<li><a href="../../../industries/beverage-packaged-goods/">Beverage &amp; Packaged Goods</a></li>
-</ul>
-</li>
-<li class="nav-item has-menu">
-<a href="../../../resources/case-studies/">Case Studies</a><ul class="nav-menu">
-<li><a href="../../../resources/case-studies/">All Case Studies</a></li>
-<li><a href="../../../resources/case-studies/bone-detection/">Bone Detection</a></li>
-<li><a href="../../../resources/case-studies/product-in-seal/">Product-in-Seal</a></li>
-<li><a href="../../../resources/case-studies/dent-detection/">Dent Detection</a></li>
-<li><a href="../../../contact/">Discuss Your Line</a></li>
-</ul>
-</li>
-<li><a class="nav-cta" href="../../../contact/">Request a Demo</a></li>
-</ul></nav></header>
-    <main>
-      <section class="page-hero">
-        <div class="section-inner">
-          <p class="eyebrow">Case study</p>
-          <h1>AI product-in-seal detection at production speed.</h1>
-          <p class="lead">An anonymized packaged-food application where GreyscaleAI used AI image analysis to identify subtle product-in-seal events that traditional inspection approaches can miss.</p>
-          <div class="case-metrics">
-            <div class="case-metric">
-<span class="meta">Line speed</span><strong>200 fpm</strong><p>Real production rejects shown in the source application spotlight.</p>
-</div>
-            <div class="case-metric">
-<span class="meta">Primary buyer</span><strong>QA</strong><p>Focused on seal integrity, rework, complaints, and hold-backs.</p>
-</div>
-            <div class="case-metric">
-<span class="meta">Application</span><strong>Pouches, bags, trays</strong><p>Package formats where seal contamination can be subtle.</p>
-</div>
-          </div>
+    <!-- SITE_HEADER_START -->
+<header class="site-header" data-site-header>
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="../../../" aria-label="GreyscaleAI home"><img src="../../../assets/img/logos/greyscale-ai-logo-white.png" alt="GreyscaleAI"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation" data-nav-toggle><svg class="nav-toggle__icon nav-toggle__icon--menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg><svg class="nav-toggle__icon nav-toggle__icon--close" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <ul class="nav-links" id="primary-navigation" data-nav-links>
+      <li class="nav-item has-menu" data-nav-item data-nav-section="platform">
+        <div class="nav-item__topline">
+          <a class="nav-link" href="../../../platform/">Platform</a>
+          <button class="nav-submenu-toggle" type="button" aria-expanded="false" aria-controls="nav-platform-menu" aria-label="Open Platform menu" data-nav-submenu-toggle><svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
         </div>
-      </section>
-      <section class="section">
-        <div class="section-inner case-story">
-          <ul class="feature-list">
-            <li>
-<strong>Challenge</strong><br>Product-in-seal events were expensive and frustrating because the difference between a clean seal and contamination could be subtle, inconsistent, and difficult to catch at higher line speeds.</li>
-            <li>
-<strong>Solution</strong><br>GreyscaleAI applied machine-learning models trained on real production imagery to evaluate the seal region with high granularity instead of relying only on fixed thresholds.</li>
-            <li>
-<strong>Outcome</strong><br>The application spotlight reports far fewer missed seals, fewer customer complaints and hold-backs, dramatically reduced rework and labor, and stable detection across shifts and products.</li>
-            <li>
-<strong>Why it matters</strong><br>QA leaders get a more consistent way to protect seal quality while operations teams spend less time chasing avoidable rework and customer-impacting defects.</li>
+        <div class="nav-menu nav-menu--platform" id="nav-platform-menu" data-nav-menu>
+          <div class="nav-menu__intro">
+            <svg class="nav-menu__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>
+            <p>See how HRX systems, AI, Insights, and support work as one platform.</p>
+          </div>
+          <ul class="nav-menu__links">
+            <li><a href="../../../platform/"><span>Overview</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../platform/ai-image-analysis/"><span>AI Image Analysis</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../platform/managed-service-support/"><span>Managed Service &amp; Support</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../platform/application-fit-validation/"><span>Application Fit &amp; Validation</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
           </ul>
-          <div class="case-image-grid">
-            <figure class="case-image"><img src="../../../assets/img/case-studies/product-in-seal-02.png" alt="X-ray product-in-seal example"><figcaption>Real production reject image from the product-in-seal application spotlight.</figcaption></figure>
-            <figure class="case-image"><img src="../../../assets/img/case-studies/product-in-seal-05.png" alt="X-ray product-in-seal reject example"><figcaption>AI review focuses on subtle seal-region patterns rather than simple fixed thresholds.</figcaption></figure>
-            <figure class="case-image"><img src="../../../assets/img/case-studies/product-in-seal-03.png" alt="Clean seal comparison X-ray example"><figcaption>Seal-region review helps separate true contamination from normal package and fill variation.</figcaption></figure>
-            <figure class="case-image"><img src="../../../assets/img/case-studies/product-in-seal-04.png" alt="X-ray seal inspection comparison example"><figcaption>Consistent image review supports repeatable QA decisions across products and shifts.</figcaption></figure>
-          </div>
         </div>
-      </section>
-<section class="section dark"><div class="section-inner">
-<p class="eyebrow">Related pages</p>
-<h2>Connect this story to the broader platform.</h2>
-<div class="card-grid three">
-<a class="resource-card" href="/platform/ai-image-analysis/"><div><p class="eyebrow">Related platform capability</p><h3>AI Image Analysis</h3><p>See how GreyscaleAI uses customer-specific image history, application-specific models, and reviewable evidence to support difficult inspection problems.</p></div><span class="button">Explore AI Image Analysis</span></a>
-</div>
-<div class="section-actions">
-<a class="button" href="../../../capabilities/product-quality-inspection/">Product Quality Inspection</a><a class="button secondary" href="../../../insights/">Explore Insights Software</a>
-</div>
-</div></section>
+      </li>
+      <li class="nav-item has-menu" data-nav-item data-nav-section="applications">
+        <div class="nav-item__topline">
+          <a class="nav-link" href="../../../applications/">Applications</a>
+          <button class="nav-submenu-toggle" type="button" aria-expanded="false" aria-controls="nav-applications-menu" aria-label="Open Applications menu" data-nav-submenu-toggle><svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        </div>
+        <div class="nav-menu nav-menu--applications" id="nav-applications-menu" data-nav-menu>
+          <div class="nav-menu__intro">
+            <svg class="nav-menu__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="11" cy="11" r="3"/><path d="m16 16-2.2-2.2"/></svg>
+            <p>Start with the inspection, quality, traceability, or production question.</p>
+          </div>
+          <ul class="nav-menu__links">
+            <li><a href="../../../applications/"><span>Overview</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../applications/foreign-material-detection/"><span>Foreign Material Detection</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../applications/product-quality-package-integrity/"><span>Product Quality &amp; Package Integrity</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../applications/weight-count-intelligence/"><span>Weight &amp; Count Intelligence</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../applications/traceability-qa-review/"><span>Traceability &amp; QA Review</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../applications/production-analytics/"><span>Production Analytics</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item has-menu" data-nav-item data-nav-section="insights">
+        <div class="nav-item__topline">
+          <a class="nav-link" href="../../../insights/">Insights Software</a>
+          <button class="nav-submenu-toggle" type="button" aria-expanded="false" aria-controls="nav-insights-menu" aria-label="Open Insights Software menu" data-nav-submenu-toggle><svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        </div>
+        <div class="nav-menu nav-menu--insights" id="nav-insights-menu" data-nav-menu>
+          <div class="nav-menu__intro">
+            <svg class="nav-menu__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+            <p>Review images, events, alerts, and machine context in one software layer.</p>
+          </div>
+          <ul class="nav-menu__links">
+            <li><a href="../../../insights/"><span>Overview</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../insights/image-history-event-review/"><span>Image History &amp; Event Review</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../insights/beyond-rejects/"><span>Beyond Rejects</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../insights/machine-visibility-alerts/"><span>Machine Visibility &amp; Alerts</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../insights/enterprise-access/"><span>Enterprise Access</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item has-menu" data-nav-item data-nav-section="systems">
+        <div class="nav-item__topline">
+          <a class="nav-link" href="../../../machines/">Inspection Systems</a>
+          <button class="nav-submenu-toggle" type="button" aria-expanded="false" aria-controls="nav-systems-menu" aria-label="Open Inspection Systems menu" data-nav-submenu-toggle><svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        </div>
+        <div class="nav-menu nav-menu--systems" id="nav-systems-menu" data-nav-menu>
+          <div class="nav-menu__intro">
+            <svg class="nav-menu__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>
+            <p>Compare HRX systems, technical specifications, and line fit.</p>
+          </div>
+          <ul class="nav-menu__links">
+            <li><a href="../../../machines/"><span>HRX Systems</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../machines/#comparison"><span>Compare HRX Models</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../inspection-systems/spec-sheets/"><span>Spec Sheets</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../contact/"><span>Talk Through Fit</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item has-menu" data-nav-item data-nav-section="industries">
+        <div class="nav-item__topline">
+          <a class="nav-link" href="../../../industries/">Industries</a>
+          <button class="nav-submenu-toggle" type="button" aria-expanded="false" aria-controls="nav-industries-menu" aria-label="Open Industries menu" data-nav-submenu-toggle><svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        </div>
+        <div class="nav-menu nav-menu--industries" id="nav-industries-menu" data-nav-menu>
+          <div class="nav-menu__intro">
+            <svg class="nav-menu__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 20h20"/><path d="M4 20V9l5 3V9l5 3V4h4v16"/><path d="M8 16h1"/><path d="M13 16h1"/></svg>
+            <p>Explore application fit by food and beverage category.</p>
+          </div>
+          <ul class="nav-menu__links">
+            <li><a href="../../../industries/"><span>Overview</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../industries/protein/"><span>Protein</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../industries/dairy-cheese/"><span>Dairy &amp; Cheese</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../industries/frozen-prepared-foods/"><span>Frozen &amp; Prepared Foods</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../industries/pet-food/"><span>Pet Food</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../industries/produce/"><span>Produce</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../industries/seafood/"><span>Seafood</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../industries/beverage-packaged-goods/"><span>Beverage &amp; Packaged Goods</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item has-menu is-current-section" data-nav-item data-nav-section="case-studies">
+        <div class="nav-item__topline">
+          <a class="nav-link" href="../../../resources/case-studies/">Case Studies</a>
+          <button class="nav-submenu-toggle" type="button" aria-expanded="false" aria-controls="nav-case-studies-menu" aria-label="Open Case Studies menu" data-nav-submenu-toggle><svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        </div>
+        <div class="nav-menu nav-menu--case-studies" id="nav-case-studies-menu" data-nav-menu>
+          <div class="nav-menu__intro">
+            <svg class="nav-menu__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
+            <p>See image-backed proof from application-specific production challenges.</p>
+          </div>
+          <ul class="nav-menu__links">
+            <li><a href="../../../resources/case-studies/"><span>All Case Studies</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../resources/case-studies/bone-detection/"><span>Bone Detection</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../resources/case-studies/product-in-seal/" aria-current="page"><span>Product-in-Seal</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+            <li><a href="../../../resources/case-studies/dent-detection/"><span>Dent Detection</span><svg class="nav-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a class="nav-cta" href="../../../contact/">Request a Demo</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- SITE_HEADER_END -->
+    <main class="case-study-page">
+      <article class="case-study-page">
+        <section class="case-study-hero" id="hero" aria-labelledby="case-study-title">
+          <div class="case-study-hero__inner">
+            <div class="case-study-hero__copy">
+              <nav class="case-study-breadcrumb" aria-label="Breadcrumb"><a href="../">Case Studies</a><span aria-hidden="true">/</span><span>Product-in-Seal Detection</span></nav>
+              <p class="eyebrow">CASE STUDY / PACKAGE QUALITY</p>
+              <h1 id="case-study-title">Separating product-in-seal events from normal package variation.</h1>
+              <p class="lead">In an anonymized packaged-food application running at a reported 200 feet per minute, GreyscaleAI used application-specific AI trained on real X-ray images to distinguish product in the seal region from clean seals and normal package or fill variation.</p>
+              <div class="case-study-hero__actions"><a class="button" href="../../../contact/">Talk Through Your Package Application</a><a class="button secondary" href="../../../applications/product-quality-package-integrity/">Explore Product Quality &amp; Package Integrity</a></div>
+            </div>
+            <figure class="case-study-hero__media"><img src="../../../assets/img/case-studies/product-in-seal-02.png" alt="Packaged-food X-ray showing product extending into the package seal region." width="320" height="619" loading="eager" fetchpriority="high"><figcaption>Production X-ray from the anonymized application showing product extending into the seal region.</figcaption></figure>
+          </div>
+        </section>
+        <section class="section" id="at-a-glance" aria-labelledby="at-a-glance-label">
+          <div class="section-inner">
+            <p class="eyebrow" id="at-a-glance-label">AT A GLANCE</p>
+            <div class="case-study-meta">
+              <div class="case-study-meta__item"><span class="meta">Application</span><strong>Product-in-seal review</strong><p>X-ray image analysis focused on product in or near the seal region.</p></div>
+              <div class="case-study-meta__item"><span class="meta">Reported line speed</span><strong>200 fpm</strong><p>The source application spotlight reports operation at this production speed.</p></div>
+              <div class="case-study-meta__item"><span class="meta">Primary users</span><strong>QA and packaging operations</strong><p>The workflow supports image review, investigation, and follow-up.</p></div>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="challenge" aria-labelledby="challenge-heading">
+          <div class="section-inner">
+            <p class="eyebrow">THE CHALLENGE</p>
+            <h2 id="challenge-heading">A small amount of product in the seal area could create a large downstream problem.</h2>
+            <p class="case-study-section-lead">Product in or near a package seal can contribute to leaks, rework, hold-backs, and customer complaints. The production team needed to identify subtle seal-region events at line speed without treating normal fill, package overlap, or presentation variation as a defect.</p>
+            <div class="case-study-card-grid">
+              <div class="case-study-info-card"><svg class="case-study-icon" aria-hidden="true"><use href="#icon-scan-search"></use></svg><h3>The difference can be subtle</h3><p>A small amount of product near the seal can resemble normal fill or package variation in the X-ray image.</p></div>
+              <div class="case-study-info-card"><svg class="case-study-icon" aria-hidden="true"><use href="#icon-gauge"></use></svg><h3>The line keeps moving</h3><p>The inspection decision must remain useful at the production speed and product presentation represented in the application.</p></div>
+              <div class="case-study-info-card"><svg class="case-study-icon" aria-hidden="true"><use href="#icon-package-x"></use></svg><h3>A missed event has downstream cost</h3><p>A seal-region condition can lead to rework, holds, leaks, or complaints after the package leaves the line.</p></div>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="why-it-was-hard" aria-labelledby="why-it-was-hard-heading">
+          <div class="section-inner">
+            <p class="eyebrow">WHY IT WAS HARD</p>
+            <h2 id="why-it-was-hard-heading">The seal region was narrow, variable, and difficult to judge with fixed thresholds.</h2>
+            <p class="case-study-section-lead">Product fill, package folds, overlap, seal geometry, orientation, density, and movement all change what appears in the X-ray image. A fixed rule can respond to normal variation as though it were a defect, or become too broad to identify the small condition that matters. The model needed to learn both confirmed product-in-seal events and the clean or normal examples that should not be rejected.</p>
+            <p class="case-study-pullquote">The inspection problem was not only seeing the seal region. It was deciding whether the image represented true product in the seal area or expected package and fill variation.</p>
+          </div>
+        </section>
+        <section class="section" id="approach" aria-labelledby="approach-heading">
+          <div class="section-inner">
+            <p class="eyebrow">THE GREYSCALEAI APPROACH</p>
+            <h2 id="approach-heading">Train and back-check the model with real reject and clean-seal images.</h2>
+            <p class="case-study-section-lead">GreyscaleAI built an application-specific image model using representative production examples, including confirmed product-in-seal events, clean seals, and difficult normal variations. The model was then checked against the historical image set and the operating conditions represented in the application.</p>
+            <div class="case-study-card-grid case-study-card-grid--four">
+              <div class="case-study-process-card"><span class="case-study-narrative__number" aria-hidden="true">01</span><svg class="case-study-icon" aria-hidden="true"><use href="#icon-images"></use></svg><h3>Capture the real seal region</h3><p>Include production images of confirmed events, clean packages, and difficult normal variation.</p></div>
+              <div class="case-study-process-card"><span class="case-study-narrative__number" aria-hidden="true">02</span><svg class="case-study-icon" aria-hidden="true"><use href="#icon-tags"></use></svg><h3>Label the distinction</h3><p>Separate product-in-seal events from expected fill, overlap, package structure, and presentation.</p></div>
+              <div class="case-study-process-card"><span class="case-study-narrative__number" aria-hidden="true">03</span><svg class="case-study-icon" aria-hidden="true"><use href="#icon-brain-circuit"></use></svg><h3>Train and back-check</h3><p>Evaluate model decisions against known outcomes and the historical image set.</p></div>
+              <div class="case-study-process-card"><span class="case-study-narrative__number" aria-hidden="true">04</span><svg class="case-study-icon" aria-hidden="true"><use href="#icon-badge-check"></use></svg><h3>Validate under production conditions</h3><p>Confirm performance for the product, package, seal geometry, line speed, and acceptance criteria in scope.</p></div>
+            </div>
+          </div>
+        </section>
+        <section class="section case-study-evidence" id="system-analyzed" aria-labelledby="system-analyzed-heading">
+          <div class="section-inner">
+            <p class="eyebrow">WHAT THE SYSTEM ANALYZED</p>
+            <h2 id="system-analyzed-heading">The decision came from comparisons across the seal region.</h2>
+            <p class="case-study-evidence__intro">The model compared the image pattern in the seal region with confirmed product-in-seal events, clean-seal references, and normal package or fill variation. The examples below show the evidence used to distinguish an event that needed review from expected production variation.</p>
+            <div class="case-study-evidence__grid">
+              <figure class="case-study-evidence__card"><span class="case-study-evidence__frame"><img src="../../../assets/img/case-studies/product-in-seal-05.png" alt="Packaged-food X-ray showing product extending into the seal region." width="311" height="610" loading="lazy"></span><span class="case-study-evidence__label">Product-in-seal example</span><figcaption>A second production image shows product extending into the seal region.</figcaption></figure>
+              <figure class="case-study-evidence__card"><span class="case-study-evidence__frame"><img src="../../../assets/img/case-studies/product-in-seal-03.png" alt="Clean packaged-food X-ray used as a seal-region comparison image." width="347" height="602" loading="lazy"></span><span class="case-study-evidence__label">Clean-seal reference</span><figcaption>A clean comparison image establishes the expected seal-region appearance for this product and package.</figcaption></figure>
+              <figure class="case-study-evidence__card"><span class="case-study-evidence__frame"><img src="../../../assets/img/case-studies/product-in-seal-04.png" alt="Packaged-food X-ray showing normal seal-region and fill variation." width="394" height="591" loading="lazy"></span><span class="case-study-evidence__label">Normal package variation</span><figcaption>A second clean comparison helps represent normal package and fill variation rather than a defect.</figcaption></figure>
+            </div>
+          </div>
+        </section>
+        <section class="section case-study-insights" id="insights-visibility" aria-labelledby="insights-visibility-heading">
+          <div class="section-inner case-study-insights__layout">
+            <div class="case-study-insights__copy">
+              <p class="eyebrow">INSIGHTS VISIBILITY</p>
+              <h2 id="insights-visibility-heading">A seal-region event becomes a reviewable QA record.</h2>
+              <p>In GreyscaleAI Insights, authorized users can open the X-ray image, review the product-in-seal classification, and see available product, package, line, machine, time, and review-status context. Keep this section focused on the case-study workflow. The full software story belongs on the Insights Software page.</p>
+            </div>
+            <div>
+              <div class="case-study-insights__visual case-study-record-panel">
+                <p class="case-study-record-panel__label">ILLUSTRATIVE RECORD, NOT CUSTOMER DATA</p>
+                <div class="case-study-record-panel__fields">
+                  <div class="case-study-record-panel__field"><svg class="case-study-icon" aria-hidden="true"><use href="#icon-tag"></use></svg><div><span>Event type</span><strong>Product-in-seal</strong></div></div>
+                  <div class="case-study-record-panel__field"><svg class="case-study-icon" aria-hidden="true"><use href="#icon-package-search"></use></svg><div><span>Product</span><strong>Anonymized packaged food</strong></div></div>
+                  <div class="case-study-record-panel__field"><svg class="case-study-icon" aria-hidden="true"><use href="#icon-package"></use></svg><div><span>Package</span><strong>Anonymized package format</strong></div></div>
+                  <div class="case-study-record-panel__field"><svg class="case-study-icon" aria-hidden="true"><use href="#icon-factory"></use></svg><div><span>Line</span><strong>Packaging line</strong></div></div>
+                  <div class="case-study-record-panel__field"><svg class="case-study-icon" aria-hidden="true"><use href="#icon-circle-dot"></use></svg><div><span>Review status</span><strong>Needs review</strong></div></div>
+                  <div class="case-study-record-panel__field"><svg class="case-study-icon" aria-hidden="true"><use href="#icon-image"></use></svg><div><span>Evidence</span><strong>X-ray image + seal-region classification</strong></div></div>
+                </div>
+                <div class="case-study-record-panel__actions" aria-hidden="true"><span class="case-study-record-panel__chip">Open image</span><span class="case-study-record-panel__chip">Compare nearby events</span></div>
+                <p class="case-study-record-panel__disclosure">Illustrative interface content. Fields shown are representative of the review workflow and are not customer data.</p>
+              </div>
+              <p><a class="text-link" href="../../../insights/">Explore Insights Software</a></p>
+            </div>
+          </div>
+        </section>
+        <section class="section case-study-outcome" id="reported-outcome" aria-labelledby="reported-outcome-heading">
+          <div class="section-inner">
+            <div class="case-study-outcome__panel">
+              <div class="case-study-outcome__copy">
+                <p class="eyebrow">REPORTED OUTCOME</p>
+                <h2 id="reported-outcome-heading">Fewer missed seal-region events and less downstream rework were reported.</h2>
+                <p>The anonymized application reported fewer missed product-in-seal events, fewer complaint and hold-back situations, and less rework and manual effort than the prior inspection approach. The proof point is that application-specific image analysis supported more consistent review of subtle seal-region conditions at production speed, not that every package format can be inspected the same way.</p>
+              </div>
+              <div class="case-study-card-grid">
+                <div class="case-study-result-card"><strong>200 fpm</strong><p>Reported production line speed</p></div>
+                <div class="case-study-result-card"><strong>Fewer missed events</strong><p>Reported inspection outcome</p></div>
+                <div class="case-study-result-card"><strong>Less rework</strong><p>Reported process outcome</p></div>
+              </div>
+              <p class="case-study-validation-note">Performance is application-specific. Product density, fill, package material, seal geometry, overlap, presentation, line speed, image contrast, and acceptance criteria must be validated for each application.</p>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="where-this-proof-applies" aria-labelledby="where-this-proof-applies-heading">
+          <div class="section-inner">
+            <p class="eyebrow">WHERE THIS PROOF APPLIES</p>
+            <h2 id="where-this-proof-applies-heading">Use this case study when a subtle package condition creates an expensive operating problem.</h2>
+            <p class="case-study-section-lead">This story is most relevant when product can enter a package seal area and create leakage risk, rework, holds, or complaints, but the image distinction between a true event and normal variation is difficult. It supports a discussion about product-specific AI, image-backed QA review, and application validation. It does not establish complete seal-integrity inspection or guaranteed performance for every product and package.</p>
+            <div class="case-study-card-grid">
+              <div class="case-study-audience-card"><svg class="case-study-icon" aria-hidden="true"><use href="#icon-shield-check"></use></svg><h3>QA</h3><p>Review the X-ray evidence behind a seal-region event and support disposition decisions.</p></div>
+              <div class="case-study-audience-card"><svg class="case-study-icon" aria-hidden="true"><use href="#icon-factory"></use></svg><h3>Packaging operations</h3><p>Investigate whether product-in-seal events are isolated or recurring.</p></div>
+              <div class="case-study-audience-card"><svg class="case-study-icon" aria-hidden="true"><use href="#icon-building-2"></use></svg><h3>Quality leadership</h3><p>Compare package-quality event patterns across products, lines, shifts, or time windows.</p></div>
+            </div>
+          </div>
+        </section>
+        <section class="section case-study-related" id="related-pages" aria-labelledby="related-pages-heading">
+          <div class="section-inner">
+            <p class="eyebrow">CONTINUE EXPLORING</p>
+            <h2 id="related-pages-heading">Connect the proof to the application, industry, software, and validation path.</h2>
+            <div class="case-study-related__grid">
+              <a class="case-study-related-link" href="../../../applications/product-quality-package-integrity/"><svg class="case-study-icon" aria-hidden="true"><use href="#icon-badge-check"></use></svg><p class="meta">APPLICATION</p><h3>Product Quality &amp; Package Integrity</h3><p>See where product-in-seal fits within broader product and package quality inspection.</p></a>
+              <a class="case-study-related-link" href="../../../industries/dairy-cheese/"><svg class="case-study-icon" aria-hidden="true"><use href="#icon-milk"></use></svg><p class="meta">INDUSTRY</p><h3>Dairy &amp; Cheese</h3><p>Review package-integrity, product-quality, weight and count, and QA workflows for dairy and cheese production.</p></a>
+              <a class="case-study-related-link" href="../../../insights/"><svg class="case-study-icon" aria-hidden="true"><use href="#icon-layout-dashboard"></use></svg><p class="meta">SOFTWARE</p><h3>Insights Software</h3><p>See how images, classifications, review status, and production context become searchable records.</p></a>
+              <a class="case-study-related-link" href="../../../platform/application-fit-validation/"><svg class="case-study-icon" aria-hidden="true"><use href="#icon-clipboard-check"></use></svg><p class="meta">FIT &amp; VALIDATION</p><h3>Application Fit &amp; Validation</h3><p>Understand how product, package, seal geometry, line speed, image contrast, and acceptance criteria are tested.</p></a>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="next-step" aria-labelledby="next-step-heading">
+          <div class="section-inner"><div class="case-study-cta"><p class="eyebrow">NEXT STEP</p><h2 id="next-step-heading">Bring the product, package, seal region, and line conditions.</h2><p>Share the product format, package material, seal geometry, line speed, known defect examples, clean comparison product, and current QA workflow. GreyscaleAI can help define the image-review and validation plan for the application.</p><div class="section-actions"><a class="button" href="../../../contact/">Talk Through Your Package Application</a><a class="button secondary" href="../../../platform/application-fit-validation/">Review Application Fit &amp; Validation</a></div></div></div>
+        </section>
+      </article>
+      <svg width="0" height="0" aria-hidden="true" focusable="false"><defs><symbol id="icon-scan-search" viewBox="0 0 24 24"><path d="M7 3H5a2 2 0 0 0-2 2v2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M13 21H9"/><circle cx="15" cy="15" r="3"/><path d="m18 18 3 3"/><path d="M9 8h6"/><path d="M9 12h2"/></symbol><symbol id="icon-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.3 19a10 10 0 1 1 17.4 0"/><path d="M12 6v2"/><path d="M4.6 10l1.7 1"/><path d="M19.4 10l-1.7 1"/></symbol><symbol id="icon-package-x" viewBox="0 0 24 24"><path d="m7.5 4.3 9 5.2"/><path d="M21 8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="M3.3 7 12 12l8.7-5"/><path d="M12 22V12"/><path d="m15 15 4 4"/><path d="m19 15-4 4"/></symbol><symbol id="icon-images" viewBox="0 0 24 24"><path d="M18 22H4a2 2 0 0 1-2-2V6"/><path d="m22 13-1.3-1.3a2.4 2.4 0 0 0-3.4 0L12 17"/><path d="M14 14.5 12.5 13a2.4 2.4 0 0 0-3.4 0L6 16"/><rect width="16" height="16" x="6" y="2" rx="2"/><circle cx="14" cy="8" r="2"/></symbol><symbol id="icon-tags" viewBox="0 0 24 24"><path d="M13 2H4a2 2 0 0 0-2 2v9l9 9 11-11Z"/><path d="M7.5 7.5h.01"/><path d="m16 5 6 6"/></symbol><symbol id="icon-brain-circuit" viewBox="0 0 24 24"><path d="M12 5a3 3 0 0 0-5.8-1A3 3 0 0 0 3 7v1a3 3 0 0 0 0 6v1a3 3 0 0 0 3 3 3 3 0 0 0 6 1"/><path d="M12 5a3 3 0 0 1 5.8-1A3 3 0 0 1 21 7v1a3 3 0 0 1 0 6v1a3 3 0 0 1-3 3 3 3 0 0 1-6 1"/><path d="M12 5v14"/><path d="M8 10h8"/><path d="M8 14h8"/></symbol><symbol id="icon-badge-check" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.77 4 4 0 0 1 0 6.76 4 4 0 0 1-4.78 4.77 4 4 0 0 1-6.74 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></symbol><symbol id="icon-tag" viewBox="0 0 24 24"><path d="M12 2H4a2 2 0 0 0-2 2v8l10 10 10-10Z"/><path d="M7 7h.01"/></symbol><symbol id="icon-package-search" viewBox="0 0 24 24"><path d="m7.5 4.3 9 5.2"/><path d="M21 8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0"/><path d="M3.3 7 12 12l8.7-5"/><path d="M12 22V12"/><circle cx="18" cy="18" r="3"/><path d="m21 21-1.5-1.5"/></symbol><symbol id="icon-package" viewBox="0 0 24 24"><path d="m7.5 4.3 9 5.2"/><path d="M21 8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="M3.3 7 12 12l8.7-5"/><path d="M12 22V12"/></symbol><symbol id="icon-factory" viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M4 20V9l6 4V9l6 4V4h4v16"/><path d="M8 18h1"/><path d="M13 18h1"/><path d="M18 18h1"/></symbol><symbol id="icon-circle-dot" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="1"/></symbol><symbol id="icon-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></symbol><symbol id="icon-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.4 8.8a2 2 0 0 1-1.2 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.4a1.3 1.3 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol><symbol id="icon-building-2" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18"/><path d="M6 12H4a2 2 0 0 0-2 2v8"/><path d="M18 9h2a2 2 0 0 1 2 2v11"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></symbol><symbol id="icon-milk" viewBox="0 0 24 24"><path d="M8 2h8"/><path d="M9 2v4.3a2 2 0 0 1-.4 1.2L7.4 9.1A2 2 0 0 0 7 10.3V20a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-9.7a2 2 0 0 0-.4-1.2l-1.2-1.6A2 2 0 0 1 15 6.3V2"/><path d="M7 14h10"/></symbol><symbol id="icon-layout-dashboard" viewBox="0 0 24 24"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></symbol><symbol id="icon-clipboard-check" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><path d="M9 5a3 3 0 0 1 6 0v1H9z"/><path d="m9 14 2 2 4-4"/></symbol></defs></svg>
     </main>
     <footer class="site-footer"><div class="footer-inner">
 <div>
