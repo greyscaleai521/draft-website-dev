@@ -140,7 +140,9 @@
 <!-- SITE_HEADER_END -->
 
     <main id="main-content" class="home-router-main">
-      <section class="hero home-router-hero">
+      <section class="hero home-router-hero home-router-hero--evidence">
+        <div class="hero-ambient hero-ambient--one" aria-hidden="true"></div>
+        <div class="hero-ambient hero-ambient--two" aria-hidden="true"></div>
         <div class="hero-inner home-router-hero__inner">
           <div class="home-router-hero__copy">
             <p class="eyebrow">CONNECTED FOOD INSPECTION</p>
@@ -151,6 +153,110 @@
               <a class="button secondary home-router-hero__secondary" href="platform/">Explore the Platform <svg class="home-router-button-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
             </div>
           </div>
+          <figure class="inspection-story" data-inspection-story aria-labelledby="inspection-story-caption">
+            <figcaption id="inspection-story-caption" class="sr-only">
+              A GreyscaleAI HRX inspection system connected to an X-ray inspection event. A highlighted region in the inspection image links to a magnified view of a detected bone fragment.
+            </figcaption>
+
+            <div class="inspection-story__headline" aria-hidden="true">
+              <span>From physical inspection to reviewable evidence</span>
+              <i></i>
+            </div>
+
+            <div class="inspection-story__stage">
+              <div class="inspection-story__grid" aria-hidden="true"></div>
+              <div class="inspection-story__glow" aria-hidden="true"></div>
+
+              <div class="machine-block">
+                <div class="visual-label visual-label--machine">
+                  <span>01</span>
+                  <b>Physical inspection</b>
+                </div>
+                <div class="machine-halo" aria-hidden="true"></div>
+                <img class="machine-image" src="assets/img/hero/home/hrx380aq-cutout.png" width="449" height="973" alt="GreyscaleAI HRX380AQ X-ray inspection system" loading="eager" decoding="async">
+                <div class="machine-caption">
+                  <span class="status-dot" aria-hidden="true"></span>
+                  HRX inspection system
+                </div>
+              </div>
+
+              <svg class="inspection-flow" viewBox="0 0 1000 620" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <linearGradient id="flowGradient" x1="0" x2="1">
+                    <stop offset="0" stop-color="#59cfe8" stop-opacity="0.18"/>
+                    <stop offset="0.58" stop-color="#59cfe8" stop-opacity="0.88"/>
+                    <stop offset="1" stop-color="#00a09d" stop-opacity="0.95"/>
+                  </linearGradient>
+                </defs>
+                <path class="inspection-flow__path" d="M232 287 C 278 287, 282 230, 340 230"/>
+                <circle class="inspection-flow__origin" cx="232" cy="287" r="5"/>
+                <circle class="inspection-flow__destination" cx="340" cy="230" r="5"/>
+              </svg>
+
+              <article class="inspection-event-card" tabindex="0" aria-label="Inspection event: bone fragment detected">
+                <header class="inspection-event-card__header">
+                  <div class="event-heading">
+                    <span>02</span>
+                    <b>Image evidence</b>
+                  </div>
+                  <span class="reviewable-pill">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    Reviewable
+                  </span>
+                </header>
+
+                <div class="xray-view" data-roi-anchor>
+                  <img src="assets/img/hero/home/bone-event-xray.webp" width="631" height="369" alt="X-ray image of poultry pieces with a small bone fragment in one piece" fetchpriority="high">
+                  <span class="xray-view__tag">Source image</span>
+                  <span class="roi-box" aria-hidden="true">
+                    <span class="roi-box__corner roi-box__corner--one"></span>
+                    <span class="roi-box__corner roi-box__corner--two"></span>
+                    <span class="roi-box__corner roi-box__corner--three"></span>
+                    <span class="roi-box__corner roi-box__corner--four"></span>
+                    <span class="roi-box__pulse roi-box__pulse--one"></span>
+                    <span class="roi-box__pulse roi-box__pulse--two"></span>
+                  </span>
+                </div>
+
+                <footer class="inspection-event-card__footer">
+                  <div>
+                    <span class="event-kicker">Inspection event</span>
+                    <strong>See what the system saw</strong>
+                    <small>Image <i></i> Product <i></i> Line <i></i> History</small>
+                  </div>
+                  <span class="event-arrow" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+                  </span>
+                </footer>
+              </article>
+
+              <svg class="detail-connector" viewBox="0 0 1000 620" preserveAspectRatio="none" aria-hidden="true">
+                <path class="detail-connector__path" d="M580 342 C 684 342, 722 332, 802 332"/>
+                <circle class="detail-connector__node detail-connector__node--start" cx="580" cy="342" r="5"/>
+                <circle class="detail-connector__node detail-connector__node--end" cx="802" cy="332" r="6"/>
+              </svg>
+
+              <aside class="detail-card" aria-label="Magnified detail of detected bone fragment">
+                <div class="detail-card__image">
+                  <img src="assets/img/hero/home/bone-event-detail.webp" width="1100" height="624" alt="Magnified X-ray view of the detected bone fragment" loading="eager" decoding="async">
+                  <span>Detail view</span>
+                </div>
+                <div class="detail-card__body">
+                  <span class="detail-card__kicker">AI-identified region</span>
+                  <strong>Bone fragment</strong>
+                  <small>Review the source image and event context.</small>
+                </div>
+              </aside>
+
+              <div class="story-steps" aria-hidden="true">
+                <span class="story-step story-step--active"><b>01</b> Inspect</span>
+                <i></i>
+                <span class="story-step story-step--active"><b>02</b> Identify</span>
+                <i></i>
+                <span class="story-step"><b>03</b> Review</span>
+              </div>
+            </div>
+          </figure>
         </div>
       </section>
 
@@ -223,27 +329,102 @@
         </div>
       </section>
 
-      <section class="section home-router-proof" data-motion-section>
+      <section class="home-proof-strip" aria-labelledby="home-proof-title" data-motion-section>
         <div class="section-inner">
-          <p class="eyebrow">PROOF IN PRODUCTION</p>
-          <h2>See what image-backed inspection looks like in real applications.</h2>
-          <p class="lead">Each case study shows a specific inspection challenge and the evidence used to review it.</p>
-          <div class="home-router-proof-grid">
-            <a class="home-router-proof-card" href="resources/case-studies/bone-detection/">
-              <span class="home-router-proof-card__media"><img src="assets/img/case-studies/bone-detection-04.png" alt="X-ray image of poultry pieces with a suspected bone region outlined in red." width="859" height="688" loading="lazy" decoding="async"></span>
-              <span class="home-router-proof-card__body"><span class="home-router-proof-card__category">PROTEIN / FOREIGN MATERIAL</span><h3>AI bone detection in poultry production</h3><span class="home-router-proof-card__text">See how image analysis can help separate true bone concerns from normal product variation in a difficult protein application.</span><span class="home-router-link-label">Read Bone Detection <svg class="home-router-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></span>
-            </a>
-            <a class="home-router-proof-card" href="resources/case-studies/product-in-seal/">
-              <span class="home-router-proof-card__media"><img src="assets/img/case-studies/product-in-seal-02.png" alt="X-ray image of a packaged product with material visible at the seal area." width="320" height="619" loading="lazy" decoding="async"></span>
-              <span class="home-router-proof-card__body"><span class="home-router-proof-card__category">PACKAGE INTEGRITY</span><h3>Product-in-seal inspection</h3><span class="home-router-proof-card__text">See how a subtle seal-area condition can become a dedicated, reviewable inspection signal at production speed.</span><span class="home-router-link-label">Read Product-in-Seal <svg class="home-router-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></span>
-            </a>
-            <a class="home-router-proof-card" href="resources/case-studies/dent-detection/">
-              <span class="home-router-proof-card__media"><img src="assets/img/case-studies/dent-detection-06.png" alt="X-ray image of a can end with a suspected dent region outlined in red." width="275" height="244" loading="lazy" decoding="async"></span>
-              <span class="home-router-proof-card__body"><span class="home-router-proof-card__category">PRODUCT QUALITY</span><h3>Advanced dent detection for canned products</h3><span class="home-router-proof-card__text">See how a quality defect can be classified and reviewed as its own signal instead of disappearing inside general reject activity.</span><span class="home-router-link-label">Read Dent Detection <svg class="home-router-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></span>
+          <div class="home-proof-strip__header">
+            <div class="home-proof-strip__copy">
+              <p class="eyebrow">PROOF IN PRODUCTION</p>
+              <h2 id="home-proof-title">Real inspection challenges. Image-backed answers.</h2>
+              <p class="home-proof-strip__lead">Explore how application-specific X-ray image analysis distinguishes difficult product and package conditions in production.</p>
+            </div>
+
+            <a class="button home-proof-strip__all" href="resources/case-studies/">
+              View all case studies
+              <svg class="home-proof-strip__button-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
             </a>
           </div>
-          <div class="home-router-section-actions">
-            <a class="button" href="resources/case-studies/">View All Case Studies <svg class="home-router-button-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+
+          <div class="home-proof-strip__grid">
+            <a class="home-proof-card" href="resources/case-studies/bone-detection/">
+              <span class="home-proof-card__media home-proof-card__media--cover">
+                <img
+                  src="assets/img/case-studies/bone-detection-04.png"
+                  alt="Poultry X-ray with a bone-related review region outlined in red."
+                  width="859"
+                  height="688"
+                  loading="lazy"
+                  decoding="async"
+                >
+                <span class="home-proof-card__number" aria-hidden="true">01</span>
+              </span>
+              <span class="home-proof-card__body">
+                <span class="home-proof-card__category">FOREIGN MATERIAL / PROTEIN</span>
+                <h3>Distinguishing bone from normal poultry variation</h3>
+                <span class="home-proof-card__summary">See how the model separated true bone signals from cartilage, tendon, overlap, and other normal product structure.</span>
+                <span class="home-proof-card__link">
+                  Read bone detection
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M7 7h10v10"></path>
+                    <path d="M7 17 17 7"></path>
+                  </svg>
+                </span>
+              </span>
+            </a>
+
+            <a class="home-proof-card" href="resources/case-studies/product-in-seal/">
+              <span class="home-proof-card__media home-proof-card__media--cover">
+                <img
+                  src="assets/img/case-studies/product-in-seal-placeholder.svg"
+                  alt="Abstract package illustration with the seal region highlighted for inspection."
+                  width="1200"
+                  height="600"
+                  loading="lazy"
+                  decoding="async"
+                >
+                <span class="home-proof-card__number" aria-hidden="true">02</span>
+              </span>
+              <span class="home-proof-card__body">
+                <span class="home-proof-card__category">PACKAGE QUALITY</span>
+                <h3>Finding product in the seal region at line speed</h3>
+                <span class="home-proof-card__summary">See how subtle seal-area events were separated from clean seals and normal package or fill variation.</span>
+                <span class="home-proof-card__link">
+                  Read product-in-seal
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M7 7h10v10"></path>
+                    <path d="M7 17 17 7"></path>
+                  </svg>
+                </span>
+              </span>
+            </a>
+
+            <a class="home-proof-card" href="resources/case-studies/dent-detection/">
+              <span class="home-proof-card__media home-proof-card__media--contain">
+                <img
+                  src="assets/img/case-studies/dent-detection-06.png"
+                  alt="Canned-product X-ray with a dent-related review region outlined in red."
+                  width="275"
+                  height="244"
+                  loading="lazy"
+                  decoding="async"
+                >
+                <span class="home-proof-card__number" aria-hidden="true">03</span>
+              </span>
+              <span class="home-proof-card__body">
+                <span class="home-proof-card__category">PACKAGE QUALITY</span>
+                <h3>Separating dent events from foreign material</h3>
+                <span class="home-proof-card__summary">See how a canned-product dent became its own reviewable quality signal instead of a generic reject.</span>
+                <span class="home-proof-card__link">
+                  Read dent detection
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M7 7h10v10"></path>
+                    <path d="M7 17 17 7"></path>
+                  </svg>
+                </span>
+              </span>
+            </a>
           </div>
         </div>
       </section>

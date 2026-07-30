@@ -23,6 +23,51 @@ Only switch to the troubleshooting section when one of these happens:
 
 Do not improvise a merge strategy. If a fast-forward command fails, stop and troubleshoot.
 
+## Scripted Fast Path
+
+For normal publishes, use the helper script instead of running the manual commands one by one:
+
+```bash
+scripts/publish_github_pages.sh \
+  --message "Describe the website update" \
+  --verify-path "/path-to-changed-page/" \
+  --expected-text "Expected text from the changed live page" \
+  -- path/to/file path/to/another-file
+```
+
+Example:
+
+```bash
+scripts/publish_github_pages.sh \
+  --message "Update homepage case studies router" \
+  --verify-path "/" \
+  --expected-text "Real inspection challenges. Image-backed answers." \
+  -- index.html assets/css/styles.css assets/img/case-studies/product-in-seal-placeholder.svg
+```
+
+The script follows the fast path below and adds guardrails:
+
+- refuses to run from `main`;
+- refuses pre-existing staged changes;
+- refuses uncommitted files outside the explicit publish file list, unless `--allow-extra-changes` is passed;
+- checks that GitHub Pages is configured for `main /`;
+- stages only the explicit files;
+- checks for accidental scratch/generated files in the staged commit;
+- commits, pushes the working branch, fast-forwards `main`, and pushes `main`;
+- finds and watches the matching GitHub Pages run for the published commit;
+- verifies the live page with `curl` and `EXPECTED_TEXT`;
+- switches back to the working branch when complete.
+
+If the script stops, read the error it printed and use the relevant troubleshooting section below. Do not force-push, reset, or invent a merge strategy.
+
+Optional flags:
+
+```bash
+scripts/publish_github_pages.sh --help
+```
+
+Use `--rerun-pages-on-failure` only when the Pages failure looks transient after reviewing the failed run log.
+
 ## Inputs
 
 Set these values before starting.

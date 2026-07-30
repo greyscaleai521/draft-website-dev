@@ -8,24 +8,11 @@
     <meta name="description" content="Give authorized teams secure cloud access to inspection images, alerts, machine context, dashboards, and QA evidence through GreyscaleAI Insights.">
     <link rel="icon" href="../../assets/img/meta/favicon.ico">
     <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/enterprise-access.css">
     <script defer src="../../assets/js/main.js"></script>
+    <script defer src="../../assets/js/enterprise-access.js"></script>
   </head>
   <body>
-    <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <symbol id="icon-key-round" viewBox="0 0 24 24"><path d="M2.6 18.4a5 5 0 1 0 3-8.4 5 5 0 0 0-3 8.4Z"/><path d="m10.5 13.5 8.9-8.9"/><path d="M15 5h5v5"/><path d="M14 9h3"/></symbol>
-      <symbol id="icon-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
-      <symbol id="icon-cloud" viewBox="0 0 24 24"><path d="M17.5 19H7a5 5 0 1 1 1.2-9.9A7 7 0 0 1 21 12.5 3.5 3.5 0 0 1 17.5 19Z"/></symbol>
-      <symbol id="icon-scan-line" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/><path d="M9 9h6"/><path d="M9 15h6"/></symbol>
-      <symbol id="icon-brain-circuit" viewBox="0 0 24 24"><path d="M9 3a3 3 0 0 0-3 3v1a3 3 0 0 0-2 5.2A3.5 3.5 0 0 0 8 18h1"/><path d="M15 3a3 3 0 0 1 3 3v1a3 3 0 0 1 2 5.2A3.5 3.5 0 0 1 16 18h-1"/><path d="M12 3v18"/><path d="M8 9h2"/><path d="M14 9h2"/><path d="M8 14h2"/><path d="M14 14h2"/><circle cx="5" cy="20" r="1"/><circle cx="19" cy="20" r="1"/><path d="M8 18v1.5L6 20"/><path d="M16 18v1.5l2 0.5"/></symbol>
-      <symbol id="icon-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></symbol>
-      <symbol id="icon-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.4 8.8a2 2 0 0 1-1.2 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.4a1.3 1.3 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
-      <symbol id="icon-check" viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></symbol>
-      <symbol id="icon-building-2" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18"/><path d="M6 12H4a2 2 0 0 0-2 2v8"/><path d="M18 9h2a2 2 0 0 1 2 2v11"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></symbol>
-      <symbol id="icon-factory" viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M4 20V9l6 4V9l6 4V4h4v16"/><path d="M8 18h1"/><path d="M13 18h1"/><path d="M18 18h1"/></symbol>
-      <symbol id="icon-refresh-cw" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 0-15-6.7L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 15 6.7l3-2.7"/><path d="M21 21v-5h-5"/></symbol>
-      <symbol id="icon-headset" viewBox="0 0 24 24"><path d="M3 13a9 9 0 0 1 18 0"/><path d="M5 13v4a2 2 0 0 0 2 2h1v-8H7a2 2 0 0 0-2 2Z"/><path d="M16 11v8h1a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Z"/><path d="M12 21h2a3 3 0 0 0 3-3"/></symbol>
-      <symbol id="icon-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
-    </svg>
     <!-- SITE_HEADER_START -->
 <header class="site-header" data-site-header>
   <nav class="nav" aria-label="Primary">
@@ -153,116 +140,297 @@
 </header>
 <!-- SITE_HEADER_END -->
 
-    <main>
-      <section class="page-hero enterprise-access-hero">
-        <div class="section-inner enterprise-access-hero__grid">
-          <div>
-            <p class="eyebrow">GREYSCALEAI INSIGHTS</p>
-            <h1>Secure access for enterprise food production teams.</h1>
-            <p class="lead">GreyscaleAI Insights gives authorized customer users a secure cloud application for inspection images, AI decisions, machine context, alerts, dashboards, and QA evidence across approved lines and plants.</p>
-            <p class="hero-support">Access is controlled through the customer's preferred authorization and access system, so IT teams can review the platform without taking on another local software system to maintain.</p>
-            <div class="section-actions">
-              <a class="button" href="/contact/">Request a Demo</a>
-              <a class="button secondary" href="/insights/">Explore Insights Software</a>
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:none">
+<symbol id="ea-icon-shield-check" viewBox="0 0 24 24"><path d="M12 3c2.3 1.6 5 2.5 8 2.7V12c0 5-3.2 8.1-8 9.6C7.2 20.1 4 17 4 12V5.7C7 5.5 9.7 4.6 12 3Z"/><path d="m8.7 12.2 2.1 2.1 4.6-4.8"/></symbol>
+<symbol id="ea-icon-identity" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><path d="M16 8.5h5M18.5 6v5"/></symbol>
+<symbol id="ea-icon-users" viewBox="0 0 24 24"><path d="M16 20v-1.5a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20"/><circle cx="9" cy="7" r="4"/><path d="M18 11a3.2 3.2 0 0 0 0-6.2M22 20v-1.5a4 4 0 0 0-3-3.7"/></symbol>
+<symbol id="ea-icon-cloud" viewBox="0 0 24 24"><path d="M17.5 19H7a5 5 0 1 1 1.2-9.9A7 7 0 0 1 21 12.5 3.5 3.5 0 0 1 17.5 19Z"/><path d="m9.5 14 1.7 1.7 3.8-4"/></symbol>
+<symbol id="ea-icon-factory" viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M4 20V9l6 4V9l6 4V4h4v16"/><path d="M8 17h1M13 17h1M18 17h1"/></symbol>
+<symbol id="ea-icon-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M15 4h5v5M14 8h3"/></symbol>
+<symbol id="ea-icon-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></symbol>
+<symbol id="ea-icon-layers" viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></symbol>
+<symbol id="ea-icon-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M7 9h3M7 12h7"/></symbol>
+<symbol id="ea-icon-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 0-15-6.7L3 8"/><path d="M3 3v5h5M3 12a9 9 0 0 0 15 6.7l3-2.7"/><path d="M21 21v-5h-5"/></symbol>
+<symbol id="ea-icon-headset" viewBox="0 0 24 24"><path d="M3 13a9 9 0 0 1 18 0"/><path d="M5 13v4a2 2 0 0 0 2 2h1v-8H7a2 2 0 0 0-2 2ZM16 11v8h1a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Z"/><path d="M12 21h2a3 3 0 0 0 3-3"/></symbol>
+<symbol id="ea-icon-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></symbol>
+<symbol id="ea-icon-scan" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10M9 9h6M9 15h6"/></symbol>
+<symbol id="ea-icon-check" viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></symbol>
+<symbol id="ea-icon-building" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18"/><path d="M6 12H4a2 2 0 0 0-2 2v8M18 9h2a2 2 0 0 1 2 2v11M10 6h4M10 10h4M10 14h4M10 18h4"/></symbol>
+</svg>
+
+<main class="enterprise-access-page" id="main-content">
+  <section class="ea-hero" aria-labelledby="ea-hero-title">
+    <div class="ea-section-inner">
+      <div class="ea-hero__grid">
+        <div class="ea-hero__copy ea-reveal">
+          <p class="ea-eyebrow">GreyscaleAI Insights / Enterprise Access</p>
+          <h1 id="ea-hero-title"><span>Enterprise access.</span><em>Without the enterprise headache.</em></h1>
+          <p class="ea-hero__lead">Give approved teams a secure cloud view of inspection images, AI decisions, alerts, dashboards, and machine context across authorized lines and plants.</p>
+          <p class="ea-hero__support">GreyscaleAI works with customer IT and security teams on access, connectivity, data separation, updates, and support—so the experience fits the way your organization already operates.</p>
+          <div class="ea-button-row">
+            <a class="ea-button" href="../../contact/">Request a Demo <span aria-hidden="true">→</span></a>
+            <a class="ea-button ea-button--secondary" href="#ea-how-access-works">See how access works</a>
+          </div>
+        </div>
+
+        <div class="ea-hero-visual ea-reveal" data-ea-hero-visual data-active-layer="identity">
+          <div class="ea-hero-visual__frame">
+            <svg class="ea-hero-visual__art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="ea-hero-svg-title ea-hero-svg-desc">
+<title id="ea-hero-svg-title">Enterprise access shield</title>
+<desc id="ea-hero-svg-desc">A protective shield connects customer identity, approved users, GreyscaleAI Insights, and the image-backed inspection record.</desc>
+<defs>
+  <linearGradient id="ea-hero-shield-outer" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#76e7f5"/><stop offset=".38" stop-color="#31597f"/><stop offset="1" stop-color="#00163f"/></linearGradient>
+  <linearGradient id="ea-hero-shield-inner" x1=".2" y1="0" x2=".8" y2="1"><stop stop-color="#0a356f"/><stop offset=".55" stop-color="#051d45"/><stop offset="1" stop-color="#020d22"/></linearGradient>
+  <linearGradient id="ea-hero-route-gradient" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#59cfe8" stop-opacity=".18"/><stop offset=".5" stop-color="#59cfe8"/><stop offset="1" stop-color="#00a09d" stop-opacity=".22"/></linearGradient>
+  <radialGradient id="ea-hero-halo"><stop stop-color="#59cfe8" stop-opacity=".25"/><stop offset="1" stop-color="#59cfe8" stop-opacity="0"/></radialGradient>
+  <pattern id="ea-hero-grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#59cfe8" stroke-opacity=".07"/></pattern>
+  <filter id="ea-hero-soft-glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="ea-hero-shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#000" flood-opacity=".38"/></filter>
+  <clipPath id="ea-hero-shield-clip"><path d="M600 142C686 201 770 226 858 231v201c0 164-100 270-258 323-158-53-258-159-258-323V231c88-5 172-30 258-89Z"/></clipPath>
+  <style>
+    .ea-hero-svg-route{stroke-dasharray:11 13;animation:eaHeroRouteFlow 10s linear infinite}.ea-hero-svg-node-ring{animation:eaHeroNodePulse 4s ease-in-out infinite}.ea-hero-svg-scan-line{animation:eaHeroScan 5.5s ease-in-out infinite}.ea-hero-svg-float-a{animation:eaHeroFloatA 6s ease-in-out infinite}.ea-hero-svg-float-b{animation:eaHeroFloatB 7s ease-in-out infinite}.ea-hero-svg-spark{animation:eaHeroSpark 3.6s ease-in-out infinite}.ea-hero-svg-spark.ea-hero-svg-s2{animation-delay:-1.2s}.ea-hero-svg-spark.ea-hero-svg-s3{animation-delay:-2.4s}
+    @keyframes eaHeroRouteFlow{to{stroke-dashoffset:-240}}@keyframes eaHeroNodePulse{0%,100%{opacity:.45;transform:scale(.96)}50%{opacity:1;transform:scale(1.04)}}@keyframes eaHeroScan{0%,100%{transform:translateY(-170px);opacity:0}18%,82%{opacity:.55}50%{transform:translateY(190px);opacity:.9}}@keyframes eaHeroFloatA{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}@keyframes eaHeroFloatB{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}@keyframes eaHeroSpark{0%,100%{opacity:.15}50%{opacity:1}}
+    @media (prefers-reduced-motion:reduce){.ea-hero-svg-route,.ea-hero-svg-node-ring,.ea-hero-svg-scan-line,.ea-hero-svg-float-a,.ea-hero-svg-float-b,.ea-hero-svg-spark{animation:none}}
+  </style>
+</defs>
+<ellipse cx="600" cy="455" rx="470" ry="385" fill="url(#ea-hero-halo)"/>
+<rect x="84" y="70" width="1032" height="760" rx="54" fill="url(#ea-hero-grid)" opacity=".8"/>
+<path id="ea-hero-route-identity" class="ea-hero-svg-route" d="M190 246C316 196 395 224 472 304" fill="none" stroke="url(#ea-hero-route-gradient)" stroke-width="3"/>
+<path id="ea-hero-route-roles" class="ea-hero-svg-route" d="M1010 238C888 191 805 224 733 306" fill="none" stroke="url(#ea-hero-route-gradient)" stroke-width="3"/>
+<path id="ea-hero-route-record" class="ea-hero-svg-route" d="M192 660C315 712 410 688 482 610" fill="none" stroke="url(#ea-hero-route-gradient)" stroke-width="3"/>
+<path id="ea-hero-route-insights" class="ea-hero-svg-route" d="M1011 656C891 710 794 688 720 610" fill="none" stroke="url(#ea-hero-route-gradient)" stroke-width="3"/>
+<g data-hero-art-layer="identity" class="ea-hero-svg-float-a">
+  <rect x="118" y="167" width="172" height="150" rx="28" fill="#061f4b" fill-opacity=".82" stroke="#59cfe8" stroke-opacity=".34"/>
+  <circle class="ea-hero-svg-node-ring" cx="204" cy="242" r="42" fill="#59cfe8" fill-opacity=".08" stroke="#59cfe8" stroke-opacity=".45"/>
+  <circle cx="196" cy="233" r="12" fill="none" stroke="#dff7fb" stroke-width="4"/><path d="M169 270c5-20 49-20 54 0" fill="none" stroke="#dff7fb" stroke-width="4" stroke-linecap="round"/><path d="M238 226h22M249 215v22" stroke="#59cfe8" stroke-width="4" stroke-linecap="round"/>
+</g>
+<g data-hero-art-layer="roles" class="ea-hero-svg-float-b">
+  <rect x="910" y="161" width="172" height="150" rx="28" fill="#061f4b" fill-opacity=".82" stroke="#59cfe8" stroke-opacity=".34"/>
+  <circle class="ea-hero-svg-node-ring" cx="996" cy="236" r="42" fill="#59cfe8" fill-opacity=".08" stroke="#59cfe8" stroke-opacity=".45"/>
+  <circle cx="987" cy="226" r="12" fill="none" stroke="#dff7fb" stroke-width="4"/><path d="M960 266c5-20 49-20 54 0" fill="none" stroke="#dff7fb" stroke-width="4" stroke-linecap="round"/><path d="M1024 222c16 2 20 18 6 27M1039 265c-2-9-7-14-15-17" fill="none" stroke="#59cfe8" stroke-width="4" stroke-linecap="round"/>
+</g>
+<g data-hero-art-layer="record" class="ea-hero-svg-float-b">
+  <rect x="116" y="586" width="178" height="150" rx="28" fill="#061f4b" fill-opacity=".82" stroke="#59cfe8" stroke-opacity=".34"/>
+  <circle class="ea-hero-svg-node-ring" cx="205" cy="661" r="42" fill="#59cfe8" fill-opacity=".08" stroke="#59cfe8" stroke-opacity=".45"/>
+  <rect x="176" y="635" width="58" height="46" rx="8" fill="none" stroke="#dff7fb" stroke-width="4"/><path d="M184 671l14-14 10 9 10-14 9 19" fill="none" stroke="#59cfe8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="190" cy="648" r="4" fill="#f4b942"/>
+</g>
+<g data-hero-art-layer="insights" class="ea-hero-svg-float-a">
+  <rect x="908" y="581" width="178" height="150" rx="28" fill="#061f4b" fill-opacity=".82" stroke="#59cfe8" stroke-opacity=".34"/>
+  <circle class="ea-hero-svg-node-ring" cx="997" cy="656" r="42" fill="#59cfe8" fill-opacity=".08" stroke="#59cfe8" stroke-opacity=".45"/>
+  <rect x="965" y="626" width="64" height="48" rx="7" fill="none" stroke="#dff7fb" stroke-width="4"/><path d="M977 650h11v14h-11zM993 641h11v23h-11zM1009 633h9v31h-9z" fill="#59cfe8" stroke="none"/><path d="M983 684h28" stroke="#dff7fb" stroke-width="4" stroke-linecap="round"/>
+</g>
+<g filter="url(#ea-hero-shadow)">
+  <path d="M600 126C694 193 786 219 882 225v215c0 178-109 294-282 351-173-57-282-173-282-351V225c96-6 188-32 282-99Z" fill="#020a18" stroke="url(#ea-hero-shield-outer)" stroke-width="10"/>
+  <path d="M600 154C682 210 762 234 846 239v194c0 149-91 246-246 298-155-52-246-149-246-298V239c84-5 164-29 246-85Z" fill="url(#ea-hero-shield-inner)" stroke="#d9f8fc" stroke-opacity=".28" stroke-width="2"/>
+</g>
+<g clip-path="url(#ea-hero-shield-clip)">
+  <rect x="340" y="160" width="520" height="600" fill="url(#ea-hero-grid)" opacity=".34"/>
+  <rect class="ea-hero-svg-scan-line" x="354" y="410" width="492" height="84" fill="url(#ea-hero-halo)" opacity=".8"/>
+  <path d="M430 337h340M414 418h372M430 499h340" stroke="#59cfe8" stroke-opacity=".16" stroke-width="2"/>
+  <g opacity=".82">
+    <rect x="445" y="312" width="310" height="46" rx="16" fill="#ffffff" fill-opacity=".05" stroke="#59cfe8" stroke-opacity=".24"/>
+    <circle cx="477" cy="335" r="9" fill="#59cfe8"/><path d="M505 327h170M505 343h112" stroke="#dff7fb" stroke-opacity=".46" stroke-width="8" stroke-linecap="round"/>
+    <rect x="445" y="393" width="310" height="46" rx="16" fill="#ffffff" fill-opacity=".05" stroke="#59cfe8" stroke-opacity=".24"/>
+    <circle cx="477" cy="416" r="9" fill="#00a09d"/><path d="M505 408h142M505 424h186" stroke="#dff7fb" stroke-opacity=".46" stroke-width="8" stroke-linecap="round"/>
+    <rect x="445" y="474" width="310" height="46" rx="16" fill="#ffffff" fill-opacity=".05" stroke="#59cfe8" stroke-opacity=".24"/>
+    <circle cx="477" cy="497" r="9" fill="#f4b942"/><path d="M505 489h191M505 505h136" stroke="#dff7fb" stroke-opacity=".46" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</g>
+<g filter="url(#ea-hero-soft-glow)">
+  <path d="M600 253c45 0 82 37 82 82v38h14c19 0 34 15 34 34v132c0 19-15 34-34 34H504c-19 0-34-15-34-34V407c0-19 15-34 34-34h14v-38c0-45 37-82 82-82Z" fill="#061a3d" fill-opacity=".82" stroke="#76e7f5" stroke-width="4"/>
+  <path d="M552 373v-38c0-27 21-48 48-48s48 21 48 48v38" fill="none" stroke="#dff7fb" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="600" cy="455" r="24" fill="#59cfe8"/><path d="M600 475v41" stroke="#59cfe8" stroke-width="16" stroke-linecap="round"/>
+  <path d="m546 548 34 34 75-78" fill="none" stroke="#f4b942" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<circle class="ea-hero-svg-spark" cx="443" cy="281" r="6" fill="#59cfe8"/><circle class="ea-hero-svg-spark ea-hero-svg-s2" cx="765" cy="283" r="6" fill="#59cfe8"/><circle class="ea-hero-svg-spark ea-hero-svg-s3" cx="438" cy="627" r="6" fill="#00a09d"/><circle class="ea-hero-svg-spark ea-hero-svg-s2" cx="770" cy="626" r="6" fill="#00a09d"/>
+</svg>
+            <div class="ea-hero-detail" aria-live="polite">
+              <span class="ea-icon-wrap"><svg class="ea-icon" data-ea-hero-icon><use href="#ea-icon-identity"></use></svg></span>
+              <div>
+                <h2 data-ea-hero-title>Your access workflow</h2>
+                <p data-ea-hero-copy>Use the customer-approved sign-in and authorization process. SSO can be supported where appropriate.</p>
+              </div>
             </div>
           </div>
-          <figure class="enterprise-access-hero-graphic">
-            <img src="../../assets/img/insights/enterprise_access_graphic.svg" alt="Enterprise access flow for GreyscaleAI Insights">
-          </figure>
-        </div>
-      </section>
-
-      <section class="section compact enterprise-dark-cards" id="enterprise-access-model">
-        <div class="section-inner">
-          <p class="eyebrow">ACCESS MODEL</p>
-          <h2>Customer-controlled access to the inspection record.</h2>
-          <p class="lead">Enterprise teams need access without losing control. GreyscaleAI Insights is built so the customer controls who can reach the application, while GreyscaleAI provides the secure cloud software layer for inspection review, dashboards, alerts, and machine context.</p>
-          <div class="card-grid three icon-card-grid">
-            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-key-round"></use></svg></span><h3>Customer authorization</h3><p>Use the customer's preferred authorization and access system, including SSO or other approved identity workflows.</p></article>
-            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-users"></use></svg></span><h3>Authorized users and roles</h3><p>Roles and permissions control which users can view approved facilities, lines, dashboards, inspection records, alerts, and machine context.</p></article>
-            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-cloud"></use></svg></span><h3>Cloud application access</h3><p>Users review inspection data through GreyscaleAI Insights without installing or maintaining a separate local software stack.</p></article>
+          <div class="ea-hero-controls" role="group" aria-label="Explore the enterprise access model">
+            <button class="ea-hero-control" type="button" data-ea-hero-control="identity" data-title="Your access workflow" data-copy="Use the customer-approved sign-in and authorization process. SSO can be supported where appropriate." data-icon="identity" aria-pressed="true"><svg class="ea-icon"><use href="#ea-icon-identity"></use></svg><span>Access workflow</span></button>
+            <button class="ea-hero-control" type="button" data-ea-hero-control="roles" data-title="Approved people and roles" data-copy="Limit access by approved user, role, facility, line, and workflow." data-icon="users" aria-pressed="false"><svg class="ea-icon"><use href="#ea-icon-users"></use></svg><span>People &amp; roles</span></button>
+            <button class="ea-hero-control" type="button" data-ea-hero-control="insights" data-title="One managed application" data-copy="Users open GreyscaleAI Insights without adding another local application stack for IT to own." data-icon="monitor" aria-pressed="false"><svg class="ea-icon"><use href="#ea-icon-monitor"></use></svg><span>Managed Insights</span></button>
+            <button class="ea-hero-control" type="button" data-ea-hero-control="record" data-title="The inspection record" data-copy="Review image-backed evidence, AI decisions, events, alerts, dashboards, and machine context." data-icon="scan" aria-pressed="false"><svg class="ea-icon"><use href="#ea-icon-scan"></use></svg><span>Inspection record</span></button>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section class="section tint" id="machine-to-cloud">
-        <div class="section-inner">
-          <p class="eyebrow">SECURE OPERATING PATH</p>
-          <h2>The machine runs on the line. Insights gives approved users the cloud view.</h2>
-          <p class="lead">GreyscaleAI inspection systems are designed to operate securely in production environments while connected Insights data gives approved users visibility into what the machine saw, what the AI decided, and what changed over time.</p>
-          <div class="enterprise-process">
-            <article><span class="card-icon"><svg><use href="#icon-scan-line"></use></svg></span><h3>Inspect</h3><p>The inspection system captures image-backed evidence at production speed.</p></article>
-            <article><span class="card-icon"><svg><use href="#icon-brain-circuit"></use></svg></span><h3>Analyze</h3><p>AI decisions and event context are created from the inspection record.</p></article>
-            <article><span class="card-icon"><svg><use href="#icon-database"></use></svg></span><h3>Separate</h3><p>Customer data is separated by customer in the GreyscaleAI cloud environment.</p></article>
-            <article><span class="card-icon"><svg><use href="#icon-shield-check"></use></svg></span><h3>Authorize</h3><p>Approved users access the software through customer-controlled authorization.</p></article>
-          </div>
-          <aside class="enterprise-callout">
-            <span class="card-icon"><svg><use href="#icon-cloud"></use></svg></span>
-            <div>
-              <h3>Built to reduce IT burden</h3>
-              <p>GreyscaleAI manages the Insights application layer, including software updates, backups, and support responsibilities, so customer teams are not left maintaining another local application.</p>
+      <div class="ea-proof-band ea-reveal" aria-label="Enterprise evidence">
+        <div class="ea-proof-band__statement">
+          <span class="ea-proof-band__kicker">Proven in demanding environments</span>
+          <strong>Deployed with Fortune 500 food producers.</strong>
+          <span class="ea-proof-band__note">Customer names and deployment details are confidential.</span>
+        </div>
+        <div class="ea-proof-band__item">
+          <strong>Customer-controlled access</strong>
+          <p>Your organization defines approved users and access requirements.</p>
+        </div>
+        <div class="ea-proof-band__item">
+          <strong>Managed application &amp; support</strong>
+          <p>GreyscaleAI maintains the cloud application, updates, backups, and support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="ea-page-nav" aria-label="Enterprise access page sections" data-ea-page-nav>
+    <div class="ea-page-nav__inner">
+      <a href="#ea-enterprise-proof">Enterprise proof</a>
+      <a href="#ea-by-team">By team</a>
+      <a href="#ea-how-access-works">How access works</a>
+      <a href="#ea-security-practices">Security practices</a>
+      <a href="#ea-it-questions">IT questions</a>
+    </div>
+  </nav>
+
+  <section class="ea-section ea-section--mist" id="ea-enterprise-proof" aria-labelledby="ea-proof-heading">
+    <div class="ea-section-inner ea-proof-intro">
+      <div class="ea-reveal">
+        <p class="ea-eyebrow">Enterprise proof</p>
+        <h2 class="ea-heading" id="ea-proof-heading">Already operating where enterprise review is required.</h2>
+        <p class="ea-lead">GreyscaleAI is deployed with Fortune 500 food producers. In those environments, IT, security, operations, QA, and engineering teams all need workable answers before software becomes part of production.</p>
+        <div class="ea-confidential-note"><span aria-hidden="true">◆</span><div><strong>The evidence is the environment.</strong> Customer names and deployment specifics are confidential. GreyscaleAI operates in large, demanding food production organizations where access, connectivity, data handling, support, and production continuity are reviewed by the teams responsible for them.</div></div>
+      </div>
+      <div class="ea-proof-gates ea-reveal" aria-label="Enterprise deployment review areas">
+        <article class="ea-proof-gate"><span class="ea-icon-wrap"><svg class="ea-icon"><use href="#ea-icon-key"></use></svg></span><h3>Access review</h3><p>Align on who can sign in, what they can see, and how access fits the customer’s approved workflow.</p></article>
+        <article class="ea-proof-gate"><span class="ea-icon-wrap"><svg class="ea-icon"><use href="#ea-icon-layers"></use></svg></span><h3>Connectivity review</h3><p>Walk through how the production system connects to the GreyscaleAI cloud environment.</p></article>
+        <article class="ea-proof-gate"><span class="ea-icon-wrap"><svg class="ea-icon"><use href="#ea-icon-factory"></use></svg></span><h3>Operating fit</h3><p>Keep line inspection, cloud visibility, and production requirements aligned.</p></article>
+        <article class="ea-proof-gate"><span class="ea-icon-wrap"><svg class="ea-icon"><use href="#ea-icon-headset"></use></svg></span><h3>Support model</h3><p>Clarify ownership for updates, backups, implementation coordination, and application support.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ea-section ea-section--soft" id="ea-by-team" aria-labelledby="ea-team-heading">
+    <div class="ea-section-inner ea-reveal">
+      <p class="ea-eyebrow">One platform, different priorities</p>
+      <h2 class="ea-heading" id="ea-team-heading">Show each team the answer it needs.</h2>
+      <p class="ea-lead">Select a team to see how enterprise access changes the experience.</p>
+
+      <div class="ea-role-layout" data-ea-tabs>
+        <div class="ea-tabs" role="tablist" aria-label="Team perspectives">
+          <button class="ea-tab" type="button" role="tab" id="ea-tab-it" aria-controls="ea-panel-it" aria-selected="true" data-ea-tab="it"><span class="ea-icon-wrap"><svg class="ea-icon"><use href="#ea-icon-shield-check"></use></svg></span><span>IT &amp; Security</span></button>
+          <button class="ea-tab" type="button" role="tab" id="ea-tab-qa" aria-controls="ea-panel-qa" aria-selected="false" tabindex="-1" data-ea-tab="qa"><span class="ea-icon-wrap"><svg class="ea-icon"><use href="#ea-icon-scan"></use></svg></span><span>QA &amp; Food Safety</span></button>
+          <button class="ea-tab" type="button" role="tab" id="ea-tab-ops" aria-controls="ea-panel-ops" aria-selected="false" tabindex="-1" data-ea-tab="ops"><span class="ea-icon-wrap"><svg class="ea-icon"><use href="#ea-icon-factory"></use></svg></span><span>Operations &amp; Engineering</span></button>
+        </div>
+
+        <div>
+          <article class="ea-role-panel" role="tabpanel" id="ea-panel-it" aria-labelledby="ea-tab-it" data-ea-panel="it">
+            <div class="ea-role-panel__grid">
+              <div class="ea-role-panel__copy"><h3>A reviewable architecture without another local application to own.</h3><p>Keep control of the access model while GreyscaleAI manages the Insights application layer.</p><ul class="ea-check-list"><li>Customer-approved identity and authorization workflow</li><li>Roles and permissions for approved users</li><li>Machine-to-cloud implementation review</li><li>GreyscaleAI-managed updates, backups, and support</li></ul></div>
+              <div class="ea-role-visual" aria-hidden="true"><div class="ea-mini-ui"><div class="ea-mini-ui__bar"><i></i><i></i><i></i></div><div class="ea-mini-ui__body"><div class="ea-mini-ui__nav"><span></span><span></span><span></span><span></span></div><div class="ea-mini-ui__content"><span class="ea-mini-ui__line"></span><span class="ea-mini-ui__line ea-mini-ui__line--short"></span><div class="ea-mini-ui__tiles"><span class="ea-mini-ui__tile"></span><span class="ea-mini-ui__tile"></span></div><span class="ea-mini-ui__chart"></span></div></div></div></div>
             </div>
-          </aside>
-        </div>
-      </section>
+          </article>
 
-      <section class="section" id="it-review-points">
-        <div class="section-inner">
-          <p class="eyebrow">ENTERPRISE REVIEW</p>
-          <h2>The conversations IT teams expect to have.</h2>
-          <p class="lead">Enterprise deployments involve security and access review. GreyscaleAI is prepared to discuss how the platform connects from machine to cloud, how users are authorized, how data is separated, and how updates and support are handled.</p>
-          <div class="enterprise-it-checklist">
-            <div><span class="check-icon"><svg><use href="#icon-check"></use></svg></span>Customer-controlled authorization and user access</div>
-            <div><span class="check-icon"><svg><use href="#icon-check"></use></svg></span>Roles and permissions for approved users</div>
-            <div><span class="check-icon"><svg><use href="#icon-check"></use></svg></span>Customer-separated data in the cloud environment</div>
-            <div><span class="check-icon"><svg><use href="#icon-check"></use></svg></span>Secure machine-to-cloud platform review</div>
-            <div><span class="check-icon"><svg><use href="#icon-check"></use></svg></span>Cloud-hosted application designed for high availability</div>
-            <div><span class="check-icon"><svg><use href="#icon-check"></use></svg></span>GreyscaleAI-managed updates, backups, and support</div>
-            <div><span class="check-icon"><svg><use href="#icon-check"></use></svg></span>Support workflows aligned with customer access requirements</div>
-            <div><span class="check-icon"><svg><use href="#icon-check"></use></svg></span>Implementation review with enterprise IT and security teams</div>
-          </div>
-        </div>
-      </section>
+          <article class="ea-role-panel" role="tabpanel" id="ea-panel-qa" aria-labelledby="ea-tab-qa" data-ea-panel="qa" hidden>
+            <div class="ea-role-panel__grid">
+              <div class="ea-role-panel__copy"><h3>Inspection evidence is easier to reach when a question cannot wait.</h3><p>Give approved QA and food safety users a common record for faster review and follow-up.</p><ul class="ea-check-list"><li>Review inspection images and AI decisions</li><li>Filter events by approved line, plant, product, or time window</li><li>See alerts, dashboards, and machine context together</li><li>Share a consistent record across authorized teams</li></ul></div>
+              <div class="ea-role-visual" aria-hidden="true"><div class="ea-mini-ui"><div class="ea-mini-ui__bar"><i></i><i></i><i></i></div><div class="ea-mini-ui__body"><div class="ea-mini-ui__nav"><span></span><span></span><span></span><span></span></div><div class="ea-mini-ui__content"><span class="ea-mini-ui__line ea-mini-ui__line--short"></span><div class="ea-mini-ui__tiles"><span class="ea-mini-ui__tile"></span><span class="ea-mini-ui__tile"></span></div><span class="ea-mini-ui__line"></span><span class="ea-mini-ui__chart"></span></div></div></div></div>
+            </div>
+          </article>
 
-      <section class="section dark enterprise-confidence-band" id="enterprise-implementation-confidence">
-        <div class="section-inner">
-          <p class="eyebrow">IMPLEMENTATION CONFIDENCE</p>
-          <h2>Ready for enterprise food production environments.</h2>
-          <p class="lead">GreyscaleAI routinely works with customer IT, security, operations, QA, and engineering teams to review how Insights fits into enterprise requirements.</p>
-          <p>The platform has been implemented with Fortune 500 food producers, where access, security review, machine connectivity, cloud visibility, and production-line operation all matter.</p>
-          <div class="card-grid four icon-card-grid">
-            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-building-2"></use></svg></span><h3>Enterprise review</h3><p>Support security and access conversations before deployment.</p></article>
-            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-factory"></use></svg></span><h3>Production-line fit</h3><p>Keep the inspection system running securely in the production environment.</p></article>
-            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-refresh-cw"></use></svg></span><h3>Managed updates</h3><p>Keep the application layer current without adding local maintenance work.</p></article>
-            <article class="capability icon-card"><span class="card-icon"><svg><use href="#icon-headset"></use></svg></span><h3>Support alignment</h3><p>Connect support conversations to the approved platform and access model.</p></article>
-          </div>
+          <article class="ea-role-panel" role="tabpanel" id="ea-panel-ops" aria-labelledby="ea-tab-ops" data-ea-panel="ops" hidden>
+            <div class="ea-role-panel__grid">
+              <div class="ea-role-panel__copy"><h3>See machine context without living at the machine.</h3><p>Approved users get cloud visibility into recent activity, health signals, alerts, and inspection context.</p><ul class="ea-check-list"><li>Review approved line and machine context remotely</li><li>Connect alerts to the inspection record</li><li>Compare patterns across authorized lines and plants</li><li>Use one managed software layer instead of separate local tools</li></ul></div>
+              <div class="ea-role-visual" aria-hidden="true"><div class="ea-mini-ui"><div class="ea-mini-ui__bar"><i></i><i></i><i></i></div><div class="ea-mini-ui__body"><div class="ea-mini-ui__nav"><span></span><span></span><span></span><span></span></div><div class="ea-mini-ui__content"><div class="ea-mini-ui__tiles"><span class="ea-mini-ui__tile"></span><span class="ea-mini-ui__tile"></span></div><span class="ea-mini-ui__chart"></span><span class="ea-mini-ui__line"></span><span class="ea-mini-ui__line ea-mini-ui__line--short"></span></div></div></div></div>
+            </div>
+          </article>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <section class="section tint" id="related-insights-software">
-        <div class="section-inner">
-          <p class="eyebrow">RELATED INSIGHTS SOFTWARE</p>
-          <h2>Enterprise access connects to the rest of Insights.</h2>
-          <div class="card-grid three icon-card-grid">
-            <a class="resource-card" href="/insights/"><div><span class="card-icon"><svg><use href="#icon-cloud"></use></svg></span><h3>Insights Software Overview</h3><p>See how inspection images, AI decisions, events, alerts, dashboards, trends, and machine context come together in GreyscaleAI Insights.</p></div><span class="button">Explore Insights</span></a>
-            <a class="resource-card" href="/insights/machine-visibility-alerts/"><div><span class="card-icon"><svg><use href="#icon-monitor"></use></svg></span><h3>Machine Visibility &amp; Alerts</h3><p>See machine status, remote screen context, health signals, recent activity, and alerts inside the same software environment.</p></div><span class="button">Explore Machine Visibility</span></a>
-            <a class="resource-card" href="/platform/managed-service-support/"><div><span class="card-icon"><svg><use href="#icon-headset"></use></svg></span><h3>Managed Service &amp; Support</h3><p>Review how monitoring, technical support, software updates, analytics, and application support fit into the GreyscaleAI service model.</p></div><span class="button">See the support model</span></a>
-          </div>
-        </div>
-      </section>
+  <section class="ea-section ea-section--dark" id="ea-how-access-works" aria-labelledby="ea-flow-heading">
+    <div class="ea-section-inner ea-reveal">
+      <p class="ea-eyebrow">How access works</p>
+      <h2 class="ea-heading" id="ea-flow-heading">One controlled path. Four clear handoffs.</h2>
+      <p class="ea-lead">Select each step to see what the customer controls and what GreyscaleAI manages.</p>
 
-      <section class="section dark" id="enterprise-final-cta">
-        <div class="section-inner">
-          <p class="eyebrow">NEXT STEP</p>
-          <h2>Bring IT into the inspection conversation early.</h2>
-          <p class="lead">Talk with GreyscaleAI about your production environment, access requirements, security review process, software users, and support expectations.</p>
-          <div class="section-actions">
-            <a class="button" href="/contact/">Request a Demo</a>
-            <a class="button secondary" href="/insights/">Explore Insights Software</a>
-          </div>
+      <div class="ea-flow-wrap" data-ea-stepper>
+        <div class="ea-steps" role="tablist" aria-label="Enterprise access steps">
+          <button class="ea-step" type="button" role="tab" id="ea-step-approve" aria-controls="ea-flow-approve" aria-selected="true" data-ea-step="approve"><span class="ea-step__number">01</span><span><strong>Approve</strong><small>Customer access model</small></span></button>
+          <button class="ea-step" type="button" role="tab" id="ea-step-connect" aria-controls="ea-flow-connect" aria-selected="false" tabindex="-1" data-ea-step="connect"><span class="ea-step__number">02</span><span><strong>Connect</strong><small>Joint implementation review</small></span></button>
+          <button class="ea-step" type="button" role="tab" id="ea-step-separate" aria-controls="ea-flow-separate" aria-selected="false" tabindex="-1" data-ea-step="separate"><span class="ea-step__number">03</span><span><strong>Separate</strong><small>GreyscaleAI cloud</small></span></button>
+          <button class="ea-step" type="button" role="tab" id="ea-step-use" aria-controls="ea-flow-use" aria-selected="false" tabindex="-1" data-ea-step="use"><span class="ea-step__number">04</span><span><strong>Use</strong><small>Approved users</small></span></button>
         </div>
-      </section>
-    </main>
+
+        <div>
+          <article class="ea-flow-panel" role="tabpanel" id="ea-flow-approve" aria-labelledby="ea-step-approve" data-ea-flow-panel="approve"><div class="ea-flow-panel__copy"><span class="ea-flow-panel__owner">Customer controlled</span><h3>Define the access model.</h3><p>Your team sets identity and access requirements, approved user groups, facilities, lines, and internal governance.</p></div><div class="ea-flow-panel__visual" aria-hidden="true"><div class="ea-flow-orbit"><div class="ea-flow-orbit__core"><svg class="ea-icon"><use href="#ea-icon-identity"></use></svg></div></div></div></article>
+          <article class="ea-flow-panel" role="tabpanel" id="ea-flow-connect" aria-labelledby="ea-step-connect" data-ea-flow-panel="connect" hidden><div class="ea-flow-panel__copy"><span class="ea-flow-panel__owner">Joint review</span><h3>Review the operating path.</h3><p>GreyscaleAI works with IT and security teams to review machine-to-cloud connectivity and the implementation approach.</p></div><div class="ea-flow-panel__visual" aria-hidden="true"><div class="ea-flow-orbit"><div class="ea-flow-orbit__core"><svg class="ea-icon"><use href="#ea-icon-layers"></use></svg></div></div></div></article>
+          <article class="ea-flow-panel" role="tabpanel" id="ea-flow-separate" aria-labelledby="ea-step-separate" data-ea-flow-panel="separate" hidden><div class="ea-flow-panel__copy"><span class="ea-flow-panel__owner">GreyscaleAI cloud</span><h3>Keep customer data separated.</h3><p>Inspection data is separated by customer within the GreyscaleAI cloud environment.</p></div><div class="ea-flow-panel__visual" aria-hidden="true"><div class="ea-flow-orbit"><div class="ea-flow-orbit__core"><svg class="ea-icon"><use href="#ea-icon-database"></use></svg></div></div></div></article>
+          <article class="ea-flow-panel" role="tabpanel" id="ea-flow-use" aria-labelledby="ea-step-use" data-ea-flow-panel="use" hidden><div class="ea-flow-panel__copy"><span class="ea-flow-panel__owner">Approved users</span><h3>Open the inspection record.</h3><p>Authorized users access Insights while GreyscaleAI manages application updates, backups, and support.</p></div><div class="ea-flow-panel__visual" aria-hidden="true"><div class="ea-flow-orbit"><div class="ea-flow-orbit__core"><svg class="ea-icon"><use href="#ea-icon-monitor"></use></svg></div></div></div></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ea-section ea-section--mist" id="ea-security-practices" aria-labelledby="ea-security-heading">
+    <div class="ea-section-inner ea-reveal">
+      <p class="ea-eyebrow">Security practices</p>
+      <h2 class="ea-heading" id="ea-security-heading">Formal controls. Reviewable operating practices.</h2>
+      <p class="ea-lead">GreyscaleAI’s security program is built around documented controls, repeatable operating practices, and clear ownership. We can walk your team through the areas enterprise diligence typically covers—without turning this page into a wall of security jargon.</p>
+      <div class="ea-practice-grid">
+        <article class="ea-practice-card"><span class="ea-icon-wrap"><svg class="ea-icon"><use href="#ea-icon-key"></use></svg></span><h3>Access &amp; permissions</h3><p>Customer-approved authorization, defined users and roles, and access limited to approved facilities, lines, and workflows.</p></article>
+        <article class="ea-practice-card"><span class="ea-icon-wrap"><svg class="ea-icon"><use href="#ea-icon-database"></use></svg></span><h3>Data separation</h3><p>Customer data is separated by customer in the GreyscaleAI cloud environment.</p></article>
+        <article class="ea-practice-card"><span class="ea-icon-wrap"><svg class="ea-icon"><use href="#ea-icon-shield-check"></use></svg></span><h3>Secure operating path</h3><p>Implementation review covers the machine-to-cloud connection, approved access, and production operating requirements.</p></article>
+        <article class="ea-practice-card"><span class="ea-icon-wrap"><svg class="ea-icon"><use href="#ea-icon-refresh"></use></svg></span><h3>Application lifecycle</h3><p>GreyscaleAI manages the Insights application layer, including updates, backups, and support responsibilities.</p></article>
+      </div>
+      <aside class="ea-security-note"><span class="ea-icon-wrap"><svg class="ea-icon"><use href="#ea-icon-building"></use></svg></span><div><h3>Built for customer diligence</h3><p>Security documentation and operating responsibilities can be discussed during a qualified enterprise review.</p></div></aside>
+    </div>
+  </section>
+
+  <section class="ea-section ea-section--dark" id="ea-it-questions" aria-labelledby="ea-review-heading">
+    <div class="ea-section-inner ea-review">
+      <div class="ea-review__sticky ea-reveal"><p class="ea-eyebrow">Bring the hard questions</p><h2 class="ea-heading" id="ea-review-heading">The questions enterprise teams ask first.</h2><p class="ea-lead">Open a question to see the direct answer. Technical detail stays available without dominating the page.</p></div>
+      <div class="ea-reveal">
+        <details open><summary>Who controls access?</summary><p>The customer defines access requirements and approved users. Roles and permissions control which authorized users can reach approved facilities, lines, dashboards, inspection records, alerts, and machine context.</p></details>
+        <details><summary>Does this require another local application?</summary><p>No. Insights is a GreyscaleAI-managed cloud application. Customer teams use approved access rather than maintaining a separate local software stack.</p></details>
+        <details><summary>How does it fit our identity workflow?</summary><p>GreyscaleAI can work with customer-approved authorization workflows, including SSO where appropriate. The exact approach is reviewed with the customer’s IT and security teams.</p></details>
+        <details><summary>How is customer data handled?</summary><p>Customer data is separated by customer in the GreyscaleAI cloud environment. Implementation review covers connectivity, access, and data responsibilities.</p></details>
+        <details><summary>Who handles updates and support?</summary><p>GreyscaleAI manages the Insights application layer, including software updates, backups, and support responsibilities.</p></details>
+        <details><summary>Can this work in a demanding production environment?</summary><p>GreyscaleAI is deployed with Fortune 500 food producers, where access, security review, machine connectivity, cloud visibility, production-line operation, and support all matter.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="ea-section ea-section--soft" id="ea-responsibilities" aria-labelledby="ea-responsibility-heading">
+    <div class="ea-section-inner ea-reveal">
+      <p class="ea-eyebrow">Headache-free by design</p>
+      <h2 class="ea-heading" id="ea-responsibility-heading">Your team stays in control. GreyscaleAI carries the application burden.</h2>
+      <p class="ea-lead">The division of responsibility is intentionally simple.</p>
+      <div class="ea-responsibility">
+        <article class="ea-responsibility-card"><div class="ea-responsibility-card__head"><span class="ea-icon-wrap"><svg class="ea-icon"><use href="#ea-icon-users"></use></svg></span><h3>Your team controls</h3></div><ul><li>Identity and access requirements</li><li>Approved users, roles, facilities, and lines</li><li>Internal governance and review</li><li>Production and network requirements</li></ul></article>
+        <article class="ea-responsibility-card ea-responsibility-card--greyscale"><div class="ea-responsibility-card__head"><span class="ea-icon-wrap"><svg class="ea-icon"><use href="#ea-icon-cloud"></use></svg></span><h3>GreyscaleAI manages</h3></div><ul><li>The Insights cloud application</li><li>Software updates and backups</li><li>Implementation coordination</li><li>Application support responsibilities</li></ul></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ea-section" id="ea-related" aria-labelledby="ea-related-heading">
+    <div class="ea-section-inner ea-reveal">
+      <p class="ea-eyebrow">Related Insights software</p>
+      <h2 class="ea-heading" id="ea-related-heading">Enterprise access connects to the rest of Insights.</h2>
+      <div class="ea-related-grid">
+        <a class="ea-related-card" href="../"><div><span class="ea-icon-wrap"><svg class="ea-icon"><use href="#ea-icon-cloud"></use></svg></span><h3>Insights Software Overview</h3><p>See how inspection images, AI decisions, events, alerts, dashboards, trends, and machine context come together.</p></div><span class="ea-related-card__link">Explore Insights <span aria-hidden="true">→</span></span></a>
+        <a class="ea-related-card" href="../machine-visibility-alerts/"><div><span class="ea-icon-wrap"><svg class="ea-icon"><use href="#ea-icon-monitor"></use></svg></span><h3>Machine Visibility &amp; Alerts</h3><p>Review machine status, remote screen context, health signals, recent activity, and alerts.</p></div><span class="ea-related-card__link">Explore machine visibility <span aria-hidden="true">→</span></span></a>
+        <a class="ea-related-card" href="../../platform/managed-service-support/"><div><span class="ea-icon-wrap"><svg class="ea-icon"><use href="#ea-icon-headset"></use></svg></span><h3>Managed Service &amp; Support</h3><p>See how monitoring, technical support, updates, analytics, and application support fit together.</p></div><span class="ea-related-card__link">See the support model <span aria-hidden="true">→</span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="ea-section ea-section--dark ea-final-cta" id="ea-final-cta" aria-labelledby="ea-final-heading">
+    <div class="ea-section-inner ea-reveal">
+      <p class="ea-eyebrow">Next step</p>
+      <h2 class="ea-heading" id="ea-final-heading">Bring IT into the inspection conversation early—and keep the process moving.</h2>
+      <p class="ea-lead">We will walk through your production environment, access requirements, security review process, user groups, and support expectations.</p>
+      <div class="ea-button-row"><a class="ea-button" href="../../contact/">Request a Demo <span aria-hidden="true">→</span></a><a class="ea-button ea-button--secondary" href="../">Explore Insights Software</a></div>
+    </div>
+  </section>
+</main>
 
     <footer class="site-footer"><div class="footer-inner">
 <div>

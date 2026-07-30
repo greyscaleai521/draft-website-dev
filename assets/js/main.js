@@ -563,3 +563,230 @@ document.querySelectorAll("[data-assembly-toggle]").forEach((toggle) => {
     }
   });
 });
+
+// Insights overview V2
+document.querySelectorAll("[data-insights-story]").forEach((story) => {
+  const steps = Array.from(story.querySelectorAll("[data-story-step]"));
+  const regions = Array.from(story.querySelectorAll("[data-story-region]"));
+  const screen = story.querySelector("[data-story-screen]");
+
+  if (!steps.length || !regions.length || !screen) {
+    return;
+  }
+
+  const activateStep = (stepName, shouldFocus = false) => {
+    const activeStep = steps.find((step) => step.dataset.storyStep === stepName);
+    const activeRegion = regions.find((region) => region.dataset.storyRegion === stepName);
+
+    if (!activeStep || !activeRegion) {
+      return;
+    }
+
+    steps.forEach((step) => {
+      const isActive = step === activeStep;
+      step.classList.toggle("is-active", isActive);
+      step.setAttribute("aria-pressed", String(isActive));
+    });
+
+    regions.forEach((region) => {
+      region.classList.toggle("is-highlighted", region === activeRegion);
+    });
+
+    screen.dataset.activeStep = stepName;
+
+    if (shouldFocus) {
+      activeStep.focus();
+    }
+  };
+
+  steps.forEach((step, index) => {
+    step.addEventListener("click", () => activateStep(step.dataset.storyStep));
+
+    step.addEventListener("keydown", (event) => {
+      let nextIndex = index;
+
+      if (event.key === "ArrowDown" || event.key === "ArrowRight") {
+        nextIndex = (index + 1) % steps.length;
+      } else if (event.key === "ArrowUp" || event.key === "ArrowLeft") {
+        nextIndex = (index - 1 + steps.length) % steps.length;
+      } else if (event.key === "Home") {
+        nextIndex = 0;
+      } else if (event.key === "End") {
+        nextIndex = steps.length - 1;
+      } else {
+        return;
+      }
+
+      event.preventDefault();
+      activateStep(steps[nextIndex].dataset.storyStep, true);
+    });
+  });
+
+  const initialStep = steps.find((step) => step.classList.contains("is-active")) || steps[0];
+  activateStep(initialStep.dataset.storyStep);
+});
+
+document.querySelectorAll("[data-insights-page-nav]").forEach((nav) => {
+  const items = Array.from(nav.querySelectorAll('a[href^="#"]'))
+    .map((link) => ({
+      link,
+      section: document.getElementById(link.hash.slice(1))
+    }))
+    .filter((item) => item.section);
+
+  if (!items.length) {
+    return;
+  }
+
+  const mobileQuery = window.matchMedia("(max-width: 640px)");
+  let activeSectionId = "";
+
+  const setActiveItem = (activeItem) => {
+    if (!activeItem || activeSectionId === activeItem.section.id) {
+      return;
+    }
+
+    activeSectionId = activeItem.section.id;
+
+    items.forEach((item) => {
+      if (item === activeItem) {
+        item.link.setAttribute("aria-current", "location");
+      } else {
+        item.link.removeAttribute("aria-current");
+      }
+    });
+
+    if (mobileQuery.matches) {
+      activeItem.link.scrollIntoView({ block: "nearest", inline: "nearest" });
+    }
+  };
+
+  items.forEach((item) => {
+    item.link.addEventListener("click", () => setActiveItem(item));
+  });
+
+  setActiveItem(items[0]);
+
+  if (!("IntersectionObserver" in window)) {
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    const visibleEntries = entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => {
+        if (b.intersectionRatio !== a.intersectionRatio) {
+          return b.intersectionRatio - a.intersectionRatio;
+        }
+        return Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top);
+      });
+
+    if (!visibleEntries.length) {
+      return;
+    }
+
+    const activeItem = items.find((item) => item.section === visibleEntries[0].target);
+    setActiveItem(activeItem);
+  }, {
+    root: null,
+    rootMargin: "-34% 0px -56% 0px",
+    threshold: [0, 0.25, 0.5, 0.75]
+  });
+
+  items.forEach((item) => observer.observe(item.section));
+});
+
+// Homepage evidence hero.
+document.querySelectorAll("[data-inspection-story]").forEach((story) => {
+  const eventCard = story.querySelector(".inspection-event-card");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let sequenceTimer = null;
+  let replayDebounceTimer = null;
+  let hasPlayed = false;
+  let lastReplayAt = -Infinity;
+
+  const replaySequence = ({ force = false } = {}) => {
+    if (reducedMotion.matches) {
+      return;
+    }
+
+    const now = performance.now();
+
+    if (!force && hasPlayed) {
+      return;
+    }
+
+    if (force && now - lastReplayAt < 900) {
+      return;
+    }
+
+    lastReplayAt = now;
+    window.clearTimeout(sequenceTimer);
+    story.classList.remove("is-sequencing");
+    void story.offsetWidth;
+    story.classList.add("is-sequencing");
+    hasPlayed = true;
+
+    sequenceTimer = window.setTimeout(() => {
+      story.classList.remove("is-sequencing");
+    }, 3350);
+  };
+
+  const queueReplay = () => {
+    window.clearTimeout(replayDebounceTimer);
+    replayDebounceTimer = window.setTimeout(() => {
+      replaySequence({ force: true });
+    }, 90);
+  };
+
+  const startWhenVisible = () => {
+    if (reducedMotion.matches) {
+      return;
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      window.setTimeout(() => replaySequence(), 520);
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+
+      if (!entry?.isIntersecting || entry.intersectionRatio < 0.42) {
+        return;
+      }
+
+      window.setTimeout(() => replaySequence(), 360);
+      observer.disconnect();
+    }, {
+      threshold: [0.42]
+    });
+
+    observer.observe(story);
+  };
+
+  if (document.readyState === "complete") {
+    startWhenVisible();
+  } else {
+    window.addEventListener("load", startWhenVisible, { once: true });
+  }
+
+  eventCard?.addEventListener("pointerenter", (event) => {
+    if (event.pointerType === "mouse" || event.pointerType === "pen") {
+      queueReplay();
+    }
+  });
+
+  eventCard?.addEventListener("mouseenter", queueReplay);
+  eventCard?.addEventListener("focus", queueReplay);
+
+  reducedMotion.addEventListener?.("change", () => {
+    if (!reducedMotion.matches) {
+      return;
+    }
+
+    window.clearTimeout(sequenceTimer);
+    window.clearTimeout(replayDebounceTimer);
+    story.classList.remove("is-sequencing");
+  });
+});
