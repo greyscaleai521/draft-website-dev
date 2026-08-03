@@ -1352,7 +1352,7 @@ h3 {
 
 .home-router-hero--evidence .home-router-hero__inner {
   min-height: 712px;
-  grid-template-columns: minmax(410px, 0.86fr) minmax(650px, 1.14fr);
+  grid-template-columns: minmax(470px, 0.9fr) minmax(650px, 1.1fr);
   gap: clamp(48px, 5vw, 78px);
   padding: 72px 0 86px;
 }
