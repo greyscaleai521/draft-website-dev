@@ -418,7 +418,7 @@ printf 'GitHub Pages status: %s\n' "$pages_status"
 [[ "$pages_status" == "built" ]] || die "GitHub Pages status was '$pages_status', expected built."
 
 step "Verify live page"
-tmp_file="$(mktemp "${TMPDIR:-/tmp}/page-check.XXXXXX.html")"
+tmp_file="$(mktemp "${TMPDIR:-/tmp}/page-check.XXXXXX")"
 CHECK_URL="${PAGES_URL%/}${VERIFY_PATH}?verify=${PUBLISH_SHA}"
 printf 'Check URL: %s\n' "$CHECK_URL"
 
