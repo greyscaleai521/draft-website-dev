@@ -8,7 +8,7 @@
     <meta name="description" content="Explore how GreyscaleAI helps food producers use X-ray inspection, AI image analysis, and Insights software for foreign material detection, product quality, package integrity, weight and count intelligence, traceability, and production analytics.">
     <link rel="canonical" href="https://www.greyscaleai.com/applications/">
     <link rel="icon" href="../assets/img/meta/favicon.ico">
-    <link rel="stylesheet" href="../assets/css/styles.css?v=applications-motion-v6">
+    <link rel="stylesheet" href="../assets/css/styles.css?v=applications-hero-v2">
     <script defer src="../assets/js/main.js?v=applications-motion-v6"></script>
   </head>
   <body>
@@ -166,31 +166,28 @@
 <!-- SITE_HEADER_END -->
 
     <main>
-      <section class="page-hero applications-hero">
-        <div class="section-inner applications-hero-grid">
-          <div>
+      <section class="page-hero applications-hero applications-hero--site-matched">
+        <div class="section-inner applications-hero-grid applications-hero-grid--site-matched">
+          <div class="applications-hero-copy">
             <p class="eyebrow">Applications</p>
-            <h1>Inspection intelligence for the problems food producers actually need to solve.</h1>
-            <p class="lead">GreyscaleAI turns every inspected product into image-backed evidence and operational data, helping teams improve food safety, product quality, yield, traceability, and production visibility without treating inspection as a standalone pass/fail machine.</p>
+            <h1>Inspection for the problems that matter.</h1>
+            <p class="lead">Image-backed applications for safety, quality, yield, QA review, and production performance.</p>
             <div class="section-actions">
-              <a class="button" href="../platform/application-fit-validation/">Talk Through Fit</a>
-              <a class="button secondary" href="../insights/">See Insights Software</a>
-            </div>
-            <div class="hero-proof applications-chips" aria-label="Application outcomes">
-              <span>Food safety</span><span>Quality signals</span><span>Yield visibility</span><span>QA evidence</span><span>Production analytics</span>
+              <a class="button" href="#application-selector">Explore Applications</a>
+              <a class="button secondary" href="../platform/#how-it-works">See the Platform</a>
             </div>
           </div>
-          <figure class="hero-visual-placeholder" aria-label="Placeholder for future Applications hero visual showing inspection image, AI decision, and application outcomes.">
-            <div>
-              <p class="eyebrow">Hero visual placeholder</p>
-              <h2>Interactive inspection graphic to be finalized</h2>
-              <p>Final visual will show an inspection image, AI decision, and five application outcomes. This placeholder is intentional.</p>
-            </div>
+
+          <figure class="applications-hero-graphic">
+            <picture>
+              <source media="(max-width: 700px)" srcset="../assets/img/hero/applications/applications-hero-visual-mobile.svg?v=image-fit-3">
+              <img src="../assets/img/hero/applications/applications-hero-visual.svg?v=image-fit-3" width="1200" height="720" alt="One X-ray inspection event connected to foreign material, product quality, weight and count, QA review, and production analytics applications.">
+            </picture>
           </figure>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="application-selector">
         <div class="section-inner">
           <p class="eyebrow">Problem selector</p>
           <h2>Choose the outcome you need to improve.</h2>
@@ -270,18 +267,25 @@
         </div>
       </section>
 
-      <section class="section tint">
+      <section class="section tint applications-platform-router" aria-labelledby="applications-platform-router-title">
         <div class="section-inner">
-          <p class="eyebrow">How it works</p>
-          <h2>From inspection image to action.</h2>
-          <p class="lead">GreyscaleAI applications connect what the system sees on the line to the evidence, context, alerts, and trends teams need to act.</p>
-          <div class="signal-stepper" aria-label="Signal to action workflow">
-            <article class="signal-step"><span class="signal-step-number">1</span><span class="card-icon"><svg><use href="#icon-scan-line"></use></svg></span><h3>Inspect</h3><p>Capture high-resolution X-ray images at line speed.</p></article>
-            <article class="signal-step"><span class="signal-step-number">2</span><span class="card-icon"><svg><use href="#icon-sparkles"></use></svg></span><h3>Analyze</h3><p>Apply product-specific AI models and inspection rules to classify validated signals.</p></article>
-            <article class="signal-step"><span class="signal-step-number">3</span><span class="card-icon"><svg><use href="#icon-database"></use></svg></span><h3>Connect</h3><p>Attach image, event, product, lot, line, machine, timestamp, and review context where available.</p></article>
-            <article class="signal-step"><span class="signal-step-number">4</span><span class="card-icon"><svg><use href="#icon-clipboard-check"></use></svg></span><h3>Review</h3><p>Use Insights to search, compare, document, and decide what needs follow-up.</p></article>
-            <article class="signal-step"><span class="signal-step-number">5</span><span class="card-icon"><svg><use href="#icon-trending-up"></use></svg></span><h3>Improve</h3><p>Use trends and recurring patterns to support QA, operations, maintenance, and corporate decisions.</p></article>
-          </div>
+          <a class="applications-platform-router__card" href="../platform/#how-it-works">
+            <div class="applications-platform-router__copy">
+              <p class="eyebrow">Connected platform</p>
+              <h2 id="applications-platform-router-title">Follow one inspection from image to improvement.</h2>
+              <p>See how GreyscaleAI connects the image, AI finding, production context, review, and dashboard-level patterns in one workflow.</p>
+              <span class="applications-platform-router__cta">
+                Explore the Platform workflow
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </span>
+            </div>
+            <div class="applications-platform-router__visual" aria-hidden="true">
+              <img src="../assets/img/solutions/applications-platform-workflow-preview-v2.svg" alt="" width="1080" height="430">
+            </div>
+          </a>
         </div>
       </section>
 

@@ -7,8 +7,9 @@
     <title>Platform Overview | GreyscaleAI</title>
     <meta name="description" content="GreyscaleAI connects HRX inspection systems, AI image analysis, Insights software, alerts, and managed support into one inspection intelligence platform for food production teams.">
     <link rel="icon" href="../assets/img/meta/favicon.ico">
-    <link rel="stylesheet" href="../assets/css/styles.css?v=platform-overview-4-1">
+    <link rel="stylesheet" href="../assets/css/styles.css?v=platform-story-v4">
     <script defer src="../assets/js/main.js"></script>
+    <script defer src="../assets/js/platform-story.js?v=platform-story-v4"></script>
   </head>
   <body>
     <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -213,42 +214,117 @@
         </div>
       </section>
 
-      <section class="section tint" id="how-it-works">
+      <section class="section tint platform-story-section" id="how-it-works">
         <div class="section-inner">
-          <p class="eyebrow">HOW IT WORKS</p>
-          <h2>Inspect. Analyze. Connect. Alert. Improve.</h2>
-          <p class="lead">The platform loop starts with every inspected product and ends with evidence, trends, alerts, and support context that teams can use.</p>
-          <div class="platform-loop-grid" aria-label="GreyscaleAI platform operating loop">
-            <article class="platform-loop-card">
-              <div class="platform-loop-head"><span>01</span><span class="card-icon"><svg><use href="#icon-scan-line"></use></svg></span></div>
-              <h3>Inspect</h3>
-              <p>HRX systems capture high-resolution X-ray images of product flow at line speed.</p>
-              <img src="../assets/img/solutions/platform-step-inspect.png" alt="X-ray image of inspected packaged product with a visible dense contaminant.">
-            </article>
-            <article class="platform-loop-card">
-              <div class="platform-loop-head"><span>02</span><span class="card-icon"><svg><use href="#icon-brain-circuit"></use></svg></span></div>
-              <h3>Analyze</h3>
-              <p>AI models evaluate image evidence for foreign material, quality, count, density, shape, or other product-specific signals.</p>
-              <img src="../assets/img/solutions/platform-step-analyze.png" alt="X-ray image with AI detection overlays highlighting product signals.">
-            </article>
-            <article class="platform-loop-card">
-              <div class="platform-loop-head"><span>03</span><span class="card-icon"><svg><use href="#icon-cloud-upload"></use></svg></span></div>
-              <h3>Connect</h3>
-              <p>Images, AI decisions, event metadata, product context, and machine context are stored in GreyscaleAI Insights.</p>
-              <img src="../assets/img/solutions/platform-step-connect.png" alt="GreyscaleAI Insights event review panel showing inspection events and metadata.">
-            </article>
-            <article class="platform-loop-card">
-              <div class="platform-loop-head"><span>04</span><span class="card-icon"><svg><use href="#icon-bell-ring"></use></svg></span></div>
-              <h3>Alert</h3>
-              <p>Meaningful alerts surface quality, reject-rate, machine, or trend changes with supporting context.</p>
-              <img src="../assets/img/solutions/platform-step-alert.png" alt="Insights alert and trend panels with image history and site overview.">
-            </article>
-            <article class="platform-loop-card">
-              <div class="platform-loop-head"><span>05</span><span class="card-icon"><svg><use href="#icon-trending-up"></use></svg></span></div>
-              <h3>Improve</h3>
-              <p>Monitoring, support, updates, analytics, and application learning help the system become more useful over time.</p>
-              <img src="../assets/img/solutions/platform-step-support.png" alt="Support cards for system health, customer support, and continuous improvement.">
-            </article>
+          <div class="platform-story__header">
+            <div class="platform-story__heading-copy">
+              <p class="eyebrow">HOW THE PLATFORM WORKS</p>
+              <h2>Follow one inspection from image to improvement.</h2>
+              <p class="lead platform-story__intro">GreyscaleAI carries the same inspection event through AI analysis, production context, review, and longer-term improvement. Teams can see what happened, understand why it matters, and decide what to do next.</p>
+            </div>
+          </div>
+
+          <div class="platform-story" data-platform-story data-autoplay-interval="7000">
+            <div class="platform-story__tabs" role="tablist" aria-label="Platform workflow steps">
+              <button class="platform-story__tab is-active" type="button" role="tab" id="platform-story-tab-1" aria-selected="true" aria-controls="platform-story-panel-1" tabindex="0" data-platform-story-tab="1" aria-label="Step 1, Inspect: Capture the image evidence">
+                <span class="platform-story__number">01</span><span class="platform-story__tab-title">Inspect</span><span class="platform-story__progress" aria-hidden="true"><span></span></span>
+              </button>
+              <button class="platform-story__tab" type="button" role="tab" id="platform-story-tab-2" aria-selected="false" aria-controls="platform-story-panel-2" tabindex="-1" data-platform-story-tab="2" aria-label="Step 2, Identify: Highlight meaningful signals">
+                <span class="platform-story__number">02</span><span class="platform-story__tab-title">Identify</span><span class="platform-story__progress" aria-hidden="true"><span></span></span>
+              </button>
+              <button class="platform-story__tab" type="button" role="tab" id="platform-story-tab-3" aria-selected="false" aria-controls="platform-story-panel-3" tabindex="-1" data-platform-story-tab="3" aria-label="Step 3, Add context: Connect image and production data">
+                <span class="platform-story__number">03</span><span class="platform-story__tab-title">Add context</span><span class="platform-story__progress" aria-hidden="true"><span></span></span>
+              </button>
+              <button class="platform-story__tab" type="button" role="tab" id="platform-story-tab-4" aria-selected="false" aria-controls="platform-story-panel-4" tabindex="-1" data-platform-story-tab="4" aria-label="Step 4, Review and respond: Decide with supporting evidence">
+                <span class="platform-story__number">04</span><span class="platform-story__tab-title">Review and respond</span><span class="platform-story__progress" aria-hidden="true"><span></span></span>
+              </button>
+              <button class="platform-story__tab" type="button" role="tab" id="platform-story-tab-5" aria-selected="false" aria-controls="platform-story-panel-5" tabindex="-1" data-platform-story-tab="5" aria-label="Step 5, Learn and improve: See patterns beyond a single event">
+                <span class="platform-story__number">05</span><span class="platform-story__tab-title">Learn and improve</span><span class="platform-story__progress" aria-hidden="true"><span></span></span>
+              </button>
+            </div>
+
+            <div class="platform-story__panels">
+              <article class="platform-story__panel is-active" role="tabpanel" id="platform-story-panel-1" aria-labelledby="platform-story-tab-1" data-platform-story-panel="1">
+                <div class="platform-story__panel-copy">
+                  <p class="platform-story__step-label">STEP 1 OF 5</p>
+                  <h3>Inspect</h3>
+                  <p class="platform-story__summary">Capture the image evidence.</p>
+                  <p>HRX systems capture a high-resolution X-ray image of every inspected product at line speed.</p>
+                </div>
+                <div class="platform-story__visual">
+                  <picture>
+                    <source media="(max-width: 700px)" srcset="../assets/img/solutions/platform-workflow/platform-workflow-step-01-inspect-mobile.svg" width="760" height="820">
+              <img src="../assets/img/solutions/platform-workflow/platform-workflow-step-01-inspect.svg" width="1200" height="760" alt="Illustration of inspection 04218 beginning with an X-ray image captured on Line 1.">
+                  </picture>
+                </div>
+              </article>
+
+              <article class="platform-story__panel" role="tabpanel" id="platform-story-panel-2" aria-labelledby="platform-story-tab-2" data-platform-story-panel="2" hidden>
+                <div class="platform-story__panel-copy">
+                  <p class="platform-story__step-label">STEP 2 OF 5</p>
+                  <h3>Identify</h3>
+                  <p class="platform-story__summary">Highlight meaningful signals.</p>
+            <p>AI evaluates the same image and highlights a foreign material finding that may require attention.</p>
+                </div>
+                <div class="platform-story__visual">
+                  <picture>
+                    <source media="(max-width: 700px)" srcset="../assets/img/solutions/platform-workflow/platform-workflow-step-02-identify-mobile.svg" width="760" height="820">
+              <img src="../assets/img/solutions/platform-workflow/platform-workflow-step-02-identify.svg" width="1200" height="760" alt="Illustration of AI highlighting foreign material in the same X-ray image and revealing a magnified view.">
+                  </picture>
+                </div>
+              </article>
+
+              <article class="platform-story__panel" role="tabpanel" id="platform-story-panel-3" aria-labelledby="platform-story-tab-3" data-platform-story-panel="3" hidden>
+                <div class="platform-story__panel-copy">
+                  <p class="platform-story__step-label">STEP 3 OF 5</p>
+                  <h3>Add context</h3>
+                  <p class="platform-story__summary">Connect image and production data.</p>
+                  <p>The image, AI result, product, lot, line, time, and finding come together in GreyscaleAI Insights.</p>
+                </div>
+                <div class="platform-story__visual">
+                  <picture>
+                    <source media="(max-width: 700px)" srcset="../assets/img/solutions/platform-workflow/platform-workflow-step-03-add-context-mobile.svg" width="760" height="820">
+                    <img src="../assets/img/solutions/platform-workflow/platform-workflow-step-03-add-context.svg" width="1200" height="760" alt="Illustration of the same image and AI result connected with product Core 12, lot, line, time, and a Foreign material finding in Insights.">
+                  </picture>
+                </div>
+              </article>
+
+              <article class="platform-story__panel" role="tabpanel" id="platform-story-panel-4" aria-labelledby="platform-story-tab-4" data-platform-story-panel="4" hidden>
+                <div class="platform-story__panel-copy">
+                  <p class="platform-story__step-label">STEP 4 OF 5</p>
+                  <h3>Review and respond</h3>
+                  <p class="platform-story__summary">Decide with supporting evidence.</p>
+                  <p>Teams review the event with its supporting evidence, compare related images, and decide whether action is needed.</p>
+                </div>
+                <div class="platform-story__visual">
+                  <picture>
+                    <source media="(max-width: 700px)" srcset="../assets/img/solutions/platform-workflow/platform-workflow-step-04-review-respond-mobile.svg" width="760" height="820">
+                    <img src="../assets/img/solutions/platform-workflow/platform-workflow-step-04-review-respond.svg" width="1200" height="760" alt="Illustration of the same event reviewed with its image, production context, magnified signal, and related images together.">
+                  </picture>
+                </div>
+              </article>
+
+              <article class="platform-story__panel" role="tabpanel" id="platform-story-panel-5" aria-labelledby="platform-story-tab-5" data-platform-story-panel="5" hidden>
+                <div class="platform-story__panel-copy">
+                  <p class="platform-story__step-label">STEP 5 OF 5</p>
+                  <h3>Learn and improve</h3>
+                  <p class="platform-story__summary">See patterns beyond a single event.</p>
+                  <p>Dashboards show how conditions vary across time, lines, products, and raw materials, helping teams decide where to adjust the process instead of only responding to individual events.</p>
+                </div>
+                <div class="platform-story__visual">
+                  <picture>
+                    <source media="(max-width: 700px)" srcset="../assets/img/solutions/platform-workflow/platform-workflow-step-05-learn-improve-mobile.svg" width="760" height="820">
+              <img src="../assets/img/solutions/platform-workflow/platform-workflow-step-05-learn-improve.svg" width="1200" height="760" alt="Illustration of a Foreign material dashboard comparing signals across time, lines, products, and raw materials to identify a pattern for process review.">
+                  </picture>
+                </div>
+              </article>
+            </div>
+
+            <div class="platform-story__mobile-controls" aria-label="Workflow navigation">
+              <button type="button" class="platform-story__arrow" data-platform-story-previous><span aria-hidden="true">←</span> Previous</button>
+              <span class="platform-story__position" aria-hidden="true" data-platform-story-position>1 of 5</span>
+              <button type="button" class="platform-story__arrow" data-platform-story-next>Next <span aria-hidden="true">→</span></button>
+            </div>
           </div>
         </div>
       </section>

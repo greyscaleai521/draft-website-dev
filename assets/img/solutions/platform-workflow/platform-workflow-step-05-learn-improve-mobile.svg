@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="820" viewBox="0 0 760 820" role="img" aria-hidden="true" focusable="false">
+<defs>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+    <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#0B2748" flood-opacity="0.12"/>
+  </filter>
+  <filter id="smallShadow" x="-30%" y="-30%" width="160%" height="180%">
+    <feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#0B2748" flood-opacity="0.12"/>
+  </filter>
+  <linearGradient id="tealArea" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#7FE5E2" stop-opacity="0.55"/>
+    <stop offset="1" stop-color="#7FE5E2" stop-opacity="0.03"/>
+  </linearGradient>
+</defs>
+<style>
+  text { font-family: Inter, 'Segoe UI', Arial, sans-serif; }
+  .frame { fill: #FFFFFF; stroke: #D6E5EC; stroke-width: 2; }
+  .topbar { fill: #F7FAFC; }
+  .navy { fill: #08275F; }
+  .ink { fill: #17212B; }
+  .muted { fill: #637383; }
+  .teal { fill: #009E9A; }
+  .label { font-size: 22px; font-weight: 800; letter-spacing: .055em; }
+  .value { font-size: 26px; font-weight: 800; }
+  .small { font-size: 20px; font-weight: 700; }
+  .tiny { font-size: 17px; font-weight: 700; letter-spacing: .035em; }
+  .micro { font-size: 14px; font-weight: 750; letter-spacing: .025em; }
+  .shadow { filter: url(#shadow); }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+
+
+  @keyframes drawTrend { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+  .dashboard-trend { stroke-dasharray: 1; stroke-dashoffset: 1; animation: drawTrend 1.35s ease-out .15s forwards; }
+  .mobile-dimensions { animation: fadeUp .48s ease-out .55s both; }
+  .review-card { animation: fadeUp .48s ease-out .9s both; }
+</style>
+
+<rect class="frame shadow" x="18" y="18" width="724" height="784" rx="28"/>
+<path class="topbar" d="M46 18 H714 A28 28 0 0 1 742 46 V90 H18 V46 A28 28 0 0 1 46 18 Z"/>
+<line x1="18" y1="90" x2="742" y2="90" stroke="#D6E5EC" stroke-width="2"/>
+<circle cx="52" cy="54" r="7" fill="#B8C9D7"/><circle cx="78" cy="54" r="7" fill="#B8C9D7"/><circle cx="104" cy="54" r="7" fill="#B8C9D7"/>
+<text x="132" y="63" class="navy small">FOREIGN MATERIAL DASHBOARD</text>
+
+<!-- Compact 2 x 2 filter grid -->
+<rect x="46" y="112" width="318" height="58" rx="16" fill="#FFFFFF" stroke="#D6E5EC" stroke-width="2"/>
+<text x="66" y="134" class="muted micro">TIME</text><text x="66" y="155" class="navy tiny">Last 30 days</text>
+<rect x="396" y="112" width="318" height="58" rx="16" fill="#FFFFFF" stroke="#D6E5EC" stroke-width="2"/>
+<text x="416" y="134" class="muted micro">LINE</text><text x="416" y="155" class="navy tiny">All lines</text>
+<rect x="46" y="182" width="318" height="58" rx="16" fill="#FFFFFF" stroke="#D6E5EC" stroke-width="2"/>
+<text x="66" y="204" class="muted micro">PRODUCT</text><text x="66" y="225" class="navy tiny">All products</text>
+<rect x="396" y="182" width="318" height="58" rx="16" fill="#FFFFFF" stroke="#D6E5EC" stroke-width="2"/>
+<text x="416" y="204" class="muted micro">RAW MATERIAL</text><text x="416" y="225" class="navy tiny">All raw materials</text>
+
+<!-- Trend -->
+<rect x="46" y="262" width="668" height="286" rx="22" fill="#FFFFFF" stroke="#D6E5EC" stroke-width="2" filter="url(#smallShadow)"/>
+<text x="74" y="298" class="navy small">SIGNALS OVER TIME</text>
+<rect x="74" y="320" width="612" height="182" rx="18" fill="#F3F8FA" stroke="#D6E5EC" stroke-width="2"/>
+<g stroke="#DCE7ED" stroke-width="2"><line x1="106" y1="368" x2="656" y2="368"/><line x1="106" y1="414" x2="656" y2="414"/><line x1="106" y1="460" x2="656" y2="460"/></g>
+<path d="M108 334 L146 350 L184 364 L222 382 L260 396 L298 412 L336 426 L374 440 L412 452 L450 462 L488 470 L526 476 L564 480 L602 484 L654 488 L654 478 L108 478 Z" fill="url(#tealArea)"/>
+<path class="dashboard-trend" pathLength="1" d="M108 334 L146 350 L184 364 L222 382 L260 396 L298 412 L336 426 L374 440 L412 452 L450 462 L488 470 L526 476 L564 480 L602 484 L654 488" fill="none" stroke="#009E9A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="108" y="526" class="muted micro">WEEK 1</text><text x="286" y="526" class="muted micro">WEEK 2</text><text x="462" y="526" class="muted micro">WEEK 3</text><text x="616" y="526" class="muted micro">WEEK 4</text>
+
+<!-- Three wider-lens dimensions -->
+<g class="mobile-dimensions">
+  <rect x="46" y="568" width="206" height="104" rx="18" fill="#FFFFFF" stroke="#D6E5EC" stroke-width="2"/>
+  <text x="64" y="594" class="teal micro">BY LINE</text><text x="64" y="622" class="navy tiny">Line 2</text>
+  <rect x="64" y="640" width="154" height="12" rx="6" fill="#EEF4F8"/><rect x="64" y="640" width="126" height="12" rx="6" fill="#009E9A"/>
+
+  <rect x="277" y="568" width="206" height="104" rx="18" fill="#FFFFFF" stroke="#D6E5EC" stroke-width="2"/>
+  <text x="295" y="594" class="teal micro">BY PRODUCT</text><text x="295" y="622" class="navy tiny">Core 12</text>
+  <rect x="295" y="640" width="154" height="12" rx="6" fill="#EEF4F8"/><rect x="295" y="640" width="116" height="12" rx="6" fill="#009E9A"/>
+
+  <rect x="508" y="568" width="206" height="104" rx="18" fill="#FFFFFF" stroke="#D6E5EC" stroke-width="2"/>
+  <text x="526" y="594" class="teal micro">BY RAW MATERIAL</text><text x="526" y="622" class="navy tiny">Input B</text>
+  <rect x="526" y="640" width="154" height="12" rx="6" fill="#EEF4F8"/><rect x="526" y="640" width="132" height="12" rx="6" fill="#009E9A"/>
+</g>
+
+<g class="review-card">
+  <rect x="46" y="694" width="668" height="78" rx="20" fill="#08275F"/>
+  <text x="72" y="720" fill="#7FE5E2" class="micro">PATTERN TO REVIEW</text>
+  <text x="72" y="752" fill="#FFFFFF" class="small">Line 2 + Input B</text>
+  <text x="686" y="741" text-anchor="end" fill="#FFFFFF" class="tiny">Use the wider view to adjust</text>
+</g>
+
+</svg>
