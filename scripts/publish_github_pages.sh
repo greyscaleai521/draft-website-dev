@@ -13,7 +13,6 @@ VERIFY_PATH="${VERIFY_PATH:-}"
 EXPECTED_TEXT="${EXPECTED_TEXT:-}"
 ALLOW_EXTRA_CHANGES=0
 ASSUME_YES=0
-RERUN_PAGES_ON_FAILURE=0
 RETURN_TO_WORK_BRANCH=0
 FILES=()
 
@@ -44,7 +43,6 @@ Options:
   --expected-text TEXT           Text expected on the live page. Required.
   --files FILE [FILE ...]        Explicit files to stage. Alternative to using --.
   --allow-extra-changes          Permit unrelated local changes to remain unstaged.
-  --rerun-pages-on-failure       Rerun the failed Pages job once, then watch again.
   -y, --yes                      Do not prompt before commit/push/fast-forward.
   -h, --help                     Show this help.
 
@@ -159,6 +157,16 @@ pages_failure_diagnostics() {
   gh api "repos/$REPO/pages" --jq '.status' || true
 }
 
+is_pages_deploy_timeout() {
+  local run_id="$1"
+  local failed_log
+
+  failed_log="$(gh run view "$run_id" --repo "$REPO" --log-failed 2>/dev/null || true)"
+
+  [[ "$failed_log" == *"Deploy to GitHub Pages"* ]] &&
+    [[ "$failed_log" == *"Timeout reached, aborting!"* ]]
+}
+
 live_page_diagnostics() {
   local run_id="$1"
   local publish_sha="$2"
@@ -218,10 +226,6 @@ while [[ $# -gt 0 ]]; do
       ;;
     --allow-extra-changes)
       ALLOW_EXTRA_CHANGES=1
-      shift
-      ;;
-    --rerun-pages-on-failure)
-      RERUN_PAGES_ON_FAILURE=1
       shift
       ;;
     -y|--yes)
@@ -397,15 +401,15 @@ printf 'Pages run id: %s\n' "$RUN_ID"
 if ! gh run watch "$RUN_ID" --repo "$REPO" --exit-status; then
   pages_failure_diagnostics "$RUN_ID"
 
-  if [[ $RERUN_PAGES_ON_FAILURE -eq 1 ]]; then
-    step "Rerun failed Pages job once"
+  if is_pages_deploy_timeout "$RUN_ID"; then
+    step "Retry GitHub Pages deploy after its 10-minute timeout"
     run gh run rerun "$RUN_ID" --repo "$REPO" --failed
     if ! gh run watch "$RUN_ID" --repo "$REPO" --exit-status; then
       pages_failure_diagnostics "$RUN_ID"
-      die "Pages rerun failed. Stop and inspect the failed log."
+      die "Pages deploy retry failed. Stop and inspect the failed log."
     fi
   else
-    die "Pages run failed. Review the diagnostics above; rerun with --rerun-pages-on-failure only if the failure is transient."
+    die "Pages run failed. The automatic retry only handles the GitHub Pages deploy timeout; review the diagnostics above."
   fi
 fi
 

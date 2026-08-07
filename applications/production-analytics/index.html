@@ -154,27 +154,30 @@
 <!-- SITE_HEADER_END -->
 
     <main>
-      <section class="page-hero production-analytics-hero">
-        <div class="section-inner production-analytics-hero__grid">
-          <div>
-            <p class="eyebrow">Application</p>
-            <h1>Production Analytics</h1>
-            <h2>See the patterns hiding inside inspection events.</h2>
-            <p class="lead">Every reject, alert, image, and machine signal has context. GreyscaleAI helps teams compare inspection activity by product, line, shift, plant, lot, supplier, reason code, and time window so recurring issues become easier to find and act on.</p>
-            <div class="section-actions">
-              <a class="button" href="/insights/#production-analytics">See Insights</a>
-              <a class="button secondary" href="/platform/application-fit-validation/">Talk Through Fit</a>
-            </div>
-            <div class="hero-proof production-analytics-badges" aria-label="Production analytics focus areas">
-              <span>Reject trends</span><span>Shift comparisons</span><span>SKU and lot context</span><span>Machine context</span>
+      <section class="pa-hero" aria-labelledby="pa-hero-title">
+        <div class="section-inner pa-hero__layout">
+          <div class="pa-hero__copy">
+            <p class="pa-hero__eyebrow">GREYSCALEAI INSIGHTS</p>
+            <h1 id="pa-hero-title">See the patterns hiding inside inspection events.</h1>
+            <p class="pa-hero__lead">Track foreign material trends across lines, shifts, products, and packages, then move from a visible pattern to the image-backed evidence behind it.</p>
+            <div class="pa-hero__actions">
+              <a class="button btn btn-primary" href="../../contact/">Request a Demo</a>
+              <a class="pa-hero__secondary" href="#analytics-view">See the analytics view <span aria-hidden="true">↓</span></a>
             </div>
           </div>
-          <div class="visual-placeholder production-analytics-hero-placeholder">
-            <div class="visual-placeholder__icon"><svg><use href="#icon-bar-chart"></use></svg></div>
-            <div class="visual-placeholder__label">VISUAL PLACEHOLDER</div>
-            <h3>Production analytics dashboard graphic</h3>
-            <p>Future visual: dark dashboard mockup showing filters, KPI tiles, reject-rate trend, top review reasons, line x shift comparison, and a What changed callout.</p>
-            <div class="visual-placeholder__note">Do not replace with stock photography.</div>
+
+          <div class="pa-hero__visual">
+            <object
+              class="pa-hero__svg"
+              type="image/svg+xml"
+              data="../../assets/img/hero/applications/production-analytics/hero-production-analytics-animated.svg"
+              aria-label="Production analytics graphic showing food X-ray events becoming a foreign-material pattern concentrated on Line 2, Shift B.">
+              <img
+                src="../../assets/img/hero/applications/production-analytics/hero-production-analytics-fallback.png"
+                alt="Production analytics graphic showing food X-ray events becoming a foreign-material pattern concentrated on Line 2, Shift B."
+                width="1600"
+                height="920">
+            </object>
           </div>
         </div>
       </section>
@@ -235,25 +238,25 @@
         </div>
       </section>
 
-      <section class="section tint production-analytics-demo-section" id="analytics-view">
+      <section class="pa-analytics-view section" id="analytics-view">
         <div class="section-inner">
-          <p class="eyebrow">Analytics view</p>
-          <h2>A dashboard built around the questions production teams actually ask.</h2>
-          <p class="lead">The point is not to add another chart. The point is to make inspection activity easier to compare, filter, and investigate so teams can decide where to focus.</p>
-          <div class="visual-placeholder production-analytics-demo-placeholder">
-            <div class="visual-placeholder__icon"><svg><use href="#icon-line-chart"></use></svg></div>
-            <div class="visual-placeholder__label">VISUAL PLACEHOLDER</div>
-            <h3>Production analytics dashboard mockup</h3>
-            <p>Future visual: an example dashboard with a filter bar, KPI tiles, reject and review trend, top review reasons, line x shift heatmap, and a What changed callout.</p>
-            <div class="visual-placeholder__chips">
-              <span>Filter bar</span>
-              <span>KPI tiles</span>
-              <span>Trend chart</span>
-              <span>Top reasons</span>
-              <span>Line x shift heatmap</span>
-              <span>What changed</span>
-            </div>
-            <div class="visual-placeholder__note">Use example data only. Do not use customer data, real plant names, real machine names, dates, or timestamps.</div>
+          <div class="pa-analytics-view__intro">
+            <h2 class="pa-analytics-view__title">Analytics view: From pattern to evidence.</h2>
+            <p class="pa-analytics-view__body">A dashboard built around the questions production teams actually ask. Compare lines and shifts, identify changes over time, and drill into the inspection events and images behind every data point.</p>
+          </div>
+
+          <div class="pa-analytics-view__media-frame">
+            <picture>
+              <source srcset="../../assets/img/applications/production-analytics/analytics-view/production-analytics-dashboard-animated.svg" type="image/svg+xml">
+              <img
+                class="pa-analytics-view__media"
+                src="../../assets/img/applications/production-analytics/analytics-view/production-analytics-dashboard.png"
+                alt="GreyscaleAI Production Analytics dashboard showing foreign material trends, heatmap by line and shift, change analysis, and X-ray evidence"
+                width="1536"
+                height="1024"
+                loading="lazy"
+                decoding="async">
+            </picture>
           </div>
         </div>
       </section>

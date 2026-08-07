@@ -54,7 +54,7 @@ The script follows the fast path below and adds guardrails:
 - stages only the explicit files;
 - checks for accidental scratch/generated files in the staged commit;
 - commits, pushes the working branch, fast-forwards `main`, and pushes `main`;
-- finds and watches the matching GitHub Pages run for the published commit;
+- finds and watches the matching GitHub Pages run for the published commit, automatically retrying the known 10-minute deploy timeout once;
 - verifies the live page with `curl` and `EXPECTED_TEXT`;
 - switches back to the working branch when complete.
 
@@ -65,8 +65,6 @@ Optional flags:
 ```bash
 scripts/publish_github_pages.sh --help
 ```
-
-Use `--rerun-pages-on-failure` only when the Pages failure looks transient after reviewing the failed run log.
 
 ## Inputs
 
@@ -418,16 +416,9 @@ Use this table:
 | --- | --- | --- |
 | Checkout, artifact upload, missing files, build errors | The site artifact did not build correctly. | Fix the repo issue, commit, push the working branch, fast-forward `main`, and publish again. |
 | Push protection or secret scanning | A commit contains a detected secret. | Clean the commit. Do not bypass protection. |
-| `Deploy to GitHub Pages` says `Deployment failed, try again later` after an artifact and deployment were created | GitHub's deploy step failed after the artifact was prepared. | Rerun once. If it fails again or stays queued, make a small real follow-up commit and push `main` again. |
+| `Deploy to GitHub Pages` remains `deployment_in_progress` and then logs `Timeout reached, aborting!` after the artifact was created | GitHub's deploy service stalled after the artifact was prepared. | The publish script automatically reruns the failed deployment once and watches it again. If that retry fails, stop repeating it and investigate the failed log. |
 
-Rerun once:
-
-```bash
-gh run rerun "$RUN_ID" --repo "$REPO" --failed
-gh run watch "$RUN_ID" --repo "$REPO" --exit-status
-```
-
-If the rerun does not publish, stop repeating the same run. Make a small real follow-up commit on `main`, document why, and push it to trigger a fresh Pages deployment.
+The script retries only this known GitHub deploy timeout. It does not retry checkout, artifact-upload, site-content, or source-setting failures. If the automatic retry does not publish, stop repeating the same run. Make a small real follow-up commit on `main`, document why, and push it to trigger a fresh Pages deployment.
 
 ### Live Page Is 404 or Stale
 
